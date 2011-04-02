@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>DeVeDe, a video DVD creator</title>
+</head>
+<body bgcolor="#E8E8F0">
+<p><div style="text-align: center;"><h1>DeVeDe, a video DVD creator</h1></div></p>
+<p><a href="index.html">Up: help index</a></p>
+<p><a href="select.html">Next: the disk type selection window</a></p>
+
+<p><h2>Creating a disk: fast instructions</h2></p>
+
+<p>Before explaining all the options in DeVeDe, I'll give you the common sequence to create a disk.</p>
+
+<p>First, you choose the disk type you want to create (DVD, VCD, sVCD, CVD or DivX). Then, you drag&amp;drop
+the files you want in the main window, creating (if is a DVD) the titles you want, or add them one-each-time
+with the <b>Add file</b> button.</p>
+
+<p>If you want to add subtitles or fine-tune the properties of a file, you should use the <b>Properties</b> button.</p>
+
+<p>Then you should click the <b>Adjust disk usage</b> button. This will automatically set the video bitrate for each
+file (which depends on the final size of the file, if it has one or more subtitles, if it's already a converted
+file...).</p>
+
+<p>After that, use the <b>Menu preview</b> button to ensure that you like the menu that DeVeDe will create. If not,
+you can use the <b>Menu options</b> button to change them. Remember that the menu will use the names of the titles.</p>
+
+<p>Finally, just click the <b>Forward</b> button, choose a destination directory and a name, and enjoy a good
+coffee while DeVeDe works.</p>
+
+<p>When the ISO or BIN/CUE file has been created, you can use K3b, GnomeBaker or Brasero to burn it. Under Gnome
+(is possible that under KDE there's a simmilar option) you can right-click on the file and choose <b>Burn to disk</b>
+too. Or you can use the safest option: command line:</p>
+
+<p align="center">growisofs -dvd-compat -speed=4 -Z /dev/dvd=FILE.ISO</p>
+
+<p>for ISO images, or:</p>
+
+<p align="center">cdrdao write --device ATA:0,0,0 --driver generic-mmc --speed 16 NameOfCUEOrTOCFile</p>
+
+<p>for BIN/CUE files.</p>
+
+<h3>Storing and restoring the disc structure</h3>
+
+<p>The options <b>Load</b>, <b>Save</b> and <b>Save as</b> in the <b>File</b> menu allow you to save
+the current disk structure, in the case that you want continue your work later, or reuse it for another,
+slightly different, disk. DeVeDe stores the disk format adding the extension <b>.devede</b>.</p>
+
+<p>When you load a disk structure, DeVeDe checks that every file is still in its place. If there is a missing,
+it will show an error message listing all the missing files (the complete path) and will refuse to load the
+structure, to avoid incorrect results. There's a trick to still load it: just copy another movie to the
+right directory and rename it with the right name, and after loading the structure, remove it from DeVeDe.</p>
+
+<p>If the missing file is the menu background or the menu soundtrack, DeVeDe will load the structure anyway, but
+showing a warning message and using the default background and/or soundtrack instead.</p>
+
+<p><a href="index.html">Up: help index</a></p>
+<p><a href="select.html">Next: the disk type selection window</a></p>
+
+</body>
+</html>

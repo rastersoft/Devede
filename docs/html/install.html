@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>DeVeDe, a video DVD creator</title>
+</head>
+<body bgcolor="#E8E8F0">
+<p><div style="text-align: center;"><h1>DeVeDe, a video DVD creator</h1></div></p>
+
+<p><a href="index.html">Up: help index</a></p>
+<p><a href="basic.html">Next: basic usage</a></p>
+
+<p><h2>Installing DeVeDe</h2></p>
+<p>To install DeVeDe, first you must ensure you have <b>Mplayer</b>, <b>Mencoder</b>, <b>DVDAuthor</b>,
+<b>VCDimager</b> and <b>mkisofs or genisoimage</b> in your system. You need Python 2.4 or later, PyGTK and
+PyGlade too. Then, just run the <b>install.sh</b> script as root:</p>
+<p><div style="text-align: center"><h3><b>sudo ./install.sh</b></h3></div></p>
+
+<p>It will copy all the files at the right place. It should even create an entry in your
+Gnome/KDE/freedesktop-compatible-windowmanager menu.</p>
+
+<p>For advanced users, there are some extra paremeters that you can pass to the install.sh script (thanks to
+Patrick Monnerat). These are the <i>--targeted=(yes/no)</i>, <i>--uninstall=(yes/no)</i>, and the more common
+ones (<i>--DESTDIR=...</i>, <i>--prefix=...</i>).</p>
+
+<p>The <i>--targeted</i> parameter means that you want to install DeVeDe in a directory different than /usr/local.
+If you put it to <b>yes</b> you must use <i>--DESTDIR=</i> and <i>--prefix=</i> at least to specify where to
+store the files.</p>
+
+<p>The <i>--uninstall</i> parameter was a need due to a mistake in the first versions of DeVeDe. Up to version
+2.8, the <i>install.sh</i> script installed DeVeDe in /usr, but starting from version 2.9 it used /usr/local.
+To avoid problems when an user updates from a version lower than 2.9 to a higher one, by default the <i>install.sh</i>
+script first uninstall DeVeDe from all possible locations (/usr and /usr/local), and then proceed with the
+installation itself. This is a good effect until you want to create a .deb or .rpm package. In this case, just
+add the <i>--uninstall=no</i> parameter and the <i>install.sh</i> script will only do the install process,
+skipping the previous uninstall.</p>
+
+<p>So if you are a package developer, you should use a command line like:</p>
+
+<p><div style="text-align: center">./install.sh --uninstall=no --targeted=yes --DESTDIR=/var/tmp/blahblah
+--prefix=/usr</div></p>
+<p><h2>Using the DEB package</h2></p>
+<p>If you want to install DeVeDe from a DEB package, you must ensure that any previous version installed from
+a TAR.BZ2 package has been removed. You can do that with the <b>uninstall.sh</b> script available in the TAR.BZ2
+package. But you don't need to uninstall previous versions installed from a DEB package.</p>
+
+<p><a href="index.html">Up: help index</a></p>
+<p><a href="basic.html">Next: basic usage</a></p>
+
+</body>
+</html>

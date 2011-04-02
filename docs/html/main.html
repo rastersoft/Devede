@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>DeVeDe, a video DVD creator</title>
+</head>
+<body bgcolor="#E8E8F0">
+<p><div style="text-align: center;"><h1>DeVeDe, a video DVD creator</h1></div></p>
+<p><a href="index.html">Up: help index</a></p>
+<p><a href="title.html">Next: the title properties window</a></p>
+
+<h2>The main interface</h2>
+
+<p>After choosing the kind of disk you want, you will see the main interface:</p>
+
+<p><div style="text-align: center"><img src="main.jpg" /><br/><h5>Main interface for DVD discs</h5></div></p>
+
+<p>A DVD is divided in <b>Titles</b> and <b>Files</b>. Each title is a film on its own, and,
+when played, you have to choose the one you want to see. Into each title you can add as many files as
+you want, and cut them in chapters to allow an easy search. But remember that a DVD can contain up to 61 files,
+and a VideoCD, SuperVCD or CVD up to 99 files.</p>
+
+<p><div style="text-align: center"><img src="main2.jpg" /><br/><h5>Main interface for VCD/SVCD/CVD discs</h5></div></p>
+
+<p>In VideoCDs, Super VideoCDs and CVDs there's no title concept, so that frame won't be visible when you
+choose to create one of them.</p>
+
+<h3>Main window properties</h3>
+
+<p>In the DVD window screenshot we can see that there are two titles, and title two has two files.
+The files in a title will be played one after another, like a single film. So if you only want to
+create a DVD with one single film from multiple files, you have to put all of them in a single title. Your
+player will merge all in a single film.</p>
+
+<p>The <b>File info</b> box contains all the information about the selected file: the final audio an video
+rate, original and final size, FPS and length in seconds. It has the estimated size in Mbytes, but have in mind
+that is an estimation, so the final size can be lower (but never higher).</p>
+
+<p>The <b>Disk usage</b> bar shows the percentage of the disk currently used. You can occupy more than the
+100% because it's based in an estimation, so the final size can (and probably will) be lower than the
+espected, but never higher (see the <a href="faq.html">FAQ</a> for details). You can choose the CD/DVD size too.
+Have in mind another thing: a 700MB CD can contain 80 minutes of compressed audio/video, which, at 1152 kbps are
+about 800MB. This means that, when the media is a CD, you MUST use the bar to know how many disc space you are
+using, and not the estimated size of the files, because you can put up to 800MB of compressed video in a 700MB
+CD, or about 720MB in a 650MB CD.</p>
+
+<p>Under the bar is the <b>Adjust disk usage</b> button. Clicking on it will adjust the video rate in each video
+in order to use the 100% of the disk. To do so, DeVeDe takes in account the final resolution and the length,
+giving more bits per second to the videos with a higher resolution, but always in a proportional way. Remember
+that you should always click again the <b>Adjust disk usage</b> button after changing the final resolution,
+adding or removing subtitles, adding or removing titles, or, in general, before creating your disk,
+in order to assign a good video bit rate to each film. Remember that changing the soundtrack used in the menus
+will change the disk usage too.</p>
+
+<p>The <b>Default format</b> sets the format used by default in your disk. It's used to create the menus
+and each time you add a video file. But, as we will see in a moment, you can use a different format in some
+videos if you want, having PAL and NTSC videos mixed in the same disk.</p>
+
+<p>The <b>Preview menu</b> button allows you to see how will be the DVD menus. If you dislike it, you can
+change their properties (background picture, text colors, title...) with the <b>Menu properties</b> button. This will be
+explained with more detail in the section <a href="menu.html">Creating the DVD menu</a>. You can choose if you
+want or not a menu in your disk checking or unchecking the <b>Create a menu with the titles</b> checkbox.</p>
+
+<p>Finally, there is an expander which hiddes the advanced options. If you expand it, you will see this:</p>
+
+<p><div style="text-align: center"><img src="main3.jpg" /><br/><h5>Main interface for DVD discs with advanced
+options expanded.</h5></div></p>
+
+<p>Here, the <b>Action</b> block allows you to choose what do you want to create. The first option,<b>Only
+convert film files to compliant MPEG files</b> takes each file and converts it to a DVD-compliant MPEG-PS
+file, or to VCD, SVCD or CVD-compliant MPEG-PS. You can choose a generic name, being the default name "movie",
+so the files will have names like <b>movie_XX_YY.mpg</b>, being XX the title, and YY the file position
+into the title. An example: if you have two titles, and two files in the first title and three files at
+the second title, you will get five files: movie_01_01.mpg, movie_01_02.mpg, movie_02_01.mpg,
+movie_02_02.mpg and movie_02_03.mpg. This option is specially usefull when you want to create DVD menus
+with other program like <a href="http://dvdstyler.sourceforge.net/">DVD Styler</a>,
+<a href="http://qdvdauthor.sourceforge.net/">Q DVD Author</a> or
+<a href="http://polidori.sourceforge.net/">PoliDori</a>. Of course, with VCD, SVCD or CVD, the title
+number will be always "01".</p>
+
+<p>The second option, <b>Create disk structure</b>, is visible only when you create a DVD. It creates the
+MPEG files and then uses DVDAuthor to create the DVD tree structure. After that, it erases the MPEG files (unless
+you unckeck the <b>Erase temporary files</b> button). You can use this option to create the folder and files
+for a DVD and use your own DVD recording program to create the ISO image and burn it into a DVD.</p>
+
+<p>The third option, (second if you are creating a VCD, SVCD or CVD), <b>Create an ISO or BIN/CUE image,
+ready to burn to a disk</b>, converts the files to MPEG, creates the DVD tree if needed and, using
+<b>MKISOFS</b>, creates the ISO file, erasing then the MPEG and DVD tree to free disk space. With CD media,
+it converts the files to MPEG and uses <b>VCDImager</b> to create a BIN/CUE image, ready to be burned
+to a CD. Use this option to create a disk image ready to be burned to a CD/DVD with a program like
+<a href="http://gnomebaker.sourceforge.net/">GnomeBaker</a> or <a href="http://www.k3b.org">K3b</a>, or directly
+from the Gnome Desktop.</p>
+
+<p>These options will be unavailable when creating DIVX files, because there you will create only files, not
+disk images.</p>
+
+<p>The next block, <b>options</b>, starts with <b>Erase temporary files</b>, which allows to choose if you want
+DeVeDe to erase the temporary files as soon as they are needed no more. Selecting it, DeVeDe will need
+only about twice the final disk space, but if you don't mark it, you will need about three times the final
+disk space, but you will have all the temporary files to analize them.</p>
+<p>The next option, <b>Use optimizations for multicore CPUs</b>, when marked, makes Mencoder to use several
+threads to convert the videos, thus getting advantage of multicore CPUs to run faster.</p>
+
+<p><a href="index.html">Up: help index</a></p>
+<p><a href="title.html">Next: the title properties window</a></p>
+
+</body>
+</html>

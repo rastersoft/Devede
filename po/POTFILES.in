@@ -1,0 +1,50 @@
+devede.py
+devede_bincue.py
+devede_convert.py
+devede_delete.py
+devede_dialogs.py
+devede_disctype.py
+devede_dvd.py
+devede_dvdmenu.py
+devede_executor.py
+devede_loadsave.py
+devede_main.py
+devede_newfiles.py
+devede_other.py
+devede_subtitles.py
+devede_title_properties.py
+devede_video_convert.py
+devede_xml_menu.py
+[type: gettext/glade]interface/aboutdialog1.ui
+[type: gettext/glade]interface/add_subtitle2.ui
+[type: gettext/glade]interface/add_subtitle.ui
+[type: gettext/glade]interface/codepages.lst
+[type: gettext/glade]interface/languages.lst
+[type: gettext/glade]interface/waborted_dialog.ui
+[type: gettext/glade]interface/wcancel_dialog.ui
+[type: gettext/glade]interface/wcancel_job_dialog.ui
+[type: gettext/glade]interface/wdel_chapter_dialog.ui
+[type: gettext/glade]interface/wdel_subtitle.ui
+[type: gettext/glade]interface/wdel_title_dialog.ui
+[type: gettext/glade]interface/wdisk_type.ui
+[type: gettext/glade]interface/wempty_titles_dialog.ui
+[type: gettext/glade]interface/wend_dialog.ui
+[type: gettext/glade]interface/werase_dialog.ui
+[type: gettext/glade]interface/werror_dialog.ui
+[type: gettext/glade]interface/wfile.ui
+[type: gettext/glade]interface/wfolder_dialog.ui
+[type: gettext/glade]interface/wfolder_exists.ui
+[type: gettext/glade]interface/wloadconfig.ui
+[type: gettext/glade]interface/wloosecurrent.ui
+[type: gettext/glade]interface/wmain.ui
+[type: gettext/glade]interface/wmenu_preview_ntsc.ui
+[type: gettext/glade]interface/wmenu_preview_pal.ui
+[type: gettext/glade]interface/wmenu_properties.ui
+[type: gettext/glade]interface/wnofonts.ui
+[type: gettext/glade]interface/wpreviewagain_dialog.ui
+[type: gettext/glade]interface/wpreview_dialog.ui
+[type: gettext/glade]interface/wprograms.ui
+[type: gettext/glade]interface/wprogress.ui
+[type: gettext/glade]interface/wsaveconfig.ui
+[type: gettext/glade]interface/wtitle_properties_dialog.ui
+[type: gettext/glade]interface/wwarning_dialog.ui

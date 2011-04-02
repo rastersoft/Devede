@@ -1,0 +1,4 @@
+#!/bin/bash
+
+devede > devede.debug 2>&1
+

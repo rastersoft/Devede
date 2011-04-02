@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>DeVeDe, a video DVD creator</title>
+</head>
+<body bgcolor="#E8E8F0">
+<p><div style="text-align: center;"><h1>DeVeDe, a video DVD creator</h1></div></p>
+<p>Current version: 3.16.8</p>
+<p><h2>What is it?</h2></p>
+<p>DeVeDe is a program that allows you to create a video DVD from an MPEG, AVI, MOV... video file,
+suitable for home DVD players. DeVeDe uses <b>Mplayer</b>, <b>Mencoder</b>, <b>DVDAuthor</b> and
+<b>VCDimager</b>, so you can use any video playable with Mplayer.</p>
+<p>
+<h2>DISCLAIMER</h2>
+This software is distributed as is, under the <a href="gpl.html">GPL license</a> (version 3 or later), and
+without warranty of any kind. Use it at your own risk. Press <a href="gpl.html">here</a> to read the
+GPLv3 license.
+</p>
+<p><a href="install.html">Installation</a></p>
+<p><a href="basic.html">Basic usage</a></p>
+<p><a href="select.html">The disk type window</a></p>
+<p><a href="main.html">Main window options</a></p>
+<p><a href="title.html">Title properties</a></p>
+<p><a href="file.html">Add file window options</a></p>
+<p><a href="menu.html">Creating the DVD menu</a></p>
+<p><a href="disk.html">Creating the disk image</a></p>
+<p><a href="faq.html">Frecuently Asked Questions</a></p>
+<p><a href="versions.html">History of versions</a></p>
+<p><a href="contact.html">Contacting the authors</a></p>
+<p><a href="gpl.html">License (GPL v3)</a></p>
+</body>
+</html>

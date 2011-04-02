@@ -1,0 +1,43 @@
+#!/bin/bash
+
+echo ca
+msgfmt ca.po -o ca.mo
+echo cs_CZ
+msgfmt cs_CZ.po -o cs_CZ.mo
+echo "da (Danish)"
+msgfmt da.po -o da.mo
+echo de_DE
+msgfmt de_DE.po -o de_DE.mo
+echo "el (Greek)"
+msgfmt el.po -o el.mo
+echo es
+msgfmt es.po -o es.mo
+echo fr
+msgfmt fr.po -o fr.mo
+echo gl
+msgfmt gl.po -o gl.mo
+echo hu_HU
+msgfmt hu_HU.po -o hu_HU.mo
+echo it_IT
+msgfmt it_IT.po -o it_IT.mo
+echo nb_NO
+msgfmt nb_NO.po -o nb_NO.mo
+echo nl
+msgfmt nl.po -o nl.mo
+echo pl
+msgfmt pl.po -o pl.mo
+echo pt_BR
+msgfmt pt_BR.po -o pt_BR.mo
+echo pt_PT
+msgfmt pt_PT.po -o pt_PT.mo
+echo ru
+msgfmt ru.po -o ru.mo
+echo sk
+msgfmt sk.po -o sk.mo
+echo sv
+msgfmt sv.po -o sv.mo
+echo "zh_TW (Chinese, Taiwan)"
+msgfmt zh_TW.po -o zh_TW.mo
+echo "zh_CN (Simplified Chinese)"
+msgfmt zh_CN.po -o zh_CN.mo
+

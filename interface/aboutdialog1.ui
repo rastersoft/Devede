@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy toplevel-contextual -->
+  <object class="GtkAboutDialog" id="aboutdialog1">
+    <property name="border_width">5</property>
+    <property name="window_position">center</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="icon">devede.svg</property>
+    <property name="type_hint">normal</property>
+    <property name="program_name">DeVeDe</property>
+    <property name="version">3.16.9</property>
+    <property name="copyright">(C)2006-2010 Raster Software Vigo,
+Peter Gill and Gustavo Sanchez</property>
+    <property name="website">http://www.rastersoft.com/programas/devede.html</property>
+    <property name="license">DeVeDe is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+DeVeDe is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;</property>
+    <property name="authors">Sergio Costas (raster@rastersoft.com)
+Peter Gill (peter.m.gill@gmail.com) (Win32 parts)
+Gustavo Sanchez (sancheztabo@gmail.com)</property>
+    <property name="translator_credits" comments="TRANSLATORS: Replace this string with your names, one name per line.">Alex
+Arnaud Leroy
+Daniel Nylander
+Hagen Hoepfner
+Henrik Kristiansen
+Holger Wansing
+Joan Farrerons
+Joel Calado
+Jose Sun
+Jozef Riha
+Lars-Erik Aunevik Labori
+Laszlo Csordas
+Marco de Freitas
+Martin &#x160;&#xED;n
+Maurizio Daniele
+Maxim Winckelmans
+Miguel Bouzada
+Patrick Monnerat
+Qla
+V. Fotiadis
+&#x5927;&#x5B9D;</property>
+    <property name="artists">Ben Trein
+Jonah Naylor
+Jonathan Estrella</property>
+    <property name="logo">devede.svg</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <child>
+          <placeholder/>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

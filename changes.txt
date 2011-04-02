@@ -1,0 +1,18 @@
+
+--------- TODO --------------
+
+Allow to continue a previously failed conversion
+check maximum files allowed (69)
+Allow to select subtitles in MKV files
+Render MKV subtitles in the Right Way(tm)
+Remove v4mv
+Widescreen menus
+Allow to run a command after finishing a DVD
+Check menu size and abort if it's zero
+Use asynchronous reading in the processing of the output in Mencoder, DVDAuthor and so on
+Support for a plugable menu system
+Multithread support for parallel encoding
+Allow to extract VOB files from DVDs
+Select times for chapters
+Allow for global changes to files
+Create slideshows

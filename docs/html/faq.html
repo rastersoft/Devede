@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>DeVeDe, a video DVD creator</title>
+</head>
+<body bgcolor="#E8E8F0">
+<p><div style="text-align: center;"><h1>DeVeDe, a video DVD creator</h1></div></p>
+<p><div style="text-align: center;"><h1>FAQ</h1></div></p>
+
+<p><a href="index.html">Up: help index</a></p>
+
+<h3>Generic</h3>
+
+<ol>
+
+<li><b>I installed DeVeDe in Ubuntu 9.10, but the icons in the buttons dissapeared. How can I put them again?</b>
+<p>It's a bug in Ubuntu. To fix it, press <b>Alt+F2</b>, type <b>gconf-editor</b> to enter Gnome's configuration system, and activate the entry <b>/ -&gt;
+desktop -&gt; gnome -&gt; interface -&gt; buttons_have_icons</b>.
+As a bonus, you can get again the icons in the main menu by activating the entry <b>/ -&gt; desktop -&gt; gnome -&gt; interface -&gt; menus_have_icons</b></p>
+<p>Here is a picture to explain it better:</p>
+<p><div style="text-align: center"><img src="ubuntu_9_10.png" /></div></p>
+</li>
+
+<li><b>I'm running Ubuntu 8.10/Debian stable and I can't run DeVeDe. What's happening?</b>
+<p>Last versions of DeVeDe need Gtk 2.16 or latter. Those distros have older versions. You must update your system.</p></li>
+
+<li>
+<b>I installed DeVeDe using the DEB package, but it doesn't work fine. I miss some features explained in
+the instructions.</b>
+<p>To install the DEB version you must remove first any version installed from a TAR.BZ2 package, or they will
+interfere. You can do it just running <b>sudo ./uninstall.sh</b> (from the TAR.BZ2 package) and then installing
+the DEB package.</li>
+
+<li>
+<b>I created a PAL disc, and the final movie is played slightly faster, but older versions of DeVeDe
+converts them at the right speed, but with a little jump each second. Why?</b>
+<p>This happens only when the original file has 24 frames per second (like classic films), and you create a
+PAL disc, which needs 25 frames per second. In older versions DeVeDe converted the original 24 fps to
+25 just by repeating one after 24. Unfortunately that produces a noticeable "jump" each second, because the
+picture, literally, stops during 1/25 of a second.</p>
+<p>To avoid this, in this version DeVeDe does the same that does a TV station: plays the movie at 25 fps instead
+of 24fps. That means that it's played about a 4&#37; faster. That means that the pitch will be higher. Usually
+you won't be able to notice it, unless you compare the original and the new sound.</p>
+</li>
+
+<li>
+<b>I added a VOB file and marked the option "This is already a DVD/xCD-suitable MPEG file", but DeVeDe fails.</b>
+<p>The VOB files aren't fully suitable for DVDAuthor. In order to get the right file you can repackage it
+(without recompressing, so you will not loose quality) just marking the option <b>Repack audio and video without reencoding</b>.</p>
+</li>
+
+<li>
+<b>DeVeDe creates an ISO (or BIN/CUE) file instead of burning a CD/DVD. How can I create the final disk?</b>
+<p>For ISO files, under GNOME, the fastest method it to just right-click in the ISO file and choose "Burn to CD...".</p>
+<p>Or you can use:</p>
+<p align="center">growisofs -dvd-compat -speed=4 -Z /dev/dvd=FILE.ISO</p>
+<p>Where <i>/dev/dvd</i> is the device which corresponds to your DVD burner (in some computers it can be /dev/dvd1;
+to be sure, just type <i>ls /dev/dvd*</i> to see the right value).</p>
+<p>For BIN/CUE images you can use CDRDAO:</p>
+<p align="center">cdrdao write --device ATA:0,0,0 --driver generic-mmc --speed 16 NameOfCUEOrTOCFile</p>
+<p>Finally, you can use your preferred CD/DVD burner program like <b>GnomeBaker</b>, <b>Brasero</b> or <b>K3b</b>.</p>
+</li>
+
+<li>
+<b>DeVeDe is very slow compared to Mencoder alone!</b>
+<p>By default, Mencoder uses <i>fast</i> options, but DeVeDe uses <i>high quality</i> options.
+If you want speed, just go to the tab <i>Quality options</i> (in the
+<i>Advanced options</i> section) and there disable <b>Trellis</b> and choose <b>Use MBCMP</b>. Now DeVeDe
+should be as fast as Mencoder with default options.</p>
+</li>
+
+<li><b>Why can't I use a VFAT/FAT32 partition to create my DVDs?</b>
+<p>VFAT and FAT32 file systems doesn't understand uppercase/lowercase letters, and shows everything in
+lowercase. Unfortunately, the creation of a DVD tree is case sensitive.</p>
+</li>
+
+<li>
+<b>DeVeDe does not start in windows</b>
+<p>First you need python 2.5. Then you have to make sure you have gtk for windows installed. It is more easy
+to get the Gtk+/Win32 Development Environment (runtime, devel, docs, glade) version. Then you need pygtk.
+Now you need to install python 2.5 extension pywin32. Any of the needed programs such as mplayer that are
+not already installed should now be automatically installed next time you run mplayer. Or you can wait for
+a win32 installer to be made (any voluteers in the room?).</p>
+</li>
+
+<li>
+<b>I adjust the bitrate to use the 100%, but the final size is smaller.</b>
+<p>Unfortunately is impossible to accurately predict the disk's final size, because you specify a bitrate, but
+Mencoder can decide to use an smaller value in certain parts if it can compress it more without quality loss
+(like in very static scenes). That means that the final size can be smaller than the estimation made by DeVeDe,
+but never bigger.</p>
+</li>
+
+<li>
+<b>What about using VRC_MINRATE to ensure that the final size is mucho more acurate?</b>
+<p>I added that option in DeVeDe 3.7; unfortunately the result was that, in a lot of cases, the final size was
+bigger than the predicted size, so I removed it in version 3.9.</p>
+</li>
+
+<li>
+<b>When I add empty titles, the disk usage grows. Why?</b>
+<p>Each menu can hold up to 10 titles. If you create more titles DeVeDe will need more menus, and
+each one needs some disk space.</p>
+</li>
+
+<li>
+<b>What kind of disk is CVD?</b>
+<p>It stands for China Video Disk. It's an alternative format to SuperVCD, using a resolution of 352x480 (or
+352x576 in PAL), which can result in better image quality in some players, because the widht and height are
+compatible with DVD standard (SuperVCD uses a width of 480 pixels, which can result in some picture artifacts
+in some players).</p>
+</li>
+
+<li>
+<b>In some fast scenes the picture is jerky. I use bigger bitrates but it doesn't work. How can I fix it?</b>
+<p>Try to deinterlace your video. You can find the deinterlace options in the <b>Properties</b> window for
+that file, expanding the <b>Advanced options</b> and choosing the <b>Quality</b> tab.</p>
+</li>
+
+<li>
+<b>Fine, but... what is the better deinterlacing filter?</b>
+<p>That's a good question. In <a href="http://guru.multimedia.cx/deinterlacing-filters/">guru-multimedia</a>
+you can find a comparison. The YADIF in DeVeDe is "yadif=0", without adding "mcdeint".</p>
+</li>
+
+<li>
+<b>Why I can't add more than 61 files in a DVD?</b>
+<p>Because the DVD standard allows to put up to 128 commands in each menu. The current menu system needs two
+commands for each file, and six extra commands, which leaves only 61 files.</p>
+<p>The limit for VCDs, sVCDs and CVDs is 99 files.</p>
+</li>
+
+</ol>
+
+<h3>Subtitles</h3>
+
+<ol>
+
+<li><b>I preview a video with subtitles and the text looks bad (text colors are inverted)</b>
+<p>Don't worry, it's a bug of MPlayer when showing DVD subtitles from a file instead of a true DVD.
+In the final disk they will look fine.</p>
+</li>
+
+<li><b>I preview a video with subtitles, but it doesn't show the subtitles...</b>
+<p>Some Mplayer/Mencoder versions seems to fail to show the subtitles when you watch an MPEG file from
+hard disk, but they are there. SVN versions seems to have this fixed.</p></li>
+
+<li><b>I dislike the font used to render the subtitles. How can I change it?</b>
+<p>Just choose a TrueType font you like and copy it in $HOME/.spumux directory, renaming it to
+<b>devedesans.ttf</b>.</p>
+</li>
+
+<li><b>I tried to create a DivX file with subtitles, but in the tab it says it's not possible. How can
+I add subtitles to a DivX?</b>
+<p>DivX format doesn't allow embedded subtitles, but nearly all software players (MPlayer, VLC...) and a
+lot of hardware players can render them on-demand if you put the file with the subtitles in the same
+directory than the movie, and rename the former with the same name than the later (this is, if your movie
+file is MYMOVIE.AVI and your subtitles are in .SRT format, just put the subtitles file in the same directory
+and rename it to MYMOVIE.SRT). The player should allow you to enable/disable them with the
+same button used for DVD subtitles.</p>
+</li>
+
+</ol>
+
+<h3>Menus</h3>
+
+<ol>
+
+<li><b>How can I add a menu to a VCD/SVCD/CVD?</b>
+<p>Currently you can't with DeVeDe.</p>
+</li>
+
+<li><b>The menus created by DeVeDe are simplistic. Will you add a menu editor to allow to create more
+complex menues?</b>
+<p>Probably not. My intention is to maintain DeVeDe as an easy-to-use tool. If you want to create complex
+menues you have excellent tools like <a href="http://dvdstyler.sourceforge.net/">DVD Styler</a>,
+<a href="http://qdvdauthor.sourceforge.net/">Q DVD Author</a> or
+<a href="http://polidori.sourceforge.net/">PoliDori</a>.</p>
+</li>
+
+<li>
+<b>In older versions I was able to create a DVD without a menu. How can I do it now?</b>
+<p>Creating a DVD without a menu results in some compatibility problems with the new title/chapter system,
+so now DeVeDe always creates one. But you can go to the menu options and select <b>Jump to the first title at
+startup</b>, so the DVD will start playing the first title, and will only show the menu when it ends, or when
+the user presses the MENU key in the DVD player's remote.</p>
+</li>
+
+</ol>
+
+<h3>Bugs</h3>
+
+<ol>
+
+<li>
+<b>When I click on the Properties button to change a film's properties, sometimes the button with the
+filename is empty, so I can't change them, but sometimes it works fine.</b>
+<p>There's a bug in GTK 2.12.0 (the one used in Ubuntu 7.10) that produces that behaviour. I already reported it,
+but developers need time to fix it. Until then, there's only one workaround: pressing cancel and clicking again
+the Properties button, until the filename appears in the filebutton. The same if you use Drag&Drop.</p>
+</li>
+
+<li><b>I tried to create a disk but the sound is pure noise.</b>
+<p>Version 1.0-rc1 of MPlayer/Mencoder (the one released, at least at April 20, 2007 with Ubuntu Feisty
+and other Linux distributions) is buggy and doesn't work fine. While they don't launch a fixed release,
+just download the file <b>mplayer_fixed</b> from DeVeDe's homepage and follow the instructions there. Or,
+if you are brave and experimented, you can compile MPlayer/Mencoder from SVN.</p>
+<p><b>Update (21 Nov. 2007):</b> Mplayer/Mencoder 1.0 RC2 is out and fixes this bug. You can find .deb packages
+in the GUTSY-BACKPORTS repository.</p>
+</li>
+
+<li><b>I created a DVD and my DVD player is unable to play it, but other players can.</b>
+<p>Go to <b>Advanced options->Misc</b>, and be sure that you have marked the option <b>Use a GOP of 12
+frames</b>.</p>
+</li>
+
+<li>
+<b>I created a DVD from Ubuntu 8.04, but it doesn't play under WinXP: it doesn't show the folders AUDIO_TS nor
+VIDEO_TS.</b>
+<p>Unfortunately it's a <a href="https://bugs.launchpad.net/ubuntu/+source/cdrkit/+bug/233942">known bug</a>.
+Since DeVeDe uses MKISOFS (which is an alias to GENISOIMAGE), it's susceptible to this bug. As it says
+the people at the forum, there are two ways of fixing it:</p>
+<ul>
+<li>Uninstalling GENISOIMAGE package and compiling the last version from source code.</li>
+<li>Or installing the GENISOIMAGE package from Feisty (which is version 1.1.2).</li>
+</ul>
+<p>This bug can prevent the discs from playing in some commercial players too.</p>
+</li>
+
+<li><b>I created a 5.1 DVD marking the <b>Create DVD with 5.1 channel sound</b> option, but the channels are
+out of order.</b>
+<p>If your source video file has AC3 audio, use the <b>This file already has AC3 sound</b> instead.</p>
+</li>
+
+<li><b>DeVeDe fails to create watchable videos, or makes a 0-byte ISO file</b>
+<p>Be sure that you are using the last version of MPlayer/Mencoder (at least 1.0Pre8, but later is better).
+The very common version 1.0Pre7 has some bugs that can lead to problems with DeVeDe. But warning with
+version 1.0-rc1.</p>
+</li>
+
+<li><b>I receive an error when I try to create a DIVX/MPEG4 file</b>
+<p>Be sure that your MPlayer/Mencoder version is compiled with MP3lame support. The creation of DIVX files
+needs it.</p></li>
+
+<li><b>DeVeDe still fails. How can I report a bug?</b>
+<p>You can ask everything you need in the DeVeDe Forum, at http://groups.google.com/group/devede-forum/</p>
+<p>If asked for a dump of DeVeDe's output, just open a terminal, launch DeVeDe with this command:</p>
+<p><div style="text-align: center;">devede_debug</div></p>
+<p>and create again the disc. When it fails (or when it fully ends), take the file DEVEDE.DEBUG, which will be
+created in your HOME directory, and send it to the forum.</p>
+</li>
+</ol>
+
+<p><a href="index.html">Up: help index</a></p>
+
+</body>
+</html>

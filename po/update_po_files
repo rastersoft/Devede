@@ -1,0 +1,43 @@
+#!/bin/bash
+
+echo "ca (catala)"
+intltool-update ca
+echo cs_CZ
+intltool-update cs_CZ
+echo "da (danish)"
+intltool-update da
+echo de_DE
+intltool-update de_DE
+echo "el (greek)"
+intltool-update el
+echo "es_ES (spanish)"
+intltool-update es
+echo "fr (french)"
+intltool-update fr
+echo "gl_ES (galego)"
+intltool-update gl
+echo "hu_HU (hungarian)"
+intltool-update hu_HU
+echo "it_IT (italian)"
+intltool-update it_IT
+echo nb_NO
+intltool-update nb_NO
+echo nl
+intltool-update nl
+echo pl
+intltool-update pl
+echo "pt_BR (portugues do brasil)"
+intltool-update pt_BR
+echo "pt_PT (portugues)"
+intltool-update pt_PT
+echo ru
+intltool-update ru
+echo sk
+intltool-update sk
+echo sv
+intltool-update sv
+echo "zh_TW (Chinese, Taiwan)"
+intltool-update zh_TW
+echo "zh_CN (Simplified Chinese)"
+intltool-update zh_CN
+

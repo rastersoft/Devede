@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>DeVeDe, a video DVD creator</title>
+</head>
+<body bgcolor="#E8E8F0">
+<p><div style="text-align: center;"><h1>DeVeDe, a video DVD creator</h1></div></p>
+
+<p><a href="index.html">Up: help index</a></p>
+<p><a href="menu.html">Next: Creating the DVD menu</a></p>
+
+<h3>Adding movie files to a title</h3>
+
+<p>To add a new file you have two options: first, you can drag and drop one or more files into the main
+window, so DeVeDe will give them some fine default values; or you can choose the "Add" button, so you will see
+this window:</p>
+
+<p><div style="text-align: center"><img src="movie1.jpg" /></div></p>
+
+<p>First you choose the file you want to add (you can do it by drag and drop in this window too). After
+doing it, you can see its properties at the <b>File info</b> block. You can then choose the format (PAL or
+NTSC) and, if the movie has more than one audio track (like several languages), you can choose which
+one you want to use.</p>
+
+<p>Maybe you ask why is here another PAL/NTSC option, when we already have chosen it in the main window.
+The answer is: because this way you can create hybrid DVDs, with some films in PAL/SECAM format and
+others in NTSC. What is the utility of this? Simply: modern TV sets and DVD players can play both formats,
+so if you manually choose the one that fits better the original framerate of the file, you will have an
+smoother video. This is: if the original file has 25 fps, select PAL, and if it has 24 or 30 fps, select
+NTSC (the telecine option seems to work better with NTSC). Of course you can
+force one of them and DeVeDe will adjust the framerate to 25 or 30 fps, ensuring that the DVD will have
+the rigth framerate and will play fine in all TV sets, but maybe the motion won't be not as smooth as it could
+be.</p>
+
+<p>Then you can choose the audio track to use (currently DeVeDe can set only one audio track per movie), and
+adjust its volume if it is too low or too loud.</p>
+
+<p>If you are creating a VCD, sVCD or CVD, you can choose if you want to put the whole file, or only the first
+or the second half. This is specially usefull when creating VCDs: you can cut a long film in two disks if it's
+too long to fit in a single disk. But if the length of the film is less than 60 seconds, you won't be able to
+choose them.</p>
+
+<p>Remember that this option is applied to each file, so if you put two files in a xCD and choose in
+both the first half, you will have a xCD with the first half of the first file followed by the first half
+of the second file.</p>
+
+<p>Finally, you can add up to 32 subtitle files, each one with one language. You can use the <b>Add</b> button
+or just drag&amp;drop a file with subtitles (DeVeDe will check if the extension is .sub, .srt, .ssa, .smi, .txt,
+.aqt, .jss or .ass). These will be true DVD subtitles, in the sense that you can enable or disable
+them, and choose the language you want. When you do that, DeVeDe will show you this window:</p>
+
+<p><div style="text-align: center"><img src="subs.jpg" /></div></p>
+
+<p>In <b>File</b> you can choose the file with the subtitles. If you are using subtitle files coded with a
+codepage different than ISO-8859-1 (or pure ASCII) you will have to choose the right Codepage (UTF-8 is
+twice in the list to make it easier to find). DeVeDe tries to detect if the file is pure ASCII, UTF-8 or
+UTF-16; in case it's unable to do so, it will set the last format selected.</p>
+
+<p>You must choose the language too. This allows the DVD player to show the language code when you enable
+the subtitles.</p>
+
+<p>Finally, the option "Put subtitles upper" makes DeVeDe to render the subtitles a little upper that normally.
+This is fine when you have a 16:9 film in 3:4 format (with black bars up and down) and want to use the ZOOM
+option in your TV without loosing the subtitles, or when your TV is old and misses too many lines in bottom and
+cuts the ordinary subtitles.</p>
+
+<p> You can also change the font size for subtitles if you think that the default 28 points are too small or large.</p>
+
+<p>Have in mind that if you preview a video from DeVeDe with subtitles, they will be shown in order to allow
+you to ensure that the sincronization is fine (needs MPlayer 1.0rc1 or later, and not always works :( ).</p>
+
+<p>Currently you can't add subtitles when creating DIVX files, so this block will be unavailable in that mode.
+But if you put the subtitles in the same directory than your DIVX file, usually the player should show them.
+<a href="faq.html">Read the FAQ for details</a>.</p>
+
+<p>There's a <b>Preview</b> button that converts some seconds (you can choose how many), allowing you to
+check the audio/video quality and the audio sync. It will create the temporary file by default at
+<b>/var/tmp</b>, but you can choose other place if you preffer.</p>
+
+<p>Finally there's an expansor named <b>Advanced options</b>. If you expand it, you will see that there are
+six tabs with new options, not needed normally but which can give much more control to advanced users:</p>
+
+<p><div style="text-align: center"><img src="movie2.jpg" /></div></p>
+
+<p>In the <b>General</b> tab you can manually adjust the audio and video bitrate, if you are unhappy with
+the values assigned by the <b>Adjust disk usage</b> button. You can choose if you want to split each file
+in several chapters and its lenght too. This allows to jump forward in the movie and select scenes.</p>
+
+<p><div style="text-align: center"><img src="movie3.jpg" /></div></p>
+
+<p>In the <b>Video format</b> tab you can choose the final resolution for this video and the aspect ratio (this
+is, if you want a classic, or a widescreen video). A bigger resolution will give you
+sharper pictures, but will need more bitrate to avoid the horrible MPEG artifacs. If you choose <b>Default</b>,
+DeVeDe will choose automagically the best resolution, based in the original video resolution and the disk
+format you wanted. For Video DVD, DeVeDe will use resolutions of 352x288 for PAL/SECAM, or 352x240 for NTSC, if the video's
+resolution is smaller or equal than that. If not, it will jump to 352x480 (NTSC) or 352x576 (PAL) if this
+way the video fits. If not, it will use 720x576 for PAL/SECAM or 720x480 for NTSC. For VCD, SuperVCD or CVD,
+DeVeDe will use, as default, the standard resolution of each format. Finally, for DivX, it will use the same resolution
+and aspect ratio than the original. Remember that you should click again
+the <b>Adjust disk usage</b> button after changing the final resolution, adding or removing subtitles or, in general,
+after doing any modification in these parameters, in order to assign a good video bit rate to each film.</p>
+
+<p>Have in mind that the DVD standard only allows to create a 16:9 DVD with a width of 720 pixels, so
+if you activate this option, DeVeDe will ensure that the final width will be 720. For the same reason, if
+you choose a different width, the 16:9 option will be deactivated. This is not true for DivX files.</p>
+
+<p>You can create 16:9 DVDs and DivX, but not 16:9 VCDs, SVCDs or CVDs because the formats don't allow it.</p>
+
+<p><div style="text-align: center"><img src="movie3b.jpg" /></div></p>
+
+<p>If you are creating a DivX file, you will be able to choose High Definition (1920x1080 and 1280x720) and
+Mobile Devices (160x128) resolutions too, as you can see in the above picture, but you have to do it manually.</p>
+
+<p><div style="text-align: center"><img src="movie4.jpg" /></div></p>
+
+<p>In the <b>Video options</b> tab you have:</p>
+<ul>
+<li><b>Rotation</b>: allows you to rotate the video before converting. Useful when you filmed something with
+the camera rotated (example: movies filmed with the mobil phone).</li>
+
+<li><b>Mirror</b>: allows to flip horizontally or vertically the video.</li>
+
+<li><b>Field order</b>: when you have an interlaced video (like video from a DV camera), and the field order is incorrect,
+you can change it just by checking this option.</li>
+
+<li><b>Scaling mode</b>: here you can choose the expand method to use when the aspect ratio of the original file is not 4/3.
+The first method is the preferred, and consists in adding the classic black bars up and down. It has the
+advantage of maintain the aspect ratio, so the faces will look natural. The alternative method consists
+in expand the film, so the faces will look enlarged. Of course, if you have a 16:9 TV you can put it to
+Full Screen, and enjoy a full-resolution panoramic film.</li>
+</ul>
+
+<p><div style="text-align: center"><img src="movie5.jpg" /></div></p>
+
+<p>In the <b>Quality</b> tab you have:</p>
+
+<ul>
+
+<li><b>MacroBlock decision algorithm</b>: allows to choose the MBD algorithm, so you can choose to
+have better quality at the cost of slower conversion.</li>
+
+<li><b>Use Trellis Searched Quantization</b>: this option makes Mencoder to find the optimal encoding for each
+8x8 block, giving more video quality at the cost of a little slower conversion.</li>
+
+<li><b>Two pass encoding</b>: when marked, it will do a two-pass encoding of this movie. This gives much better quality
+at the cost of being slower. Marking <b>Turbo 1st pass</b> will make it slightly faster.</li>
+
+<li><b>Deinterlacing</b>: allows to apply a deinterlace algorithm to the video. Useful when creating
+a DVD from a TV program or TV camera. You have five different algoritms to choose.</li>
+</ul>
+
+<p><div style="text-align: center"><img src="movie6.jpg" /></div></p>
+
+<p>In the <b>Audio</b> tab you will find:</p>
+
+<p><b>Audio delay</b>: it's used to adjust the audio/video sync, allowing to fix videos with audio out
+of sync. You can set positive or negative values.</p>
+
+<p><b>Create DVD with 5.1 channel sound</b>: checking this will send to MENCODER the parameter <b>-channels 6</b>, so,
+if the source file has 5.1 sound, it will be preserved. But depending on the Mencoder version, is possible that the
+audio channels will be misordered.</p>
+
+<p><b>This file already has AC3 sound</b>: checking this will copy the audio tracks instead of recompressing them. This
+way, if the source file has a 5.1 sound track, it will be copied "as is", maintaining all the quality and the channel
+order (of course, if the original movie has 5.1 sound, the converted movie will have it too). If your file has AC3
+sound is better to use this option instead of <b>Create DVD with 5.1 channel sound</b>.</p>
+
+<p><div style="text-align: center"><img src="movie7.jpg" /></div></p>
+
+<p>In the <b>Misc</b> tab you have:</p>
+
+<ul>
+
+<li><b>This file is already a DVD/xCD-suitable MPEG-PS file</b> option.
+When active, nearly all options will became insensitive because DeVeDe will not recompress that file, but
+will use it directly when creating the DVD/xCD structure. This option is usefull when you have some
+already-compressed files (Eg. when you capture a TV signal and store it directly in MPEG2-PS format), because
+you will not need to wait the conversion time. Of course, you can mix MPEG-PS and non-MPEG-PS files in the
+same disc, because DeVeDe will recompress the non-MPEG-PS files, and use directly the MPEG-PS ones.</li>
+
+<li><b>Repack audio and video without reencoding</b>: this option is useful when you have MPEG2 video and MP2 audio
+in a container different than MPEG-PS (like a VOB file, or an MPEG2 video in an AVI container). When active, it
+extracts the video and audio without uncompressing and recompressing it, and stores them unchanged in a MPEG-PS container,
+as needed for a DVD, allowing to use these files without quality loss.</li>
+
+<li><b>Use a GOP of 12 frames</b>: if thischeckbox is active, DeVeDe will use 12-frame GOPs. Althoug the standard
+allows for up to 15-frame GOPs for PAL or up to 18-frame GOPs for NTSC, some DVD players dislikes GOPs bigger
+than 12. If you have problems to play DVDs created with the default option, check this.</li>
+
+<li><b>Extra parameters for Mencoder</b>: allows you to add extra parameters to <b>Mencoder</b>, allowing
+you to add hardcoded subtitles, set picture quality, and much more. Is divided in three parts:</li>
+<ul>
+<li><b>Main</b>: here you can add "classic" parameters to Mencoder, like <b>-sub</b> (to hard-render
+subtitles in the file). Each parameter is prepended with a dash, and uses blank space as separator. Remember
+to use '\ ' to put blank spaces. An example: <b>-sub /home/raster/holidays\ at\ galicia.sub</b> will hard
+render the subtitles from the file "holidays at galicia.sub".</li>
+<li><b>-VF</b>: allows to add extra sub-parameters in the -vf parameter. Parameters uses comma as separator.</li>
+<li><b>-LAVCOPTS</b>: allows to add extra sub-parameters in the -lavcopts parameter. Parameters uses colon as
+separator.</li>
+</ul>
+</ul>
+
+<p><a href="index.html">Up: help index</a></p>
+<p><a href="menu.html">Next: Creating the DVD menu</a></p>
+
+</body>
+</html>
