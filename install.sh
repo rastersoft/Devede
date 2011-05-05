@@ -57,15 +57,15 @@ install_others()	# arg1=bindir, arg2=datadir, arg3=pkglibdir,
 	install -m 755 -d "${DESTDIR}${4}/backgrounds"
 	install -m 644 "${scriptdir}/interface"/* "${DESTDIR}${4}/"
 	install -m 644 "${scriptdir}/devedesans.ttf" "${DESTDIR}${4}/"
-	install -m 644 "${scriptdir}/pixmaps"/* "${DESTDIR}${4}/"
-        install -m 644 "${scriptdir}/pixmaps/backgrounds"/* "${DESTDIR}${4}/backgrounds/"
+	install -m 644 "${scriptdir}/pixmaps"/* "${DESTDIR}${4}/" 2>/dev/null
+	install -m 644 "${scriptdir}/pixmaps/backgrounds"/* "${DESTDIR}${4}/backgrounds/"
 	install -m 644 "${scriptdir}/devede.svg" "${DESTDIR}${4}/"
 
 	install -m 755 -d "${DESTDIR}${2}/pixmaps"
 	install -m 644 "${scriptdir}/devede.svg" "${DESTDIR}${2}/pixmaps/"
 
-        install -m 755 -d "${DESTDIR}${2}/pixmaps/backgrounds"
-        install -m 644 "${scriptdir}/devede.svg" "${DESTDIR}${2}/pixmaps/"
+	install -m 755 -d "${DESTDIR}${2}/pixmaps/backgrounds"
+	install -m 644 "${scriptdir}/devede.svg" "${DESTDIR}${2}/pixmaps/"
 
 	install -m 755 -d "${DESTDIR}${2}/applications"
 	install -m 644 "${scriptdir}/devede.desktop"			\
