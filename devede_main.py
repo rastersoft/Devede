@@ -81,8 +81,10 @@ class main_window:
 		
 		if global_vars["PAL"]:
 			w=self.tree.get_object("default_pal")
+			os.environ["VIDEO_FORMAT"]="PAL"
 		else:
 			w=self.tree.get_object("default_ntsc")
+			os.environ["VIDEO_FORMAT"]="NTSC"
 		w.set_active(True)
 		
 		self.window.show()
@@ -465,8 +467,10 @@ class main_window:
 		
 		if widget.get_active():
 			self.global_vars["PAL"]=True
+			os.environ["VIDEO_FORMAT"]="PAL"
 		else:
 			self.global_vars["PAL"]=False
+			os.environ["VIDEO_FORMAT"]="NTSC"
 		print "PAL: "+str(self.global_vars["PAL"])
 	
 	
@@ -751,8 +755,10 @@ class main_window:
 		self.set_title()
 		if self.global_vars["PAL"]:
 			w=self.tree.get_object("default_pal")
+			os.environ["VIDEO_FORMAT"]="PAL"
 		else:
 			w=self.tree.get_object("default_ntsc")
+			os.environ["VIDEO_FORMAT"]="NTSC"
 		w.set_active(True)
 		
 		w=self.tree.get_object("include_menu")
