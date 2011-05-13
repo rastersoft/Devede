@@ -52,7 +52,7 @@ class video_converter(devede_executor.executor):
 		return 32
 
 	
-	def __init__(self,global_vars,videofile,filename,filefolder,progresbar,proglabel,disctype,title,chapter,threads,seconds,encpass):
+	def __init__(self,global_vars,videofile,filename,filefolder,progresbar,proglabel,disctype,title,chapter,threads,seconds,encpass,fix_ac3):
 
 		""" This class converts a video file to MPEG-1 or MPEG-2 format
 
@@ -464,7 +464,10 @@ class video_converter(devede_executor.executor):
 				if(copy_audio==False):
 					lavcopts+=":acodec="
 					if disctype=="dvd":
-						lavcopts+="ac3"
+						if fix_ac3:
+							lavcopts+="ac3_fixed"
+						else:
+							lavcopts+="ac3"
 					else:
 						lavcopts+="mp2"
 					lavcopts+=":abitrate="+str(audiorate)

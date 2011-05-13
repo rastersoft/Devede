@@ -988,8 +988,7 @@ class file_properties(newfile):
 		self.global_vars["number_actions"]=1
 		tmp_structure=[["",self.file_properties]]
 		converter=devede_convert.create_all(self.gladefile,tmp_structure,self.global_vars,self.callback)
-		self.global_vars["temp_folder"]=converter.preview(self.global_vars["temp_folder"])
-		print "Temp folder changed to "+str(self.global_vars["temp_folder"])
+		converter.preview(self.global_vars["temp_folder"])
 
 
 	def on_file_help_clicked(self,widget):

@@ -207,19 +207,18 @@ class create_all:
 		newtree=devede_other.create_tree(self,"wpreview_dialog",self.gladefile,False)
 		timev=newtree.get_object("seconds_preview")
 		timev.set_value(60)
-		path=newtree.get_object("temporary_files")
-		path.set_filename(filefolder)
+		
 		w=newtree.get_object("wpreview_dialog")
 		w.show()
 		ret=w.run()
 		w.hide()
-		self.filefolder=path.get_filename()
+		self.filefolder=filefolder
 		if self.filefolder[-1]!=os.sep:
 			self.filefolder+=os.sep
 		self.seconds=timev.get_value()
 		w.destroy()
 		if ret!=-6:
-			return self.filefolder
+			return
 
 		self.runner=None
 		self.queue.append(["PREVIEW"]) # Preview
@@ -233,7 +232,7 @@ class create_all:
 		except:
 			self.show_error(_("Failed to write to the destination directory.\nCheck that you have privileges and free space there."))
 			self.window.destroy()
-			return self.filefolder
+			return
 		
 		try:
 			os.remove(self.filefolder+"write_check")
@@ -244,7 +243,7 @@ class create_all:
 		self.erase_temp=True
 		self.timer=gobject.timeout_add(250,self.time_callback)
 		self.window.show()
-		return self.filefolder
+		return
 		
 
 	def on_iso_filename_activate(self,widg,ventana):
@@ -433,13 +432,13 @@ class create_all:
 			else:
 				encpass = int(action[0][1])
 			print "Segundos "+str(self.seconds)
-			self.runner=devede_video_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass)
+			self.runner=devede_video_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
 			return True
 		
 		if action[0]=="C2":
 			title=action[1]
 			chapter=action[2]
-			self.runner=devede_video_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2)
+			self.runner=devede_video_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
 			return True
 		
 		if action[0]=="S":

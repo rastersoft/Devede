@@ -34,6 +34,7 @@ import devede_title_properties
 import devede_dialogs
 import devede_convert
 import devede_help
+import devede_settings
 
 if (sys.platform=="win32") or (sys.platform=="win64"):
 	import win32api
@@ -88,8 +89,6 @@ class main_window:
 		w.set_active(True)
 		
 		self.window.show()
-		
-		print "Cores: "+str(self.get_cores())
 
 
 	def hide(self):
@@ -195,16 +194,13 @@ class main_window:
 			w6.hide()
 		
 		w1 = self.tree.get_object("frame5") # ACTION frame
-		w2 = self.tree.get_object("erase_files")
 		if self.disctocreate == "divx":
 			w1.hide()
-			w2.hide()
 			self.global_vars["action_todo"]=0
 			w = self.tree.get_object("only_convert")
 			w.set_active(True)
 		else:
 			w1.show()
-			w2.show()
 			if self.global_vars["action_todo"]==2:
 				w=self.tree.get_object("create_iso")
 			elif self.global_vars["action_todo"]==1:
@@ -213,9 +209,6 @@ class main_window:
 				w=self.tree.get_object("only_convert")
 				self.global_vars["action_todo"]=0
 			w.set_active(True)
-		
-		w=self.tree.get_object("erase_files")
-		w.set_active(self.global_vars["erase_files"])
 	
 		# now select the first title and chapter
 		
@@ -224,13 +217,6 @@ class main_window:
 		
 		lchapters=self.tree.get_object("lchapters")
 		lchapters.get_selection().select_path( (0,))
-		
-		w=self.tree.get_object("multicore")
-		if (self.global_vars["multicore"]==1):
-			w.set_active(False)
-		else:
-			w.set_active(True)
-			self.global_vars["multicore"]=self.get_cores()
 		
 		# refresh the title and chapter lists		
 		self.refresh_titles()
@@ -274,59 +260,7 @@ class main_window:
 			size=(length*(element["vrate"]+audiorate))/8
 
 		return size,surface,length,audiorate
-
-
-	def get_number(self,line):
-		
-		pos=line.find(":")
-		if pos==-1:
-			return -1
-		
-		return int(line[pos+1:])
-
-
-	def get_cores(self):
-		
-		""" Returns the number of cores available in the system """
-		if (sys.platform=="win32") or (sys.platform=="win64"):
-			logical_cores = win32api.GetSystemInfo()[5] #Logical Cores
-			return logical_cores
-
-		try:
-			proc=open("/proc/cpuinfo","r")
-		except:
-			return 1 # if we can't open /PROC/CPUINFO, return only one CPU (just in case)
-		
-		siblings=1 # default values
-		cpu_cores=1 # for siblings and cpu cores
-		notfirst=False
-		ncores=0
-		while(True):
-			line=proc.readline()
-			
-			if (((line[:9]=="processor") and notfirst) or (line=="")):
-				
-				# each entry is equivalent to CPU_CORES/SIBLINGS real cores
-				# (always 1 except in HyperThreading systems, where it counts 1/2)
-				
-				ncores+=(float(cpu_cores))/(float(siblings))
-				siblings=1
-				cpu_cores=1
-
-			if line=="":
-				break
-				
-			if line[:9]=="processor":
-				notfirst=True
-			elif (line[:8]=="siblings"):
-				siblings=self.get_number(line)
-			elif (line[:9]=="cpu cores"):
-				cpu_cores=self.get_number(line)
-
-		if(ncores<=1.0):
-			return 1
-		else:
-			return int(ncores)
+	
 
 	# Callbacks
 
@@ -531,15 +465,6 @@ class main_window:
 			self.window.hide()
 	
 	
-	def on_multicore_toggled(self,widget):
-		
-		w=self.tree.get_object("multicore")
-		if w.get_active():
-			self.global_vars["multicore"]=self.get_cores()
-		else:
-			self.global_vars["multicore"]=1	
-	
-	
 	# titles-related callbacks
 	
 	
@@ -665,8 +590,7 @@ class main_window:
 		self.global_vars["number_actions"]=1
 		tmp_structure=[["",self.structure[title][chapter]]]
 		converter=devede_convert.create_all(self.gladefile,tmp_structure,self.global_vars,self.callback3)
-		self.global_vars["temp_folder"]=converter.preview(self.global_vars["temp_folder"])
-		print "Temp folder changed to "+str(self.global_vars["temp_folder"])
+		converter.preview(self.global_vars["temp_folder"])
 
 
 	def callback3(self):
@@ -785,6 +709,11 @@ class main_window:
 	def on_help_index_activate(self,widget):
 	
 		help_class=devede_help.show_help(self.gladefile,self.global_vars["help_path"],"index.html")
+	
+	
+	def on_devede_settings_activate(self,widget):
+		
+		settings=devede_settings.devede_settings(self.gladefile,self.structure,self.global_vars)
 	
 	
 	# help methods

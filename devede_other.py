@@ -461,13 +461,21 @@ def load_config(global_vars):
 			if linea[:12]=="temp_folder:":
 				global_vars["temp_folder"]=linea[12:]
 			if linea[:10]=="multicore:":
-				global_vars["multicore"]=int(linea[10:]) # don't remember multicore
+				if linea[10:]=="1":
+					global_vars["multicore"]=1
+				else:
+					global_vars["multicore"]=global_vars["cores"]
 			if linea[:13]=="final_folder:":
 				global_vars["finalfolder"]=linea[13:]
 			if linea[:13]=="sub_language:":
 				global_vars["sub_language"]=linea[13:]
 			if linea[:13]=="sub_codepage:":
 				global_vars["sub_codepage"]=linea[13:]
+			if linea[:8]=="AC3_fix:":
+				if linea[8:]=="1":
+					global_vars["AC3_fix"]=True
+				else:
+					global_vars["AC3_fix"]=False
 			#if linea[:]==":":
 			#	global_vars[""]=linea[:]
 		archivo.close()
@@ -503,6 +511,10 @@ def save_config(global_vars):
 			archivo.write("final_folder:"+str(global_vars["finalfolder"])+"\n")
 		archivo.write("sub_language:"+str(global_vars["sub_language"])+"\n")
 		archivo.write("sub_codepage:"+str(global_vars["sub_codepage"])+"\n")
+		if global_vars["AC3_fix"]:
+			archivo.write("AC3_fix:1\n")
+		else:
+			archivo.write("AC3_fix:0\n")
 		archivo.close()
 	except IOError:
 		pass
