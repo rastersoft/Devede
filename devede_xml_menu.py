@@ -38,6 +38,7 @@ class xml_files(devede_executor.executor):
 		self.print_error=_("Failed to create the menues.")
 		self.output=False
 		self.structure=structure
+		self.AC3_fix=global_vars["AC3_fix"]
 		self.with_menu=global_vars["with_menu"]
 		if (len(structure)==1) and (len(structure[0])==2) and (not self.with_menu):
 			self.onlyone=True
@@ -884,7 +885,12 @@ class xml_files(devede_executor.executor):
 			lavcopts=""
 		lavcopts+="vcodec=mpeg2video:sc_threshold=1000000000:cgop:trell:mbd=2:vstrict=0:"
 		lavcopts+="vrc_maxrate=7000:vrc_buf_size=1835:vbitrate=1000:keyint=12:"
-		lavcopts+="acodec=ac3:abitrate=128:aspect="+wide
+		lavcopts+="acodec="
+		if self.AC3_fix:
+			lavcopts+="ac3_fixed"
+		else:
+			lavcopts+="ac3"
+		lavcopts+=":abitrate=128:aspect="+wide
 		command_var.append(lavcopts)
 		command_var.append("-o")
 		command_var.append(currentfile)

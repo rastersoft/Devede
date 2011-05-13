@@ -43,13 +43,23 @@ if (sys.platform!="win32") and (sys.platform!="win64"):
 
 # append the directories where we install the devede's own modules
 tipo=-1
+
 try:
-	fichero=open("/usr/share/devede/wmain.ui","r")
+	fichero=open("./interface/wmain.ui","r")
 	fichero.close()
-	tipo=0
+	tipo=2
 	found=True
 except:
-	found=False
+	found=False	
+
+if found==False:
+	try:
+		fichero=open("/usr/share/devede/wmain.ui","r")
+		fichero.close()
+		tipo=0
+		found=True
+	except:
+		found=False
 
 if found==False:
 	try:
@@ -59,15 +69,6 @@ if found==False:
 		found=True
 	except:
 		found=False
-
-if found==False:
-	try:
-		fichero=open("./interface/wmain.ui","r")
-		fichero.close()
-		tipo=2
-		found=True
-	except:
-		found=False	
 
 if tipo==0:
 	#gettext.bindtextdomain('devede', '/usr/share/locale')
@@ -202,6 +203,57 @@ global_vars={}
 if pic_path[-1]!=os.sep:
 	pic_path+=os.sep
 
+def get_number(line):
+		
+	pos=line.find(":")
+	if pos==-1:
+		return -1
+	
+	return int(line[pos+1:])
+
+def get_cores():
+		
+	""" Returns the number of cores available in the system """
+	if (sys.platform=="win32") or (sys.platform=="win64"):
+		logical_cores = win32api.GetSystemInfo()[5] #Logical Cores
+		return logical_cores
+
+	try:
+		proc=open("/proc/cpuinfo","r")
+	except:
+		return 1 # if we can't open /PROC/CPUINFO, return only one CPU (just in case)
+	
+	siblings=1 # default values
+	cpu_cores=1 # for siblings and cpu cores
+	notfirst=False
+	ncores=0
+	while(True):
+		line=proc.readline()
+		
+		if (((line[:9]=="processor") and notfirst) or (line=="")):
+			
+			# each entry is equivalent to CPU_CORES/SIBLINGS real cores
+			# (always 1 except in HyperThreading systems, where it counts 1/2)
+			
+			ncores+=(float(cpu_cores))/(float(siblings))
+			siblings=1
+			cpu_cores=1
+
+		if line=="":
+			break
+			
+		if line[:9]=="processor":
+			notfirst=True
+		elif (line[:8]=="siblings"):
+			siblings=get_number(line)
+		elif (line[:9]=="cpu cores"):
+			cpu_cores=get_number(line)
+
+	if(ncores<=1.0):
+		return 1
+	else:
+		return int(ncores)
+
 global_vars["PAL"]=True
 global_vars["disctocreate"]=""
 global_vars["path"]=pic_path
@@ -219,7 +271,11 @@ global_vars["finalfolder"]=""
 global_vars["sub_codepage"]="ISO-8859-1"
 global_vars["sub_language"]="EN (ENGLISH)"
 global_vars["with_menu"]=True
+global_vars["AC3_fix"]=False
+global_vars["cores"]=get_cores()
 #global_vars[""]=""
+
+print "Cores: "+str(global_vars["cores"])
 
 if font_path[-1]!=os.sep:
 	font_path+=os.sep

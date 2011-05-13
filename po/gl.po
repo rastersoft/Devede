@@ -4,16 +4,17 @@
 # Sergio Costas <raster@rastersoft.com>, 2006.
 # , fuzzy
 # Sergio Costas <raster@rastersoft.com>, 2008.
-#
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-03 00:22+0200\n"
-"PO-Revision-Date: 2010-02-10 09:28+0100\n"
+"POT-Creation-Date: 2011-05-14 01:45+0200\n"
+"PO-Revision-Date: 2011-05-14 01:46+0200\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,10 +53,10 @@ msgstr ""
 "Non hai espazo baleiro abondo. Para crear este disco\n"
 "precísanse %(total)d Mbytes, pero só hai %(free)d Mbytes."
 
-#: ../devede_convert.py:234 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:87 ../devede_xml_menu.py:121
-#: ../devede_xml_menu.py:472 ../devede_xml_menu.py:480
-#: ../devede_xml_menu.py:484 ../devede_xml_menu.py:488
+#: ../devede_convert.py:233 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:87 ../devede_xml_menu.py:122
+#: ../devede_xml_menu.py:473 ../devede_xml_menu.py:481
+#: ../devede_xml_menu.py:485 ../devede_xml_menu.py:489
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -63,7 +64,7 @@ msgstr ""
 "Houbo un erro ao escribir no directorio de destino.\n"
 "Comprobe que ten espazo baleiro e permisos nel."
 
-#: ../devede_convert.py:320
+#: ../devede_convert.py:319
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -78,7 +79,7 @@ msgstr ""
 "\n"
 "xa existe. Se continúa, borrarase."
 
-#: ../devede_convert.py:413
+#: ../devede_convert.py:412
 msgid "Unknown error"
 msgstr "Erro descoñecido"
 
@@ -100,7 +101,7 @@ msgstr ""
 "O ficheiro coa música do menú semella estar danado. Farase un menú sen "
 "música."
 
-#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:476
+#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:477
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -154,7 +155,7 @@ msgstr "Falta o nome de ficheiro"
 msgid "Can't save the file."
 msgstr "Non se pode gardar o ficheiro."
 
-#: ../devede_main.py:400
+#: ../devede_main.py:336
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -162,7 +163,7 @@ msgstr ""
 "Demasiados vídeos para este tamaño de disco.\n"
 "Por favor, escolla un tipo de disco mais grande ou borre algúns vídeos."
 
-#: ../devede_main.py:460
+#: ../devede_main.py:396
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -170,7 +171,7 @@ msgstr ""
 "Algúns ficheiros non eran de vídeo.\n"
 "Non se engadiu ningún."
 
-#: ../devede_main.py:506
+#: ../devede_main.py:444
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -179,15 +180,15 @@ msgstr ""
 "Este proxecto contén %(X)d ficheiros, pero o máximo é de %(MAX)d. Por favor, "
 "elimine algúns ficheiros e tenteo de novo."
 
-#: ../devede_main.py:946
+#: ../devede_main.py:881
 msgid "no chapters"
 msgstr "Sen capítulos"
 
-#: ../devede_main.py:1006
+#: ../devede_main.py:941
 msgid "Unsaved disc structure"
 msgstr "Estrutura de disco non gardada"
 
-#: ../devede_main.py:1074
+#: ../devede_main.py:1009
 #, python-format
 msgid "Title %(X)d"
 msgstr "Título %(X)d"
@@ -222,11 +223,11 @@ msgstr "Non semella ser un ficheiro de vídeo."
 msgid "File seems to be an audio file."
 msgstr "Semella ser un ficheiro de son."
 
-#: ../devede_newfiles.py:1020
+#: ../devede_newfiles.py:1019
 msgid "Please, add only one file each time."
 msgstr "Por favor, engada só un ficheiro de cada vez."
 
-#: ../devede_newfiles.py:1033
+#: ../devede_newfiles.py:1032
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Por favor, engada un filme antes de engadir os subtítulos."
 
@@ -269,7 +270,7 @@ msgstr ""
 "\n"
 "%(file_name)s"
 
-#: ../devede_video_convert.py:531
+#: ../devede_video_convert.py:534
 msgid ""
 "Conversion failed.\n"
 "It seems a bug of Mencoder."
@@ -277,13 +278,13 @@ msgstr ""
 "Fallou a conversión.\n"
 "Semella ser un problema de Mencoder."
 
-#: ../devede_video_convert.py:533
+#: ../devede_video_convert.py:536
 msgid "Also check the extra params passed to Mencoder for syntax errors."
 msgstr ""
 "Comprobe tamén os parámetros extra para Mencoder na busca de erros "
 "sintácticos."
 
-#: ../devede_video_convert.py:566
+#: ../devede_video_convert.py:569
 msgid ""
 "Conversion failed\n"
 "Maybe you ran out of disk space?"
@@ -295,11 +296,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr "Ocorreu un erro ao crear os menús"
 
-#: ../devede_xml_menu.py:101 ../devede_xml_menu.py:492
+#: ../devede_xml_menu.py:102 ../devede_xml_menu.py:493
 msgid "Menu generation failed."
 msgstr "Houbo un erro ao xerar o menú."
 
-#: ../devede_xml_menu.py:108 ../devede_xml_menu.py:501
+#: ../devede_xml_menu.py:109 ../devede_xml_menu.py:502
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -307,10 +308,44 @@ msgstr ""
 "Non se poden xerar os botóns do menú.\n"
 "Semella ser un problema de SPUMUX."
 
-#: ../devede_xml_menu.py:467
+#: ../devede_xml_menu.py:468
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Creando o menú %(menu_number)d"
+
+#: ../interface/settings.ui.h:1
+msgid "<b>Folders</b>"
+msgstr "<b>Cartafoles</b>"
+
+#: ../interface/settings.ui.h:2
+msgid "<b>Options</b>"
+msgstr "<b>Opcións</b>"
+
+#: ../interface/settings.ui.h:3
+msgid "<b>Workarounds</b>"
+msgstr "<b>Apaños</b>"
+
+#: ../interface/settings.ui.h:4
+msgid ""
+"AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
+msgstr ""
+"Apaño AC3_FIXED para correxir o erro de discos sen son ó usar Mencoder beta"
+
+#: ../interface/settings.ui.h:5
+msgid "Erase temporary files"
+msgstr "Borrar ficheiros temporais"
+
+#: ../interface/settings.ui.h:6
+msgid "Folder for temporary file"
+msgstr "Directorio para ficheiros temporais"
+
+#: ../interface/settings.ui.h:7
+msgid "Temporary files folder:"
+msgstr "Directorio para os ficheiros temporais:"
+
+#: ../interface/settings.ui.h:8
+msgid "Use optimizations for multicore CPUs"
+msgstr "Usar optimizacións para CPU multinúcleo"
 
 #: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:3
 msgid "Clear"
@@ -611,7 +646,7 @@ msgstr "<b>Volume (%)</b>"
 msgid "Add black bars"
 msgstr "Engadir bandas negras"
 
-#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:19
+#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:18
 msgid "Advanced options"
 msgstr "Opcións avanzadas"
 
@@ -655,7 +690,7 @@ msgstr "Filtro de desentrelazado de FFMpeg"
 msgid "File properties"
 msgstr "Propiedades do ficheiro"
 
-#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:27
+#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:25
 msgid "Final size (pixels):"
 msgstr "Tamaño final (pixeles):"
 
@@ -667,7 +702,7 @@ msgstr "Tamaño do tipo de letra: "
 msgid "Force subtitles"
 msgstr "Forzar subtítulos"
 
-#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:28
+#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:26
 msgid "Frames per second: "
 msgstr "Fotogramas por segundo: "
 
@@ -699,7 +734,7 @@ msgstr "Median deinterlacing filter"
 msgid "Misc"
 msgstr "Misc"
 
-#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:31
+#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:29
 msgid "NTSC"
 msgstr "NTSC"
 
@@ -715,7 +750,7 @@ msgstr "Taxa orixinal de son (Kbits/seg):"
 msgid "Original length (seconds): "
 msgstr "Lonxitude orixinal(segundos): "
 
-#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:33
+#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:31
 msgid "Original size (pixels): "
 msgstr "Tamaño orixinal (píxeles): "
 
@@ -727,7 +762,7 @@ msgstr "Taxa orixinal de vídeo (Kbits/seg):"
 msgid "PAL/SECAM"
 msgstr "PAL/SECAM"
 
-#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:36
+#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:34
 msgid "Preview"
 msgstr "Previsualizar"
 
@@ -935,88 +970,84 @@ msgid "<b>Menus</b>"
 msgstr "<b>Menús</b>"
 
 #: ../interface/wmain.ui.h:16
-msgid "<b>Options</b>"
-msgstr "<b>Opcións</b>"
-
-#: ../interface/wmain.ui.h:17
 msgid "<b>Titles</b>"
 msgstr "<b>Títulos</b>"
 
-#: ../interface/wmain.ui.h:18
+#: ../interface/wmain.ui.h:17
 msgid "Adjust disc usage"
 msgstr "Axustar o uso de disco"
 
-#: ../interface/wmain.ui.h:20
+#: ../interface/wmain.ui.h:19
 msgid "Audio rate (Kbits/sec): "
 msgstr "Taxa de son (Kbits/seg): "
 
-#: ../interface/wmain.ui.h:21
+#: ../interface/wmain.ui.h:20
 msgid "Create a menu with the titles"
 msgstr "Crear un menú cos títulos"
 
-#: ../interface/wmain.ui.h:22
+#: ../interface/wmain.ui.h:21
 msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
 msgstr "Crear unha imaxe ISO ou BIN/CUE, lista para gravar nun disco"
 
-#: ../interface/wmain.ui.h:23
+#: ../interface/wmain.ui.h:22
 msgid "Create disc structure"
 msgstr "Crear a estrutura do disco"
 
-#: ../interface/wmain.ui.h:24
+#: ../interface/wmain.ui.h:23
 msgid "DeVeDe"
 msgstr "DeVeDe"
 
-#: ../interface/wmain.ui.h:25
-msgid "Erase temporary files"
-msgstr "Borrar ficheiros temporais"
-
-#: ../interface/wmain.ui.h:26
+#: ../interface/wmain.ui.h:24
 msgid "Estimated length (MBytes): "
 msgstr "Tamaño estimado (MBytes): "
 
-#: ../interface/wmain.ui.h:29
+#: ../interface/wmain.ui.h:27
 msgid "Length (seconds): "
 msgstr "Lonxitude (segundos): "
 
-#: ../interface/wmain.ui.h:30
+#: ../interface/wmain.ui.h:28
 msgid "Menu options"
 msgstr "Opcións do menú"
 
-#: ../interface/wmain.ui.h:32
+#: ../interface/wmain.ui.h:30
 msgid "Only convert film files to compliant MPEG files"
 msgstr "Converter só os ficheiros de filme a ficheiros MPEG"
 
-#: ../interface/wmain.ui.h:34
+#: ../interface/wmain.ui.h:32
 msgid "Output aspect ratio:"
 msgstr "Relación de aspeto (saída):"
 
-#: ../interface/wmain.ui.h:35
+#: ../interface/wmain.ui.h:33
 msgid "PAL"
 msgstr "PAL"
 
-#: ../interface/wmain.ui.h:37 ../interface/wmenu_properties.ui.h:20
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:20
 msgid "Preview menu"
 msgstr "Vista previa do menú"
 
-#: ../interface/wmain.ui.h:38
+#: ../interface/wmain.ui.h:36
 msgid "Size of chapters:"
 msgstr "Tamaño dos capítulos:"
 
-#: ../interface/wmain.ui.h:39
-msgid "Use optimizations for multicore CPUs"
-msgstr "Usar optimizacións para CPU multinúcleo"
-
-#: ../interface/wmain.ui.h:40
+#: ../interface/wmain.ui.h:37
 msgid "Video rate (Kbits/sec): "
 msgstr "Taxa de vídeo (Kbits/seg): "
 
-#: ../interface/wmain.ui.h:41
+#: ../interface/wmain.ui.h:38
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../interface/wmain.ui.h:39
 msgid "_File"
 msgstr "_Ficheiro"
 
-#: ../interface/wmain.ui.h:42
+#: ../interface/wmain.ui.h:40
 msgid "_Help"
 msgstr "_Axuda"
+
+#: ../interface/wmain.ui.h:41
+msgid "_Preferences"
+msgstr "_Preferencias"
 
 #: ../interface/wmenu_preview_ntsc.ui.h:1
 #: ../interface/wmenu_preview_pal.ui.h:1
@@ -1156,16 +1187,8 @@ msgstr ""
 "comprobar a calidade da imaxe, etc."
 
 #: ../interface/wpreview_dialog.ui.h:3
-msgid "Folder for temporary file"
-msgstr "Directorio para ficheiros temporais"
-
-#: ../interface/wpreview_dialog.ui.h:4
 msgid "Preview length:"
 msgstr "Duración da vista previa:"
-
-#: ../interface/wpreview_dialog.ui.h:5
-msgid "Temporary files folder:"
-msgstr "Directorio para os ficheiros temporais:"
 
 #: ../interface/wprograms.ui.h:1
 msgid "Can't find the following programs:"

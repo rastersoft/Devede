@@ -3,10 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-03 00:22+0200\n"
+"POT-Creation-Date: 2011-05-14 01:45+0200\n"
 "PO-Revision-Date: 2009-01-15 10:01+0200\n"
 "Last-Translator: Aleksey Kirpichnikov <alexcoder@gmail.com>\n"
 "Language-Team: Russian <alexcoder@gmail.com>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,10 +45,10 @@ msgstr ""
 "Недостаточно свободного места для создания диска\n"
 "%(total)d MBytes необходимо, но только %(free)d MBytes свободно."
 
-#: ../devede_convert.py:234 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:87 ../devede_xml_menu.py:121
-#: ../devede_xml_menu.py:472 ../devede_xml_menu.py:480
-#: ../devede_xml_menu.py:484 ../devede_xml_menu.py:488
+#: ../devede_convert.py:233 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:87 ../devede_xml_menu.py:122
+#: ../devede_xml_menu.py:473 ../devede_xml_menu.py:481
+#: ../devede_xml_menu.py:485 ../devede_xml_menu.py:489
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -55,7 +56,7 @@ msgstr ""
 "Ошибка при записи в каталог назначения.\n"
 "Проверьте права доступа и свободное место на диске."
 
-#: ../devede_convert.py:320
+#: ../devede_convert.py:319
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -70,7 +71,7 @@ msgstr ""
 "\n"
 "существует. Будет удалена при продолжении."
 
-#: ../devede_convert.py:413
+#: ../devede_convert.py:412
 msgid "Unknown error"
 msgstr "Неизвестная ошибка"
 
@@ -91,7 +92,7 @@ msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr ""
 "Звуковая дорожка меню повреждена. Используется тишина в качестве звука."
 
-#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:476
+#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:477
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -143,7 +144,7 @@ msgstr "Нет имени файла"
 msgid "Can't save the file."
 msgstr "Невозможно сохранить файл."
 
-#: ../devede_main.py:400
+#: ../devede_main.py:336
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -151,7 +152,7 @@ msgstr ""
 "Слишком много видео файлов для этого размера диска.\n"
 "Пожалуйста, выберите больший размер диска или удалите некоторые файлы."
 
-#: ../devede_main.py:460
+#: ../devede_main.py:396
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -159,7 +160,7 @@ msgstr ""
 "Некоторые файлы не являются видео файлами.\n"
 "Ничего не добавлено."
 
-#: ../devede_main.py:506
+#: ../devede_main.py:444
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -168,15 +169,15 @@ msgstr ""
 "В вашем проекте %(X)d видео файлов, но максимальное количество %(MAX)d. "
 "Пожалуйста, удалите некоторые файлы и попробуйте еще раз."
 
-#: ../devede_main.py:946
+#: ../devede_main.py:881
 msgid "no chapters"
 msgstr "нет глав"
 
-#: ../devede_main.py:1006
+#: ../devede_main.py:941
 msgid "Unsaved disc structure"
 msgstr "Не сохранённая структура диска"
 
-#: ../devede_main.py:1074
+#: ../devede_main.py:1009
 #, python-format
 msgid "Title %(X)d"
 msgstr "Раздел %(X)d"
@@ -211,11 +212,11 @@ msgstr "Файл не похож на видео файл."
 msgid "File seems to be an audio file."
 msgstr "Файл похож на звуковой файл."
 
-#: ../devede_newfiles.py:1020
+#: ../devede_newfiles.py:1019
 msgid "Please, add only one file each time."
 msgstr "Пожалуйста, добавляйте только один файл за раз."
 
-#: ../devede_newfiles.py:1033
+#: ../devede_newfiles.py:1032
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Пожалуйста, добавьте видео перед добавлением субтитров."
 
@@ -255,7 +256,7 @@ msgid ""
 "%(file_name)s"
 msgstr ""
 
-#: ../devede_video_convert.py:531
+#: ../devede_video_convert.py:534
 msgid ""
 "Conversion failed.\n"
 "It seems a bug of Mencoder."
@@ -263,13 +264,13 @@ msgstr ""
 "Ошибка при конвертации.\n"
 "Возможно баг в Mencoder."
 
-#: ../devede_video_convert.py:533
+#: ../devede_video_convert.py:536
 msgid "Also check the extra params passed to Mencoder for syntax errors."
 msgstr ""
 "Также, проверьте дополнительные параметры переданные Mencoder-у на наличие "
 "ошибок."
 
-#: ../devede_video_convert.py:566
+#: ../devede_video_convert.py:569
 msgid ""
 "Conversion failed\n"
 "Maybe you ran out of disk space?"
@@ -281,11 +282,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr "Ошибка при создании меню."
 
-#: ../devede_xml_menu.py:101 ../devede_xml_menu.py:492
+#: ../devede_xml_menu.py:102 ../devede_xml_menu.py:493
 msgid "Menu generation failed."
 msgstr "Ошибка при создании меню."
 
-#: ../devede_xml_menu.py:108 ../devede_xml_menu.py:501
+#: ../devede_xml_menu.py:109 ../devede_xml_menu.py:502
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -293,10 +294,45 @@ msgstr ""
 "Невозможно добавить кнопки к меню.\n"
 "Похоже на баг в SPUMUX."
 
-#: ../devede_xml_menu.py:467
+#: ../devede_xml_menu.py:468
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Создание меню %(menu_number)d"
+
+#: ../interface/settings.ui.h:1
+#, fuzzy
+msgid "<b>Folders</b>"
+msgstr "<b>Файлы</b>"
+
+#: ../interface/settings.ui.h:2
+msgid "<b>Options</b>"
+msgstr "<b>Настройки</b>"
+
+#: ../interface/settings.ui.h:3
+#, fuzzy
+msgid "<b>Workarounds</b>"
+msgstr "<b>Вращение</b>"
+
+#: ../interface/settings.ui.h:4
+msgid ""
+"AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
+msgstr ""
+
+#: ../interface/settings.ui.h:5
+msgid "Erase temporary files"
+msgstr "Удалить временные файлы"
+
+#: ../interface/settings.ui.h:6
+msgid "Folder for temporary file"
+msgstr "Каталог временных файлов"
+
+#: ../interface/settings.ui.h:7
+msgid "Temporary files folder:"
+msgstr "Папка для временных файлов:"
+
+#: ../interface/settings.ui.h:8
+msgid "Use optimizations for multicore CPUs"
+msgstr "Использовать оптимизацию многоядерных процессоров"
 
 #: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:3
 msgid "Clear"
@@ -598,7 +634,7 @@ msgstr "<b>Файл</b>"
 msgid "Add black bars"
 msgstr "Добавить чёрные полосы"
 
-#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:19
+#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:18
 msgid "Advanced options"
 msgstr "Расширенные настройки"
 
@@ -642,7 +678,7 @@ msgstr "FFMpeg deinterlacing фильтр"
 msgid "File properties"
 msgstr "Свойства файла"
 
-#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:27
+#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:25
 msgid "Final size (pixels):"
 msgstr "Финальное разрешение (pixels):"
 
@@ -656,7 +692,7 @@ msgstr "Шрифт:"
 msgid "Force subtitles"
 msgstr "Добавить субтитры"
 
-#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:28
+#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:26
 msgid "Frames per second: "
 msgstr "Кадров в секунду:"
 
@@ -688,7 +724,7 @@ msgstr "Median deinterlacing фильтр"
 msgid "Misc"
 msgstr "Дополнительно"
 
-#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:31
+#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:29
 msgid "NTSC"
 msgstr "NTSC"
 
@@ -704,7 +740,7 @@ msgstr "Оригинальный звуковой поток (Kbits/sec):"
 msgid "Original length (seconds): "
 msgstr "Оригинальная длина (секунд):"
 
-#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:33
+#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:31
 msgid "Original size (pixels): "
 msgstr "Оригинальное разрешение (pixels):"
 
@@ -716,7 +752,7 @@ msgstr "Оригинальный видео поток (Kbits/sec):"
 msgid "PAL/SECAM"
 msgstr "PAL/SECAM"
 
-#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:36
+#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:34
 msgid "Preview"
 msgstr "Предпросмотр"
 
@@ -925,91 +961,87 @@ msgid "<b>Menus</b>"
 msgstr "<b>Меню</b>"
 
 #: ../interface/wmain.ui.h:16
-msgid "<b>Options</b>"
-msgstr "<b>Настройки</b>"
-
-#: ../interface/wmain.ui.h:17
 msgid "<b>Titles</b>"
 msgstr "<b>Разделы</b>"
 
-#: ../interface/wmain.ui.h:18
+#: ../interface/wmain.ui.h:17
 msgid "Adjust disc usage"
 msgstr "Настройка использования диска"
 
-#: ../interface/wmain.ui.h:20
+#: ../interface/wmain.ui.h:19
 msgid "Audio rate (Kbits/sec): "
 msgstr "Звуковой поток (Kbits/sec): "
 
-#: ../interface/wmain.ui.h:21
+#: ../interface/wmain.ui.h:20
 #, fuzzy
 msgid "Create a menu with the titles"
 msgstr ""
 "п©Б√═п©Б∙╛п©Б∙═п©Б∙÷п©Б∙║п©Б∙╕я▐Б■▄я▐Б√└ п©Б∙╙п©Б∙ёп©Б∙╚я▐Б√▄ я▐Б■┌ "
 "я▐Б■─п©Б∙÷п©Б∙╔п©Б∙╒п©Б∙ёп©Б∙╘п©Б∙÷п©Б∙╙п©Б∙╕"
 
-#: ../interface/wmain.ui.h:22
+#: ../interface/wmain.ui.h:21
 msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
 msgstr "Создать образ ISO или BIN/CUE готовый для записи на диск"
 
-#: ../interface/wmain.ui.h:23
+#: ../interface/wmain.ui.h:22
 msgid "Create disc structure"
 msgstr "Создать структуру диска"
 
-#: ../interface/wmain.ui.h:24
+#: ../interface/wmain.ui.h:23
 msgid "DeVeDe"
 msgstr "DeVeDe"
 
-#: ../interface/wmain.ui.h:25
-msgid "Erase temporary files"
-msgstr "Удалить временные файлы"
-
-#: ../interface/wmain.ui.h:26
+#: ../interface/wmain.ui.h:24
 msgid "Estimated length (MBytes): "
 msgstr "Выходной размер (MBytes):"
 
-#: ../interface/wmain.ui.h:29
+#: ../interface/wmain.ui.h:27
 msgid "Length (seconds): "
 msgstr "Длина (секунд):"
 
-#: ../interface/wmain.ui.h:30
+#: ../interface/wmain.ui.h:28
 msgid "Menu options"
 msgstr "Настройки меню"
 
-#: ../interface/wmain.ui.h:32
+#: ../interface/wmain.ui.h:30
 msgid "Only convert film files to compliant MPEG files"
 msgstr "Только конвертировать файлы в корректный MPEG формат"
 
-#: ../interface/wmain.ui.h:34
+#: ../interface/wmain.ui.h:32
 msgid "Output aspect ratio:"
 msgstr "Оригинальное соотношение сторон:"
 
-#: ../interface/wmain.ui.h:35
+#: ../interface/wmain.ui.h:33
 msgid "PAL"
 msgstr "PAL"
 
-#: ../interface/wmain.ui.h:37 ../interface/wmenu_properties.ui.h:20
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:20
 msgid "Preview menu"
 msgstr "Просмотр меню"
 
-#: ../interface/wmain.ui.h:38
+#: ../interface/wmain.ui.h:36
 msgid "Size of chapters:"
 msgstr "Длина глав:"
 
-#: ../interface/wmain.ui.h:39
-msgid "Use optimizations for multicore CPUs"
-msgstr "Использовать оптимизацию многоядерных процессоров"
-
-#: ../interface/wmain.ui.h:40
+#: ../interface/wmain.ui.h:37
 msgid "Video rate (Kbits/sec): "
 msgstr "Видео поток (Kbits/sec):"
 
-#: ../interface/wmain.ui.h:41
+#: ../interface/wmain.ui.h:38
+msgid "_Edit"
+msgstr ""
+
+#: ../interface/wmain.ui.h:39
 msgid "_File"
 msgstr "_Файл"
 
-#: ../interface/wmain.ui.h:42
+#: ../interface/wmain.ui.h:40
 msgid "_Help"
 msgstr "_Справка"
+
+#: ../interface/wmain.ui.h:41
+msgid "_Preferences"
+msgstr ""
 
 #: ../interface/wmenu_preview_ntsc.ui.h:1
 #: ../interface/wmenu_preview_pal.ui.h:1
@@ -1150,16 +1182,8 @@ msgstr ""
 "качество видео, синхронизацию звука и т.д."
 
 #: ../interface/wpreview_dialog.ui.h:3
-msgid "Folder for temporary file"
-msgstr "Каталог временных файлов"
-
-#: ../interface/wpreview_dialog.ui.h:4
 msgid "Preview length:"
 msgstr "Длина предпросмотра:"
-
-#: ../interface/wpreview_dialog.ui.h:5
-msgid "Temporary files folder:"
-msgstr "Папка для временных файлов:"
 
 #: ../interface/wprograms.ui.h:1
 msgid "Can't find the following programs:"
@@ -1444,8 +1468,8 @@ msgstr "Предупреждение"
 #~ msgstr ""
 #~ "п©б╡п©Б∙ёп©Б∙║п©Б∙╛п©Б∙╔п©Б∙╙п©Б∙╛п©Б∙╓п©Б∙╚п©Б∙╛ "
 #~ "я▐Б■░п©Б∙╙п©Б∙ёп©Б∙╚я▐Б√└я▐Б■╛п©Б∙╕я▐Б■▄я▐Б√└ "
-#~ "п©Б∙╗п©Б∙╛п©Б∙╘п©Б∙╕я▐Б■╓п©Б∙ёя▐Б■┌я▐Б■▄п©Б∙║п©Б∙╛ я▐Б■°"
-#~ "п©Б∙║п©Б∙ёя▐Б■▄п©Б∙╛п©Б∙║ п©Б∙╙п©Б∙ёп©Б∙╚я▐Б√▄.\n"
+#~ "п©Б∙╗п©Б∙╛п©Б∙╘п©Б∙╕я▐Б■╓п©Б∙ёя▐Б■┌я▐Б■▄п©Б∙║п©Б∙╛ я▐Б■"
+#~ "°п©Б∙║п©Б∙ёя▐Б■▄п©Б∙╛п©Б∙║ п©Б∙╙п©Б∙ёп©Б∙╚я▐Б√▄.\n"
 #~ "п©ц╥я▐Б■─п©Б∙╛п©Б∙║п©Б∙ёя▐Б■─я▐Б√└я▐Б■▄п©Б∙ё "
 #~ "п©Б∙╚п©Б∙÷п©Б∙╘п©Б∙╕я▐Б■╓п©Б∙╕п©Б∙ё "
 #~ "я▐Б■░я▐Б■┌я▐Б■▄п©Б∙÷п©Б∙╚п©Б∙╛п©Б∙║п©Б∙╘п©Б∙ёп©Б∙╚п©Б∙╚п©Б∙╛п©п│п©Б∙╛ "

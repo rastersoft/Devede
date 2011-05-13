@@ -11,10 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-03 00:22+0200\n"
+"POT-Creation-Date: 2011-05-14 01:45+0200\n"
 "PO-Revision-Date: 2008-08-07 02:47+0200\n"
 "Last-Translator: Lars-Erik Aunevik Labori <translate@labori.nu>\n"
 "Language-Team: Norwegian/Bokmaal <i18n-nb@lister.ping.uio.no>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,10 +54,10 @@ msgstr ""
 "nødvendig med\n"
 "%(total)d Mbytes, men bare %(free)d Mbytes er ledig."
 
-#: ../devede_convert.py:234 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:87 ../devede_xml_menu.py:121
-#: ../devede_xml_menu.py:472 ../devede_xml_menu.py:480
-#: ../devede_xml_menu.py:484 ../devede_xml_menu.py:488
+#: ../devede_convert.py:233 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:87 ../devede_xml_menu.py:122
+#: ../devede_xml_menu.py:473 ../devede_xml_menu.py:481
+#: ../devede_xml_menu.py:485 ../devede_xml_menu.py:489
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -64,7 +65,7 @@ msgstr ""
 "Feilet ved skriving til målmappen.\n"
 "Kontroller at du har ledig plass og rettigheter til å lagre."
 
-#: ../devede_convert.py:320
+#: ../devede_convert.py:319
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -74,7 +75,7 @@ msgid ""
 "already exists. If you continue, it will be deleted."
 msgstr ""
 
-#: ../devede_convert.py:413
+#: ../devede_convert.py:412
 msgid "Unknown error"
 msgstr ""
 
@@ -94,7 +95,7 @@ msgstr ""
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr ""
 
-#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:476
+#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:477
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -150,13 +151,13 @@ msgstr "Uten filnavn"
 msgid "Can't save the file."
 msgstr "Klarte ikke å lagre filen"
 
-#: ../devede_main.py:400
+#: ../devede_main.py:336
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
 msgstr ""
 
-#: ../devede_main.py:460
+#: ../devede_main.py:396
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -164,23 +165,23 @@ msgstr ""
 "Noen av filene var ikke videofiler.\n"
 "Ingenting lagt til."
 
-#: ../devede_main.py:506
+#: ../devede_main.py:444
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
 "remove some files and try again."
 msgstr ""
 
-#: ../devede_main.py:946
+#: ../devede_main.py:881
 msgid "no chapters"
 msgstr "ingen kapitler"
 
-#: ../devede_main.py:1006
+#: ../devede_main.py:941
 #, fuzzy
 msgid "Unsaved disc structure"
 msgstr "Ulagret diskstruktur"
 
-#: ../devede_main.py:1074
+#: ../devede_main.py:1009
 #, python-format
 msgid "Title %(X)d"
 msgstr "Tittel %(X)d"
@@ -216,11 +217,11 @@ msgstr "Dette er ikke en videofil."
 msgid "File seems to be an audio file."
 msgstr "Dette ser ut som en lydfil."
 
-#: ../devede_newfiles.py:1020
+#: ../devede_newfiles.py:1019
 msgid "Please, add only one file each time."
 msgstr "Kun en fil om gangen."
 
-#: ../devede_newfiles.py:1033
+#: ../devede_newfiles.py:1032
 #, fuzzy
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Kun en fil om gangen."
@@ -261,7 +262,7 @@ msgid ""
 "%(file_name)s"
 msgstr ""
 
-#: ../devede_video_convert.py:531
+#: ../devede_video_convert.py:534
 msgid ""
 "Conversion failed.\n"
 "It seems a bug of Mencoder."
@@ -269,11 +270,11 @@ msgstr ""
 "Konverteringen feilet.\n"
 "Det kan vÃƒÂ¦re en feil med Mencoder."
 
-#: ../devede_video_convert.py:533
+#: ../devede_video_convert.py:536
 msgid "Also check the extra params passed to Mencoder for syntax errors."
 msgstr ""
 
-#: ../devede_video_convert.py:566
+#: ../devede_video_convert.py:569
 msgid ""
 "Conversion failed\n"
 "Maybe you ran out of disk space?"
@@ -285,11 +286,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr ""
 
-#: ../devede_xml_menu.py:101 ../devede_xml_menu.py:492
+#: ../devede_xml_menu.py:102 ../devede_xml_menu.py:493
 msgid "Menu generation failed."
 msgstr "Oppretting av meny feilet."
 
-#: ../devede_xml_menu.py:108 ../devede_xml_menu.py:501
+#: ../devede_xml_menu.py:109 ../devede_xml_menu.py:502
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -297,9 +298,45 @@ msgstr ""
 "Klarte ikke ÃƒÂ¥ legge til knappene til menyen.\n"
 "Kan vÃƒÂ¦re en feil med SPUMUX."
 
-#: ../devede_xml_menu.py:467
+#: ../devede_xml_menu.py:468
 #, python-format
 msgid "Creating menu %(menu_number)d"
+msgstr ""
+
+#: ../interface/settings.ui.h:1
+#, fuzzy
+msgid "<b>Folders</b>"
+msgstr "<b>Filer</b>"
+
+#: ../interface/settings.ui.h:2
+msgid "<b>Options</b>"
+msgstr "<b>Valg</b>"
+
+#: ../interface/settings.ui.h:3
+#, fuzzy
+msgid "<b>Workarounds</b>"
+msgstr "<b>Handling</b>"
+
+#: ../interface/settings.ui.h:4
+msgid ""
+"AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
+msgstr ""
+
+#: ../interface/settings.ui.h:5
+msgid "Erase temporary files"
+msgstr "Slett midlertidige filer"
+
+#: ../interface/settings.ui.h:6
+msgid "Folder for temporary file"
+msgstr "Mappe for midlertidige filer"
+
+#: ../interface/settings.ui.h:7
+#, fuzzy
+msgid "Temporary files folder:"
+msgstr "Slett midlertidige filer"
+
+#: ../interface/settings.ui.h:8
+msgid "Use optimizations for multicore CPUs"
 msgstr ""
 
 #: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:3
@@ -600,7 +637,7 @@ msgstr "<b>Fil</b>"
 msgid "Add black bars"
 msgstr "Legg til svarte felter"
 
-#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:19
+#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:18
 msgid "Advanced options"
 msgstr "Avanserte valg"
 
@@ -645,7 +682,7 @@ msgstr "FFMpeg linjedoblingsfilter"
 msgid "File properties"
 msgstr "Filegenskaper"
 
-#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:27
+#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:25
 msgid "Final size (pixels):"
 msgstr "Ferdig størrelse (piksler):"
 
@@ -658,7 +695,7 @@ msgstr ""
 msgid "Force subtitles"
 msgstr "Legger til undertekster "
 
-#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:28
+#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:26
 msgid "Frames per second: "
 msgstr "Bilder per sekund: "
 
@@ -691,7 +728,7 @@ msgstr "Median filter for linjedobling"
 msgid "Misc"
 msgstr "Diverse"
 
-#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:31
+#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:29
 msgid "NTSC"
 msgstr "NTSC"
 
@@ -707,7 +744,7 @@ msgstr "Opprinnelig lydkvalitet (Kbits/sek):"
 msgid "Original length (seconds): "
 msgstr "Opprinnelig lengde (sekunder): "
 
-#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:33
+#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:31
 msgid "Original size (pixels): "
 msgstr "Opprinnelig størrelse (piksler): "
 
@@ -719,7 +756,7 @@ msgstr "Opprinnelig bildekvalitet (Kbits/sek):"
 msgid "PAL/SECAM"
 msgstr "PAL/SECAM"
 
-#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:36
+#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:34
 msgid "Preview"
 msgstr "Forhåndsvisning"
 
@@ -933,89 +970,85 @@ msgid "<b>Menus</b>"
 msgstr "<b>Menyformat</b>"
 
 #: ../interface/wmain.ui.h:16
-msgid "<b>Options</b>"
-msgstr "<b>Valg</b>"
-
-#: ../interface/wmain.ui.h:17
 msgid "<b>Titles</b>"
 msgstr "<b>Titler</b>"
 
-#: ../interface/wmain.ui.h:18
+#: ../interface/wmain.ui.h:17
 msgid "Adjust disc usage"
 msgstr ""
 
-#: ../interface/wmain.ui.h:20
+#: ../interface/wmain.ui.h:19
 msgid "Audio rate (Kbits/sec): "
 msgstr "Lydkvalitet (Kbits/sek): "
 
-#: ../interface/wmain.ui.h:21
+#: ../interface/wmain.ui.h:20
 #, fuzzy
 msgid "Create a menu with the titles"
 msgstr "Legg til en meny med tittelen"
 
-#: ../interface/wmain.ui.h:22
+#: ../interface/wmain.ui.h:21
 msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
 msgstr "Lag et ISO- eller BIN/CUE- bilde, klar til å brennes på en plate"
 
-#: ../interface/wmain.ui.h:23
+#: ../interface/wmain.ui.h:22
 msgid "Create disc structure"
 msgstr "Lag diskstruktur"
 
-#: ../interface/wmain.ui.h:24
+#: ../interface/wmain.ui.h:23
 msgid "DeVeDe"
 msgstr "DeVeDe"
 
-#: ../interface/wmain.ui.h:25
-msgid "Erase temporary files"
-msgstr "Slett midlertidige filer"
-
-#: ../interface/wmain.ui.h:26
+#: ../interface/wmain.ui.h:24
 msgid "Estimated length (MBytes): "
 msgstr "Antatt størrelse (MBytes): "
 
-#: ../interface/wmain.ui.h:29
+#: ../interface/wmain.ui.h:27
 msgid "Length (seconds): "
 msgstr "Lengde (sekunder): "
 
-#: ../interface/wmain.ui.h:30
+#: ../interface/wmain.ui.h:28
 msgid "Menu options"
 msgstr "Menyvalg"
 
-#: ../interface/wmain.ui.h:32
+#: ../interface/wmain.ui.h:30
 msgid "Only convert film files to compliant MPEG files"
 msgstr "Konverter filmfiler kun til MPEG filstandarden"
 
-#: ../interface/wmain.ui.h:34
+#: ../interface/wmain.ui.h:32
 msgid "Output aspect ratio:"
 msgstr "Utdata størrelsesforhold:"
 
-#: ../interface/wmain.ui.h:35
+#: ../interface/wmain.ui.h:33
 msgid "PAL"
 msgstr ""
 
-#: ../interface/wmain.ui.h:37 ../interface/wmenu_properties.ui.h:20
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:20
 msgid "Preview menu"
 msgstr "Forhåndsvisning av menyen"
 
-#: ../interface/wmain.ui.h:38
+#: ../interface/wmain.ui.h:36
 msgid "Size of chapters:"
 msgstr "Kapittelstørrelse:"
 
-#: ../interface/wmain.ui.h:39
-msgid "Use optimizations for multicore CPUs"
-msgstr ""
-
-#: ../interface/wmain.ui.h:40
+#: ../interface/wmain.ui.h:37
 msgid "Video rate (Kbits/sec): "
 msgstr "Videokvalitet (Kbits/sek): "
 
-#: ../interface/wmain.ui.h:41
+#: ../interface/wmain.ui.h:38
+msgid "_Edit"
+msgstr ""
+
+#: ../interface/wmain.ui.h:39
 msgid "_File"
 msgstr "_Fil"
 
-#: ../interface/wmain.ui.h:42
+#: ../interface/wmain.ui.h:40
 msgid "_Help"
 msgstr "_Hjelp"
+
+#: ../interface/wmain.ui.h:41
+msgid "_Preferences"
+msgstr ""
 
 #: ../interface/wmenu_preview_ntsc.ui.h:1
 #: ../interface/wmenu_preview_pal.ui.h:1
@@ -1164,18 +1197,9 @@ msgid ""
 msgstr ""
 
 #: ../interface/wpreview_dialog.ui.h:3
-msgid "Folder for temporary file"
-msgstr "Mappe for midlertidige filer"
-
-#: ../interface/wpreview_dialog.ui.h:4
 #, fuzzy
 msgid "Preview length:"
 msgstr "Forhåndsvisning av menyen"
-
-#: ../interface/wpreview_dialog.ui.h:5
-#, fuzzy
-msgid "Temporary files folder:"
-msgstr "Slett midlertidige filer"
 
 #: ../interface/wprograms.ui.h:1
 msgid "Can't find the following programs:"
