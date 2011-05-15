@@ -238,8 +238,6 @@ class load_save_config:
 		if global_vars2.has_key("erase_files")==False:
 			w=self.tree.get_object("create_iso")
 			w.set_active(True)
-			w=self.tree.get_object("erase_files")
-			w.set_active(True)
 
 		self.global_vars["struct_name"]=file_name # update the path
 		
@@ -310,9 +308,7 @@ class load_save_config:
 			vars["menu_title_shadow"]=self.global_vars["menu_title_shadow"]
 			vars["menu_title_text"]=self.global_vars["menu_title_text"]
 			vars["menu_title_fontname"]=self.global_vars["menu_title_fontname"]
-			
-			w=self.tree.get_object("erase_files")
-			vars["erase_files"]=w.get_active()
+
 			if self.tree.get_object("create_iso").get_active():
 				vars["action_todo"]=2
 			elif self.tree.get_object("create_dvd").get_active():
@@ -320,7 +316,6 @@ class load_save_config:
 			else:
 				vars["action_todo"]=0
 
-			print "Erase: "+str(vars["erase_files"])
 			print "Action: "+str(vars["action_todo"])
 			print "Variables: "+str(vars)
 			pickle.dump(vars,output)

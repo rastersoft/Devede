@@ -476,6 +476,11 @@ def load_config(global_vars):
 					global_vars["AC3_fix"]=True
 				else:
 					global_vars["AC3_fix"]=False
+			if linea[:16]=="erase_tmp_files:":
+				if linea[16:]=="1":
+					global_vars["erase_files"]=True
+				else:
+					global_vars["erase_files"]=False
 			#if linea[:]==":":
 			#	global_vars[""]=linea[:]
 		archivo.close()
@@ -515,6 +520,10 @@ def save_config(global_vars):
 			archivo.write("AC3_fix:1\n")
 		else:
 			archivo.write("AC3_fix:0\n")
+		if global_vars["erase_files"]:
+			archivo.write("erase_tmp_files:1")
+		else:
+			archivo.write("erase_tmp_files:0")
 		archivo.close()
 	except IOError:
 		pass

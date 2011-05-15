@@ -80,7 +80,7 @@ class iso_generator(devede_executor.executor):
 	
 		volume="DVDVIDEO"
 		self.print_error=_("Failed to create the ISO image\nMaybe you ran out of disk space")
-		self.launch_program([command,"-dvd-video","-V",volume,"-v","-o",filefolder+filename+".iso",filefolder+filename])
+		self.launch_program([command,"-dvd-video","-V",volume,"-v","-udf","-o",filefolder+filename+".iso",filefolder+filename])
 
 
 	def set_progress_bar(self):

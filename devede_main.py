@@ -116,7 +116,6 @@ class main_window:
 		""" Sets the default GLOBAL vars each time the user wants to create a new disc """
 		
 		self.global_vars["action_todo"]=2
-		self.global_vars["erase_files"]=True
 		self.global_vars["struct_name"]=""
 		self.global_vars["do_menu"]=True
 		self.global_vars["with_menu"]=True
@@ -456,8 +455,8 @@ class main_window:
 				actions=3
 	
 		self.global_vars["number_actions"]=actions
-		w=self.tree.get_object("erase_files")
-		self.global_vars["erase_temporary_files"]=w.get_active()
+		
+		self.global_vars["erase_temporary_files"]=self.global_vars["erase_files"]
 		
 		print "Threads: "+str(self.global_vars["multicore"])
 		conversor=devede_convert.create_all(self.gladefile,self.structure,self.global_vars,self.callback2)
