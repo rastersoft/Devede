@@ -88,7 +88,8 @@ class iso_generator(devede_executor.executor):
 		punto=self.cadena.find("done, estimate")
 		if (punto!=-1):
 			if ((self.cadena[punto-6].isdigit()) and ((self.cadena[punto-7].isdigit()) or (self.cadena[punto-7]==" "))):
-				percent2=float(self.cadena[punto-7:punto-2])
+				value=self.cadena[punto-7:punto-2]
+				percent2=float(value.replace(",","."))
 				self.bar.set_fraction(percent2/100)
 				self.bar.set_text(str(int(percent2))+"%")
 			return True

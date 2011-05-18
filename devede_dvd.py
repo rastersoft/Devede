@@ -66,7 +66,7 @@ class dvd_generator(devede_executor.executor):
 					if (position2!=-1):
 						cadena=self.cadena[position2-2:position2]
 						self.bar.set_text(cadena+"%")
-						self.bar.set_fraction((float(cadena))/100.0)
+						self.bar.set_fraction((float(cadena.replace(",",".")))/100.0)
 						self.read_chars=200
 						return True
 		return False
