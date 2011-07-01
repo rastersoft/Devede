@@ -193,11 +193,13 @@ class main_window:
 			w6.hide()
 		
 		w1 = self.tree.get_object("frame5") # ACTION frame
+		w2 = self.tree.get_object("expander2")
 		if self.disctocreate == "divx":
 			w1.hide()
 			self.global_vars["action_todo"]=0
 			w = self.tree.get_object("only_convert")
 			w.set_active(True)
+			w2.hide()
 		else:
 			w1.show()
 			if self.global_vars["action_todo"]==2:
@@ -208,6 +210,7 @@ class main_window:
 				w=self.tree.get_object("only_convert")
 				self.global_vars["action_todo"]=0
 			w.set_active(True)
+			w2.show()
 	
 		# now select the first title and chapter
 		
