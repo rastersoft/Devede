@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devede-3.14.0_de_DE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-14 01:45+0200\n"
+"POT-Creation-Date: 2011-07-03 23:27+0200\n"
 "PO-Revision-Date: 2010-02-24 19:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: german <debian-l10n-german@lists.debian.org>\n"
@@ -139,15 +139,15 @@ msgstr ""
 "Kan menumuzieknummer niet vinden. De schijfstructuur wordt nu zonder geluid "
 "geopend, vergeet niet om dit te corrigeren voordat u de schijf aanmaakt."
 
-#: ../devede_loadsave.py:278
+#: ../devede_loadsave.py:276
 msgid "No filename"
 msgstr "Geen bestandsnaam"
 
-#: ../devede_loadsave.py:329
+#: ../devede_loadsave.py:324
 msgid "Can't save the file."
 msgstr "Kan bestand niet opslaan."
 
-#: ../devede_main.py:336
+#: ../devede_main.py:338
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -155,7 +155,7 @@ msgstr ""
 "Te veel video's voor deze schijfgrootte.\n"
 "Selecteer een grotere schijf of verwijder enige video's."
 
-#: ../devede_main.py:396
+#: ../devede_main.py:398
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -163,7 +163,7 @@ msgstr ""
 "Enkele bestanden zijn geen videobestanden.\n"
 "Geen bestanden toegevoegd."
 
-#: ../devede_main.py:444
+#: ../devede_main.py:446
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -172,15 +172,15 @@ msgstr ""
 "Uw project bevat %(X)d videobestanden, maar het maximum is %(MAX)d. "
 "Verwijder enige bestanden en probeer het opnieuw."
 
-#: ../devede_main.py:881
+#: ../devede_main.py:883
 msgid "no chapters"
 msgstr "Geen hoofdstukken"
 
-#: ../devede_main.py:941
+#: ../devede_main.py:943
 msgid "Unsaved disc structure"
 msgstr "Schijfstructuur niet opgeslagen"
 
-#: ../devede_main.py:1009
+#: ../devede_main.py:1011
 #, python-format
 msgid "Title %(X)d"
 msgstr "Titel %(X)d"

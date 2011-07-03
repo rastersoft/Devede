@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.16.0 beta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-14 01:45+0200\n"
+"POT-Creation-Date: 2011-07-03 23:27+0200\n"
 "PO-Revision-Date: 2010-01-25 15:25+0100\n"
 "Last-Translator: Henrik Kristiansen <henrik.g.kristiansen@gmail.com>\n"
 "Language-Team: Danish < >\n"
@@ -141,15 +141,15 @@ msgstr ""
 "Kan ikke finde menu lydfilen. Disk strukturen vil blive åbnet med en lydløs "
 "lydfil, så glem ikke at rette dette før oprettelse af disken."
 
-#: ../devede_loadsave.py:278
+#: ../devede_loadsave.py:276
 msgid "No filename"
 msgstr "Ingen filnavn"
 
-#: ../devede_loadsave.py:329
+#: ../devede_loadsave.py:324
 msgid "Can't save the file."
 msgstr "Kan ikke gemme filen"
 
-#: ../devede_main.py:336
+#: ../devede_main.py:338
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -157,7 +157,7 @@ msgstr ""
 "For mange videoer til denne disk størrelse.\n"
 "Vælg en større disk type eller fjen nogle videoer"
 
-#: ../devede_main.py:396
+#: ../devede_main.py:398
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -165,7 +165,7 @@ msgstr ""
 "Nogle filer var ikke video filer.\n"
 "Ingen tilføjet"
 
-#: ../devede_main.py:444
+#: ../devede_main.py:446
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -174,15 +174,15 @@ msgstr ""
 "Dit projekt indeholder %(X)d film filer, men maxium er %(MAX)d. Fjern nogle "
 "filer og prøv igen."
 
-#: ../devede_main.py:881
+#: ../devede_main.py:883
 msgid "no chapters"
 msgstr "Ingen kapitler"
 
-#: ../devede_main.py:941
+#: ../devede_main.py:943
 msgid "Unsaved disc structure"
 msgstr "Ikke gemt disk struktur"
 
-#: ../devede_main.py:1009
+#: ../devede_main.py:1011
 #, python-format
 msgid "Title %(X)d"
 msgstr "Titel %(X)d"

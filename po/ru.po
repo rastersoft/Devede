@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-14 01:45+0200\n"
+"POT-Creation-Date: 2011-07-03 23:27+0200\n"
 "PO-Revision-Date: 2009-01-15 10:01+0200\n"
 "Last-Translator: Aleksey Kirpichnikov <alexcoder@gmail.com>\n"
 "Language-Team: Russian <alexcoder@gmail.com>\n"
@@ -136,15 +136,15 @@ msgstr ""
 "Невозможно найти звуковую дорожку меню. Будет использована пустая дорожка, "
 "но не забудьте исправить это перед созданием диска."
 
-#: ../devede_loadsave.py:278
+#: ../devede_loadsave.py:276
 msgid "No filename"
 msgstr "Нет имени файла"
 
-#: ../devede_loadsave.py:329
+#: ../devede_loadsave.py:324
 msgid "Can't save the file."
 msgstr "Невозможно сохранить файл."
 
-#: ../devede_main.py:336
+#: ../devede_main.py:338
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -152,7 +152,7 @@ msgstr ""
 "Слишком много видео файлов для этого размера диска.\n"
 "Пожалуйста, выберите больший размер диска или удалите некоторые файлы."
 
-#: ../devede_main.py:396
+#: ../devede_main.py:398
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -160,7 +160,7 @@ msgstr ""
 "Некоторые файлы не являются видео файлами.\n"
 "Ничего не добавлено."
 
-#: ../devede_main.py:444
+#: ../devede_main.py:446
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -169,15 +169,15 @@ msgstr ""
 "В вашем проекте %(X)d видео файлов, но максимальное количество %(MAX)d. "
 "Пожалуйста, удалите некоторые файлы и попробуйте еще раз."
 
-#: ../devede_main.py:881
+#: ../devede_main.py:883
 msgid "no chapters"
 msgstr "нет глав"
 
-#: ../devede_main.py:941
+#: ../devede_main.py:943
 msgid "Unsaved disc structure"
 msgstr "Не сохранённая структура диска"
 
-#: ../devede_main.py:1009
+#: ../devede_main.py:1011
 #, python-format
 msgid "Title %(X)d"
 msgstr "Раздел %(X)d"

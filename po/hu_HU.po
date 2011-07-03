@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.16.8 - 20100621\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-14 01:45+0200\n"
+"POT-Creation-Date: 2011-07-03 23:27+0200\n"
 "PO-Revision-Date: 2010-06-21 10:14+0100\n"
 "Last-Translator: csola48 <csola48@gmail.com>\n"
 "Language-Team: csola48 <csola48@gmail.com>\n"
@@ -146,15 +146,15 @@ msgstr ""
 "alapértelmezett silent.ogg hangsávval, ezért ne felejtse el megjavítani azt "
 "mielőtt létrehozza a lemezt."
 
-#: ../devede_loadsave.py:278
+#: ../devede_loadsave.py:276
 msgid "No filename"
 msgstr "Nincs fájlnév"
 
-#: ../devede_loadsave.py:329
+#: ../devede_loadsave.py:324
 msgid "Can't save the file."
 msgstr "A fájl nem menthető."
 
-#: ../devede_main.py:336
+#: ../devede_main.py:338
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -162,7 +162,7 @@ msgstr ""
 "Túl sok a videó ehhez a lemez mérethez.\n"
 "Válasszon egy nagyobb méretű lemez típust vagy távolítson el néhány videót."
 
-#: ../devede_main.py:396
+#: ../devede_main.py:398
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -170,7 +170,7 @@ msgstr ""
 "Néhány fájl nem videófájl.\n"
 "Hozzáadás nem történt."
 
-#: ../devede_main.py:444
+#: ../devede_main.py:446
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -179,15 +179,15 @@ msgstr ""
 "A projekt %(X)d film fájlt tartalmaz, de az csak maximum %(MAX)d lehet. "
 "Távolítson el néhány fájlt és próbálja újra."
 
-#: ../devede_main.py:881
+#: ../devede_main.py:883
 msgid "no chapters"
 msgstr "nincsenek fejezetek"
 
-#: ../devede_main.py:941
+#: ../devede_main.py:943
 msgid "Unsaved disc structure"
 msgstr "Nem mentett lemez struktúra"
 
-#: ../devede_main.py:1009
+#: ../devede_main.py:1011
 #, python-format
 msgid "Title %(X)d"
 msgstr "Cím %(X)d"

@@ -34,7 +34,7 @@ import shutil
 import pickle
 import cairo
 
-print "DeVeDe 3.16.9"
+print "DeVeDe 3.16.10"
 if (sys.platform!="win32") and (sys.platform!="win64"):
 	try:
 		print "Locale: "+str(os.environ["LANG"])

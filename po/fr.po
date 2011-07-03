@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-14 01:45+0200\n"
+"POT-Creation-Date: 2011-07-03 23:27+0200\n"
 "PO-Revision-Date: 2010-01-31 12:19+0100\n"
 "Last-Translator: Arnaud Leroy <jacknaquunoeil@gmail.com>\n"
 "Language-Team: \n"
@@ -143,15 +143,15 @@ msgstr ""
 "quand même ouverte, mais avec la bande muette par défaut: n'oubliez donc pas "
 "de la mettre à jour avant de créer le disque."
 
-#: ../devede_loadsave.py:278
+#: ../devede_loadsave.py:276
 msgid "No filename"
 msgstr "Pas de nom de fichier"
 
-#: ../devede_loadsave.py:329
+#: ../devede_loadsave.py:324
 msgid "Can't save the file."
 msgstr "Impossible d'enregistrer le fichier."
 
-#: ../devede_main.py:336
+#: ../devede_main.py:338
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -159,7 +159,7 @@ msgstr ""
 "Trop de vidéos pour cette taille de disque.\n"
 "SVP, sélectionnez un type de disque plus grand ou supprimez quelques vidéos."
 
-#: ../devede_main.py:396
+#: ../devede_main.py:398
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -167,7 +167,7 @@ msgstr ""
 "Certains fichiers ne contiennent pas de vidéo.\n"
 "Aucun fichier ajouté."
 
-#: ../devede_main.py:444
+#: ../devede_main.py:446
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -176,15 +176,15 @@ msgstr ""
 "Votre projet contient %(X)d fichiers de films, mais le maximum est %(MAX)d. "
 "SVP, supprimez quelques fichiers et réessayez."
 
-#: ../devede_main.py:881
+#: ../devede_main.py:883
 msgid "no chapters"
 msgstr "Pas de chapitres"
 
-#: ../devede_main.py:941
+#: ../devede_main.py:943
 msgid "Unsaved disc structure"
 msgstr "Structure de disque non enregistrée"
 
-#: ../devede_main.py:1009
+#: ../devede_main.py:1011
 #, python-format
 msgid "Title %(X)d"
 msgstr "Titre %(X)d"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ca\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-14 01:45+0200\n"
+"POT-Creation-Date: 2011-07-03 23:27+0200\n"
 "PO-Revision-Date: 2010-01-26 21:49+0100\n"
 "Last-Translator: Joan Farrerons <jfarrerons@economistes.com>\n"
 "Language-Team: catala <ca@li.org>\n"
@@ -146,15 +146,15 @@ msgstr ""
 "disc amb una pista silenciosa, però no oblideu d'esmenar aquest problema "
 "abans de crear el disc."
 
-#: ../devede_loadsave.py:278
+#: ../devede_loadsave.py:276
 msgid "No filename"
 msgstr "Manca el nom del fitxer"
 
-#: ../devede_loadsave.py:329
+#: ../devede_loadsave.py:324
 msgid "Can't save the file."
 msgstr "No es pot desar el fitxer."
 
-#: ../devede_main.py:336
+#: ../devede_main.py:338
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -162,7 +162,7 @@ msgstr ""
 "Hi ha massa vídeos per a aquesta mida de disc.\n"
 "Escolliu un disc més gran o suprimiu alguns vídeos."
 
-#: ../devede_main.py:396
+#: ../devede_main.py:398
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -170,7 +170,7 @@ msgstr ""
 "Alguns fitxers no eren de vídeo.\n"
 "No se n'ha afegit cap."
 
-#: ../devede_main.py:444
+#: ../devede_main.py:446
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -179,15 +179,15 @@ msgstr ""
 "El projecte conté %(X)d fitxers de pel·lícula, però el màxim és %(MAX)d. "
 "Suprimiu alguns fitxers i torneu-ho a provar."
 
-#: ../devede_main.py:881
+#: ../devede_main.py:883
 msgid "no chapters"
 msgstr "sense capítols"
 
-#: ../devede_main.py:941
+#: ../devede_main.py:943
 msgid "Unsaved disc structure"
 msgstr "L'estructura del disc no s'ha desat"
 
-#: ../devede_main.py:1009
+#: ../devede_main.py:1011
 #, python-format
 msgid "Title %(X)d"
 msgstr "Títol %(X)d"

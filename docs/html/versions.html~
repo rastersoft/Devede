@@ -10,10 +10,18 @@
 
 <p><h2>History of versions</h2></p>
 
+<p><b>Version 3.17.0 (2011-07-03)</b></p>
+<ul>
+<li>Fixed a bug in MKISOFS, when it shows decimals with a comman instead of a dot</li>
+<li>Defines the VIDEO_FORMAT environment variable, needed in current SPUMUX versions</li>
+<li>Added bugfix AC3_FIX for current MENCODER versions</li>
+</ul>
+
+
 <p><b>Version 3.16.9 (2010-07-03)</b></p>
 <ul>
 <li>Added the license in the About dialog</li>
-<li>Added </li>
+<li>Added hungarian translation</li>
 </ul>
 
 <p><b>Version 3.16.8 (2010-04-18)</b></p>

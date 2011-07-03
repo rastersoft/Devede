@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devede\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-14 01:45+0200\n"
+"POT-Creation-Date: 2011-07-03 23:27+0200\n"
 "PO-Revision-Date: 2010-01-25 00:11+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -141,15 +141,15 @@ msgstr ""
 "ändå med ett tyst ljudspår så glöm inte att rätta till den innan du skapar "
 "skivan."
 
-#: ../devede_loadsave.py:278
+#: ../devede_loadsave.py:276
 msgid "No filename"
 msgstr "Inget filnamn"
 
-#: ../devede_loadsave.py:329
+#: ../devede_loadsave.py:324
 msgid "Can't save the file."
 msgstr "Kan inte spara filen."
 
-#: ../devede_main.py:336
+#: ../devede_main.py:338
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -157,7 +157,7 @@ msgstr ""
 "För många videor för denna diskstorlek.\n"
 "Välj en större disktyp eller ta bort några videor."
 
-#: ../devede_main.py:396
+#: ../devede_main.py:398
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -165,7 +165,7 @@ msgstr ""
 "Några av filerna var inte videofiler.\n"
 "Inga lades till."
 
-#: ../devede_main.py:444
+#: ../devede_main.py:446
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -174,15 +174,15 @@ msgstr ""
 "Ditt projekt innehåller %(X)d filmfiler men maximalt antal är %(MAX)d. Ta "
 "bort några filer och försök igen."
 
-#: ../devede_main.py:881
+#: ../devede_main.py:883
 msgid "no chapters"
 msgstr "inga kapitel"
 
-#: ../devede_main.py:941
+#: ../devede_main.py:943
 msgid "Unsaved disc structure"
 msgstr "Osparad skivstruktur"
 
-#: ../devede_main.py:1009
+#: ../devede_main.py:1011
 #, python-format
 msgid "Title %(X)d"
 msgstr "Titel %(X)d"
