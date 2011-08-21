@@ -9,8 +9,8 @@
     <property name="icon">devede.svg</property>
     <property name="type_hint">normal</property>
     <property name="program_name">DeVeDe</property>
-    <property name="version">3.17.0</property>
-    <property name="copyright">(C)2006-2010 Raster Software Vigo,
+    <property name="version">3.17.1</property>
+    <property name="copyright">(C)2006-2011 Raster Software Vigo,
 Peter Gill and Gustavo Sanchez</property>
     <property name="website">http://www.rastersoft.com/programas/devede.html</property>
     <property name="license">DeVeDe is free software; you can redistribute it and/or modify

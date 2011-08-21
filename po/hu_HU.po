@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: DeVeDe 3.16.8 - 20100621\n"
+"Project-Id-Version: DeVeDe 3.17.0 - 20110703\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-03 23:27+0200\n"
-"PO-Revision-Date: 2010-06-21 10:14+0100\n"
+"POT-Creation-Date: 2011-07-20 22:58+0200\n"
+"PO-Revision-Date: 2011-07-12 11:31+0100\n"
 "Last-Translator: csola48 <csola48@gmail.com>\n"
 "Language-Team: csola48 <csola48@gmail.com>\n"
 "Language: \n"
@@ -313,23 +313,21 @@ msgid "Creating menu %(menu_number)d"
 msgstr "Menü készítése %(menu_number)d"
 
 #: ../interface/settings.ui.h:1
-#, fuzzy
 msgid "<b>Folders</b>"
-msgstr "<b>Fájlok</b>"
+msgstr "<b>Gyűjtők</b>"
 
 #: ../interface/settings.ui.h:2
 msgid "<b>Options</b>"
 msgstr "<b>Opciók</b>"
 
 #: ../interface/settings.ui.h:3
-#, fuzzy
 msgid "<b>Workarounds</b>"
-msgstr "<b>Forgatás</b>"
+msgstr "<b>Áthidaló megoldások</b>"
 
 #: ../interface/settings.ui.h:4
 msgid ""
 "AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
-msgstr ""
+msgstr "Az AC3 fix áthidaló megoldás hang nélkül a Mencoder beta használatához"
 
 #: ../interface/settings.ui.h:5
 msgid "Erase temporary files"
@@ -349,7 +347,7 @@ msgstr "Többmagú CPU optimalizálás választása"
 
 #: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:3
 msgid "Clear"
-msgstr "Tiszta"
+msgstr "Törlés"
 
 #: ../interface/add_subtitle2.ui.h:2 ../interface/add_subtitle.ui.h:4
 msgid "Encoding: "
@@ -1030,7 +1028,7 @@ msgstr "Videó sebesség (kbit/sec):"
 
 #: ../interface/wmain.ui.h:38
 msgid "_Edit"
-msgstr ""
+msgstr "Sz_erkesztés"
 
 #: ../interface/wmain.ui.h:39
 msgid "_File"
@@ -1042,7 +1040,7 @@ msgstr "_Súgó"
 
 #: ../interface/wmain.ui.h:41
 msgid "_Preferences"
-msgstr ""
+msgstr "_Beállítások"
 
 #: ../interface/wmenu_preview_ntsc.ui.h:1
 #: ../interface/wmenu_preview_pal.ui.h:1
