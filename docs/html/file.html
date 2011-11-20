@@ -34,7 +34,8 @@ the rigth framerate and will play fine in all TV sets, but maybe the motion won'
 be.</p>
 
 <p>Then you can choose the audio track to use (currently DeVeDe can set only one audio track per movie), and
-adjust its volume if it is too low or too loud.</p>
+adjust its volume if it is too low or too loud. These options aren't available yet if you are using FFMPEG instead
+of Mencoder.</p>
 
 <p>If you are creating a VCD, sVCD or CVD, you can choose if you want to put the whole file, or only the first
 or the second half. This is specially usefull when creating VCDs: you can cut a long film in two disks if it's
@@ -122,7 +123,7 @@ the camera rotated (example: movies filmed with the mobil phone).</li>
 <li><b>Mirror</b>: allows to flip horizontally or vertically the video.</li>
 
 <li><b>Field order</b>: when you have an interlaced video (like video from a DV camera), and the field order is incorrect,
-you can change it just by checking this option.</li>
+you can change it just by checking this option. This option is not yet available when using FFMPEG instead of Mencoder.</li>
 
 <li><b>Scaling mode</b>: here you can choose the expand method to use when the aspect ratio of the original file is not 4/3.
 The first method is the preferred, and consists in adding the classic black bars up and down. It has the
@@ -144,7 +145,8 @@ have better quality at the cost of slower conversion.</li>
 8x8 block, giving more video quality at the cost of a little slower conversion.</li>
 
 <li><b>Two pass encoding</b>: when marked, it will do a two-pass encoding of this movie. This gives much better quality
-at the cost of being slower. Marking <b>Turbo 1st pass</b> will make it slightly faster.</li>
+at the cost of being slower. Marking <b>Turbo 1st pass</b> will make it slightly faster (this option is used automatically
+when working with FFMPEG, so it is not shown).</li>
 
 <li><b>Deinterlacing</b>: allows to apply a deinterlace algorithm to the video. Useful when creating
 a DVD from a TV program or TV camera. You have five different algoritms to choose.</li>
@@ -188,16 +190,16 @@ as needed for a DVD, allowing to use these files without quality loss.</li>
 allows for up to 15-frame GOPs for PAL or up to 18-frame GOPs for NTSC, some DVD players dislikes GOPs bigger
 than 12. If you have problems to play DVDs created with the default option, check this.</li>
 
-<li><b>Extra parameters for Mencoder</b>: allows you to add extra parameters to <b>Mencoder</b>, allowing
+<li><b>Extra parameters for coder</b>: allows you to add extra parameters to <b>Mencoder</b> or <b>FFMpeg</b>, allowing
 you to add hardcoded subtitles, set picture quality, and much more. Is divided in three parts:</li>
 <ul>
-<li><b>Main</b>: here you can add "classic" parameters to Mencoder, like <b>-sub</b> (to hard-render
+<li><b>Main</b>: here you can add "classic" parameters, like <b>-sub</b> (to hard-render
 subtitles in the file). Each parameter is prepended with a dash, and uses blank space as separator. Remember
 to use '\ ' to put blank spaces. An example: <b>-sub /home/raster/holidays\ at\ galicia.sub</b> will hard
 render the subtitles from the file "holidays at galicia.sub".</li>
 <li><b>-VF</b>: allows to add extra sub-parameters in the -vf parameter. Parameters uses comma as separator.</li>
 <li><b>-LAVCOPTS</b>: allows to add extra sub-parameters in the -lavcopts parameter. Parameters uses colon as
-separator.</li>
+separator. This is not available when using FFMpeg.</li>
 </ul>
 </ul>
 

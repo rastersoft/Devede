@@ -38,11 +38,14 @@ import gtk
 import devede_other
 import gobject
 import cairo
+import dbus
+
 if (sys.platform=="win32") or (sys.platform=="win64"):
 	import win32api
 
 import devede_other
 import devede_video_convert
+import devede_ffmpeg_convert
 import devede_subtitles
 import devede_xml_menu
 import devede_delete
@@ -281,6 +284,7 @@ class create_all:
 			wdir.set_current_folder(self.global_vars["finalfolder"])
 		wfile=newtree.get_object("iso_filename")
 		wfolder_dialog=newtree.get_object("wfolder_dialog")
+		do_shdw=newtree.get_object("do_shutdown")
 		wfile.set_text("movie")
 		wfile.connect("activate",self.on_iso_filename_activate,wfolder_dialog)
 		wfile.connect("changed",self.iso_changed,newtree)
@@ -289,18 +293,23 @@ class create_all:
 
 		wfolder_dialog.show()
 		wfile.grab_focus()
+		print "Entro en RUN"
 		value=wfolder_dialog.run()
-		
+		print "Salgo de RUN"
+		self.global_vars["shutdown_after_disc"]=do_shdw.get_active()
 		self.filename=wfile.get_text()
 		self.filename.replace("/","_")
 		self.filename.replace("|","_")
 		self.filename.replace("\\","_")
-			
+		
 		filefolder=wdir.get_current_folder()
 		
 		wfolder_dialog.hide()
 		wfolder_dialog.destroy()
 		if value!=-6:
+			self.window.hide()
+			self.window.destroy()
+			(self.main_window_callback)()
 			return False
 		
 		self.global_vars["finalfolder"]=filefolder
@@ -322,6 +331,9 @@ class create_all:
 			w.hide()
 			w.destroy()
 			if value!=2:
+				self.window.hide()
+				self.window.destroy()
+				(self.main_window_callback)()
 				return False
 		
 		try:
@@ -432,13 +444,19 @@ class create_all:
 			else:
 				encpass = int(action[0][1])
 			print "Segundos "+str(self.seconds)
-			self.runner=devede_video_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
+			if (self.global_vars["use_ffmpeg"]):
+				self.runner=devede_ffmpeg_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
+			else:
+				self.runner=devede_video_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
 			return True
 		
 		if action[0]=="C2":
 			title=action[1]
 			chapter=action[2]
-			self.runner=devede_video_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
+			if (self.global_vars["use_ffmpeg"]):
+				self.runner=devede_ffmpeg_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
+			else:
+				self.runner=devede_video_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
 			return True
 		
 		if action[0]=="S":
@@ -472,7 +490,7 @@ class create_all:
 				w.hide()
 				if ret!=-6:
 					break
-				while gtk.events_pending():
+				while gtk.events_pending():	
 					gtk.main_iteration()
 			w.destroy()
 			os.remove(fname)
@@ -502,6 +520,31 @@ class create_all:
 
 		self.window.hide()
 		self.window.destroy()
+		if (self.global_vars["shutdown_after_disc"]):
+			print "\n\nApago el ordenador\n\n"
+			failure=False
+			
+			# First, try with ConsoleKit
+			try:
+				bus = dbus.SystemBus()
+				bus_object = bus.get_object("org.freedesktop.ConsoleKit", "/org/freedesktop/ConsoleKit/Manager")
+				bus_object.Stop(dbus_interface="org.freedesktop.ConsoleKit.Manager")
+			except:
+				failure=True
+			if (failure):
+				failure=False
+				
+				# If it fails, try with HAL
+				try:
+					bus = dbus.SystemBus()
+					bus_object = bus.get_object("org.freedesktop.Hal", "/org/freedesktop/Hal/devices/computer")
+					bus_object.Shutdown(dbus_interface="org.freedesktop.Hal.Device.SystemPowerManagement")
+				except:
+					failure=True
+
+			if (failure==False):
+				gtk.main_quit()
+
 		newtree=devede_other.create_tree(self,"wend_dialog",self.gladefile,False)
 		label=newtree.get_object("elapsed")
 		tiempo2=devede_other.return_time(time.time()-self.tiempo,True)
@@ -515,6 +558,7 @@ class create_all:
 		newtree = None
 		gc.collect()
 		(self.main_window_callback)()
+		
 
 
 	def show_error(self,message):

@@ -481,6 +481,17 @@ def load_config(global_vars):
 					global_vars["erase_files"]=True
 				else:
 					global_vars["erase_files"]=False
+			if linea[:11]=="use_ffmpeg:":
+				if linea[11:]=="1":
+					global_vars["use_ffmpeg"]=True
+				else:
+					global_vars["use_ffmpeg"]=False
+			if linea[:15]=="warning_ffmpeg:":
+				if linea[15:]=="1":
+					global_vars["warning_ffmpeg"]=True
+				else:
+					global_vars["warning_ffmpeg"]=False
+					
 			#if linea[:]==":":
 			#	global_vars[""]=linea[:]
 		archivo.close()
@@ -521,9 +532,17 @@ def save_config(global_vars):
 		else:
 			archivo.write("AC3_fix:0\n")
 		if global_vars["erase_files"]:
-			archivo.write("erase_tmp_files:1")
+			archivo.write("erase_tmp_files:1\n")
 		else:
-			archivo.write("erase_tmp_files:0")
+			archivo.write("erase_tmp_files:0\n")
+		if global_vars["use_ffmpeg"]:
+			archivo.write("use_ffmpeg:1\n")
+		else:
+			archivo.write("use_ffmpeg:0\n")
+		if global_vars["warning_ffmpeg"]:
+			archivo.write("warning_ffmpeg:1\n")
+		else:
+			archivo.write("warning_ffmpeg:0\n")
 		archivo.close()
 	except IOError:
 		pass

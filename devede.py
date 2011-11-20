@@ -273,6 +273,9 @@ global_vars["sub_language"]="EN (ENGLISH)"
 global_vars["with_menu"]=True
 global_vars["AC3_fix"]=False
 global_vars["cores"]=get_cores()
+global_vars["use_ffmpeg"]=False
+global_vars["warning_ffmpeg"]=True
+global_vars["shutdown_after_disc"]=False
 #global_vars[""]=""
 
 print "Cores: "+str(global_vars["cores"])
@@ -336,6 +339,8 @@ else:
 		errors+="mplayer\n"
 	if 127==devede_other.check_program("mencoder -msglevel help"):
 		errors+="mencoder\n"
+	if 127==devede_other.check_program("ffmpeg --help"):
+		errors+="ffmpeg\n"
 	if 127==devede_other.check_program("dvdauthor --help"):
 		errors+="dvdauthor\n"
 	if 127==devede_other.check_program("vcdimager --help"):
@@ -359,7 +364,6 @@ def program_exit(widget):
 	gtk.main_quit()
 
 
-
 if errors!="":
 	arbol.add_from_file(os.path.join(glade,"wprograms.ui"))
 	w=arbol.get_object("programs_label")
@@ -378,6 +382,20 @@ elif fonts_found==False:
 	wprograms.connect("destroy",program_exit)
 else:
 	new_file=devede_disctype.disctype(global_vars)
+
+if global_vars["warning_ffmpeg"]:
+	tree2=gtk.Builder()
+	tree2.set_translation_domain("devede")
+	tree2.add_from_file(os.path.join(glade,"use_ffmpeg.ui"))
+	w2=tree2.get_object("use_ffmpeg")
+	ch=tree2.get_object("show_again")
+	w2.show_all()
+	w2.run()
+	if ch.get_active():
+		global_vars["warning_ffmpeg"]=False
+		devede_other.save_config(global_vars)
+	w2.hide()
+	w2.destroy()
 
 gtk.main()
 print "Saving configuration"

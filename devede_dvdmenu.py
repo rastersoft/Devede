@@ -377,7 +377,7 @@ class menu_preview:
 		if global_vars.has_key("menu_sound_duration")==False:
 			global_vars["menu_sound_duration"]=1
 		clase=devede_xml_menu.xml_files(None,None,None,structure,global_vars,"","")
-		self.sf=clase.create_menu_bg(0,0)
+		self.sf=clase.create_menu_bg(0,0,0,True)
 
 		if self.sf==None:
 			devede_dialogs.show_error(gladefile,_("Can't find the menu background.\nCheck the menu options."))

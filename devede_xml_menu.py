@@ -39,6 +39,7 @@ class xml_files(devede_executor.executor):
 		self.output=False
 		self.structure=structure
 		self.AC3_fix=global_vars["AC3_fix"]
+		self.use_ffmpeg=global_vars["use_ffmpeg"]
 		self.with_menu=global_vars["with_menu"]
 		if (len(structure)==1) and (len(structure[0])==2) and (not self.with_menu):
 			self.onlyone=True
@@ -709,7 +710,7 @@ class xml_files(devede_executor.executor):
 		cr.show_text(texto)
 
 
-	def create_menu_bg(self,counter,element,paint_bg=0):
+	def create_menu_bg(self,counter,element,paint_bg=0,preview=False):
 
 		""" Paints the menu in a Cairo surface.	PAINT_BG can be:
 			0: paints everything for the base picture
@@ -788,9 +789,9 @@ class xml_files(devede_executor.executor):
 				arrowshadowcolor=None
 			elif paint_bg==2:
 				bgcolor=[0,0,0,0]
-				fontcolor=self.activecolor
-				arrowcolor=self.activecolor
-				strokecolor=self.activecolor
+				fontcolor=self.fontcolor
+				arrowcolor=self.fontcolor
+				strokecolor=self.fontcolor
 				arrowshadowcolor=None
 			else:
 				bgcolor=[0,0,0,0]
@@ -834,10 +835,71 @@ class xml_files(devede_executor.executor):
 		return sf
 
 	
+	def create_menu_mpg_ffmpeg(self,counter):
+
+		self.mplexed=False
+		command_var=[]
+		command_var.append("ffmpeg")
+	
+		currentfile=self.filefolder+self.filename+"_menu_"+str(counter)+".mpg"
+	
+		audio=self.menu_sound
+		command_var.append("-loop_input")
+		
+		command_var.append("-f")
+		command_var.append("image2")
+		command_var.append("-t")
+		command_var.append(str(1+self.menu_sound_duration))
+		command_var.append("-i")
+		command_var.append(self.filefolder+self.filename+"_menu"+str(counter)+"_bg.png")
+		command_var.append("-i")
+		command_var.append(audio)
+	
+		command_var.append("-y")
+		command_var.append("-target")
+		if self.menu_PAL:
+			command_var.append("pal-dvd")
+		else:
+			command_var.append("ntsc-dvd")
+		command_var.append("-s")
+		if self.menu_PAL:
+			command_var.append("720x576")
+		else:
+			command_var.append("720x480")
+		command_var.append("-g")
+		command_var.append("12")
+		command_var.append("-ac")
+		command_var.append("2")
+		command_var.append("-trellis")
+		command_var.append("1")
+		command_var.append("-mbd")
+		command_var.append("2")
+		command_var.append("-b")
+		command_var.append("1000000")
+		command_var.append("-ab")
+		command_var.append("128000")
+		command_var.append("-aspect")
+		command_var.append("4:3")
+
+
+		#audio="/home/raster/Escritorio/lazy.mp3"
+
+		
+		command_var.append(currentfile)
+		origDir=os.getcwd()
+		print "Lanzo "+str(command_var)
+
+		self.launch_program(command_var)
+	
+	
 	def create_menu_mpg(self,counter):
 	
 		print "Creating menus"
-		
+	
+		if (self.use_ffmpeg):
+			self.create_menu_mpg_ffmpeg(counter)
+			return
+	
 		self.mplexed=False
 		command_var=[]
 		if (sys.platform=="win32") or (sys.platform=="win64"):

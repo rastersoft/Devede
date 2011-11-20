@@ -88,6 +88,9 @@ class main_window:
 			os.environ["VIDEO_FORMAT"]="NTSC"
 		w.set_active(True)
 		
+		w=self.tree.get_object("add_title")
+		w.get_settings().props.gtk_button_images = True
+		
 		self.window.show()
 
 

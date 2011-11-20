@@ -29,6 +29,13 @@ import devede_other
 
 class devede_settings:
     
+    def on_toggled_cb(self,w):
+        
+        if (self.use_ffmpeg.get_active()):
+            self.ac3_fix.set_sensitive(False)
+        else:
+            self.ac3_fix.set_sensitive(True)
+    
     def __init__(self,gladefile,structure,global_vars):
         
         self.gladefile=gladefile
@@ -36,6 +43,7 @@ class devede_settings:
         self.global_vars=global_vars
         
         self.tree=devede_other.create_tree(self,"settings",self.gladefile,False)
+        self.tree.connect_signals(self)
         wsettings=self.tree.get_object("wsettings_dialog")
         
         w=self.tree.get_object("erase_files")
@@ -47,13 +55,18 @@ class devede_settings:
         else:
             w.set_active(True)
             self.global_vars["multicore"]=self.global_vars["cores"]
+        
+        self.ac3_fix=self.tree.get_object("AC3_fix")
+        self.ac3_fix.set_active(self.global_vars["AC3_fix"])
+
+        self.use_ffmpeg=self.tree.get_object("use_ffmpeg")
+        self.use_ffmpeg.set_active(self.global_vars["use_ffmpeg"])
             
-        w=self.tree.get_object("AC3_fix")
-        w.set_active(self.global_vars["AC3_fix"])
         
         print "Path: "+str(global_vars["temp_folder"])
         path=self.tree.get_object("temporary_files")
         path.set_current_folder(global_vars["temp_folder"])
+        self.on_toggled_cb(None)
         
         wsettings.show()
         value=wsettings.run()
@@ -71,9 +84,10 @@ class devede_settings:
             self.global_vars["multicore"]=self.global_vars["cores"]
         else:
             self.global_vars["multicore"]=1
+        
+        self.global_vars["use_ffmpeg"]=self.use_ffmpeg.get_active()
             
-        w=self.tree.get_object("AC3_fix")
-        self.global_vars["AC3_fix"]=w.get_active()
+        self.global_vars["AC3_fix"]=self.ac3_fix.get_active()
         
         path=self.tree.get_object("temporary_files")
         self.global_vars["temp_folder"]=path.get_current_folder()

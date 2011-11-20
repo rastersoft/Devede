@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-20 22:58+0200\n"
+"POT-Creation-Date: 2011-11-21 00:31+0100\n"
 "PO-Revision-Date: 2009-07-06 11:05+0200\n"
 "Last-Translator: Maurizio Daniele <hayabusa@hayabusa.it>\n"
 "Language-Team: Italian <Project-Id-Version: gtranslator 1.0Report-Msgid>\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Errore nel creare l'immagine ISO\n"
 "Forse non hai spazio sufficiente sul disco"
 
-#: ../devede_convert.py:144
+#: ../devede_convert.py:147
 #, python-format
 msgid ""
 "Insuficient free space. To create this disc\n"
@@ -50,10 +50,10 @@ msgstr ""
 "Spazio libero insufficiente. Per creare questo disco\n"
 "sono necessari %(total)d Mbytes, ma sono disponibili solo %(free)d Mbytes."
 
-#: ../devede_convert.py:233 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:87 ../devede_xml_menu.py:122
-#: ../devede_xml_menu.py:473 ../devede_xml_menu.py:481
-#: ../devede_xml_menu.py:485 ../devede_xml_menu.py:489
+#: ../devede_convert.py:236 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:87 ../devede_xml_menu.py:123
+#: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
+#: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -61,7 +61,7 @@ msgstr ""
 "Impossibile scrivere nella directory destinazione.\n"
 "Controllare di avere i privilegi necessari e sufficiente spazio libero."
 
-#: ../devede_convert.py:319
+#: ../devede_convert.py:328
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -76,7 +76,7 @@ msgstr ""
 "\n"
 "esiste già. Se continui, sarà cancellata."
 
-#: ../devede_convert.py:412
+#: ../devede_convert.py:424
 msgid "Unknown error"
 msgstr "Errore Sconosciuto"
 
@@ -98,7 +98,7 @@ msgstr ""
 "La colonna sonora del menu sembra sia danneggiata. Si userà la traccia muta "
 "predefinita."
 
-#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:477
+#: ../devede_dvdmenu.py:383 ../devede_xml_menu.py:478
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -290,11 +290,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr "Errore nella creazione dei menu."
 
-#: ../devede_xml_menu.py:102 ../devede_xml_menu.py:493
+#: ../devede_xml_menu.py:103 ../devede_xml_menu.py:494
 msgid "Menu generation failed."
 msgstr "Generazione del menu fallita"
 
-#: ../devede_xml_menu.py:109 ../devede_xml_menu.py:502
+#: ../devede_xml_menu.py:110 ../devede_xml_menu.py:503
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -302,10 +302,27 @@ msgstr ""
 "Impossibile aggiungere i pulsanti al menu\n"
 "Probabile bug di SPUMUX."
 
-#: ../devede_xml_menu.py:468
+#: ../devede_xml_menu.py:469
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Creazione del %(menu_number)o menu"
+
+#: ../interface/use_ffmpeg.ui.h:1
+msgid "Don't show this message at startup again"
+msgstr ""
+
+#: ../interface/use_ffmpeg.ui.h:2
+msgid ""
+"This version of Devede allows to use FFMPEG instead\n"
+"of Mencoder for movie conversion. This code is still\n"
+"EXPERIMENTAL, but quite complete. The reason to do\n"
+"this is that Mencoder is provocating a lot of problems.\n"
+"\n"
+"If you see glitches in the video when using FFMPEG, try\n"
+"to disable the multicore support before filling a bug.\n"
+"\n"
+"To test this mode, active it in Edit->Preferences"
+msgstr ""
 
 #: ../interface/settings.ui.h:1
 #, fuzzy
@@ -339,6 +356,10 @@ msgid "Temporary files folder:"
 msgstr "Cartella per i file temporanei: "
 
 #: ../interface/settings.ui.h:8
+msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
+msgstr ""
+
+#: ../interface/settings.ui.h:9
 msgid "Use optimizations for multicore CPUs"
 msgstr "Usa ottimizzazioni per CPU multicore"
 
@@ -574,7 +595,8 @@ msgid "<b>Division in chapters</b>"
 msgstr "<b>Divisione in capitoli</b>"
 
 #: ../interface/wfile.ui.h:20
-msgid "<b>Extra parameters for Mencoder</b>"
+#, fuzzy
+msgid "<b>Extra parameters for coder</b>"
 msgstr "<b>Parametri extra per Mencoder</b>"
 
 #: ../interface/wfile.ui.h:21
@@ -902,6 +924,10 @@ msgid ""
 msgstr ""
 "Scegli la cartella dove DeVeDe creerà l'immagine DVD e un nome per essa. Non "
 "utilizzare una cartella in un disco VFAT/FAT32."
+
+#: ../interface/wfolder_dialog.ui.h:3
+msgid "Shutdown computer when disc is done"
+msgstr ""
 
 #: ../interface/wloadconfig.ui.h:1
 msgid "Load a disc structure"

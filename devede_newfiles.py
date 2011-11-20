@@ -1075,7 +1075,7 @@ class file_properties(newfile):
 	def set_widgets(self):
 		
 		""" sets the widgets to the values specificated in SELF.FILE_PROPERTIES """
-
+		
 		dsize,minvid,maxvid=devede_other.get_dvd_size(None,self.disctocreate)
 
 		if self.disctocreate=="vcd":
@@ -1153,6 +1153,8 @@ class file_properties(newfile):
 		
 		w=self.tree.get_object("turbo1stpass")
 		w.set_active(self.file_properties["turbo1stpass"])
+		
+		w.set_sensitive(self.file_properties["twopass"])
 		
 		if self.file_properties["mbd"]==0:
 			w=self.tree.get_object("mbd")
@@ -1280,6 +1282,24 @@ class file_properties(newfile):
 			w.show()
 
 		self.refresh_subtitles()
+		
+		if (self.global_vars["use_ffmpeg"]):
+			use_ffmpeg=False
+		else:
+			use_ffmpeg=True
+		
+		self.tree.get_object("turbo1stpass").set_visible(use_ffmpeg)
+		self.tree.get_object("deinterlace_md").set_visible(use_ffmpeg)
+		self.tree.get_object("deinterlace_l5").set_visible(use_ffmpeg)
+		self.tree.get_object("deinterlace_lb").set_visible(use_ffmpeg)
+		self.tree.get_object("lavcopts_label").set_visible(use_ffmpeg)
+		self.tree.get_object("lameopts_label").set_visible(use_ffmpeg)
+		self.tree.get_object("custom_params_lavcopts").set_visible(use_ffmpeg)
+		self.tree.get_object("custom_params_lameopts").set_visible(use_ffmpeg)
+		self.tree.get_object("volume_frame").set_visible(use_ffmpeg)
+		self.tree.get_object("audiotrack_box").set_visible(use_ffmpeg)
+		self.tree.get_object("frame_field_order").set_visible(use_ffmpeg)
+		
 
 	def refresh_subtitles(self):
 
@@ -1484,8 +1504,9 @@ class file_properties(newfile):
 		w.set_sensitive(grupo2 and isvob)
 		w=self.tree.get_object("twopass")
 		w.set_sensitive(grupo2 and isvob)
+		tp = w.get_active()
 		w=self.tree.get_object("turbo1stpass")
-		w.set_sensitive(grupo2 and isvob)
+		w.set_sensitive(grupo2 and isvob and tp)
 		w=self.tree.get_object("deinterlace")
 		w.set_sensitive(grupo2 and isvob)
 		w=self.tree.get_object("deinterlace_lb")

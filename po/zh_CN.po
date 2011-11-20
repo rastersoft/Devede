@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-20 22:58+0200\n"
+"POT-Creation-Date: 2011-11-21 00:32+0100\n"
 "PO-Revision-Date: 2009-11-20 12:34+0100\n"
 "Last-Translator: 大宝 <michaelbond01@163.com>\n"
 "Language-Team:  <>\n"
@@ -37,7 +37,7 @@ msgstr ""
 "建立 ISO 文件失败\n"
 "貌似是因为磁盘空间不足"
 
-#: ../devede_convert.py:144
+#: ../devede_convert.py:147
 #, python-format
 msgid ""
 "Insuficient free space. To create this disc\n"
@@ -46,10 +46,10 @@ msgstr ""
 "可用空间不足。\n"
 "要建立此光盘需要 %(total)d MB，但当前可用空间只有 %(free)d MB。"
 
-#: ../devede_convert.py:233 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:87 ../devede_xml_menu.py:122
-#: ../devede_xml_menu.py:473 ../devede_xml_menu.py:481
-#: ../devede_xml_menu.py:485 ../devede_xml_menu.py:489
+#: ../devede_convert.py:236 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:87 ../devede_xml_menu.py:123
+#: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
+#: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -57,7 +57,7 @@ msgstr ""
 "写入目标目录失败。\n"
 "请检查你的权限和磁盘可用空间。"
 
-#: ../devede_convert.py:319
+#: ../devede_convert.py:328
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -72,7 +72,7 @@ msgstr ""
 "\n"
 "已经存在。如果你要继续，其将被强行删除。"
 
-#: ../devede_convert.py:412
+#: ../devede_convert.py:424
 msgid "Unknown error"
 msgstr "不知道哪出问题了"
 
@@ -92,7 +92,7 @@ msgstr ""
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr "菜单的音频文件似乎已损坏，使用默认的静音模式。"
 
-#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:477
+#: ../devede_dvdmenu.py:383 ../devede_xml_menu.py:478
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -277,11 +277,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr "建立菜单失败。"
 
-#: ../devede_xml_menu.py:102 ../devede_xml_menu.py:493
+#: ../devede_xml_menu.py:103 ../devede_xml_menu.py:494
 msgid "Menu generation failed."
 msgstr "生成菜单失败。"
 
-#: ../devede_xml_menu.py:109 ../devede_xml_menu.py:502
+#: ../devede_xml_menu.py:110 ../devede_xml_menu.py:503
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -289,10 +289,27 @@ msgstr ""
 "无法在菜单中添加按钮，\n"
 "貌似是 SPUMUX 的程序错误。"
 
-#: ../devede_xml_menu.py:468
+#: ../devede_xml_menu.py:469
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "建立菜单 %(menu_number)d 中"
+
+#: ../interface/use_ffmpeg.ui.h:1
+msgid "Don't show this message at startup again"
+msgstr ""
+
+#: ../interface/use_ffmpeg.ui.h:2
+msgid ""
+"This version of Devede allows to use FFMPEG instead\n"
+"of Mencoder for movie conversion. This code is still\n"
+"EXPERIMENTAL, but quite complete. The reason to do\n"
+"this is that Mencoder is provocating a lot of problems.\n"
+"\n"
+"If you see glitches in the video when using FFMPEG, try\n"
+"to disable the multicore support before filling a bug.\n"
+"\n"
+"To test this mode, active it in Edit->Preferences"
+msgstr ""
 
 #: ../interface/settings.ui.h:1
 #, fuzzy
@@ -326,6 +343,10 @@ msgid "Temporary files folder:"
 msgstr "存放临时文件的位置:"
 
 #: ../interface/settings.ui.h:8
+msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
+msgstr ""
+
+#: ../interface/settings.ui.h:9
 msgid "Use optimizations for multicore CPUs"
 msgstr "为多核 CPU 提供优化"
 
@@ -559,7 +580,8 @@ msgid "<b>Division in chapters</b>"
 msgstr "<b>章节分配</b>"
 
 #: ../interface/wfile.ui.h:20
-msgid "<b>Extra parameters for Mencoder</b>"
+#, fuzzy
+msgid "<b>Extra parameters for coder</b>"
 msgstr "<b>Mencoder 的附加参数</b>"
 
 #: ../interface/wfile.ui.h:21
@@ -880,6 +902,10 @@ msgid ""
 msgstr ""
 "请选择要建立 DVD 镜像文件的文件夹并为其命名。\n"
 "注意：不可选择 VFAT/FAT32 格式的磁盘分区作为或存放文件夹。"
+
+#: ../interface/wfolder_dialog.ui.h:3
+msgid "Shutdown computer when disc is done"
+msgstr ""
 
 #: ../interface/wloadconfig.ui.h:1
 msgid "Load a disc structure"

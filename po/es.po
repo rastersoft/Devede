@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-20 22:58+0200\n"
-"PO-Revision-Date: 2011-05-14 01:45+0200\n"
+"POT-Creation-Date: 2011-11-21 00:31+0100\n"
+"PO-Revision-Date: 2011-11-21 00:36+0100\n"
 "Last-Translator: raster <raster@rastersoft.com>\n"
 "Language-Team: Project-Id-Version: esReport-Msgid-Bugs-To: POT-Creation- "
 "<es@li.org>\n"
@@ -44,7 +44,7 @@ msgstr ""
 "Ha fallado la creación de la imagen ISO.\n"
 "Compruebe que tiene suficiente espacio libre."
 
-#: ../devede_convert.py:144
+#: ../devede_convert.py:147
 #, python-format
 msgid ""
 "Insuficient free space. To create this disc\n"
@@ -53,10 +53,10 @@ msgstr ""
 "No hay suficiente espacio libre. Para crear este disco\n"
 "necesita %(total)d MBytes, pero sólo hay %(free)d MBytes disponibles."
 
-#: ../devede_convert.py:233 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:87 ../devede_xml_menu.py:122
-#: ../devede_xml_menu.py:473 ../devede_xml_menu.py:481
-#: ../devede_xml_menu.py:485 ../devede_xml_menu.py:489
+#: ../devede_convert.py:236 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:87 ../devede_xml_menu.py:123
+#: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
+#: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -64,7 +64,7 @@ msgstr ""
 "Error al intentar escribir en el directorio destino.\n"
 "Compruebe que tiene permisos y espacio libre en él."
 
-#: ../devede_convert.py:319
+#: ../devede_convert.py:328
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -79,7 +79,7 @@ msgstr ""
 "\n"
 "ya existe. Si continúa, será borrada."
 
-#: ../devede_convert.py:412
+#: ../devede_convert.py:424
 msgid "Unknown error"
 msgstr "Error desconocido"
 
@@ -100,7 +100,7 @@ msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr ""
 "El fichero de sonido para el menú parece dañado. Crearé un menú sin sonido."
 
-#: ../devede_dvdmenu.py:382 ../devede_xml_menu.py:477
+#: ../devede_dvdmenu.py:383 ../devede_xml_menu.py:478
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -295,11 +295,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr "Ha fallado la creación de los menús."
 
-#: ../devede_xml_menu.py:102 ../devede_xml_menu.py:493
+#: ../devede_xml_menu.py:103 ../devede_xml_menu.py:494
 msgid "Menu generation failed."
 msgstr "Falló la creación del menú."
 
-#: ../devede_xml_menu.py:109 ../devede_xml_menu.py:502
+#: ../devede_xml_menu.py:110 ../devede_xml_menu.py:503
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -307,10 +307,37 @@ msgstr ""
 "No puedo crear los botones del menú.\n"
 "Parece un problema de SPUMUX."
 
-#: ../devede_xml_menu.py:468
+#: ../devede_xml_menu.py:469
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Creando el menú %(menu_number)d"
+
+#: ../interface/use_ffmpeg.ui.h:1
+msgid "Don't show this message at startup again"
+msgstr "No mostrar en el arranque este mensaje de nuevo"
+
+#: ../interface/use_ffmpeg.ui.h:2
+msgid ""
+"This version of Devede allows to use FFMPEG instead\n"
+"of Mencoder for movie conversion. This code is still\n"
+"EXPERIMENTAL, but quite complete. The reason to do\n"
+"this is that Mencoder is provocating a lot of problems.\n"
+"\n"
+"If you see glitches in the video when using FFMPEG, try\n"
+"to disable the multicore support before filling a bug.\n"
+"\n"
+"To test this mode, active it in Edit->Preferences"
+msgstr ""
+"Esta versión de Devede permite utilizar FFMPEG en\n"
+"lugar de Mencoder para la conversión de formatos.\n"
+"Este código es aún EXPERIMENTAL, pero es bastante\n"
+"estable.\n"
+"\n"
+"Si aprecias fallos en el vídeo al utilizar FFMPEG,\n"
+"prueba a desactivar el soporte de múltiples núcleos\n"
+"antes de enviar un informe de error.\n"
+"\n"
+"Para probar esta opción, actívala en Editar->Preferencias."
 
 #: ../interface/settings.ui.h:1
 msgid "<b>Folders</b>"
@@ -344,6 +371,10 @@ msgid "Temporary files folder:"
 msgstr "Carpeta para los ficheros temporales:"
 
 #: ../interface/settings.ui.h:8
+msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
+msgstr "Utilizar FFMPEG en lugar de Mencoder (EXPERIMENTAL)"
+
+#: ../interface/settings.ui.h:9
 msgid "Use optimizations for multicore CPUs"
 msgstr "Usar optimizaciones para CPUs multinúcleo"
 
@@ -579,8 +610,8 @@ msgid "<b>Division in chapters</b>"
 msgstr "<b>División en capítulos</b>"
 
 #: ../interface/wfile.ui.h:20
-msgid "<b>Extra parameters for Mencoder</b>"
-msgstr "<b>Parámetros extra para Mencoder</b>"
+msgid "<b>Extra parameters for coder</b>"
+msgstr "<b>Parámetros extra para el coder</b>"
 
 #: ../interface/wfile.ui.h:21
 msgid "<b>Field order</b>"
@@ -901,6 +932,10 @@ msgstr ""
 "nombre para ésta. No use un directorio que esté en una unidad VFAT/FAT32. No "
 "se permiten los caracteres /, | y \\, que serán reemplazados por guiones "
 "bajos."
+
+#: ../interface/wfolder_dialog.ui.h:3
+msgid "Shutdown computer when disc is done"
+msgstr "Apagar el equipo cuando el disco esté hecho"
 
 #: ../interface/wloadconfig.ui.h:1
 msgid "Load a disc structure"

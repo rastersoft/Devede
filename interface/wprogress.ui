@@ -3,32 +3,39 @@
   <requires lib="gtk+" version="2.16"/>
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkWindow" id="wprogress">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Creating...</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
     <property name="icon">devede.svg</property>
-    <signal name="delete_event" handler="cancel_clicked"/>
+    <signal name="delete-event" handler="cancel_clicked" swapped="no"/>
     <child>
       <object class="GtkVBox" id="vbox8">
         <property name="width_request">400</property>
         <property name="height_request">200</property>
         <property name="visible">True</property>
+        <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child>
           <object class="GtkLabel" id="lcreating">
             <property name="visible">True</property>
+            <property name="can_focus">False</property>
             <property name="use_markup">True</property>
             <property name="justify">center</property>
           </object>
           <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">0</property>
           </packing>
         </child>
         <child>
           <object class="GtkProgressBar" id="progress_total">
             <property name="visible">True</property>
+            <property name="can_focus">False</property>
             <property name="pulse_step">0</property>
           </object>
           <packing>
@@ -40,6 +47,7 @@
         <child>
           <object class="GtkProgressBar" id="progresspartial">
             <property name="visible">True</property>
+            <property name="can_focus">False</property>
             <property name="pulse_step">0.10000000149011612</property>
           </object>
           <packing>
@@ -51,9 +59,11 @@
         <child>
           <object class="GtkHSeparator" id="hseparator3">
             <property name="visible">True</property>
+            <property name="can_focus">False</property>
           </object>
           <packing>
             <property name="expand">False</property>
+            <property name="fill">True</property>
             <property name="padding">3</property>
             <property name="position">3</property>
           </packing>
@@ -61,6 +71,7 @@
         <child>
           <object class="GtkHButtonBox" id="hbuttonbox6">
             <property name="visible">True</property>
+            <property name="can_focus">False</property>
             <property name="border_width">5</property>
             <child>
               <object class="GtkButton" id="prog_cancel">
@@ -69,8 +80,9 @@
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
-                <signal name="clicked" handler="cancel_clicked"/>
+                <signal name="clicked" handler="cancel_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -81,6 +93,7 @@
           </object>
           <packing>
             <property name="expand">False</property>
+            <property name="fill">True</property>
             <property name="padding">5</property>
             <property name="position">4</property>
           </packing>
