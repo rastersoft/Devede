@@ -1,3 +1,15 @@
+devede (3.18.0-0~rastersoft1) natty; urgency=medium
+
+  * New upstream version
+
+    - FFMpeg support
+    - Fixed menu previsualization
+    - Allows to automatically shutdown the computer when the job is done
+    - Always shows icons in buttons
+    - Fixed a bug that prevented returning to main window when aborting
+
+ -- Sergio Costas Rodriguez <raster@rastersoft.com> Sun, 21 Nov 2011 23:54:34 +0001
+
 devede (3.17.0-0~rastersoft1) natty; urgency=medium
 
   * New upstream version
