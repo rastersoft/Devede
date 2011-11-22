@@ -22,39 +22,18 @@
 
 import os
 import sys
+import gtk
 import devede_dialogs
 
 import devede_executor
 
-if (sys.platform=="win32") or (sys.platform=="win64"):
-	import webbrowser
 
-class show_help(devede_executor.executor):
+class show_help:
 	
 	def __init__(self,gladefile,installpath,filename):
 		
-		devede_executor.executor.__init__(self)
-		self.printout=False
+		file="file://"+os.path.join(installpath,"html",filename)	
 		
-		if (sys.platform=="win32") or (sys.platform=="win64"):
-			webbrowser.open_new(os.path.join(installpath, filename))
-			return
-
-		self.printout=False
-
-		launch_list=[[True,"yelp"],[False,"epiphany"],[False,"konqueror"],[False,"firefox","-new-window"],[False,"opera","-newwindow"]]
-
-		file=os.path.join(installpath,"html",filename)	
-		
-		for program in launch_list:
-			if program[0]:
-				program.append("file://"+file)
-			else:
-				program.append(file)
-			retval=self.launch_program(program[1:],80,False)
-			if retval!=None:
-				break
-			
-		if retval==None:
+		retval = gtk.show_uri(None,file,gtk.gdk.CURRENT_TIME)
+		if retval==False:
 			msg=devede_dialogs.show_error(gladefile,_("Can't open the help files."))
-		
