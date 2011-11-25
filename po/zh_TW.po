@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-21 00:32+0100\n"
+"POT-Creation-Date: 2011-11-26 00:22+0100\n"
 "PO-Revision-Date: 2008-08-21 11:37+0800\n"
 "Last-Translator: Jose Sun <josesun@gmail.com>\n"
 "Language-Team: \n"
@@ -46,7 +46,7 @@ msgstr ""
 "可用空間不足。\n"
 "要建立此碟片需要 %(total)d MB，但可用空間只有 %(free)d MB。"
 
-#: ../devede_convert.py:236 ../devede_subtitles.py:75
+#: ../devede_convert.py:247 ../devede_subtitles.py:75
 #: ../devede_subtitles.py:87 ../devede_xml_menu.py:123
 #: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
 #: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
@@ -57,7 +57,7 @@ msgstr ""
 "寫入目的目錄失敗，\n"
 "請檢查你的權限和磁碟可用空間。"
 
-#: ../devede_convert.py:328
+#: ../devede_convert.py:339
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -67,7 +67,7 @@ msgid ""
 "already exists. If you continue, it will be deleted."
 msgstr ""
 
-#: ../devede_convert.py:424
+#: ../devede_convert.py:435
 msgid "Unknown error"
 msgstr "未知的錯誤"
 
@@ -87,7 +87,7 @@ msgstr ""
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr "選單的聲音檔似乎已損壞，使用預設的靜音模式。"
 
-#: ../devede_dvdmenu.py:383 ../devede_xml_menu.py:478
+#: ../devede_dvdmenu.py:384 ../devede_xml_menu.py:478
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -137,7 +137,7 @@ msgstr "無檔名"
 msgid "Can't save the file."
 msgstr "無法儲存檔案。"
 
-#: ../devede_main.py:338
+#: ../devede_main.py:345
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -145,7 +145,7 @@ msgstr ""
 "太多影片超出磁碟大小限制。\n"
 "請換更大的磁碟類型或刪除一些影片。"
 
-#: ../devede_main.py:398
+#: ../devede_main.py:406
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -153,7 +153,7 @@ msgstr ""
 "有些檔案不是影像檔，\n"
 "沒有加入檔案。"
 
-#: ../devede_main.py:446
+#: ../devede_main.py:455
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -162,54 +162,54 @@ msgstr ""
 "你的專案含有 %(X)d 個影片檔，但最大限制為 %(MAX)d 個影片檔。請刪除一些影片後"
 "再試一次。"
 
-#: ../devede_main.py:883
+#: ../devede_main.py:892
 msgid "no chapters"
 msgstr "無章節"
 
-#: ../devede_main.py:943
+#: ../devede_main.py:952
 msgid "Unsaved disc structure"
 msgstr "未儲存的碟片結構"
 
-#: ../devede_main.py:1011
+#: ../devede_main.py:1020
 #, python-format
 msgid "Title %(X)d"
 msgstr "標題 %(X)d"
 
-#: ../devede_newfiles.py:460
+#: ../devede_newfiles.py:483
 msgid "Subtitle"
 msgstr "字幕"
 
-#: ../devede_newfiles.py:463
+#: ../devede_newfiles.py:486
 msgid "Codepage"
 msgstr "字碼頁 (Codepage)"
 
-#: ../devede_newfiles.py:466
+#: ../devede_newfiles.py:489
 msgid "Language"
 msgstr "語言"
 
-#: ../devede_newfiles.py:540
+#: ../devede_newfiles.py:563
 msgid "Video files"
 msgstr "影片檔"
 
-#: ../devede_newfiles.py:547
+#: ../devede_newfiles.py:570
 msgid "All files"
 msgstr "所有檔案"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:894
+#: ../devede_newfiles.py:917
 msgid "File doesn't seem to be a video file."
 msgstr "檔案似乎不像是影像檔。"
 
-#: ../devede_newfiles.py:896
+#: ../devede_newfiles.py:919
 msgid "File seems to be an audio file."
 msgstr "檔案似乎像是聲音檔。"
 
-#: ../devede_newfiles.py:1019
+#: ../devede_newfiles.py:1042
 msgid "Please, add only one file each time."
 msgstr "請你每次只加入一個檔案。"
 
-#: ../devede_newfiles.py:1032
+#: ../devede_newfiles.py:1055
 msgid "Please, add a movie file before adding subtitles."
 msgstr "請在加入字幕前先新增影片檔。"
 
@@ -298,8 +298,7 @@ msgstr ""
 msgid ""
 "This version of Devede allows to use FFMPEG instead\n"
 "of Mencoder for movie conversion. This code is still\n"
-"EXPERIMENTAL, but quite complete. The reason to do\n"
-"this is that Mencoder is provocating a lot of problems.\n"
+"EXPERIMENTAL, but quite complete.\n"
 "\n"
 "If you see glitches in the video when using FFMPEG, try\n"
 "to disable the multicore support before filling a bug.\n"
@@ -475,6 +474,10 @@ msgstr ""
 "你還是要繼續嗎？"
 
 #: ../interface/wend_dialog.ui.h:1
+msgid "Burn"
+msgstr ""
+
+#: ../interface/wend_dialog.ui.h:2
 msgid "Job done!"
 msgstr "工作完成！"
 

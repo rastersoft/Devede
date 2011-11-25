@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-21 00:31+0100\n"
-"PO-Revision-Date: 2011-11-21 00:36+0100\n"
+"POT-Creation-Date: 2011-11-26 00:21+0100\n"
+"PO-Revision-Date: 2011-11-26 00:23+0100\n"
 "Last-Translator: raster <raster@rastersoft.com>\n"
 "Language-Team: Project-Id-Version: esReport-Msgid-Bugs-To: POT-Creation- "
 "<es@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 "No hay suficiente espacio libre. Para crear este disco\n"
 "necesita %(total)d MBytes, pero sólo hay %(free)d MBytes disponibles."
 
-#: ../devede_convert.py:236 ../devede_subtitles.py:75
+#: ../devede_convert.py:247 ../devede_subtitles.py:75
 #: ../devede_subtitles.py:87 ../devede_xml_menu.py:123
 #: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
 #: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
@@ -64,7 +64,7 @@ msgstr ""
 "Error al intentar escribir en el directorio destino.\n"
 "Compruebe que tiene permisos y espacio libre en él."
 
-#: ../devede_convert.py:328
+#: ../devede_convert.py:339
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -79,7 +79,7 @@ msgstr ""
 "\n"
 "ya existe. Si continúa, será borrada."
 
-#: ../devede_convert.py:424
+#: ../devede_convert.py:435
 msgid "Unknown error"
 msgstr "Error desconocido"
 
@@ -100,7 +100,7 @@ msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr ""
 "El fichero de sonido para el menú parece dañado. Crearé un menú sin sonido."
 
-#: ../devede_dvdmenu.py:383 ../devede_xml_menu.py:478
+#: ../devede_dvdmenu.py:384 ../devede_xml_menu.py:478
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -154,7 +154,7 @@ msgstr "Falta el nombre de fichero"
 msgid "Can't save the file."
 msgstr "No puedo grabar el archivo."
 
-#: ../devede_main.py:338
+#: ../devede_main.py:345
 msgid ""
 "Too many videos for this disc size.\n"
 "Please, select a bigger disc type or remove some videos."
@@ -162,7 +162,7 @@ msgstr ""
 "Demasiados vídeos para este tamaño de disco.\n"
 "Por favor, escoja un disco más grande o elimine algunos vídeos."
 
-#: ../devede_main.py:398
+#: ../devede_main.py:406
 msgid ""
 "Some files weren't video files.\n"
 "None added."
@@ -170,7 +170,7 @@ msgstr ""
 "Algunos archivos no eran de vídeo.\n"
 "No se ha añadido ninguno."
 
-#: ../devede_main.py:446
+#: ../devede_main.py:455
 #, python-format
 msgid ""
 "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
@@ -179,54 +179,54 @@ msgstr ""
 "Este proyecto contiene %(X)d ficheros, pero el máximo es %(MAX)d. Por favor, "
 "elimine algunos ficheros y vuelva a intentarlo."
 
-#: ../devede_main.py:883
+#: ../devede_main.py:892
 msgid "no chapters"
 msgstr "sin capítulos"
 
-#: ../devede_main.py:943
+#: ../devede_main.py:952
 msgid "Unsaved disc structure"
 msgstr "Estructura de disco no guardada"
 
-#: ../devede_main.py:1011
+#: ../devede_main.py:1020
 #, python-format
 msgid "Title %(X)d"
 msgstr "Título %(X)d"
 
-#: ../devede_newfiles.py:460
+#: ../devede_newfiles.py:483
 msgid "Subtitle"
 msgstr "Subtítulo"
 
-#: ../devede_newfiles.py:463
+#: ../devede_newfiles.py:486
 msgid "Codepage"
 msgstr "Página de códigos"
 
-#: ../devede_newfiles.py:466
+#: ../devede_newfiles.py:489
 msgid "Language"
 msgstr "Lengua"
 
-#: ../devede_newfiles.py:540
+#: ../devede_newfiles.py:563
 msgid "Video files"
 msgstr "Ficheros de vídeo"
 
-#: ../devede_newfiles.py:547
+#: ../devede_newfiles.py:570
 msgid "All files"
 msgstr "Todos los ficheros"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:894
+#: ../devede_newfiles.py:917
 msgid "File doesn't seem to be a video file."
 msgstr "El archivo no parece ser de vídeo."
 
-#: ../devede_newfiles.py:896
+#: ../devede_newfiles.py:919
 msgid "File seems to be an audio file."
 msgstr "El archivo parece ser de sonido."
 
-#: ../devede_newfiles.py:1019
+#: ../devede_newfiles.py:1042
 msgid "Please, add only one file each time."
 msgstr "Por favor, añada sólo un archivo de cada vez."
 
-#: ../devede_newfiles.py:1032
+#: ../devede_newfiles.py:1055
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Por favor, añada una película antes de añadir subtítulos."
 
@@ -320,8 +320,7 @@ msgstr "No mostrar en el arranque este mensaje de nuevo"
 msgid ""
 "This version of Devede allows to use FFMPEG instead\n"
 "of Mencoder for movie conversion. This code is still\n"
-"EXPERIMENTAL, but quite complete. The reason to do\n"
-"this is that Mencoder is provocating a lot of problems.\n"
+"EXPERIMENTAL, but quite complete.\n"
 "\n"
 "If you see glitches in the video when using FFMPEG, try\n"
 "to disable the multicore support before filling a bug.\n"
@@ -518,6 +517,10 @@ msgstr ""
 "¿Continuar de todas formas?"
 
 #: ../interface/wend_dialog.ui.h:1
+msgid "Burn"
+msgstr "Grabar"
+
+#: ../interface/wend_dialog.ui.h:2
 msgid "Job done!"
 msgstr "¡Terminado!"
 
