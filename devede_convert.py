@@ -594,7 +594,7 @@ class create_all:
 			parameters.append(path)
 		runner=devede_executor.executor()
 		runner.launch_program(parameters,output=False)
-		salida.wait_end()
+		runner.wait_end()
 
 
 	def show_error(self,message):
