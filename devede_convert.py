@@ -151,6 +151,16 @@ class create_all:
 	
 	def __init__(self,gladefile,structure,global_vars,callback):
 		
+		if (0!=devede_other.check_program("k3b -v")):
+			self.k3b_available=False
+		else:
+			self.k3b_available=True
+		
+		if (0!=devede_other.check_program("brasero --help")):
+			self.brasero_available=False
+		else:
+			self.brasero_available=True
+		
 		self.gladefile=gladefile
 		self.structure=structure
 		self.global_vars=global_vars
@@ -551,6 +561,14 @@ class create_all:
 		tiempo2=devede_other.return_time(time.time()-self.tiempo,True)
 		label.set_text(tiempo2)
 		window=newtree.get_object("wend_dialog")
+		burn = newtree.get_object("burn_button")
+		# only enable button if k3b is available
+		# TODO: support other burners
+		
+		if (self.k3b_available==False) and (self.brasero_available==False):
+			burn.set_sensitive(False)
+		
+		burn.connect('clicked', self.burn)
 		window.show()
 		window.run()
 		window.hide()
@@ -559,7 +577,24 @@ class create_all:
 		newtree = None
 		gc.collect()
 		(self.main_window_callback)()
-		
+
+	def burn(self, widget):
+
+		"""Burns resulting iso"""
+
+		path = self.filefolder + self.filename + ".iso"
+		print path
+		parameters = []
+		if (self.brasero_available):
+			parameters.append("brasero")
+			parameters.append("--image="+path)
+		else:
+			parameters.append("k3b")
+			parameters.append("--burn")
+			parameters.append(path)
+		runner=devede_executor.executor()
+		runner.launch_program(parameters,output=False)
+		salida.wait_end()
 
 
 	def show_error(self,message):
