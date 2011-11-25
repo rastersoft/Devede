@@ -311,7 +311,7 @@ class video_converter(devede_executor.executor):
 				if final_framerate==30:
 					command_var.append("ntsc-dvd")
 				elif (framerate==24):
-					command_var.append("fild-dvd")
+					command_var.append("film-dvd")
 				else:
 					command_var.append("pal-dvd")
 			elif (disctype=="vcd"):
@@ -538,6 +538,24 @@ class video_converter(devede_executor.executor):
 		return
 
 
+	def getfloat(self,cadena,upper=0):
+		
+		pos=cadena.find(":")
+		upper*=60
+		if (pos==-1):
+			try:
+				val=upper+float(cadena)
+			except:
+				val=upper
+		else:
+			try:
+				val2=upper+float(cadena[:pos])
+			except:
+				val2=upper
+			val=self.getfloat(cadena[pos+1:],val2)
+		return val
+
+
 	def set_progress_bar(self):
 
 		if self.pulse:
@@ -550,7 +568,11 @@ class video_converter(devede_executor.executor):
 		pos2=self.cadena.find("bitrate",pos+5)
 		if pos2==-1:
 			return False
-		valuetemp=float(self.cadena[pos+5:pos2])
+		
+		cadena2=self.cadena[pos+5:pos2]
+		
+		valuetemp=self.getfloat(cadena2)
+		
 		value=(100.0*valuetemp)/self.divide
 		if (value!=self.percent2) or (self.percent2==120):
 			if (value)>100.0:

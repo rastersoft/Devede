@@ -430,6 +430,19 @@ class file_properties(newfile):
 	""" This class manages the properties window, where the user can choose the properties
 		of each video file """
 	
+	def motion_cb(self,wid, context, x, y, time):
+		context.drag_status(gtk.gdk.ACTION_COPY, time)
+		return True
+	
+	def drop_cb(self, wid, context, x, y, time):
+		# Used with windows drag and drop
+		print 'drop'
+		self.have_drag = False
+		if context.targets:
+			wid.drag_get_data(context, context.targets[0], time)
+			return True
+		return False
+	
 	# public methods	
 	
 	def __init__(self,global_vars,title,chapter,structure,callback_refresh):
@@ -445,7 +458,10 @@ class file_properties(newfile):
 		self.tree=devede_other.create_tree(self,"wfile",self.gladefile)
 		self.window=self.tree.get_object("wfile")
 		self.window.show()
-		self.window.drag_dest_set(gtk.DEST_DEFAULT_MOTION | gtk.DEST_DEFAULT_HIGHLIGHT | gtk.DEST_DEFAULT_DROP,[ ( "text/plain", 0, 80 ), ( "video/*", 0, 81) ],gtk.gdk.ACTION_COPY)
+		self.window.drag_dest_set(0,[],0)
+		self.window.connect('drag_drop', self.drop_cb)
+		self.window.connect('drag_motion', self.motion_cb)
+
 		w = self.tree.get_object("expander_advanced")
 		w.set_expanded(self.global_vars["expand_advanced"])
 		
