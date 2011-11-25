@@ -221,6 +221,7 @@ class create_all:
 		self.seconds=timev.get_value()
 		w.destroy()
 		if ret!=-6:
+			self.window.destroy()
 			return
 
 		self.runner=None
