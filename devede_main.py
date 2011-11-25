@@ -49,11 +49,10 @@ class main_window:
 		self.tree=devede_other.create_tree(self,"wmain",self.gladefile)
 		self.window=self.tree.get_object("wmain")
 
-		if (sys.platform=="win32") or (sys.platform=="win64"):
-			self.window.drag_dest_set(0,[],0)
-			self.window.connect('drag_drop', self.drop_cb)
-		else:
-			self.window.drag_dest_set(gtk.DEST_DEFAULT_MOTION | gtk.DEST_DEFAULT_HIGHLIGHT | gtk.DEST_DEFAULT_DROP,[ ( "text/plain", 0, 80), ( "video/*", 0, 81) ],gtk.gdk.ACTION_COPY)
+		self.window.drag_dest_set(0,[],0)
+		self.window.connect('drag_drop', self.drop_cb)
+		self.window.connect('drag_motion', self.motion_cb)
+
 		self.global_vars["main_window"]=self.window
 		
 		self.list_titles=gtk.TreeStore(gobject.TYPE_PYOBJECT,gobject.TYPE_STRING)
@@ -92,6 +91,11 @@ class main_window:
 		w.get_settings().props.gtk_button_images = True
 		
 		self.window.show()
+
+
+	def motion_cb(self,wid, context, x, y, time):
+		context.drag_status(gtk.gdk.ACTION_COPY, time)
+		return True
 
 
 	def hide(self):
@@ -377,6 +381,7 @@ class main_window:
 			if len(filename)>6:
 				if filename[-7:]==".devede":
 					self.on_devede_open_activate(None, list[0])
+					drag_context.finish(True,False,time)
 					return
 		
 		fine=True
@@ -400,6 +405,7 @@ class main_window:
 		else:
 			error=devede_dialogs.show_error(self.gladefile,_("Some files weren't video files.\nNone added."))
 			error=None
+		drag_context.finish(True,False,time)
 	
 	
 	def on_default_pal_toggled(self,widget):

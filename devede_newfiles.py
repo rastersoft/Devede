@@ -392,25 +392,32 @@ class newfile(file_get_params):
 		else:
 			length=7
 		
+		cadena2=""
 		for elemento in data:
-			if (elemento=="\n") and (item!=""):
-				if item[:8]=="file:///":
-					lista.append(item[length:])
-					item=""
-					continue
-			if ord(elemento)<32:
-				continue
-			if mode==0:
-				if elemento=="%":
-					mode=1
-				else:
-					item+=elemento
-			elif mode==1:
-				tempo=elemento
-				mode=2
+			if (ord(elemento)<32):
+				cadena2+="\n"
 			else:
-				mode=0
-				item+=chr(int(tempo+elemento,16))
+				cadena2+=elemento
+		
+		while(True):
+			pos=cadena2.find("file:///")
+			if (pos==-1):
+				break
+			pos2=cadena2.find("\n",pos)
+			if (pos2==-1):
+				cadena=cadena2[pos+length:]
+				cadena2=""
+			else:
+				cadena=cadena2[pos+length:pos2]
+				cadena2=cadena2[pos2:]
+			while (True):
+				pos=cadena.find("%")
+				if (pos==-1):
+					break
+				cadena=cadena[:pos]+chr(int(cadena[pos+1:pos+3],16))+cadena[pos+3:]
+			lista.append(cadena)
+		
+		
 		print "Dragged files: "+str(lista)
 		return lista
 
