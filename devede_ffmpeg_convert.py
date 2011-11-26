@@ -146,6 +146,7 @@ class video_converter_ffmpeg(devede_executor.executor):
 		audiostream=videofile["audio_stream"]
 		swap_fields=videofile["swap_fields"]
 		volume=videofile["volume"]
+		audio_tracks=len(videofile["audio_list"])
 
 		if (videofile["resolution"]==0) and (disctype=="divx"):
 			default_res=True
@@ -238,8 +239,9 @@ class video_converter_ffmpeg(devede_executor.executor):
 			command_var.append(videofile["path"])
 			command_var.append("-map")
 			command_var.append("1:0")
-			command_var.append("-map")
-			command_var.append("0:1")
+			for l in range(audio_tracks):
+				command_var.append("-map")
+				command_var.append("0"+":"+str(l+1))
 		
 		if (isvob==False):
 			cmd_line=""
@@ -519,6 +521,11 @@ class video_converter_ffmpeg(devede_executor.executor):
 		else:
 			command_var.append(currentfile)
 		
+		at=audio_tracks
+		while (at>1):
+			command_var.append("-newaudio")
+			at-=1
+			
 
 		extra_params=videofile["params"] # take the extra params
 		while (extra_params!=""):
