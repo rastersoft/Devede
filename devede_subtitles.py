@@ -76,7 +76,12 @@ class subtitles_adder(devede_executor.executor):
 			self.initerror=True
 			return
 		
-		fichero.write('<subpictures>\n\t<stream>')
+		fichero.write('<subpictures format="')
+		if (videofile["fps"]==25) :
+			fichero.write('PAL')
+		else:
+			fichero.write('NTSC')
+		fichero.write('">\n\t<stream>')
 		if (subtitle_list["sub_codepage"]!="UTF-8"):
 			final_type="UTF-8"
 			subfilename=os.path.join(filefolder,filename+"_sub_tmp.sub")

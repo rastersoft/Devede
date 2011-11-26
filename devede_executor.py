@@ -47,6 +47,12 @@ class executor:
 
 		self.initerror=False
 		self.handle=None
+		self.cadena=""
+		self.err_cadena=""
+		self.sep_stderr=False
+		self.platform_win32=((sys.platform=="win32") or (sys.platform=="win64"))
+		self.print_error="Undefined error"
+		self.keep_output=False
 
 		if filename!=None:
 			self.bar=progresbar
@@ -54,11 +60,12 @@ class executor:
 				progresbar.set_text(" ")
 			self.filefolder=filefolder
 			self.filename=filename
-			self.platform_win32=((sys.platform=="win32") or (sys.platform=="win64"))
-			self.cadena=""
 			self.printout=True
-			self.print_error="Undefined error"
-
+		else:
+			self.bar=None
+			self.filename=None
+			self.filefolder=None
+			self.printout=True
 
 	def cancel(self):
 
@@ -84,6 +91,19 @@ class executor:
 		
 		self.handle.wait()
 		return self.handle.returncode
+	
+	
+	def wait_end2(self):
+		
+		r1,r2=self.handle.communicate()
+		self.cadena=r1
+		if (self.sep_stderr):
+			self.err_cadena=r2
+		else:
+			self.cadena+=r2
+		if (self.printout):
+			print r1,
+		print r2,
 
 
 	def launch_shell(self,program,read_chars=80,output=True,stdinout=None):
@@ -142,13 +162,16 @@ class executor:
 		return None	
 
 
-	def launch_program(self,program,read_chars=80,output=True,win32arg=True,with_stderr=True):
+	def launch_program(self,program,read_chars=80,output=True,win32arg=True,with_stderr=True, sep_stderr=False,keep_out=False):
 
 		""" Launches a program that can be located in any of the directories stored in PATHLIST """
 
 		self.read_chars=read_chars
 		self.output=output
 		self.handle=None
+		
+		self.sep_stderr=sep_stderr
+		self.keep_output=keep_out
 
 		wd=sys.path[-1:] # working directory.  This works with py2exe
 		if (sys.platform=="win32") or (sys.platform=="win64"):
@@ -203,28 +226,36 @@ class executor:
 			return -1 # there's no program running
 		
 		if self.output==False: # if we don't want to read the output...
-			self.bar.pulse() # just PULSE the progress bar
+			if (self.bar!=None):
+				self.bar.pulse() # just PULSE the progress bar
 			if self.handle.poll()==None:
 				return 0 # if the program didn't end, return 0
 			else:
 				return 1 # and 1 if the program ended
 		
 		ret_value=1
-		v1=[]
 		while self.handle.poll()==None:
+			ret_value=0
 			if self.read_line_from_output():
-				ret_value=0
 				break
 			
 		if (self.set_progress_bar()): # progress_bar is defined in each subclass to fit the format
 			self.cadena=""
 		
 		if ret_value==1: # read what remains in the STDOUT and STDERR queues
-			while self.read_line_from_output():
-				tmp=1
+			r1,r2=self.handle.communicate()
+			self.cadena+=r1
+			if (self.sep_stderr):
+				self.err_cadena+=r2
+			else:
+				self.cadena+=r2
+			if (self.printout):
+				print r1,
+			print r2,
 		
 		return ret_value # 0: nothing to read; 1: program ended
 
+	
 
 	def read_line_from_output(self):
 		if self.platform_win32:
@@ -238,13 +269,19 @@ class executor:
 		for element in v1:
 			if (sys.platform=="win32") or (sys.platform=="win64"):
 				readed = element#[0,self.read_chars]
-				self.cadena+=readed
+				if (self.sep_stderr) and (element==self.handle.stderr):
+					self.err_cadena+=readed
+				else:
+					self.cadena+=readed
 				if (self.printout) or (element==self.handle.stderr):
 					print readed,
 				break # this break statement and setting the priority lower in launch_program makes devede work a lot better on windows
 			else:
 				readed=element.readline(self.read_chars)
-				self.cadena+=readed
+				if (self.sep_stderr) and (element==self.handle.stderr):
+					self.err_cadena+=readed
+				else:
+					self.cadena+=readed
 				if (self.printout) or (element==self.handle.stderr):
 					print readed,
 
@@ -256,7 +293,11 @@ class executor:
 		# By default, just do nothing
 		if self.filename!=None:
 			self.bar.pulse()
-		return True
+
+		if self.keep_output:
+			return False
+		else:
+			return True
 
 
 	def create_filename(self,filename,title,file,avi):

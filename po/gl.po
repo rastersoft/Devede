@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 00:21+0100\n"
+"POT-Creation-Date: 2011-11-26 14:53+0100\n"
 "PO-Revision-Date: 2011-05-14 01:46+0200\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -53,8 +53,8 @@ msgstr ""
 "Non hai espazo baleiro abondo. Para crear este disco\n"
 "precísanse %(total)d Mbytes, pero só hai %(free)d Mbytes."
 
-#: ../devede_convert.py:247 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:87 ../devede_xml_menu.py:123
+#: ../devede_convert.py:273 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:123
 #: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
 #: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
 msgid ""
@@ -64,7 +64,7 @@ msgstr ""
 "Houbo un erro ao escribir no directorio de destino.\n"
 "Comprobe que ten espazo baleiro e permisos nel."
 
-#: ../devede_convert.py:339
+#: ../devede_convert.py:368
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -79,7 +79,7 @@ msgstr ""
 "\n"
 "xa existe. Se continúa, borrarase."
 
-#: ../devede_convert.py:435
+#: ../devede_convert.py:464
 msgid "Unknown error"
 msgstr "Erro descoñecido"
 
@@ -235,7 +235,7 @@ msgstr "Por favor, engada un filme antes de engadir os subtítulos."
 msgid "Adding subtitles to"
 msgstr "Engadindo subtítulos a"
 
-#: ../devede_subtitles.py:181 ../devede_subtitles.py:192
+#: ../devede_subtitles.py:186 ../devede_subtitles.py:197
 msgid ""
 "Conversion failed.\n"
 "It seems a bug of SPUMUX."

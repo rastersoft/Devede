@@ -34,7 +34,8 @@ import devede_executor
 if (sys.platform == "win32") or (sys.platform=="win64"):
 	import win32file
 
-class video_converter(devede_executor.executor):
+
+class video_converter_ffmpeg(devede_executor.executor):
 	
 	def adjust_audiorate(self,audiorate,isdvd):
 		

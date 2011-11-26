@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12.2 (win32)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 00:21+0100\n"
+"POT-Creation-Date: 2011-11-26 14:53+0100\n"
 "PO-Revision-Date: 2010-01-25 09:08+0300\n"
 "Last-Translator: Stamatis H. Stamatellos <ydatografida@gmail.com>\n"
 "Language-Team: Ydatografida <ydatografida@gmail.com>\n"
@@ -54,8 +54,8 @@ msgstr ""
 "Ανεπαρκής ελεύθερος χώρος. Γιά τη δημιουργία δίσκου\n"
 "%(total)d MBytes απαιτούνται, αλλά μόνο %(free)d MBytes είναι διαθέσιμα."
 
-#: ../devede_convert.py:247 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:87 ../devede_xml_menu.py:123
+#: ../devede_convert.py:273 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:123
 #: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
 #: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
 msgid ""
@@ -65,7 +65,7 @@ msgstr ""
 "Αποτυχία εγγραφής στο κατάλογο προορισμού.\n"
 "Ελέγξτε άν έχετε τα απαραίτιτα δικαιώματα και αρκετό ελεύθερο χώρο."
 
-#: ../devede_convert.py:339
+#: ../devede_convert.py:368
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -80,7 +80,7 @@ msgstr ""
 "\n"
 "υπάρχει ήδη. Αν συνεχίσετε, αυτό θα διαγράφει."
 
-#: ../devede_convert.py:435
+#: ../devede_convert.py:464
 msgid "Unknown error"
 msgstr "Άγνωστο σφάλμα"
 
@@ -237,7 +237,7 @@ msgstr ""
 msgid "Adding subtitles to"
 msgstr "Προσθήκη υπότιτλων σε"
 
-#: ../devede_subtitles.py:181 ../devede_subtitles.py:192
+#: ../devede_subtitles.py:186 ../devede_subtitles.py:197
 msgid ""
 "Conversion failed.\n"
 "It seems a bug of SPUMUX."

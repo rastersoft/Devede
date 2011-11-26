@@ -148,6 +148,24 @@ class create_all:
 		else:
 			return False,""
 
+	def check_mp3lame(self):
+		runner=devede_executor.executor()
+		runner.launch_program(["ffmpeg","-codecs"],sep_stderr=True,keep_out=True)
+		runner.wait_end2()
+		
+		print "Salida "+str(runner.cadena)
+		pos=runner.cadena.find("mp3lame")
+		if (pos==-1):
+			tree=devede_other.create_tree(self,"wno_mp3lame",self.gladefile)
+			w=tree.get_object("nomp3lame")
+			w.show()
+			w.run()
+			w.destroy()
+			self.has_mp3lame=False
+			return False
+		else:
+			self.has_mp3lame=True
+			return True
 	
 	def __init__(self,gladefile,structure,global_vars,callback):
 		
@@ -164,6 +182,12 @@ class create_all:
 		self.gladefile=gladefile
 		self.structure=structure
 		self.global_vars=global_vars
+		
+		self.has_mp3lame=True
+		if (global_vars["disctocreate"]=="divx") and (global_vars["use_ffmpeg"]):
+			if (False==self.check_mp3lame()):
+				return
+		
 		self.tree=devede_other.create_tree(self,"wprogress",self.gladefile)
 		
 		self.window=self.tree.get_object("wprogress")
@@ -215,6 +239,9 @@ class create_all:
 
 
 	def preview(self,filefolder):
+		
+		if (self.has_mp3lame==False):
+			return
 		
 		self.init_queue()
 		newtree=devede_other.create_tree(self,"wpreview_dialog",self.gladefile,False)
@@ -268,6 +295,9 @@ class create_all:
 	def create_disc(self):
 		
 		self.time=0
+		
+		if (self.has_mp3lame==False):
+			return
 		
 		# first, check for empty titles
 		
@@ -456,7 +486,7 @@ class create_all:
 				encpass = int(action[0][1])
 			print "Segundos "+str(self.seconds)
 			if (self.global_vars["use_ffmpeg"]):
-				self.runner=devede_ffmpeg_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
+				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
 			else:
 				self.runner=devede_video_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
 			return True
@@ -465,7 +495,7 @@ class create_all:
 			title=action[1]
 			chapter=action[2]
 			if (self.global_vars["use_ffmpeg"]):
-				self.runner=devede_ffmpeg_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
+				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
 			else:
 				self.runner=devede_video_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
 			return True
