@@ -1319,7 +1319,7 @@ class file_properties(newfile):
 		self.tree.get_object("lameopts_label").set_visible(use_ffmpeg)
 		self.tree.get_object("custom_params_lavcopts").set_visible(use_ffmpeg)
 		self.tree.get_object("custom_params_lameopts").set_visible(use_ffmpeg)
-		self.tree.get_object("volume_frame").set_visible(use_ffmpeg)
+		#self.tree.get_object("volume_frame").set_visible(use_ffmpeg)
 		self.tree.get_object("audiotrack_box").set_visible(use_ffmpeg)
 		self.tree.get_object("frame_field_order").set_visible(use_ffmpeg)
 		

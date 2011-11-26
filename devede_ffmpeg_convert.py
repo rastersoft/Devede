@@ -232,6 +232,10 @@ class video_converter_ffmpeg(devede_executor.executor):
 		command_var.append("-i")
 		command_var.append(videofile["path"])
 		
+		if (volume!=100):
+			command_var.append("-vol")
+			command_var.append(str((256*volume)/100))
+		
 		if (audiodelay!=0.0) and (copy_audio==False) and (isvob==False):
 			command_var.append("-itsoffset")
 			command_var.append(str(audiodelay))
@@ -523,6 +527,9 @@ class video_converter_ffmpeg(devede_executor.executor):
 		
 		at=audio_tracks
 		while (at>1):
+			if (volume!=100):
+				command_var.append("-vol")
+				command_var.append(str((256*volume)/100))
 			command_var.append("-newaudio")
 			at-=1
 			
