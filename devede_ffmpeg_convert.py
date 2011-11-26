@@ -456,9 +456,9 @@ class video_converter(devede_executor.executor):
 				command_var.append("-b")
 				command_var.append(str(videorate)+"000")
 		
-			if disctype!="divx":
+			#if disctype!="divx":
 			#	lavcopts+=":keyint="+str(keyintv)
-				if(copy_audio==False) and (vcd==False):
+			if(copy_audio==False) and (vcd==False):
 #					lavcopts+=":acodec="
 #					if disctype=="dvd":
 #						if fix_ac3:
@@ -468,8 +468,8 @@ class video_converter(devede_executor.executor):
 #					else:
 #						lavcopts+="mp2"
 					#lavcopts+=":abitrate="+str(audiorate)
-					command_var.append("-ab")
-					command_var.append(str(audiorate)+"000")
+				command_var.append("-ab")
+				command_var.append(str(audiorate)+"000")
 
 			if (default_res==False):
 				command_var.append("-aspect")
