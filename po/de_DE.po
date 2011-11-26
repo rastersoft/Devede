@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devede-3.14.0_de_DE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 14:53+0100\n"
+"POT-Creation-Date: 2011-11-26 17:09+0100\n"
 "PO-Revision-Date: 2010-01-29 20:37+0100\n"
 "Last-Translator: Holger Wansing <linux@wansing-online.de>\n"
 "Language-Team: german <debian-l10n-german@lists.debian.org>\n"
@@ -52,7 +52,7 @@ msgstr ""
 "Unzureichender Speicherplatz. Zum Erzeugen der Disk werden\n"
 "%(total)d MByte benötigt, es sind aber nur %(free)d MByte verfügbar."
 
-#: ../devede_convert.py:273 ../devede_subtitles.py:75
+#: ../devede_convert.py:274 ../devede_subtitles.py:75
 #: ../devede_subtitles.py:92 ../devede_xml_menu.py:123
 #: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
 #: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
@@ -63,7 +63,7 @@ msgstr ""
 "Schreiben ins Zielverzeichnis fehlgeschlagen.\n"
 "Prüfen Sie den Speicherplatz und die Zugriffsrechte."
 
-#: ../devede_convert.py:368
+#: ../devede_convert.py:369
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -78,7 +78,7 @@ msgstr ""
 "\n"
 "existiert bereits. Wenn Sie fortfahren, wird sie/es gelöscht."
 
-#: ../devede_convert.py:464
+#: ../devede_convert.py:465
 msgid "Unknown error"
 msgstr "Unbekannter Fehler"
 
@@ -313,6 +313,17 @@ msgstr ""
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Erstelle Menü %(menu_number)d"
+
+#: ../interface/wno_mp3lame.ui.h:1
+msgid ""
+"Your FFMPEG version is compiled\n"
+"without MP3LAME support, so\n"
+"Devede can't create DivX.\n"
+"\n"
+"Recompile your FFMPEG code, or\n"
+"install a version with MP3LAME\n"
+"support."
+msgstr ""
 
 #: ../interface/use_ffmpeg.ui.h:1
 msgid "Don't show this message at startup again"

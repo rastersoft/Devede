@@ -24,12 +24,13 @@
             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
             <property name="layout_style">spread</property>
             <child>
-              <object class="GtkButton" id="burn_button">
-                <property name="label" translatable="yes">Burn</property>
+              <object class="GtkButton" id="button10">
+                <property name="label">gtk-ok</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
                 <property name="use_action_appearance">False</property>
+                <property name="use_stock">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -38,13 +39,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="button10">
-                <property name="label">gtk-ok</property>
+              <object class="GtkButton" id="burn_button">
+                <property name="label" translatable="yes" context="Means: &quot;Burn the ISO image in a CD/DVD&quot;" comments="Means: &quot;Burn the ISO image in a CD/DVD&quot;">Burn</property>
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="receives_default">False</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
-                <property name="use_stock">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -109,8 +109,8 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="20">burn_button</action-widget>
       <action-widget response="-5">button10</action-widget>
+      <action-widget response="20">burn_button</action-widget>
     </action-widgets>
   </object>
 </interface>

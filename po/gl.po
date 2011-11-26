@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 14:53+0100\n"
+"POT-Creation-Date: 2011-11-26 17:09+0100\n"
 "PO-Revision-Date: 2011-05-14 01:46+0200\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -53,7 +53,7 @@ msgstr ""
 "Non hai espazo baleiro abondo. Para crear este disco\n"
 "precísanse %(total)d Mbytes, pero só hai %(free)d Mbytes."
 
-#: ../devede_convert.py:273 ../devede_subtitles.py:75
+#: ../devede_convert.py:274 ../devede_subtitles.py:75
 #: ../devede_subtitles.py:92 ../devede_xml_menu.py:123
 #: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
 #: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
@@ -64,7 +64,7 @@ msgstr ""
 "Houbo un erro ao escribir no directorio de destino.\n"
 "Comprobe que ten espazo baleiro e permisos nel."
 
-#: ../devede_convert.py:368
+#: ../devede_convert.py:369
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -79,7 +79,7 @@ msgstr ""
 "\n"
 "xa existe. Se continúa, borrarase."
 
-#: ../devede_convert.py:464
+#: ../devede_convert.py:465
 msgid "Unknown error"
 msgstr "Erro descoñecido"
 
@@ -312,6 +312,17 @@ msgstr ""
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Creando o menú %(menu_number)d"
+
+#: ../interface/wno_mp3lame.ui.h:1
+msgid ""
+"Your FFMPEG version is compiled\n"
+"without MP3LAME support, so\n"
+"Devede can't create DivX.\n"
+"\n"
+"Recompile your FFMPEG code, or\n"
+"install a version with MP3LAME\n"
+"support."
+msgstr ""
 
 #: ../interface/use_ffmpeg.ui.h:1
 msgid "Don't show this message at startup again"

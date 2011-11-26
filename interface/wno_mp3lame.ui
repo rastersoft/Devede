@@ -48,19 +48,9 @@
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">Your FFMPEG version is compiled
 without MP3LAME support, so
-Devede can't create DivX.</property>
-          </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="label2">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Recompile your FFMPEG code, or
+Devede can't create DivX.
+
+Recompile your FFMPEG code, or
 install a version with MP3LAME
 support.</property>
           </object>
