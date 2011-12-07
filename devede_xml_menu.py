@@ -34,6 +34,10 @@ class xml_files(devede_executor.executor):
 	def __init__(self,pbar,filename,filefolder,structure,global_vars,proglabel,extcr=None):
 	
 		devede_executor.executor.__init__(self,filename,filefolder,pbar)
+		
+		self.height2=0.05
+		self.height=0.0391604010025
+		
 		self.proglabel=proglabel
 		self.print_error=_("Failed to create the menues.")
 		self.output=False
@@ -69,10 +73,19 @@ class xml_files(devede_executor.executor):
 
 		self.align=global_vars["menu_alignment"]
 		self.halign=global_vars["menu_halignment"]
+		
+		self.top_margin=0.75*global_vars["menu_top_margin"]
+		self.bottom_margin=0.75*global_vars["menu_bottom_margin"]
+		self.left_margin=global_vars["menu_left_margin"]
+		self.right_margin=global_vars["menu_right_margin"]
 		self.extcr=extcr
 		
-		self.elements_per_menu=10
-		self.lines_per_menu=10
+		self.elements_per_menu=int((0.75-(self.top_margin+self.bottom_margin))/self.height2)
+		self.lines_per_menu=self.elements_per_menu
+		print "Elementos por menu: "+str(self.elements_per_menu)
+		
+		if (len(self.structure))>self.elements_per_menu:
+			self.elements_per_menu-=1
 		
 		counter=0
 		if self.with_menu:
@@ -511,7 +524,7 @@ class xml_files(devede_executor.executor):
 
 		cantidad=len(self.structure[first_element:first_element+self.elements_per_menu])
 		if self.align!=0:
-			offset=(self.lines_per_menu-cantidad)/self.align
+			offset=(self.elements_per_menu-cantidad)/self.align
 		else:
 			offset=0
 			
@@ -526,10 +539,27 @@ class xml_files(devede_executor.executor):
 			fichero.write(' image="'+self.expand_xml(self.filefolder+self.filename)+'_menu'+str(nelement)+'_bg_inactive_out.png"')
 			fichero.write(' highlight="'+self.expand_xml(self.filefolder+self.filename)+'_menu'+str(nelement)+'_bg_active_out.png"')
 			fichero.write(' select="'+self.expand_xml(self.filefolder+self.filename)+'_menu'+str(nelement)+'_bg_select_out.png" >\n')
-			if self.menu_PAL:
-				coord_y=[(92,128),(130,166),(168,204),(206,242),(244,280),(282,320),(322,358),(360,396),(398,436),(438,474),(476,512)]
+			
+			counter=first_element
+			if (self.align==0):
+				pos_y=self.top_margin
+			elif self.align==1:
+				pos_y=0.75-self.bottom_margin-self.height2*float(len(self.structure[counter:counter+self.lines_per_menu]))
 			else:
-				coord_y=[(76,106),(108,138),(140,170),(172,202),(204,234),(236,266),(268,298),(300,330),(332,362),(364,394),(396,426)]
+				pos_y=(self.top_margin+(0.75-self.bottom_margin)-self.height2*float(len(self.structure[counter:counter+self.lines_per_menu])))/2
+			pos_y3=0.75-self.bottom_margin-self.height2#pos_y+self.height2*float((len(self.structure[counter:counter+self.lines_per_menu])))
+			pos_y/=0.75
+			pos_y3/=0.75
+			inc_y=self.height2/0.75
+			
+			if self.menu_PAL:
+				pos_y*=576.0
+				pos_y3*=576.0
+				inc_y*=576.0
+			else:
+				pos_y*=480.0
+				pos_y3*=480.0
+				inc_y*=480.0
 			
 			if (nelement!=0):
 				has_previous=True
@@ -543,7 +573,8 @@ class xml_files(devede_executor.executor):
 			
 			for contador in range(cantidad):
 				fichero.write('<button name="boton'+str(nelement)+"x"+str(contador))
-				fichero.write('" x0="0" y0="'+str(coord_y[contador+offset][0])+'" x1="719" y1="'+str(coord_y[contador+offset][1])+'"')
+				fichero.write('" x0="0" y0="'+str(int(pos_y))+'" x1="719" y1="'+str(int(pos_y+inc_y-2))+'"')
+				pos_y+=inc_y
 				if contador!=0:
 					fichero.write(' up="boton'+str(nelement)+"x")
 					fichero.write(str(contador-1))
@@ -562,10 +593,10 @@ class xml_files(devede_executor.executor):
 				if has_previous:
 					fichero.write(' left="boton'+str(nelement)+'p"')
 				fichero.write(' > </button>\n')
-				
+			
 			if has_previous:
 				fichero.write('<button name="boton'+str(nelement)+'p"')
-				fichero.write(' x0="0" y0="'+str(coord_y[10][0])+'" x1="359" y1="'+str(coord_y[10][1])+'"')
+				fichero.write(' x0="0" y0="'+str(int(pos_y3))+'" x1="359" y1="'+str(int(pos_y3+inc_y-2))+'"')
 				fichero.write(' up="boton'+str(nelement)+'x'+str(cantidad-1)+'"')
 				if has_next:
 					fichero.write(' right="boton'+str(nelement)+'n"')
@@ -573,7 +604,7 @@ class xml_files(devede_executor.executor):
 
 			if has_next:
 				fichero.write('<button name="boton'+str(nelement)+'n"')
-				fichero.write(' x0="360" y0="'+str(coord_y[10][0])+'" x1="719" y1="'+str(coord_y[10][1])+'"')
+				fichero.write(' x0="360" y0="'+str(int(pos_y3))+'" x1="719" y1="'+str(int(pos_y3+inc_y-2))+'"')
 				fichero.write(' up="boton'+str(nelement)+'x'+str(cantidad-1)+'"')
 				if has_previous:
 					fichero.write(' left="boton'+str(nelement)+'p"')
@@ -596,7 +627,7 @@ class xml_files(devede_executor.executor):
 		# I created the button image for this size, so I must respect it :(
 		#xb,yb,width,height,cx,cy=cr.text_extents("Título 1")
 
-		height=0.0391604010025
+		height=self.height
 
 		if width==1:
 			half_button=False
@@ -672,7 +703,7 @@ class xml_files(devede_executor.executor):
 
 		# I created the button image for this size, so I must respect it :(
 		#xb,yb,width,height,cx,cy=cr.text_extents("Título 1")
-		height=0.0391604010025
+		height=self.height
 	
 		cr.set_font_size(fontsize2)
 		xb,y2,width,h2,cx,cy2=cr.text_extents(texto)
@@ -766,11 +797,15 @@ class xml_files(devede_executor.executor):
 
 		cr.scale(sf.get_width(),1.33*sf.get_height()) # picture gets from 0 to 1 in X and from 0 to 0.75 in Y
 
-		pos_y=0.125
+		if (self.align==0):
+			pos_y=self.top_margin
+		elif self.align==1:
+			pos_y=0.75-self.bottom_margin-self.height2*float(len(self.structure[counter:counter+self.lines_per_menu]))
+		else:
+			pos_y=(self.top_margin+(0.75-self.bottom_margin)-self.height2*float(len(self.structure[counter:counter+self.lines_per_menu])))/2
+		pos_y3=0.75-self.bottom_margin-self.height2
+		#pos_y3=pos_y+self.height2*float((self.lines_per_menu)-1)
 		
-		if self.align!=0:
-			pos_y+=0.05*float((self.lines_per_menu-len(self.structure[counter:counter+self.elements_per_menu]))/self.align)
-
 		fontname,fontstyle,fontslant,fontsize=devede_other.get_font_params(self.font_name)
 
 		shadowcolor=self.shadowcolor
@@ -806,7 +841,7 @@ class xml_files(devede_executor.executor):
 				if paint_bg==0: # print the shadow first
 					self.menu_set_text(cr,self.shadow_offset,pos_y+self.shadow_offset,self.halign,entrada[0]["nombre"],bgcolor,shadowcolor,fontname,fontstyle,fontslant,fontsize)
 				self.menu_set_text(cr,0,pos_y,self.halign,entrada[0]["nombre"],bgcolor,fontcolor,fontname,fontstyle,fontslant,fontsize)
-				pos_y+=0.05
+				pos_y+=self.height2
 
 			print "Paint_bg "+str(paint_bg)+" title text: "+str(self.title_text)
 			if (paint_bg==0) and (self.title_text!=""):
@@ -815,13 +850,12 @@ class xml_files(devede_executor.executor):
 				self.menu_set_text(cr,self.shadow_offset, 0.075+self.shadow_offset,2,self.title_text, [0,0,0,0], self.title_shadow, fontname, fontstyle, fontslant, fontsize, False)
 				self.menu_set_text(cr,0, 0.075,2,self.title_text, [0,0,0,0], self.title_color, fontname, fontstyle, fontslant, fontsize, False)
 
-			pos_y=0.625
 			# check if we have to paint the NEXT MENU button
 			if (element!=self.nmenues-1) and (self.nmenues>1):
-				self.menu_set_bg(cr, 1, pos_y, 0.4, bgcolor,arrowcolor,arrowshadowcolor)
+				self.menu_set_bg(cr, 1, pos_y3, 0.4, bgcolor,arrowcolor,arrowshadowcolor)
 			# check if we have to paint the PREVIOUS MENU button
 			if (element!=0) or ((self.extcr!=None) and (self.nmenues>1)):
-				self.menu_set_bg(cr, 0, pos_y, 0.4, bgcolor,arrowcolor,arrowshadowcolor)
+				self.menu_set_bg(cr, 0, pos_y3, 0.4, bgcolor,arrowcolor,arrowshadowcolor)
 
 		if self.extcr==None:
 			if paint_bg==0:

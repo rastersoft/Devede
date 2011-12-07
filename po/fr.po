@@ -978,7 +978,7 @@ msgstr "CD de 185 Mo"
 
 #: ../interface/wmain.ui.h:6
 msgid "4.7 GB DVD"
-msgstr "DVD de 4,7 Mo"
+msgstr "DVD de 4,7 Go"
 
 #: ../interface/wmain.ui.h:7
 msgid "650 MB CD"
@@ -990,7 +990,7 @@ msgstr "CD de 700 Mo"
 
 #: ../interface/wmain.ui.h:9
 msgid "8.5 GB DVD"
-msgstr "DVD de 8,5 Mo"
+msgstr "DVD de 8,5 Go"
 
 #: ../interface/wmain.ui.h:10
 msgid "<b>Action</b>"

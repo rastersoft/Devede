@@ -68,6 +68,10 @@ class disctype:
 	def on_disctype_dvd(self,widget):
 	
 		self.global_vars["disctocreate"]="dvd"
+		self.global_vars["menu_top_margin"]=0.125
+		self.global_vars["menu_bottom_margin"]=0.125
+		self.global_vars["menu_left_margin"]=0.1
+		self.global_vars["menu_right_margin"]=0.1
 		self.set_disk_type()
 
 		

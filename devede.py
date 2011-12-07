@@ -276,6 +276,11 @@ global_vars["cores"]=get_cores()
 global_vars["use_ffmpeg"]=False
 global_vars["warning_ffmpeg"]=True
 global_vars["shutdown_after_disc"]=False
+
+global_vars["menu_top_margin"]=0.125
+global_vars["menu_bottom_margin"]=0.125
+global_vars["menu_left_margin"]=0.1
+global_vars["menu_right_margin"]=0.1
 #global_vars[""]=""
 
 print "Cores: "+str(global_vars["cores"])

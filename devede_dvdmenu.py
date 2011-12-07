@@ -144,6 +144,15 @@ class menu_options:
 		w=self.tree.get_object("menu_title_font")
 		w.set_font_name(global_vars["menu_title_fontname"])
 		
+		w=self.tree.get_object("margin_top_adj")
+		w.set_value(100.0*global_vars["menu_top_margin"])
+		w=self.tree.get_object("margin_bottom_adj")
+		w.set_value(100.0*global_vars["menu_bottom_margin"])
+		w=self.tree.get_object("margin_left_adj")
+		w.set_value(100.0*global_vars["menu_left_margin"])
+		w=self.tree.get_object("margin_right_adj")
+		w.set_value(100.0*global_vars["menu_right_margin"])
+		
 		self.window.show()
 
 
@@ -335,6 +344,15 @@ class menu_options:
 		
 		w=self.tree.get_object("menu_title_font")
 		global_vars["menu_title_fontname"]=w.get_font_name()
+		
+		w=self.tree.get_object("margin_top_adj")
+		global_vars["menu_top_margin"]=w.get_value()/100.0
+		w=self.tree.get_object("margin_bottom_adj")
+		global_vars["menu_bottom_margin"]=w.get_value()/100.0
+		w=self.tree.get_object("margin_left_adj")
+		global_vars["menu_left_margin"]=w.get_value()/100.0
+		w=self.tree.get_object("margin_right_adj")
+		global_vars["menu_right_margin"]=w.get_value()/100.0
 		
 		# repaint the used size
 		self.callback()
