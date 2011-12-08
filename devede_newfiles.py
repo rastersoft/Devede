@@ -36,6 +36,7 @@ import devede_executor
 import devede_convert
 import devede_dialogs
 import devede_help
+import math
 
 # How to add new file options:
 
@@ -153,7 +154,7 @@ class file_get_params(devede_executor.executor):
 				self.audio=audio
 			return False,audio
 		
-		if aspect_ratio==0.0:
+		if aspect_ratio==0.0 or math.isnan(aspect_ratio) :
 			aspect_ratio=(float(width))/(float(height))
 			if aspect_ratio<=1.5:
 				aspect_ratio=(4.0/3.0)
