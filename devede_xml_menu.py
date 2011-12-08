@@ -597,7 +597,7 @@ class xml_files(devede_executor.executor):
 			
 			if has_previous:
 				fichero.write('<button name="boton'+str(nelement)+'p"')
-				fichero.write(' x0="0" y0="'+str(int(pos_y3))+'" x1="359" y1="'+str(int(pos_y3+inc_y-2))+'"')
+				fichero.write(' x0="0" y0="'+str(int(pos_y3))+'" x1="'+str((self.left_margin+1-self.right_margin)/2)+'" y1="'+str(int(pos_y3+inc_y-2))+'"')
 				fichero.write(' up="boton'+str(nelement)+'x'+str(cantidad-1)+'"')
 				if has_next:
 					fichero.write(' right="boton'+str(nelement)+'n"')
@@ -605,7 +605,7 @@ class xml_files(devede_executor.executor):
 
 			if has_next:
 				fichero.write('<button name="boton'+str(nelement)+'n"')
-				fichero.write(' x0="360" y0="'+str(int(pos_y3))+'" x1="719" y1="'+str(int(pos_y3+inc_y-2))+'"')
+				fichero.write(' x0="'+str((self.left_margin+1-self.right_margin)/2)+'" y0="'+str(int(pos_y3))+'" x1="719" y1="'+str(int(pos_y3+inc_y-2))+'"')
 				fichero.write(' up="boton'+str(nelement)+'x'+str(cantidad-1)+'"')
 				if has_previous:
 					fichero.write(' left="boton'+str(nelement)+'p"')
