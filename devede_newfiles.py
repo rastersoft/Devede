@@ -591,7 +591,7 @@ class file_properties(newfile):
 
 	def custom_video_filter(self, filter_info=None, data=None):
 		"""Custom file filter.  Filter for video files when running on win32"""
-		video_types=["wmv", "avi", "asf", "flv", "bin", "vob", "es", "ps", "pes","qt", "mov", "mp4", "mpg", "mpeg", "rm", "mkv", "nut", "nsv", "vivo", "fli", "yuv4mpeg", "cpk","ogm", "asx", "3gp"]
+		video_types=["m2ts","wmv", "avi", "asf", "flv", "bin", "vob", "es", "ps", "pes","qt", "mov", "mp4", "mpg", "mpeg", "rm", "mkv", "nut", "nsv", "vivo", "fli", "yuv4mpeg", "cpk","ogm", "asx", "3gp"]
 		if os.path.splitext(filter_info[2])[1][1:] in video_types:
 			return True
 		return False
