@@ -241,6 +241,7 @@ class create_all:
 	def preview(self,filefolder):
 		
 		if (self.has_mp3lame==False):
+			self.window.destroy()
 			return
 		
 		self.init_queue()
@@ -297,7 +298,10 @@ class create_all:
 		self.time=0
 		
 		if (self.has_mp3lame==False):
-			return
+			self.window.hide()
+			self.window.destroy()
+			(self.main_window_callback)()
+			return False
 		
 		# first, check for empty titles
 		
@@ -315,6 +319,9 @@ class create_all:
 			w.hide()
 			w.destroy()
 			if value!=-6:
+				self.window.hide()
+				self.window.destroy()
+				(self.main_window_callback)()
 				return False
 
 		# ask the folder and filename
