@@ -224,6 +224,12 @@ class load_save_config:
 		for element in global_vars2:
 			self.global_vars[element]=global_vars2[element]
 		
+		if self.global_vars.has_key("menu_top_margin")==False:
+			self.global_vars["menu_top_margin"]=0.125
+			self.global_vars["menu_bottom_margin"]=0.125
+			self.global_vars["menu_left_margin"]=0.1
+			self.global_vars["menu_right_margin"]=0.1
+		
 		if self.global_vars.has_key("menu_bgcolor")==False:
 			self.global_vars["menu_bgcolor"]=[0,0,0,49152]
 			self.global_vars["menu_font_color"]=[65535,65535,65535]
@@ -308,6 +314,10 @@ class load_save_config:
 			vars["menu_title_shadow"]=self.global_vars["menu_title_shadow"]
 			vars["menu_title_text"]=self.global_vars["menu_title_text"]
 			vars["menu_title_fontname"]=self.global_vars["menu_title_fontname"]
+			vars["menu_top_margin"]=self.global_vars["menu_top_margin"]
+			vars["menu_bottom_margin"]=self.global_vars["menu_bottom_margin"]
+			vars["menu_left_margin"]=self.global_vars["menu_left_margin"]
+			vars["menu_right_margin"]=self.global_vars["menu_right_margin"]
 
 			if self.tree.get_object("create_iso").get_active():
 				vars["action_todo"]=2
