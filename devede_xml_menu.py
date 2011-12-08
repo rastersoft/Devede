@@ -73,7 +73,8 @@ class xml_files(devede_executor.executor):
 
 		self.align=global_vars["menu_alignment"]
 		self.halign=global_vars["menu_halignment"]
-		
+		self.radius=0.0375
+
 		self.top_margin=0.75*global_vars["menu_top_margin"]
 		self.bottom_margin=0.75*global_vars["menu_bottom_margin"]
 		self.left_margin=global_vars["menu_left_margin"]
@@ -621,7 +622,7 @@ class xml_files(devede_executor.executor):
 
 		""" paints the rounded rectangles used as background for titles and buttons """
 
-		radius=0.0375
+		radius=self.radius
 		border=0.0048
 		linea=0.0024
 		# I created the button image for this size, so I must respect it :(
@@ -633,18 +634,19 @@ class xml_files(devede_executor.executor):
 			half_button=False
 		else:
 			half_button=True
-		width-=2*self.margin_x
+		
+		width-=self.left_margin+self.right_margin#2*self.margin_x
 		
 		if half_button: # we want half button
 			if x==0:
-				xi=x+self.margin_x
-				xf=xi+0.5-self.margin_x*1.5
+				xi=self.left_margin+radius
+				xf=((self.left_margin+1-self.right_margin)/2.0)-radius
 			else:
-				xf=x-self.margin_x
-				xi=xf-0.5+self.margin_x*1.5
+				xi=((self.left_margin+1-self.right_margin)/2.0)+radius
+				xf=1-self.right_margin-radius
 		else:
-			xi=x+self.margin_x
-			xf=xi+width
+			xi=self.left_margin+radius
+			xf=1-self.right_margin-radius
 
 		cr.set_line_width(linea)
 	
@@ -668,8 +670,7 @@ class xml_files(devede_executor.executor):
 		else:
 			s=False
 			arrowx-=0.0175
-			
-			
+
 		self.menu_paint_arrow(cr, arrowx+self.shadow_offset, y+self.shadow_offset, s, height, shcolor)
 		self.menu_paint_arrow(cr, arrowx, y, s, height, fgcolor)
 
@@ -724,11 +725,11 @@ class xml_files(devede_executor.executor):
 		coa=float(fontcolor[3])/65535.0
 		cr.set_source_rgba(cor,cog,cob,coa)
 		if halign==2: # center
-			nx=.5-width/2.0-xb
+			nx=((self.left_margin+1-self.right_margin)-width)/2
 		elif halign==0: # left
-			nx=self.margin_x
+			nx=self.left_margin+self.radius
 		elif halign==1: # right
-			nx=1.0-self.margin_x-width
+			nx=1.0-self.right_margin-width-self.radius
 		
 		nx+=x
 		
