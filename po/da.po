@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.16.0 beta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-08 17:07+0100\n"
+"POT-Creation-Date: 2011-12-30 11:31+0100\n"
 "PO-Revision-Date: 2010-01-25 15:25+0100\n"
 "Last-Translator: Henrik Kristiansen <henrik.g.kristiansen@gmail.com>\n"
 "Language-Team: Danish < >\n"
@@ -364,7 +364,7 @@ msgid "Temporary files folder:"
 msgstr "Mappe til midlertidige filer:"
 
 #: ../interface/settings.ui.h:8
-msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
+msgid "Use FFMPEG instead of Mencoder"
 msgstr ""
 
 #: ../interface/settings.ui.h:9

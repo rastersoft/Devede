@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-08 17:07+0100\n"
-"PO-Revision-Date: 2011-05-14 01:46+0200\n"
+"POT-Creation-Date: 2011-12-30 11:31+0100\n"
+"PO-Revision-Date: 2011-12-30 11:35+0100\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
@@ -323,6 +323,12 @@ msgid ""
 "install a version with MP3LAME\n"
 "support."
 msgstr ""
+"A versión instalada de FFMPEG non\n"
+"ten soporte de MP3LAME, polo que\n"
+"Devede non pode crear DivX.\n"
+"\n"
+"Recompile o código de FFMPEG, ou\n"
+"instale a versión con MP3LAME."
 
 #: ../interface/use_ffmpeg.ui.h:1
 msgid "Don't show this message at startup again"
@@ -371,8 +377,8 @@ msgid "Temporary files folder:"
 msgstr "Directorio para os ficheiros temporais:"
 
 #: ../interface/settings.ui.h:8
-msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
-msgstr ""
+msgid "Use FFMPEG instead of Mencoder"
+msgstr "Usar FFMPEG en troques de Mencoder"
 
 #: ../interface/settings.ui.h:9
 msgid "Use optimizations for multicore CPUs"
@@ -524,7 +530,7 @@ msgstr "Rematado."
 #: ../interface/wend_dialog.ui.h:3
 msgctxt "Means: "
 msgid "Burn"
-msgstr ""
+msgstr "Grabar"
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -615,9 +621,8 @@ msgid "<b>Division in chapters</b>"
 msgstr "<b>División en capítulos</b>"
 
 #: ../interface/wfile.ui.h:20
-#, fuzzy
 msgid "<b>Extra parameters for coder</b>"
-msgstr "<b>Parámetros extra para Mencoder</b>"
+msgstr "<b>Parámetros extra para o codificador</b>"
 
 #: ../interface/wfile.ui.h:21
 msgid "<b>Field order</b>"
@@ -940,7 +945,7 @@ msgstr ""
 
 #: ../interface/wfolder_dialog.ui.h:3
 msgid "Shutdown computer when disc is done"
-msgstr ""
+msgstr "Apagar a computadora cando o disco esté feito"
 
 #: ../interface/wloadconfig.ui.h:1
 msgid "Load a disc structure"
@@ -1101,14 +1106,13 @@ msgid "<b>Disc startup options</b>"
 msgstr "<b>Opcións de inicio do disco</b>"
 
 #: ../interface/wmenu_properties.ui.h:2
-#, fuzzy
 msgid "<b>Horizontal</b>"
-msgstr "<b>Alineamento horizontal</b>"
+msgstr "<b>Horizontal</b>"
 
 #: ../interface/wmenu_properties.ui.h:4
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<b>Margins (%)</b>"
-msgstr "<b>Menús</b>"
+msgstr "<b>Marxes</b>"
 
 #: ../interface/wmenu_properties.ui.h:5
 msgid "<b>Menu background (only PNG)</b>"
@@ -1131,9 +1135,8 @@ msgid "<b>Menu title</b>"
 msgstr "<b>Título do menú</b>"
 
 #: ../interface/wmenu_properties.ui.h:10
-#, fuzzy
 msgid "<b>Vertical</b>"
-msgstr "<b>Especial</b>"
+msgstr "<b>Vertical</b>"
 
 #: ../interface/wmenu_properties.ui.h:11
 msgid "Background color for titles: "

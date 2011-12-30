@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-08 17:07+0100\n"
-"PO-Revision-Date: 2011-11-26 17:08+0100\n"
+"POT-Creation-Date: 2011-12-30 11:31+0100\n"
+"PO-Revision-Date: 2011-12-30 11:32+0100\n"
 "Last-Translator: raster <raster@rastersoft.com>\n"
 "Language-Team: Project-Id-Version: esReport-Msgid-Bugs-To: POT-Creation- "
 "<es@li.org>\n"
@@ -388,8 +388,8 @@ msgid "Temporary files folder:"
 msgstr "Carpeta para los ficheros temporales:"
 
 #: ../interface/settings.ui.h:8
-msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
-msgstr "Utilizar FFMPEG en lugar de Mencoder (EXPERIMENTAL)"
+msgid "Use FFMPEG instead of Mencoder"
+msgstr "Utilizar FFMPEG en lugar de Mencoder"
 
 #: ../interface/settings.ui.h:9
 msgid "Use optimizations for multicore CPUs"
@@ -540,7 +540,6 @@ msgstr "¡Terminado!"
 
 #. Means: "Burn the ISO image in a CD/DVD"
 #: ../interface/wend_dialog.ui.h:3
-#, fuzzy
 msgctxt "Means: "
 msgid "Burn"
 msgstr "Grabar"
@@ -1120,14 +1119,13 @@ msgid "<b>Disc startup options</b>"
 msgstr "<b>Opciones de inicio del disco</b>"
 
 #: ../interface/wmenu_properties.ui.h:2
-#, fuzzy
 msgid "<b>Horizontal</b>"
-msgstr "<b>Alineamiento horizontal</b>"
+msgstr "<b>Horizontal</b>"
 
 #: ../interface/wmenu_properties.ui.h:4
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<b>Margins (%)</b>"
-msgstr "<b>Menús</b>"
+msgstr "<b>Márgenes</b>"
 
 #: ../interface/wmenu_properties.ui.h:5
 msgid "<b>Menu background (only PNG)</b>"
@@ -1150,9 +1148,8 @@ msgid "<b>Menu title</b>"
 msgstr "<b>Título del menú</b>"
 
 #: ../interface/wmenu_properties.ui.h:10
-#, fuzzy
 msgid "<b>Vertical</b>"
-msgstr "<b>Especial</b>"
+msgstr "<b>Vertical</b>"
 
 #: ../interface/wmenu_properties.ui.h:11
 msgid "Background color for titles: "

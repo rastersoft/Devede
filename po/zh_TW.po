@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-08 17:07+0100\n"
+"POT-Creation-Date: 2011-12-30 11:31+0100\n"
 "PO-Revision-Date: 2008-08-21 11:37+0800\n"
 "Last-Translator: Jose Sun <josesun@gmail.com>\n"
 "Language-Team: \n"
@@ -349,7 +349,7 @@ msgid "Temporary files folder:"
 msgstr "暫存檔案資料夾:"
 
 #: ../interface/settings.ui.h:8
-msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
+msgid "Use FFMPEG instead of Mencoder"
 msgstr ""
 
 #: ../interface/settings.ui.h:9

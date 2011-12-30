@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_PT\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-08 17:07+0100\n"
+"POT-Creation-Date: 2011-12-30 11:31+0100\n"
 "PO-Revision-Date: 2008-08-24 01:52+0200\n"
 "Last-Translator: Joel Calado <joelcalado@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) <pt@li.org>\n"
@@ -363,7 +363,7 @@ msgid "Temporary files folder:"
 msgstr "Apagar ficheiros temporários"
 
 #: ../interface/settings.ui.h:8
-msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
+msgid "Use FFMPEG instead of Mencoder"
 msgstr ""
 
 #: ../interface/settings.ui.h:9

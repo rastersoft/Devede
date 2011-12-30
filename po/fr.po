@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-08 17:07+0100\n"
+"POT-Creation-Date: 2011-12-30 11:31+0100\n"
 "PO-Revision-Date: 2010-01-31 12:19+0100\n"
 "Last-Translator: Arnaud Leroy <jacknaquunoeil@gmail.com>\n"
 "Language-Team: \n"
@@ -368,7 +368,7 @@ msgid "Temporary files folder:"
 msgstr "Dossier des fichiers temporaires :"
 
 #: ../interface/settings.ui.h:8
-msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
+msgid "Use FFMPEG instead of Mencoder"
 msgstr ""
 
 #: ../interface/settings.ui.h:9

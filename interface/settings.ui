@@ -112,7 +112,7 @@
                         </child>
                         <child>
                           <object class="GtkCheckButton" id="use_ffmpeg">
-                            <property name="label" translatable="yes">Use FFMPEG instead of Mencoder (EXPERIMENTAL)</property>
+                            <property name="label" translatable="yes">Use FFMPEG instead of Mencoder</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>

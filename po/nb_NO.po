@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-08 17:07+0100\n"
+"POT-Creation-Date: 2011-12-30 11:31+0100\n"
 "PO-Revision-Date: 2008-08-07 02:47+0200\n"
 "Last-Translator: Lars-Erik Aunevik Labori <translate@labori.nu>\n"
 "Language-Team: Norwegian/Bokmaal <i18n-nb@lister.ping.uio.no>\n"
@@ -363,7 +363,7 @@ msgid "Temporary files folder:"
 msgstr "Slett midlertidige filer"
 
 #: ../interface/settings.ui.h:8
-msgid "Use FFMPEG instead of Mencoder (EXPERIMENTAL)"
+msgid "Use FFMPEG instead of Mencoder"
 msgstr ""
 
 #: ../interface/settings.ui.h:9
