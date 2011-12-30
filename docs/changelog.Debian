@@ -1,3 +1,43 @@
+devede (3.21.0-0~rastersoft1) oneiric;urgency=low
+
+  * New upstream version
+
+    - Fixed a bug when creating a DVD with more than one page in the menu
+    - Now uses FFMpeg as the default backend
+
+ -- Sergio Costas Rodriguez <raster@rastersoft.com> Wed, 30 Dec 2011 23:54:34 +0001
+
+devede (3.20.0-0~rastersoft1) oneiric;urgency=low
+
+  * New upstream version
+
+    - Now copies all the audio tracks to the output when using FFMpeg
+    - Support for changing volume in FFMpeg
+    - Allows to change the margins in a DVD menu
+    - Fixed several dialogs that failed when answering "No"
+    - Support for getting the number of CPUs using the <em>multiprocessing</em> module, useful for *BSD users (thanks to Sean C. Farley)
+    - Fixed when the aspect ratio is NaN (thanks to Henry HebHardt)
+    - New background image (thanks to ArTuP)
+    - Added .m2ts extension as video file type
+    - Fixed french translation
+    - Added turkish translation
+
+ -- Sergio Costas Rodriguez <raster@rastersoft.com> Wed, 8 Dec 2011 23:54:34 +0001
+
+devede (3.19.0-0~rastersoft1) oneiric;urgency=low
+
+  * New upstream version
+
+    - Drag&Drop support on KDE
+    - Fixed bug in FFMPEG support
+    - Now checks that MP3LAME support is available when creating DivX with FFMPEG
+    - Now correctly sets the audio bitrate when creating DivX with FFMPEG
+    - Allows to burn the ISO image directly after creating it (thanks to Eugeni Dodonov)
+    - Updated italian translation
+    - Minor bugfixes
+
+ -- Sergio Costas Rodriguez <raster@rastersoft.com> Sat, 26 Nov 2011 23:54:34 +0001
+
 devede (3.18.0-0~rastersoft1) natty; urgency=medium
 
   * New upstream version

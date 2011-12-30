@@ -34,7 +34,7 @@ import shutil
 import pickle
 import cairo
 
-print "DeVeDe 3.19.0"
+print "DeVeDe 3.21.0"
 if (sys.platform!="win32") and (sys.platform!="win64"):
 	try:
 		print "Locale: "+str(os.environ["LANG"])
@@ -218,9 +218,20 @@ def get_cores():
 		logical_cores = win32api.GetSystemInfo()[5] #Logical Cores
 		return logical_cores
 
+	failed=False
 	try:
 		proc=open("/proc/cpuinfo","r")
 	except:
+		failed=True
+		
+		
+	if failed:
+		# If can't read /proc/cpuinfo, try to use the multiprocessing module
+		try:
+			import multiprocessing
+			return multiprocessing.cpu_count()
+		except:
+			pass
 		return 1 # if we can't open /PROC/CPUINFO, return only one CPU (just in case)
 	
 	siblings=1 # default values
@@ -273,8 +284,8 @@ global_vars["sub_language"]="EN (ENGLISH)"
 global_vars["with_menu"]=True
 global_vars["AC3_fix"]=False
 global_vars["cores"]=get_cores()
-global_vars["use_ffmpeg"]=False
-global_vars["warning_ffmpeg"]=True
+global_vars["use_ffmpeg"]=True
+global_vars["warning_ffmpeg"]=False
 global_vars["shutdown_after_disc"]=False
 
 global_vars["menu_top_margin"]=0.125
@@ -387,20 +398,6 @@ elif fonts_found==False:
 	wprograms.connect("destroy",program_exit)
 else:
 	new_file=devede_disctype.disctype(global_vars)
-
-if global_vars["warning_ffmpeg"]:
-	tree2=gtk.Builder()
-	tree2.set_translation_domain("devede")
-	tree2.add_from_file(os.path.join(glade,"use_ffmpeg.ui"))
-	w2=tree2.get_object("use_ffmpeg")
-	ch=tree2.get_object("show_again")
-	w2.show_all()
-	w2.run()
-	if ch.get_active():
-		global_vars["warning_ffmpeg"]=False
-		devede_other.save_config(global_vars)
-	w2.hide()
-	w2.destroy()
 
 gtk.main()
 print "Saving configuration"

@@ -36,6 +36,8 @@ echo sk
 msgfmt sk.po -o sk.mo
 echo sv
 msgfmt sv.po -o sv.mo
+echo "tr (Turkish)"
+msgfmt tr.po -o tr.mo
 echo "zh_TW (Chinese, Taiwan)"
 msgfmt zh_TW.po -o zh_TW.mo
 echo "zh_CN (Simplified Chinese)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 17:09+0100\n"
+"POT-Creation-Date: 2011-12-08 17:07+0100\n"
 "PO-Revision-Date: 2009-07-07 13:27-0300\n"
 "Last-Translator: Marco de Freitas <marcodefreitas@gmail.com>\n"
 "Language-Team: Portuguese/Brazil <gnome-l10n-br@listas.cipsga.org.br>\n"
@@ -55,10 +55,10 @@ msgstr ""
 "%(total)d MBytes são necessários, mas apenas %(free)d MBytes estão "
 "disponíveis."
 
-#: ../devede_convert.py:274 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:92 ../devede_xml_menu.py:123
-#: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
-#: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
+#: ../devede_convert.py:275 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:137
+#: ../devede_xml_menu.py:488 ../devede_xml_menu.py:496
+#: ../devede_xml_menu.py:500 ../devede_xml_menu.py:504
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -66,7 +66,7 @@ msgstr ""
 "Falha ao gravar no diretório de destino.\n"
 "Verifique se há permissões e espaço livre suficiente."
 
-#: ../devede_convert.py:369
+#: ../devede_convert.py:376
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -81,7 +81,7 @@ msgstr ""
 "\n"
 "já existe. Este será apagado caso continue."
 
-#: ../devede_convert.py:465
+#: ../devede_convert.py:472
 msgid "Unknown error"
 msgstr "Erro desconhecido"
 
@@ -97,11 +97,11 @@ msgstr ""
 "Falha ao criar a árvore de diretórios do DVD\n"
 "Talvez o espaço livre no disco não seja suficiente"
 
-#: ../devede_dvdmenu.py:219 ../devede_loadsave.py:212
+#: ../devede_dvdmenu.py:228 ../devede_loadsave.py:212
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr "A trilha sonora do menu parece estar corrompida. "
 
-#: ../devede_dvdmenu.py:384 ../devede_xml_menu.py:478
+#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:492
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -147,11 +147,11 @@ msgstr ""
 "será aberta mesmo assim, usando silêncio como trilha sonora. Lembre-se de "
 "corrigir a trilha sonora do menu antes de criar o disco."
 
-#: ../devede_loadsave.py:276
+#: ../devede_loadsave.py:282
 msgid "No filename"
 msgstr "Sem nome de arquivo"
 
-#: ../devede_loadsave.py:324
+#: ../devede_loadsave.py:334
 msgid "Can't save the file."
 msgstr "Não é possível salvar o arquivo."
 
@@ -193,41 +193,41 @@ msgstr "Estrutura de disco ainda não salva."
 msgid "Title %(X)d"
 msgstr "Título %(X)d"
 
-#: ../devede_newfiles.py:483
+#: ../devede_newfiles.py:484
 msgid "Subtitle"
 msgstr "Legenda"
 
-#: ../devede_newfiles.py:486
+#: ../devede_newfiles.py:487
 msgid "Codepage"
 msgstr "Codificação do texto"
 
-#: ../devede_newfiles.py:489
+#: ../devede_newfiles.py:490
 msgid "Language"
 msgstr "Idioma"
 
-#: ../devede_newfiles.py:563
+#: ../devede_newfiles.py:564
 msgid "Video files"
 msgstr "Arquivos de vídeo"
 
-#: ../devede_newfiles.py:570
+#: ../devede_newfiles.py:571
 msgid "All files"
 msgstr "Todos os arquivos"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:917
+#: ../devede_newfiles.py:918
 msgid "File doesn't seem to be a video file."
 msgstr "O arquivo não parece ser um vídeo."
 
-#: ../devede_newfiles.py:919
+#: ../devede_newfiles.py:920
 msgid "File seems to be an audio file."
 msgstr "O arquivo parece ser de áudio."
 
-#: ../devede_newfiles.py:1042
+#: ../devede_newfiles.py:1043
 msgid "Please, add only one file each time."
 msgstr "Por favor, adicione apenas um arquivo de cada vez."
 
-#: ../devede_newfiles.py:1055
+#: ../devede_newfiles.py:1056
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Por favor, adicione um arquivo de vídeo antes de adicionar legendas."
 
@@ -288,15 +288,15 @@ msgstr ""
 "Falha na conversão\n"
 "Pode não haver espaço livre suficiente no disco?"
 
-#: ../devede_xml_menu.py:38
+#: ../devede_xml_menu.py:42
 msgid "Failed to create the menues."
 msgstr "Falha ao criar os menus."
 
-#: ../devede_xml_menu.py:103 ../devede_xml_menu.py:494
+#: ../devede_xml_menu.py:117 ../devede_xml_menu.py:508
 msgid "Menu generation failed."
 msgstr "Geração do menu falhou."
 
-#: ../devede_xml_menu.py:110 ../devede_xml_menu.py:503
+#: ../devede_xml_menu.py:124 ../devede_xml_menu.py:517
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -304,7 +304,7 @@ msgstr ""
 "Não foi possível adicionar os botões aos menus.\n"
 "Parece ser um bug do SPUMUX."
 
-#: ../devede_xml_menu.py:469
+#: ../devede_xml_menu.py:483
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Criando menu %(menu_number)d"
@@ -514,12 +514,14 @@ msgstr ""
 "Continuar mesmo assim?"
 
 #: ../interface/wend_dialog.ui.h:1
-msgid "Burn"
-msgstr ""
-
-#: ../interface/wend_dialog.ui.h:2
 msgid "Job done!"
 msgstr "Tarefa terminada!"
+
+#. Means: "Burn the ISO image in a CD/DVD"
+#: ../interface/wend_dialog.ui.h:3
+msgctxt "Means: "
+msgid "Burn"
+msgstr ""
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -1061,7 +1063,7 @@ msgstr "Relação de aspecto da saída:"
 msgid "PAL"
 msgstr "PAL"
 
-#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:20
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:22
 msgid "Preview menu"
 msgstr "Pré-visualização do menu"
 
@@ -1099,112 +1101,119 @@ msgid "<b>Disc startup options</b>"
 msgstr "<b>Opções de início de reprodução</b>"
 
 #: ../interface/wmenu_properties.ui.h:2
-msgid "<b>Horizontal alignment</b>"
+#, fuzzy
+msgid "<b>Horizontal</b>"
 msgstr "<b>Alinhamento horizontal</b>"
 
-#: ../interface/wmenu_properties.ui.h:3
+#: ../interface/wmenu_properties.ui.h:4
+#, fuzzy, no-c-format
+msgid "<b>Margins (%)</b>"
+msgstr "<b>Menus</b>"
+
+#: ../interface/wmenu_properties.ui.h:5
 msgid "<b>Menu background (only PNG)</b>"
 msgstr "<b>Plano de fundo do menu (somente PNG)</b>"
 
-#: ../interface/wmenu_properties.ui.h:4
+#: ../interface/wmenu_properties.ui.h:6
 msgid "<b>Menu font and colors</b>"
 msgstr "<b>Cores e fonte do menu</b>"
 
-#: ../interface/wmenu_properties.ui.h:5
+#: ../interface/wmenu_properties.ui.h:7
 msgid "<b>Menu music</b>"
 msgstr "<b>Música de menu</b>"
 
-#: ../interface/wmenu_properties.ui.h:6
+#: ../interface/wmenu_properties.ui.h:8
 msgid "<b>Menu position</b>"
 msgstr "<b>Posição do menu</b>"
 
-#: ../interface/wmenu_properties.ui.h:7
+#: ../interface/wmenu_properties.ui.h:9
 msgid "<b>Menu title</b>"
 msgstr "<b>Título do menu</b>"
 
-#: ../interface/wmenu_properties.ui.h:8
-msgid "<b>Vertical alignment</b>"
-msgstr "<b>Alinhamento vertical</b>"
+#: ../interface/wmenu_properties.ui.h:10
+#, fuzzy
+msgid "<b>Vertical</b>"
+msgstr "<b>Especial</b>"
 
-#: ../interface/wmenu_properties.ui.h:9
+#: ../interface/wmenu_properties.ui.h:11
 msgid "Background color for titles: "
 msgstr "Cor de fundo para os títulos:"
 
-#: ../interface/wmenu_properties.ui.h:10
+#: ../interface/wmenu_properties.ui.h:12
 msgid "Bottom"
 msgstr "Inferior"
 
-#: ../interface/wmenu_properties.ui.h:11
+#: ../interface/wmenu_properties.ui.h:13
 msgid "Center"
 msgstr "Centro"
 
-#: ../interface/wmenu_properties.ui.h:12
+#: ../interface/wmenu_properties.ui.h:14
 #, fuzzy
 msgid "Choose a music file"
 msgstr "Escolha um arquivo"
 
-#: ../interface/wmenu_properties.ui.h:13
+#: ../interface/wmenu_properties.ui.h:15
 msgid "Color for selected title: "
 msgstr "Cor para o título selecionado:"
 
-#: ../interface/wmenu_properties.ui.h:14
+#: ../interface/wmenu_properties.ui.h:16
 msgid "Color for shadows: "
 msgstr "Cor para as sombras:"
 
-#: ../interface/wmenu_properties.ui.h:15
+#: ../interface/wmenu_properties.ui.h:17
 msgid "Color for unselected titles: "
 msgstr "Cor para os títulos não selecionados:"
 
-#: ../interface/wmenu_properties.ui.h:16
+#: ../interface/wmenu_properties.ui.h:18
 msgid "Font: "
 msgstr "Fonte:"
 
-#: ../interface/wmenu_properties.ui.h:17
+#: ../interface/wmenu_properties.ui.h:19
 msgid "Jump to the first title at startup"
 msgstr "Pular para o primeiro título ao iniciar a reprodução."
 
-#: ../interface/wmenu_properties.ui.h:18
+#: ../interface/wmenu_properties.ui.h:20
 msgid "Left"
 msgstr "Esquerda"
 
-#: ../interface/wmenu_properties.ui.h:19
+#: ../interface/wmenu_properties.ui.h:21
 msgid "Middle"
 msgstr "Meio"
 
-#: ../interface/wmenu_properties.ui.h:21
+#: ../interface/wmenu_properties.ui.h:23
 msgid "Right"
 msgstr "Direita"
 
-#: ../interface/wmenu_properties.ui.h:22
+#: ../interface/wmenu_properties.ui.h:24
 msgid "Select a picture to be used as background for disc's menu"
 msgstr ""
 "Selecione uma imagem para ser usada como plano de fundo no menu do disco"
 
-#: ../interface/wmenu_properties.ui.h:23
+#: ../interface/wmenu_properties.ui.h:25
 msgid "Set default background"
 msgstr "Definir como plano de fundo padrão"
 
-#: ../interface/wmenu_properties.ui.h:24
+#: ../interface/wmenu_properties.ui.h:26
 msgid "Set menus without sound"
 msgstr "Definir menus sem som."
 
-#: ../interface/wmenu_properties.ui.h:25
+#: ../interface/wmenu_properties.ui.h:27
 msgid "Shadow color: "
 msgstr "Cor da sombra:"
 
-#: ../interface/wmenu_properties.ui.h:26
+#: ../interface/wmenu_properties.ui.h:28
 msgid "Show menu at disc startup"
 msgstr "Mostrar menu no início da reprodução"
 
-#: ../interface/wmenu_properties.ui.h:27
+#: ../interface/wmenu_properties.ui.h:29
 msgid "Text color: "
 msgstr "Cor do texto:"
 
-#: ../interface/wmenu_properties.ui.h:28
+#: ../interface/wmenu_properties.ui.h:30
 msgid "Text: "
 msgstr "Texto:"
 
-#: ../interface/wmenu_properties.ui.h:29
+#: ../interface/wmenu_properties.ui.h:31
 msgid "Top"
 msgstr "Superior"
 
@@ -1291,6 +1300,9 @@ msgstr "Propriedades do título"
 #: ../interface/wwarning_dialog.ui.h:1
 msgid "Warning"
 msgstr "Aviso"
+
+#~ msgid "<b>Vertical alignment</b>"
+#~ msgstr "<b>Alinhamento vertical</b>"
 
 #~ msgid "Converting files from title"
 #~ msgstr "Convertendo arquivos do título "
@@ -1424,10 +1436,6 @@ msgstr "Aviso"
 
 #~ msgid "There was an error while importing the file:"
 #~ msgstr "Ocorreu um erro durante a importação do arquivo:"
-
-#, fuzzy
-#~ msgid "<b>Vertical</b>"
-#~ msgstr "<b>Especial</b>"
 
 #~ msgid "Audio options"
 #~ msgstr "Opções de áudio"

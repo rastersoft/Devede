@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 17:09+0100\n"
+"POT-Creation-Date: 2011-12-08 17:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,16 +44,16 @@ msgid ""
 "%(total)d MBytes are needed, but only %(free)d MBytes are available."
 msgstr ""
 
-#: ../devede_convert.py:274 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:92 ../devede_xml_menu.py:123
-#: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
-#: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
+#: ../devede_convert.py:275 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:137
+#: ../devede_xml_menu.py:488 ../devede_xml_menu.py:496
+#: ../devede_xml_menu.py:500 ../devede_xml_menu.py:504
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
 msgstr ""
 
-#: ../devede_convert.py:369
+#: ../devede_convert.py:376
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -63,7 +63,7 @@ msgid ""
 "already exists. If you continue, it will be deleted."
 msgstr ""
 
-#: ../devede_convert.py:465
+#: ../devede_convert.py:472
 msgid "Unknown error"
 msgstr ""
 
@@ -77,11 +77,11 @@ msgid ""
 "Maybe you ran out of disk space"
 msgstr ""
 
-#: ../devede_dvdmenu.py:219 ../devede_loadsave.py:212
+#: ../devede_dvdmenu.py:228 ../devede_loadsave.py:212
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr ""
 
-#: ../devede_dvdmenu.py:384 ../devede_xml_menu.py:478
+#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:492
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -117,11 +117,11 @@ msgid ""
 "with a silent soundtrack, so don't forget to fix it before creating the disc."
 msgstr ""
 
-#: ../devede_loadsave.py:276
+#: ../devede_loadsave.py:282
 msgid "No filename"
 msgstr ""
 
-#: ../devede_loadsave.py:324
+#: ../devede_loadsave.py:334
 msgid "Can't save the file."
 msgstr ""
 
@@ -157,41 +157,41 @@ msgstr ""
 msgid "Title %(X)d"
 msgstr ""
 
-#: ../devede_newfiles.py:483
+#: ../devede_newfiles.py:484
 msgid "Subtitle"
 msgstr ""
 
-#: ../devede_newfiles.py:486
+#: ../devede_newfiles.py:487
 msgid "Codepage"
 msgstr ""
 
-#: ../devede_newfiles.py:489
+#: ../devede_newfiles.py:490
 msgid "Language"
 msgstr ""
 
-#: ../devede_newfiles.py:563
+#: ../devede_newfiles.py:564
 msgid "Video files"
 msgstr ""
 
-#: ../devede_newfiles.py:570
+#: ../devede_newfiles.py:571
 msgid "All files"
 msgstr ""
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:917
+#: ../devede_newfiles.py:918
 msgid "File doesn't seem to be a video file."
 msgstr ""
 
-#: ../devede_newfiles.py:919
+#: ../devede_newfiles.py:920
 msgid "File seems to be an audio file."
 msgstr ""
 
-#: ../devede_newfiles.py:1042
+#: ../devede_newfiles.py:1043
 msgid "Please, add only one file each time."
 msgstr ""
 
-#: ../devede_newfiles.py:1055
+#: ../devede_newfiles.py:1056
 msgid "Please, add a movie file before adding subtitles."
 msgstr ""
 
@@ -243,21 +243,21 @@ msgid ""
 "Maybe you ran out of disk space?"
 msgstr ""
 
-#: ../devede_xml_menu.py:38
+#: ../devede_xml_menu.py:42
 msgid "Failed to create the menues."
 msgstr ""
 
-#: ../devede_xml_menu.py:103 ../devede_xml_menu.py:494
+#: ../devede_xml_menu.py:117 ../devede_xml_menu.py:508
 msgid "Menu generation failed."
 msgstr ""
 
-#: ../devede_xml_menu.py:110 ../devede_xml_menu.py:503
+#: ../devede_xml_menu.py:124 ../devede_xml_menu.py:517
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
 msgstr ""
 
-#: ../devede_xml_menu.py:469
+#: ../devede_xml_menu.py:483
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr ""
@@ -448,11 +448,13 @@ msgid ""
 msgstr ""
 
 #: ../interface/wend_dialog.ui.h:1
-msgid "Burn"
+msgid "Job done!"
 msgstr ""
 
-#: ../interface/wend_dialog.ui.h:2
-msgid "Job done!"
+#. Means: "Burn the ISO image in a CD/DVD"
+#: ../interface/wend_dialog.ui.h:3
+msgctxt "Means: "
+msgid "Burn"
 msgstr ""
 
 #: ../interface/werase_dialog.ui.h:1
@@ -980,7 +982,7 @@ msgstr ""
 msgid "PAL"
 msgstr ""
 
-#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:20
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:22
 msgid "Preview menu"
 msgstr ""
 
@@ -1018,110 +1020,115 @@ msgid "<b>Disc startup options</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:2
-msgid "<b>Horizontal alignment</b>"
-msgstr ""
-
-#: ../interface/wmenu_properties.ui.h:3
-msgid "<b>Menu background (only PNG)</b>"
+msgid "<b>Horizontal</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:4
-msgid "<b>Menu font and colors</b>"
+#, no-c-format
+msgid "<b>Margins (%)</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:5
-msgid "<b>Menu music</b>"
+msgid "<b>Menu background (only PNG)</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:6
-msgid "<b>Menu position</b>"
+msgid "<b>Menu font and colors</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:7
-msgid "<b>Menu title</b>"
+msgid "<b>Menu music</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:8
-msgid "<b>Vertical alignment</b>"
+msgid "<b>Menu position</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:9
-msgid "Background color for titles: "
+msgid "<b>Menu title</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:10
-msgid "Bottom"
+msgid "<b>Vertical</b>"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:11
-msgid "Center"
+msgid "Background color for titles: "
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:12
-msgid "Choose a music file"
+msgid "Bottom"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:13
-msgid "Color for selected title: "
+msgid "Center"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:14
-msgid "Color for shadows: "
+msgid "Choose a music file"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:15
-msgid "Color for unselected titles: "
+msgid "Color for selected title: "
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:16
-msgid "Font: "
+msgid "Color for shadows: "
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:17
-msgid "Jump to the first title at startup"
+msgid "Color for unselected titles: "
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:18
-msgid "Left"
+msgid "Font: "
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:19
-msgid "Middle"
+msgid "Jump to the first title at startup"
+msgstr ""
+
+#: ../interface/wmenu_properties.ui.h:20
+msgid "Left"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:21
-msgid "Right"
-msgstr ""
-
-#: ../interface/wmenu_properties.ui.h:22
-msgid "Select a picture to be used as background for disc's menu"
+msgid "Middle"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:23
-msgid "Set default background"
+msgid "Right"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:24
-msgid "Set menus without sound"
+msgid "Select a picture to be used as background for disc's menu"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:25
-msgid "Shadow color: "
+msgid "Set default background"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:26
-msgid "Show menu at disc startup"
+msgid "Set menus without sound"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:27
-msgid "Text color: "
+msgid "Shadow color: "
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:28
-msgid "Text: "
+msgid "Show menu at disc startup"
 msgstr ""
 
 #: ../interface/wmenu_properties.ui.h:29
+msgid "Text color: "
+msgstr ""
+
+#: ../interface/wmenu_properties.ui.h:30
+msgid "Text: "
+msgstr ""
+
+#: ../interface/wmenu_properties.ui.h:31
 msgid "Top"
 msgstr ""
 

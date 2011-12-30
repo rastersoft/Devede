@@ -36,6 +36,7 @@ install_locales()	# arg1=datadir.
 	install_lang "${1}"	ru	ru		# Russian
 	install_lang "${1}"     sk      sk              # Slovak
 	install_lang "${1}"	sv	sv		#
+	install_lang "${1}"	tr	tr		# Turkish
 	install_lang "${1}"	zh_TW	zh_TW		# Taiwanese
 	install_lang "${1}"     zh_CN   zh_CN           # Simplified Chinese
 }

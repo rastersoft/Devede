@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devede\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 17:09+0100\n"
+"POT-Creation-Date: 2011-12-08 17:07+0100\n"
 "PO-Revision-Date: 2010-01-25 00:11+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -49,10 +49,10 @@ msgstr ""
 "Otillräckligt med ledigt utrymme. För att skapa den här skivan\n"
 "behövs %(total)d MByte, men endast %(free)d MByte finns."
 
-#: ../devede_convert.py:274 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:92 ../devede_xml_menu.py:123
-#: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
-#: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
+#: ../devede_convert.py:275 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:137
+#: ../devede_xml_menu.py:488 ../devede_xml_menu.py:496
+#: ../devede_xml_menu.py:500 ../devede_xml_menu.py:504
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -60,7 +60,7 @@ msgstr ""
 "Misslyckades med att skriva till målkatalogen.\n"
 "Kontrollera att du har behörighet och ledigt utrymme."
 
-#: ../devede_convert.py:369
+#: ../devede_convert.py:376
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -75,7 +75,7 @@ msgstr ""
 "\n"
 "finns redan. Om du forsätter kommer den att tas bort."
 
-#: ../devede_convert.py:465
+#: ../devede_convert.py:472
 msgid "Unknown error"
 msgstr "Okänt fel"
 
@@ -91,11 +91,11 @@ msgstr ""
 "Misslyckades med att skapa DVD-trädet\n"
 "Kanske har du slut på diskutrymme"
 
-#: ../devede_dvdmenu.py:219 ../devede_loadsave.py:212
+#: ../devede_dvdmenu.py:228 ../devede_loadsave.py:212
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr "Menyn ljudspår verkar skadat. Använder standardljudspåret (tystnad)."
 
-#: ../devede_dvdmenu.py:384 ../devede_xml_menu.py:478
+#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:492
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -141,11 +141,11 @@ msgstr ""
 "ändå med ett tyst ljudspår så glöm inte att rätta till den innan du skapar "
 "skivan."
 
-#: ../devede_loadsave.py:276
+#: ../devede_loadsave.py:282
 msgid "No filename"
 msgstr "Inget filnamn"
 
-#: ../devede_loadsave.py:324
+#: ../devede_loadsave.py:334
 msgid "Can't save the file."
 msgstr "Kan inte spara filen."
 
@@ -187,41 +187,41 @@ msgstr "Osparad skivstruktur"
 msgid "Title %(X)d"
 msgstr "Titel %(X)d"
 
-#: ../devede_newfiles.py:483
+#: ../devede_newfiles.py:484
 msgid "Subtitle"
 msgstr "Undertext"
 
-#: ../devede_newfiles.py:486
+#: ../devede_newfiles.py:487
 msgid "Codepage"
 msgstr "Codepage"
 
-#: ../devede_newfiles.py:489
+#: ../devede_newfiles.py:490
 msgid "Language"
 msgstr "Språk"
 
-#: ../devede_newfiles.py:563
+#: ../devede_newfiles.py:564
 msgid "Video files"
 msgstr "Videofiler"
 
-#: ../devede_newfiles.py:570
+#: ../devede_newfiles.py:571
 msgid "All files"
 msgstr "Alla filer"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:917
+#: ../devede_newfiles.py:918
 msgid "File doesn't seem to be a video file."
 msgstr "Filen verkar inte vara en videofil."
 
-#: ../devede_newfiles.py:919
+#: ../devede_newfiles.py:920
 msgid "File seems to be an audio file."
 msgstr "Filen verkar vara en ljudfil."
 
-#: ../devede_newfiles.py:1042
+#: ../devede_newfiles.py:1043
 msgid "Please, add only one file each time."
 msgstr "Lägg endast till en fil åt gången."
 
-#: ../devede_newfiles.py:1055
+#: ../devede_newfiles.py:1056
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Lägg till en videofil innan du lägger till undertexter."
 
@@ -286,15 +286,15 @@ msgstr ""
 "Konvertering misslyckades\n"
 "Kanske har du slut på diskutrymme?"
 
-#: ../devede_xml_menu.py:38
+#: ../devede_xml_menu.py:42
 msgid "Failed to create the menues."
 msgstr "Misslyckades med att skapa menyerna."
 
-#: ../devede_xml_menu.py:103 ../devede_xml_menu.py:494
+#: ../devede_xml_menu.py:117 ../devede_xml_menu.py:508
 msgid "Menu generation failed."
 msgstr "Menygenerering misslyckades."
 
-#: ../devede_xml_menu.py:110 ../devede_xml_menu.py:503
+#: ../devede_xml_menu.py:124 ../devede_xml_menu.py:517
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -302,7 +302,7 @@ msgstr ""
 "Kan inte lägga till knapparna i menyerna.\n"
 "Det verkar finnas ett fel i SPUMUX."
 
-#: ../devede_xml_menu.py:469
+#: ../devede_xml_menu.py:483
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Skapar meny %(menu_number)d"
@@ -511,12 +511,14 @@ msgstr ""
 "Fortsätt ändå?"
 
 #: ../interface/wend_dialog.ui.h:1
-msgid "Burn"
-msgstr ""
-
-#: ../interface/wend_dialog.ui.h:2
 msgid "Job done!"
 msgstr "Jobbet är klart!"
+
+#. Means: "Burn the ISO image in a CD/DVD"
+#: ../interface/wend_dialog.ui.h:3
+msgctxt "Means: "
+msgid "Burn"
+msgstr ""
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -1055,7 +1057,7 @@ msgstr "Bildförhållande på utdata:"
 msgid "PAL"
 msgstr "PAL"
 
-#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:20
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:22
 msgid "Preview menu"
 msgstr "Förhandsvisa meny"
 
@@ -1093,110 +1095,117 @@ msgid "<b>Disc startup options</b>"
 msgstr "<b>Uppstartsalternativ för skiva</b>"
 
 #: ../interface/wmenu_properties.ui.h:2
-msgid "<b>Horizontal alignment</b>"
+#, fuzzy
+msgid "<b>Horizontal</b>"
 msgstr "<b>Horisontell justering</b>"
 
-#: ../interface/wmenu_properties.ui.h:3
+#: ../interface/wmenu_properties.ui.h:4
+#, fuzzy, no-c-format
+msgid "<b>Margins (%)</b>"
+msgstr "<b>Menyer</b>"
+
+#: ../interface/wmenu_properties.ui.h:5
 msgid "<b>Menu background (only PNG)</b>"
 msgstr "<b>Menybakgrund (endast PNG)</b>"
 
-#: ../interface/wmenu_properties.ui.h:4
+#: ../interface/wmenu_properties.ui.h:6
 msgid "<b>Menu font and colors</b>"
 msgstr "<b>Menyfärger och -typsnitt</b>"
 
-#: ../interface/wmenu_properties.ui.h:5
+#: ../interface/wmenu_properties.ui.h:7
 msgid "<b>Menu music</b>"
 msgstr "<b>Menymusik</b>"
 
-#: ../interface/wmenu_properties.ui.h:6
+#: ../interface/wmenu_properties.ui.h:8
 msgid "<b>Menu position</b>"
 msgstr "<b>Menyposition</b>"
 
-#: ../interface/wmenu_properties.ui.h:7
+#: ../interface/wmenu_properties.ui.h:9
 msgid "<b>Menu title</b>"
 msgstr "<b>Menytitel</b>"
 
-#: ../interface/wmenu_properties.ui.h:8
-msgid "<b>Vertical alignment</b>"
-msgstr "<b>Vertikal justering</b>"
+#: ../interface/wmenu_properties.ui.h:10
+#, fuzzy
+msgid "<b>Vertical</b>"
+msgstr "<b>Special</b>"
 
-#: ../interface/wmenu_properties.ui.h:9
+#: ../interface/wmenu_properties.ui.h:11
 msgid "Background color for titles: "
 msgstr "Bakgrundsfärg för titlar:"
 
-#: ../interface/wmenu_properties.ui.h:10
+#: ../interface/wmenu_properties.ui.h:12
 msgid "Bottom"
 msgstr "Nederst"
 
-#: ../interface/wmenu_properties.ui.h:11
+#: ../interface/wmenu_properties.ui.h:13
 msgid "Center"
 msgstr "Centrera"
 
-#: ../interface/wmenu_properties.ui.h:12
+#: ../interface/wmenu_properties.ui.h:14
 msgid "Choose a music file"
 msgstr "Välj en musikfil"
 
-#: ../interface/wmenu_properties.ui.h:13
+#: ../interface/wmenu_properties.ui.h:15
 msgid "Color for selected title: "
 msgstr "Färg för markerad titel:"
 
-#: ../interface/wmenu_properties.ui.h:14
+#: ../interface/wmenu_properties.ui.h:16
 msgid "Color for shadows: "
 msgstr "Färg för skuggor: "
 
-#: ../interface/wmenu_properties.ui.h:15
+#: ../interface/wmenu_properties.ui.h:17
 msgid "Color for unselected titles: "
 msgstr "Färg för avmarkerade titlar:"
 
-#: ../interface/wmenu_properties.ui.h:16
+#: ../interface/wmenu_properties.ui.h:18
 msgid "Font: "
 msgstr "Typsnitt: "
 
-#: ../interface/wmenu_properties.ui.h:17
+#: ../interface/wmenu_properties.ui.h:19
 msgid "Jump to the first title at startup"
 msgstr "Hoppa till första titeln vid uppstart"
 
-#: ../interface/wmenu_properties.ui.h:18
+#: ../interface/wmenu_properties.ui.h:20
 msgid "Left"
 msgstr "Vänster"
 
-#: ../interface/wmenu_properties.ui.h:19
+#: ../interface/wmenu_properties.ui.h:21
 msgid "Middle"
 msgstr "Mitten"
 
-#: ../interface/wmenu_properties.ui.h:21
+#: ../interface/wmenu_properties.ui.h:23
 msgid "Right"
 msgstr "Höger"
 
-#: ../interface/wmenu_properties.ui.h:22
+#: ../interface/wmenu_properties.ui.h:24
 msgid "Select a picture to be used as background for disc's menu"
 msgstr "Välj en bild att använda som bakgrund för skivans meny"
 
-#: ../interface/wmenu_properties.ui.h:23
+#: ../interface/wmenu_properties.ui.h:25
 msgid "Set default background"
 msgstr "Ställ in standardbakgrund"
 
-#: ../interface/wmenu_properties.ui.h:24
+#: ../interface/wmenu_properties.ui.h:26
 msgid "Set menus without sound"
 msgstr "Ange menyer utan ljud"
 
-#: ../interface/wmenu_properties.ui.h:25
+#: ../interface/wmenu_properties.ui.h:27
 msgid "Shadow color: "
 msgstr "Skuggfärg: "
 
-#: ../interface/wmenu_properties.ui.h:26
+#: ../interface/wmenu_properties.ui.h:28
 msgid "Show menu at disc startup"
 msgstr "Visa meny vid uppstart av skiva"
 
-#: ../interface/wmenu_properties.ui.h:27
+#: ../interface/wmenu_properties.ui.h:29
 msgid "Text color: "
 msgstr "Textfärg: "
 
-#: ../interface/wmenu_properties.ui.h:28
+#: ../interface/wmenu_properties.ui.h:30
 msgid "Text: "
 msgstr "Text: "
 
-#: ../interface/wmenu_properties.ui.h:29
+#: ../interface/wmenu_properties.ui.h:31
 msgid "Top"
 msgstr "Överst"
 
@@ -1283,6 +1292,9 @@ msgstr "Titelegenskaper"
 #: ../interface/wwarning_dialog.ui.h:1
 msgid "Warning"
 msgstr "Varning"
+
+#~ msgid "<b>Vertical alignment</b>"
+#~ msgstr "<b>Vertikal justering</b>"
 
 #~ msgid "Converting files from title"
 #~ msgstr "Konverterar filer från titeln"
@@ -1416,10 +1428,6 @@ msgstr "Varning"
 
 #~ msgid "There was an error while importing the file:"
 #~ msgstr "Det inträffade ett fel vid importering av filen:"
-
-#, fuzzy
-#~ msgid "<b>Vertical</b>"
-#~ msgstr "<b>Special</b>"
 
 #~ msgid "Audio options"
 #~ msgstr "Ljudinställningar"

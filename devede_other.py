@@ -486,11 +486,6 @@ def load_config(global_vars):
 					global_vars["use_ffmpeg"]=True
 				else:
 					global_vars["use_ffmpeg"]=False
-			if linea[:15]=="warning_ffmpeg:":
-				if linea[15:]=="1":
-					global_vars["warning_ffmpeg"]=True
-				else:
-					global_vars["warning_ffmpeg"]=False
 					
 			#if linea[:]==":":
 			#	global_vars[""]=linea[:]
@@ -539,10 +534,6 @@ def save_config(global_vars):
 			archivo.write("use_ffmpeg:1\n")
 		else:
 			archivo.write("use_ffmpeg:0\n")
-		if global_vars["warning_ffmpeg"]:
-			archivo.write("warning_ffmpeg:1\n")
-		else:
-			archivo.write("warning_ffmpeg:0\n")
 		archivo.close()
 	except IOError:
 		pass

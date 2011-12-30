@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 17:09+0100\n"
+"POT-Creation-Date: 2011-12-08 17:07+0100\n"
 "PO-Revision-Date: 2009-11-20 12:34+0100\n"
 "Last-Translator: 大宝 <michaelbond01@163.com>\n"
 "Language-Team:  <>\n"
@@ -46,10 +46,10 @@ msgstr ""
 "可用空间不足。\n"
 "要建立此光盘需要 %(total)d MB，但当前可用空间只有 %(free)d MB。"
 
-#: ../devede_convert.py:274 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:92 ../devede_xml_menu.py:123
-#: ../devede_xml_menu.py:474 ../devede_xml_menu.py:482
-#: ../devede_xml_menu.py:486 ../devede_xml_menu.py:490
+#: ../devede_convert.py:275 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:137
+#: ../devede_xml_menu.py:488 ../devede_xml_menu.py:496
+#: ../devede_xml_menu.py:500 ../devede_xml_menu.py:504
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -57,7 +57,7 @@ msgstr ""
 "写入目标目录失败。\n"
 "请检查你的权限和磁盘可用空间。"
 
-#: ../devede_convert.py:369
+#: ../devede_convert.py:376
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -72,7 +72,7 @@ msgstr ""
 "\n"
 "已经存在。如果你要继续，其将被强行删除。"
 
-#: ../devede_convert.py:465
+#: ../devede_convert.py:472
 msgid "Unknown error"
 msgstr "不知道哪出问题了"
 
@@ -88,11 +88,11 @@ msgstr ""
 "建立 DVD 文件结构失败\n"
 "貌似是因为磁盘空间不足"
 
-#: ../devede_dvdmenu.py:219 ../devede_loadsave.py:212
+#: ../devede_dvdmenu.py:228 ../devede_loadsave.py:212
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr "菜单的音频文件似乎已损坏，使用默认的静音模式。"
 
-#: ../devede_dvdmenu.py:384 ../devede_xml_menu.py:478
+#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:492
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -133,11 +133,11 @@ msgid ""
 msgstr ""
 "找不到菜单音频文件，将用静音模式打开此光盘文件请在正式建立光盘前修正此问题。"
 
-#: ../devede_loadsave.py:276
+#: ../devede_loadsave.py:282
 msgid "No filename"
 msgstr "无文件名"
 
-#: ../devede_loadsave.py:324
+#: ../devede_loadsave.py:334
 msgid "Can't save the file."
 msgstr "未能保存文件。"
 
@@ -179,41 +179,41 @@ msgstr "未保存的光盘文件"
 msgid "Title %(X)d"
 msgstr "标题 %(X)d"
 
-#: ../devede_newfiles.py:483
+#: ../devede_newfiles.py:484
 msgid "Subtitle"
 msgstr "字幕"
 
-#: ../devede_newfiles.py:486
+#: ../devede_newfiles.py:487
 msgid "Codepage"
 msgstr "代码"
 
-#: ../devede_newfiles.py:489
+#: ../devede_newfiles.py:490
 msgid "Language"
 msgstr "语言"
 
-#: ../devede_newfiles.py:563
+#: ../devede_newfiles.py:564
 msgid "Video files"
 msgstr "影片文件"
 
-#: ../devede_newfiles.py:570
+#: ../devede_newfiles.py:571
 msgid "All files"
 msgstr "所有文件"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:917
+#: ../devede_newfiles.py:918
 msgid "File doesn't seem to be a video file."
 msgstr "目标文件貌似不是影像文件。"
 
-#: ../devede_newfiles.py:919
+#: ../devede_newfiles.py:920
 msgid "File seems to be an audio file."
 msgstr "目标文件貌似是一个音频文件。"
 
-#: ../devede_newfiles.py:1042
+#: ../devede_newfiles.py:1043
 msgid "Please, add only one file each time."
 msgstr "每次只能加入一个文件。"
 
-#: ../devede_newfiles.py:1055
+#: ../devede_newfiles.py:1056
 msgid "Please, add a movie file before adding subtitles."
 msgstr "请在加入字幕前先添加影片文件。"
 
@@ -273,15 +273,15 @@ msgstr ""
 "转换文件失败\n"
 "貌似是磁盘可用空间不足。"
 
-#: ../devede_xml_menu.py:38
+#: ../devede_xml_menu.py:42
 msgid "Failed to create the menues."
 msgstr "建立菜单失败。"
 
-#: ../devede_xml_menu.py:103 ../devede_xml_menu.py:494
+#: ../devede_xml_menu.py:117 ../devede_xml_menu.py:508
 msgid "Menu generation failed."
 msgstr "生成菜单失败。"
 
-#: ../devede_xml_menu.py:110 ../devede_xml_menu.py:503
+#: ../devede_xml_menu.py:124 ../devede_xml_menu.py:517
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -289,7 +289,7 @@ msgstr ""
 "无法在菜单中添加按钮，\n"
 "貌似是 SPUMUX 的程序错误。"
 
-#: ../devede_xml_menu.py:469
+#: ../devede_xml_menu.py:483
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "建立菜单 %(menu_number)d 中"
@@ -498,12 +498,14 @@ msgstr ""
 "真的要继续吗？"
 
 #: ../interface/wend_dialog.ui.h:1
-msgid "Burn"
-msgstr ""
-
-#: ../interface/wend_dialog.ui.h:2
 msgid "Job done!"
 msgstr "完成啦！"
+
+#. Means: "Burn the ISO image in a CD/DVD"
+#: ../interface/wend_dialog.ui.h:3
+msgctxt "Means: "
+msgid "Burn"
+msgstr ""
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -1041,7 +1043,7 @@ msgstr "输出长宽比: "
 msgid "PAL"
 msgstr "PAL"
 
-#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:20
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:22
 msgid "Preview menu"
 msgstr "预览菜单"
 
@@ -1079,111 +1081,118 @@ msgid "<b>Disc startup options</b>"
 msgstr "<b>光盘打开选项</b>"
 
 #: ../interface/wmenu_properties.ui.h:2
-msgid "<b>Horizontal alignment</b>"
+#, fuzzy
+msgid "<b>Horizontal</b>"
 msgstr "<b>水平对齐</b>"
 
-#: ../interface/wmenu_properties.ui.h:3
+#: ../interface/wmenu_properties.ui.h:4
+#, fuzzy, no-c-format
+msgid "<b>Margins (%)</b>"
+msgstr "<b>菜单</b>"
+
+#: ../interface/wmenu_properties.ui.h:5
 msgid "<b>Menu background (only PNG)</b>"
 msgstr "<b>菜单背景 (仅限 PNG 图片)</b>"
 
-#: ../interface/wmenu_properties.ui.h:4
+#: ../interface/wmenu_properties.ui.h:6
 msgid "<b>Menu font and colors</b>"
 msgstr "<b>菜单字体及颜色</b>"
 
-#: ../interface/wmenu_properties.ui.h:5
+#: ../interface/wmenu_properties.ui.h:7
 msgid "<b>Menu music</b>"
 msgstr "<b>菜单音乐</b>"
 
-#: ../interface/wmenu_properties.ui.h:6
+#: ../interface/wmenu_properties.ui.h:8
 msgid "<b>Menu position</b>"
 msgstr "<b>菜单位置</b>"
 
-#: ../interface/wmenu_properties.ui.h:7
+#: ../interface/wmenu_properties.ui.h:9
 msgid "<b>Menu title</b>"
 msgstr "<b>菜单标题</b>"
 
-#: ../interface/wmenu_properties.ui.h:8
-msgid "<b>Vertical alignment</b>"
-msgstr "<b>垂直对齐</b>"
+#: ../interface/wmenu_properties.ui.h:10
+#, fuzzy
+msgid "<b>Vertical</b>"
+msgstr "<b>特殊设定</b>"
 
-#: ../interface/wmenu_properties.ui.h:9
+#: ../interface/wmenu_properties.ui.h:11
 msgid "Background color for titles: "
 msgstr "标题的背景色:"
 
-#: ../interface/wmenu_properties.ui.h:10
+#: ../interface/wmenu_properties.ui.h:12
 msgid "Bottom"
 msgstr "底部 "
 
-#: ../interface/wmenu_properties.ui.h:11
+#: ../interface/wmenu_properties.ui.h:13
 msgid "Center"
 msgstr "置中"
 
-#: ../interface/wmenu_properties.ui.h:12
+#: ../interface/wmenu_properties.ui.h:14
 #, fuzzy
 msgid "Choose a music file"
 msgstr "请选择文件"
 
-#: ../interface/wmenu_properties.ui.h:13
+#: ../interface/wmenu_properties.ui.h:15
 msgid "Color for selected title: "
 msgstr "选中标题颜色:"
 
-#: ../interface/wmenu_properties.ui.h:14
+#: ../interface/wmenu_properties.ui.h:16
 msgid "Color for shadows: "
 msgstr "阴影颜色:"
 
-#: ../interface/wmenu_properties.ui.h:15
+#: ../interface/wmenu_properties.ui.h:17
 msgid "Color for unselected titles: "
 msgstr "未选标题颜色:"
 
-#: ../interface/wmenu_properties.ui.h:16
+#: ../interface/wmenu_properties.ui.h:18
 msgid "Font: "
 msgstr "字体:"
 
-#: ../interface/wmenu_properties.ui.h:17
+#: ../interface/wmenu_properties.ui.h:19
 msgid "Jump to the first title at startup"
 msgstr "自动跳转到第一个标题"
 
-#: ../interface/wmenu_properties.ui.h:18
+#: ../interface/wmenu_properties.ui.h:20
 msgid "Left"
 msgstr "靠左"
 
-#: ../interface/wmenu_properties.ui.h:19
+#: ../interface/wmenu_properties.ui.h:21
 msgid "Middle"
 msgstr "置中"
 
-#: ../interface/wmenu_properties.ui.h:21
+#: ../interface/wmenu_properties.ui.h:23
 msgid "Right"
 msgstr "靠右"
 
-#: ../interface/wmenu_properties.ui.h:22
+#: ../interface/wmenu_properties.ui.h:24
 msgid "Select a picture to be used as background for disc's menu"
 msgstr "选择要用于菜单背景的图片"
 
-#: ../interface/wmenu_properties.ui.h:23
+#: ../interface/wmenu_properties.ui.h:25
 msgid "Set default background"
 msgstr "使用默认图片"
 
-#: ../interface/wmenu_properties.ui.h:24
+#: ../interface/wmenu_properties.ui.h:26
 msgid "Set menus without sound"
 msgstr "使用静音菜单"
 
-#: ../interface/wmenu_properties.ui.h:25
+#: ../interface/wmenu_properties.ui.h:27
 msgid "Shadow color: "
 msgstr "阴影颜色:"
 
-#: ../interface/wmenu_properties.ui.h:26
+#: ../interface/wmenu_properties.ui.h:28
 msgid "Show menu at disc startup"
 msgstr "打开光盘时显示菜单"
 
-#: ../interface/wmenu_properties.ui.h:27
+#: ../interface/wmenu_properties.ui.h:29
 msgid "Text color: "
 msgstr "文字颜色:"
 
-#: ../interface/wmenu_properties.ui.h:28
+#: ../interface/wmenu_properties.ui.h:30
 msgid "Text: "
 msgstr "文字:"
 
-#: ../interface/wmenu_properties.ui.h:29
+#: ../interface/wmenu_properties.ui.h:31
 msgid "Top"
 msgstr "顶端"
 
@@ -1266,6 +1275,9 @@ msgstr "标题属性"
 #: ../interface/wwarning_dialog.ui.h:1
 msgid "Warning"
 msgstr "警告"
+
+#~ msgid "<b>Vertical alignment</b>"
+#~ msgstr "<b>垂直对齐</b>"
 
 #~ msgid "Converting files from title"
 #~ msgstr "转换文件中: 标题"

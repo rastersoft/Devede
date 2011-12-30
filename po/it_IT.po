@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-26 17:09+0100\n"
+"POT-Creation-Date: 2011-12-08 17:07+0100\n"
 "PO-Revision-Date: 2011-11-26 17:41+0100\n"
 "Last-Translator: Andrea Musuruane <musuruan@gmail.com>\n"
 "Language-Team: Andrea Musuruane <musuruan@gmail.com>\n"
@@ -55,14 +55,10 @@ msgstr ""
 "Spazio libero insufficiente. Per creare questo disco\n"
 "sono necessari %(total)d MBytes, ma sono disponibili solo %(free)d MBytes."
 
-#: ../devede_convert.py:274
-#: ../devede_subtitles.py:75
-#: ../devede_subtitles.py:92
-#: ../devede_xml_menu.py:123
-#: ../devede_xml_menu.py:474
-#: ../devede_xml_menu.py:482
-#: ../devede_xml_menu.py:486
-#: ../devede_xml_menu.py:490
+#: ../devede_convert.py:275 ../devede_subtitles.py:75
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:137
+#: ../devede_xml_menu.py:488 ../devede_xml_menu.py:496
+#: ../devede_xml_menu.py:500 ../devede_xml_menu.py:504
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -70,7 +66,7 @@ msgstr ""
 "Impossibile scrivere nella directory destinazione.\n"
 "Controlla di avere i privilegi necessari e sufficiente spazio libero."
 
-#: ../devede_convert.py:369
+#: ../devede_convert.py:376
 #, python-format
 msgid ""
 "The file or folder\n"
@@ -85,7 +81,7 @@ msgstr ""
 "\n"
 "esiste già. Se continui, sarà cancellata."
 
-#: ../devede_convert.py:465
+#: ../devede_convert.py:472
 msgid "Unknown error"
 msgstr "Errore sconosciuto"
 
@@ -101,13 +97,13 @@ msgstr ""
 "Impossibile creare la struttura del DVD\n"
 "Forse non hai spazio sufficiente sul disco"
 
-#: ../devede_dvdmenu.py:219
-#: ../devede_loadsave.py:212
+#: ../devede_dvdmenu.py:228 ../devede_loadsave.py:212
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
-msgstr "La colonna sonora del menu sembra danneggiata. Si userà la traccia muta predefinita."
+msgstr ""
+"La colonna sonora del menu sembra danneggiata. Si userà la traccia muta "
+"predefinita."
 
-#: ../devede_dvdmenu.py:384
-#: ../devede_xml_menu.py:478
+#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:492
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -119,8 +115,7 @@ msgstr ""
 msgid "Can't open the file."
 msgstr "Impossibile aprire il file."
 
-#: ../devede_loadsave.py:85
-#: ../devede_loadsave.py:90
+#: ../devede_loadsave.py:85 ../devede_loadsave.py:90
 msgid "That file doesn't contain a disc structure."
 msgstr "Questo file non contiene la struttura di un disco."
 
@@ -129,22 +124,36 @@ msgid "That file doesn't contain a DeVeDe structure."
 msgstr "Questo file non contiene una struttura DeVeDe."
 
 #: ../devede_loadsave.py:165
-msgid "Can't find the following movie files. Please, add them and try to load the disc structure again.\n"
-msgstr "Impossibile trovare i seguenti file video. Riprovare ad aggiungerli e a caricare la struttura del disco.\n"
+msgid ""
+"Can't find the following movie files. Please, add them and try to load the "
+"disc structure again.\n"
+msgstr ""
+"Impossibile trovare i seguenti file video. Riprovare ad aggiungerli e a "
+"caricare la struttura del disco.\n"
 
 #: ../devede_loadsave.py:175
-msgid "Can't find the menu background. I'll open the disc structure anyway with the default menu background, so don't forget to fix it before creating the disc."
-msgstr "Impossibile trovare lo sfondo del menu. Verrà comunque aperta la struttura del disco con lo sfondo predefinito. Risolvi il problema prima di creare il disco."
+msgid ""
+"Can't find the menu background. I'll open the disc structure anyway with the "
+"default menu background, so don't forget to fix it before creating the disc."
+msgstr ""
+"Impossibile trovare lo sfondo del menu. Verrà comunque aperta la struttura "
+"del disco con lo sfondo predefinito. Risolvi il problema prima di creare il "
+"disco."
 
 #: ../devede_loadsave.py:190
-msgid "Can't find the menu soundtrack file. I'll open the disc structure anyway with a silent soundtrack, so don't forget to fix it before creating the disc."
-msgstr "Impossibile trovare la colonna sonora del menu. Verrà comunque aperta la struttura del disco con la traccia muta predefinita. Risolvi il problema prima di creare il disco."
+msgid ""
+"Can't find the menu soundtrack file. I'll open the disc structure anyway "
+"with a silent soundtrack, so don't forget to fix it before creating the disc."
+msgstr ""
+"Impossibile trovare la colonna sonora del menu. Verrà comunque aperta la "
+"struttura del disco con la traccia muta predefinita. Risolvi il problema "
+"prima di creare il disco."
 
-#: ../devede_loadsave.py:276
+#: ../devede_loadsave.py:282
 msgid "No filename"
 msgstr "Nessun nome"
 
-#: ../devede_loadsave.py:324
+#: ../devede_loadsave.py:334
 msgid "Can't save the file."
 msgstr "Impossibile salvare il file."
 
@@ -166,8 +175,12 @@ msgstr ""
 
 #: ../devede_main.py:455
 #, python-format
-msgid "Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, remove some files and try again."
-msgstr "Il tuo progetto contiene %(X)d file video, ma il massimo è %(MAX)d. Rimuovi qualche file e riprova."
+msgid ""
+"Your project contains %(X)d movie files, but the maximum is %(MAX)d. Please, "
+"remove some files and try again."
+msgstr ""
+"Il tuo progetto contiene %(X)d file video, ma il massimo è %(MAX)d. Rimuovi "
+"qualche file e riprova."
 
 #: ../devede_main.py:892
 msgid "no chapters"
@@ -182,41 +195,41 @@ msgstr "Struttura disco non salvata"
 msgid "Title %(X)d"
 msgstr "Titolo %(X)d"
 
-#: ../devede_newfiles.py:483
+#: ../devede_newfiles.py:484
 msgid "Subtitle"
 msgstr "Sottotitolo"
 
-#: ../devede_newfiles.py:486
+#: ../devede_newfiles.py:487
 msgid "Codepage"
 msgstr "Codepage"
 
-#: ../devede_newfiles.py:489
+#: ../devede_newfiles.py:490
 msgid "Language"
 msgstr "Lingua"
 
-#: ../devede_newfiles.py:563
+#: ../devede_newfiles.py:564
 msgid "Video files"
 msgstr "File video"
 
-#: ../devede_newfiles.py:570
+#: ../devede_newfiles.py:571
 msgid "All files"
 msgstr "Tutti i file"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:917
+#: ../devede_newfiles.py:918
 msgid "File doesn't seem to be a video file."
 msgstr "Il file non sembra essere un video."
 
-#: ../devede_newfiles.py:919
+#: ../devede_newfiles.py:920
 msgid "File seems to be an audio file."
 msgstr "Il file sembra essere un un file audio."
 
-#: ../devede_newfiles.py:1042
+#: ../devede_newfiles.py:1043
 msgid "Please, add only one file each time."
 msgstr "Aggiungi un solo file alla volta."
 
-#: ../devede_newfiles.py:1055
+#: ../devede_newfiles.py:1056
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Aggiungi un video prima di aggiungere i sottotitoli."
 
@@ -224,8 +237,7 @@ msgstr "Aggiungi un video prima di aggiungere i sottotitoli."
 msgid "Adding subtitles to"
 msgstr "Aggiungo i sottotitoli a"
 
-#: ../devede_subtitles.py:186
-#: ../devede_subtitles.py:197
+#: ../devede_subtitles.py:186 ../devede_subtitles.py:197
 msgid ""
 "Conversion failed.\n"
 "It seems a bug of SPUMUX."
@@ -245,8 +257,7 @@ msgstr ""
 msgid "Copying the file"
 msgstr "Copia del file"
 
-#: ../devede_video_convert.py:94
-#: ../devede_video_convert.py:124
+#: ../devede_video_convert.py:94 ../devede_video_convert.py:124
 msgid "Creating preview"
 msgstr "Creazione dell'anteprima"
 
@@ -257,7 +268,8 @@ msgid ""
 "\n"
 "%(file_name)s"
 msgstr ""
-"Conversione dei file dal titolo %(title_number)s (passaggio %(pass_number)s)\n"
+"Conversione dei file dal titolo %(title_number)s (passaggio "
+"%(pass_number)s)\n"
 "\n"
 "%(file_name)s"
 
@@ -271,7 +283,9 @@ msgstr ""
 
 #: ../devede_video_convert.py:536
 msgid "Also check the extra params passed to Mencoder for syntax errors."
-msgstr "Controllare anche i parametri extra passati a Mencoder per eventuali errori di sintassi."
+msgstr ""
+"Controllare anche i parametri extra passati a Mencoder per eventuali errori "
+"di sintassi."
 
 #: ../devede_video_convert.py:569
 msgid ""
@@ -281,17 +295,15 @@ msgstr ""
 "Conversione non riuscita\n"
 "Forse non hai spazio sufficiente sul disco?"
 
-#: ../devede_xml_menu.py:38
+#: ../devede_xml_menu.py:42
 msgid "Failed to create the menues."
 msgstr "Errore nella creazione dei menu."
 
-#: ../devede_xml_menu.py:103
-#: ../devede_xml_menu.py:494
+#: ../devede_xml_menu.py:117 ../devede_xml_menu.py:508
 msgid "Menu generation failed."
 msgstr "Generazione del menu non riuscita."
 
-#: ../devede_xml_menu.py:110
-#: ../devede_xml_menu.py:503
+#: ../devede_xml_menu.py:124 ../devede_xml_menu.py:517
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -299,7 +311,7 @@ msgstr ""
 "Impossibile aggiungere i pulsanti al menu\n"
 "Probabile bug di SPUMUX."
 
-#: ../devede_xml_menu.py:469
+#: ../devede_xml_menu.py:483
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Creazione del menu %(menu_number)d"
@@ -358,8 +370,10 @@ msgid "<b>Workarounds</b>"
 msgstr "<b>Alternative</b>"
 
 #: ../interface/settings.ui.h:4
-msgid "AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
-msgstr "AC3_FIXED corregge i dischi senza audio quando si usa una beta di Mencoder"
+msgid ""
+"AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
+msgstr ""
+"AC3_FIXED corregge i dischi senza audio quando si usa una beta di Mencoder"
 
 #: ../interface/settings.ui.h:5
 msgid "Erase temporary files"
@@ -381,28 +395,23 @@ msgstr "Usa FFMPEG invece di Mencoder (SPERIMENTALE)"
 msgid "Use optimizations for multicore CPUs"
 msgstr "Usa ottimizzazioni per CPU multicore"
 
-#: ../interface/add_subtitle2.ui.h:1
-#: ../interface/add_subtitle.ui.h:3
+#: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:3
 msgid "Clear"
 msgstr "Cancella"
 
-#: ../interface/add_subtitle2.ui.h:2
-#: ../interface/add_subtitle.ui.h:4
+#: ../interface/add_subtitle2.ui.h:2 ../interface/add_subtitle.ui.h:4
 msgid "Encoding: "
 msgstr "Codifica: "
 
-#: ../interface/add_subtitle2.ui.h:3
-#: ../interface/add_subtitle.ui.h:5
+#: ../interface/add_subtitle2.ui.h:3 ../interface/add_subtitle.ui.h:5
 msgid "File: "
 msgstr "File: "
 
-#: ../interface/add_subtitle2.ui.h:4
-#: ../interface/add_subtitle.ui.h:6
+#: ../interface/add_subtitle2.ui.h:4 ../interface/add_subtitle.ui.h:6
 msgid "Language: "
 msgstr "Lingua: "
 
-#: ../interface/add_subtitle2.ui.h:5
-#: ../interface/add_subtitle.ui.h:7
+#: ../interface/add_subtitle2.ui.h:5 ../interface/add_subtitle.ui.h:7
 msgid "Put subtitles upper"
 msgstr "Inserisci i sottotitoli sopra"
 
@@ -416,7 +425,9 @@ msgstr "Scegli un file"
 
 #: ../interface/waborted_dialog.ui.h:1
 msgid "Aborted. There can be temporary files at the destination directory."
-msgstr "Interrotto. Possono essere rimasti file temporanei nella directory di destinazione."
+msgstr ""
+"Interrotto. Possono essere rimasti file temporanei nella directory di "
+"destinazione."
 
 #: ../interface/wcancel_dialog.ui.h:1
 msgid "Abort the current DVD and exit?"
@@ -524,12 +535,15 @@ msgstr ""
 "Continuare ugualmente?"
 
 #: ../interface/wend_dialog.ui.h:1
-msgid "Burn"
-msgstr "Masterizza"
-
-#: ../interface/wend_dialog.ui.h:2
 msgid "Job done!"
 msgstr "Finito!"
+
+#. Means: "Burn the ISO image in a CD/DVD"
+#: ../interface/wend_dialog.ui.h:3
+#, fuzzy
+msgctxt "Means: "
+msgid "Burn"
+msgstr "Masterizza"
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -539,8 +553,7 @@ msgstr "Cancellare la struttura del disco attuale?"
 msgid "Delete the current disc structure and start again?"
 msgstr "Cancellare l'attuale struttura del disco e ripartire da capo?"
 
-#: ../interface/werror_dialog.ui.h:1
-#: ../interface/wprograms.ui.h:3
+#: ../interface/werror_dialog.ui.h:1 ../interface/wprograms.ui.h:3
 msgid "Error"
 msgstr "Errore"
 
@@ -628,8 +641,7 @@ msgstr "<b>Parametri extra per il codificatore</b>"
 msgid "<b>Field order</b>"
 msgstr "<b>Ordine dei campi</b>"
 
-#: ../interface/wfile.ui.h:22
-#: ../interface/wmain.ui.h:13
+#: ../interface/wfile.ui.h:22 ../interface/wmain.ui.h:13
 msgid "<b>File info</b>"
 msgstr "<b>Informazioni sul file</b>"
 
@@ -690,8 +702,7 @@ msgstr "<b>Volume (%)</b>"
 msgid "Add black bars"
 msgstr "Aggiunge barre nere"
 
-#: ../interface/wfile.ui.h:38
-#: ../interface/wmain.ui.h:18
+#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:18
 msgid "Advanced options"
 msgstr "Opzioni avanzate"
 
@@ -717,7 +728,8 @@ msgstr "Predefinito"
 
 #: ../interface/wfile.ui.h:44
 msgid "DivX format doesn't support subtitles. Please, read the FAQ."
-msgstr "Il formato DiVX non supporta i sottotitoli. Per informazioni leggere le FAQ."
+msgstr ""
+"Il formato DiVX non supporta i sottotitoli. Per informazioni leggere le FAQ."
 
 #: ../interface/wfile.ui.h:45
 msgid "Don't deinterlace"
@@ -735,8 +747,7 @@ msgstr "Filtro deinterlacciamento FFMpeg"
 msgid "File properties"
 msgstr "Proprietà del file"
 
-#: ../interface/wfile.ui.h:49
-#: ../interface/wmain.ui.h:25
+#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:25
 msgid "Final size (pixels):"
 msgstr "Dimensioni finali (pixel):"
 
@@ -748,8 +759,7 @@ msgstr "Corpo carattere: "
 msgid "Force subtitles"
 msgstr "Forza i sottotitoli"
 
-#: ../interface/wfile.ui.h:52
-#: ../interface/wmain.ui.h:26
+#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:26
 msgid "Frames per second: "
 msgstr "Fotogrammi al secondo: "
 
@@ -781,8 +791,7 @@ msgstr "Filtro deinterlacciamento mediano"
 msgid "Misc"
 msgstr "Varie"
 
-#: ../interface/wfile.ui.h:60
-#: ../interface/wmain.ui.h:29
+#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:29
 msgid "NTSC"
 msgstr "NTSC"
 
@@ -798,8 +807,7 @@ msgstr "Campionamento audio originale (Kbit/sec):"
 msgid "Original length (seconds): "
 msgstr "Durata originale (secondi): "
 
-#: ../interface/wfile.ui.h:64
-#: ../interface/wmain.ui.h:31
+#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:31
 msgid "Original size (pixels): "
 msgstr "Dimensioni originali (pixel): "
 
@@ -811,8 +819,7 @@ msgstr "Campionamento video originale (Kbit/sec):"
 msgid "PAL/SECAM"
 msgstr "PAL/SECAM"
 
-#: ../interface/wfile.ui.h:67
-#: ../interface/wmain.ui.h:34
+#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:34
 msgid "Preview"
 msgstr "Anteprima"
 
@@ -855,7 +862,9 @@ msgstr "Seleziona la modalità MBD che necessita di meno bit"
 
 #: ../interface/wfile.ui.h:78
 msgid "Select the MBD mode which has the best rate distortion (better quality)"
-msgstr "Seleziona la modalità MBD che ha la migliore distorsione di campionamento (migliore qualità)"
+msgstr ""
+"Seleziona la modalità MBD che ha la migliore distorsione di campionamento "
+"(migliore qualità)"
 
 #: ../interface/wfile.ui.h:79
 msgid "Size (in minutes) for each chapter: "
@@ -882,8 +891,11 @@ msgid "Swap fields"
 msgstr "Scambia campi"
 
 #: ../interface/wfile.ui.h:85
-msgid "This file already has AC3 sound (copy audio data instead of recompress it)"
-msgstr "Questo file ha già audio AC3 (i dati audio verranno copiati anziché ricompressi)"
+msgid ""
+"This file already has AC3 sound (copy audio data instead of recompress it)"
+msgstr ""
+"Questo file ha già audio AC3 (i dati audio verranno copiati anziché "
+"ricompressi)"
 
 #: ../interface/wfile.ui.h:86
 msgid "This file is already a DVD/xCD-suitable MPEG-PS file"
@@ -903,7 +915,9 @@ msgstr "Usa MBCMP (più veloce)"
 
 #: ../interface/wfile.ui.h:90
 msgid "Use Trellis Searched Quantization (better quality, slower conversion)"
-msgstr "Usa l'algoritmo di quantizzazione Trellis (migliore qualità ma conversione più lenta)"
+msgstr ""
+"Usa l'algoritmo di quantizzazione Trellis (migliore qualità ma conversione "
+"più lenta)"
 
 #: ../interface/wfile.ui.h:91
 msgid "Use a GOP of 12 frames (improves compatibility)"
@@ -911,7 +925,8 @@ msgstr "Usa un GOP di 12 frame (aumenta la compatibilità)"
 
 #: ../interface/wfile.ui.h:92
 msgid "Use dual pass encoding (better quality, much slower conversion)"
-msgstr "Usa una codifica in due passaggi (migliore qualità ma conversione più lenta)"
+msgstr ""
+"Usa una codifica in due passaggi (migliore qualità ma conversione più lenta)"
 
 #: ../interface/wfile.ui.h:93
 msgid "Vertical mirror"
@@ -934,8 +949,14 @@ msgid "Choose a folder"
 msgstr "Scegli una cartella"
 
 #: ../interface/wfolder_dialog.ui.h:2
-msgid "Choose the folder where DeVeDe will create the DVD image and a name for it. Don't use a folder in a VFAT/FAT32 drive. Characters /, | and \\ are not allowed and will be replaced by underscores."
-msgstr "Scegli la cartella dove DeVeDe creerà l'immagine DVD e un nome per essa. Non utilizzare una cartella in un disco VFAT/FAT32. I caratteri /, | e \\ non sono permessi e saranno rimpiazzati con degli underscore."
+msgid ""
+"Choose the folder where DeVeDe will create the DVD image and a name for it. "
+"Don't use a folder in a VFAT/FAT32 drive. Characters /, | and \\ are not "
+"allowed and will be replaced by underscores."
+msgstr ""
+"Scegli la cartella dove DeVeDe creerà l'immagine DVD e un nome per essa. Non "
+"utilizzare una cartella in un disco VFAT/FAT32. I caratteri /, | e \\ non "
+"sono permessi e saranno rimpiazzati con degli underscore."
 
 #: ../interface/wfolder_dialog.ui.h:3
 msgid "Shutdown computer when disc is done"
@@ -946,8 +967,12 @@ msgid "Load a disc structure"
 msgstr "Carica la struttura di un disco"
 
 #: ../interface/wloosecurrent.ui.h:1
-msgid "If you load a disc structure you will loose your current structure (unless you saved it). Continue?"
-msgstr "Caricando una nuova struttura disco saranno persi tutti i cambiamenti effettuati alla attuale (se non salvati). Continuare?"
+msgid ""
+"If you load a disc structure you will loose your current structure (unless "
+"you saved it). Continue?"
+msgstr ""
+"Caricando una nuova struttura disco saranno persi tutti i cambiamenti "
+"effettuati alla attuale (se non salvati). Continuare?"
 
 #: ../interface/wloosecurrent.ui.h:2
 msgid "Warning: you already have a disc structure"
@@ -1058,8 +1083,7 @@ msgstr "Formato video in uscita:"
 msgid "PAL"
 msgstr "PAL"
 
-#: ../interface/wmain.ui.h:35
-#: ../interface/wmenu_properties.ui.h:20
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:22
 msgid "Preview menu"
 msgstr "Anteprima menu"
 
@@ -1097,110 +1121,117 @@ msgid "<b>Disc startup options</b>"
 msgstr "<b>Opzioni di avvio del disco</b>"
 
 #: ../interface/wmenu_properties.ui.h:2
-msgid "<b>Horizontal alignment</b>"
+#, fuzzy
+msgid "<b>Horizontal</b>"
 msgstr "<b>Allineamento orizzontale</b>"
 
-#: ../interface/wmenu_properties.ui.h:3
+#: ../interface/wmenu_properties.ui.h:4
+#, fuzzy, no-c-format
+msgid "<b>Margins (%)</b>"
+msgstr "<b>Menu</b>"
+
+#: ../interface/wmenu_properties.ui.h:5
 msgid "<b>Menu background (only PNG)</b>"
 msgstr "<b>Sfondo del menu (solo PNG)</b>"
 
-#: ../interface/wmenu_properties.ui.h:4
+#: ../interface/wmenu_properties.ui.h:6
 msgid "<b>Menu font and colors</b>"
 msgstr "<b>Colori e font del menu</b>"
 
-#: ../interface/wmenu_properties.ui.h:5
+#: ../interface/wmenu_properties.ui.h:7
 msgid "<b>Menu music</b>"
 msgstr "<b>Audio del menu</b>"
 
-#: ../interface/wmenu_properties.ui.h:6
+#: ../interface/wmenu_properties.ui.h:8
 msgid "<b>Menu position</b>"
 msgstr "<b>Posizione del menu</b>"
 
-#: ../interface/wmenu_properties.ui.h:7
+#: ../interface/wmenu_properties.ui.h:9
 msgid "<b>Menu title</b>"
 msgstr "<b>Titolo del menu</b>"
 
-#: ../interface/wmenu_properties.ui.h:8
-msgid "<b>Vertical alignment</b>"
-msgstr "<b>Allineamento verticale</b>"
+#: ../interface/wmenu_properties.ui.h:10
+#, fuzzy
+msgid "<b>Vertical</b>"
+msgstr "<b>Speciali</b>"
 
-#: ../interface/wmenu_properties.ui.h:9
+#: ../interface/wmenu_properties.ui.h:11
 msgid "Background color for titles: "
 msgstr "Colore di sfondo per i titoli: "
 
-#: ../interface/wmenu_properties.ui.h:10
+#: ../interface/wmenu_properties.ui.h:12
 msgid "Bottom"
 msgstr "In basso"
 
-#: ../interface/wmenu_properties.ui.h:11
+#: ../interface/wmenu_properties.ui.h:13
 msgid "Center"
 msgstr "Centro"
 
-#: ../interface/wmenu_properties.ui.h:12
+#: ../interface/wmenu_properties.ui.h:14
 msgid "Choose a music file"
 msgstr "Scegli un file audio"
 
-#: ../interface/wmenu_properties.ui.h:13
+#: ../interface/wmenu_properties.ui.h:15
 msgid "Color for selected title: "
 msgstr "Colore per il titolo selezionato: "
 
-#: ../interface/wmenu_properties.ui.h:14
+#: ../interface/wmenu_properties.ui.h:16
 msgid "Color for shadows: "
 msgstr "Colore per le ombre: "
 
-#: ../interface/wmenu_properties.ui.h:15
+#: ../interface/wmenu_properties.ui.h:17
 msgid "Color for unselected titles: "
 msgstr "Colore per i titoli non selezionati: "
 
-#: ../interface/wmenu_properties.ui.h:16
+#: ../interface/wmenu_properties.ui.h:18
 msgid "Font: "
 msgstr "Font: "
 
-#: ../interface/wmenu_properties.ui.h:17
+#: ../interface/wmenu_properties.ui.h:19
 msgid "Jump to the first title at startup"
 msgstr "Vai al primo titolo all'avvio"
 
-#: ../interface/wmenu_properties.ui.h:18
+#: ../interface/wmenu_properties.ui.h:20
 msgid "Left"
 msgstr "Sinistra"
 
-#: ../interface/wmenu_properties.ui.h:19
+#: ../interface/wmenu_properties.ui.h:21
 msgid "Middle"
 msgstr "Centrale"
 
-#: ../interface/wmenu_properties.ui.h:21
+#: ../interface/wmenu_properties.ui.h:23
 msgid "Right"
 msgstr "Destra"
 
-#: ../interface/wmenu_properties.ui.h:22
+#: ../interface/wmenu_properties.ui.h:24
 msgid "Select a picture to be used as background for disc's menu"
 msgstr "Seleziona un'immagine da usare come sfondo per il menu del disco"
 
-#: ../interface/wmenu_properties.ui.h:23
+#: ../interface/wmenu_properties.ui.h:25
 msgid "Set default background"
 msgstr "Imposta lo sfondo predefinito"
 
-#: ../interface/wmenu_properties.ui.h:24
+#: ../interface/wmenu_properties.ui.h:26
 msgid "Set menus without sound"
 msgstr "Imposta i menu senza suoni"
 
-#: ../interface/wmenu_properties.ui.h:25
+#: ../interface/wmenu_properties.ui.h:27
 msgid "Shadow color: "
 msgstr "Colore ombra: "
 
-#: ../interface/wmenu_properties.ui.h:26
+#: ../interface/wmenu_properties.ui.h:28
 msgid "Show menu at disc startup"
 msgstr "Visualizza il menu all'avvio del disco"
 
-#: ../interface/wmenu_properties.ui.h:27
+#: ../interface/wmenu_properties.ui.h:29
 msgid "Text color: "
 msgstr "Colore testo: "
 
-#: ../interface/wmenu_properties.ui.h:28
+#: ../interface/wmenu_properties.ui.h:30
 msgid "Text: "
 msgstr "Testo: "
 
-#: ../interface/wmenu_properties.ui.h:29
+#: ../interface/wmenu_properties.ui.h:31
 msgid "Top"
 msgstr "In alto"
 
@@ -1217,8 +1248,12 @@ msgid "<b>Preview video</b>"
 msgstr "<b>Anteprima video</b>"
 
 #: ../interface/wpreview_dialog.ui.h:2
-msgid "DeVeDe will create a preview with the selected parameters, so you will be able to check video quality, audio sync and so on."
-msgstr "DeVeDe creerà un'anteprima con i parametri selezionati, in modo da poter controllare la qualità video, la sincronia dell'audio, eccetera."
+msgid ""
+"DeVeDe will create a preview with the selected parameters, so you will be "
+"able to check video quality, audio sync and so on."
+msgstr ""
+"DeVeDe creerà un'anteprima con i parametri selezionati, in modo da poter "
+"controllare la qualità video, la sincronia dell'audio, eccetera."
 
 #: ../interface/wpreview_dialog.ui.h:3
 msgid "Preview length:"
@@ -1229,8 +1264,12 @@ msgid "Can't find the following programs:"
 msgstr "Non sono stati rilevati i seguenti programmi:"
 
 #: ../interface/wprograms.ui.h:2
-msgid "DeVeDe needs them in order to work. If you want to use DeVeDe, you must install all of them."
-msgstr "DeVeDe necessita di loro per poter funzionare, se vuoi usare DeVeDe, devi averli installati tutti."
+msgid ""
+"DeVeDe needs them in order to work. If you want to use DeVeDe, you must "
+"install all of them."
+msgstr ""
+"DeVeDe necessita di loro per poter funzionare, se vuoi usare DeVeDe, devi "
+"averli installati tutti."
 
 #: ../interface/wprogress.ui.h:1
 msgid "Creating..."
@@ -1279,6 +1318,9 @@ msgstr "Proprietà del titolo"
 #: ../interface/wwarning_dialog.ui.h:1
 msgid "Warning"
 msgstr "Attenzione"
+
+#~ msgid "<b>Vertical alignment</b>"
+#~ msgstr "<b>Allineamento verticale</b>"
 
 #~ msgid "Converting files from title"
 #~ msgstr "Converto i file dal titolo"

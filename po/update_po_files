@@ -36,6 +36,8 @@ echo sk
 intltool-update sk
 echo sv
 intltool-update sv
+echo "tr (Turkish)"
+intltool-update tr
 echo "zh_TW (Chinese, Taiwan)"
 intltool-update zh_TW
 echo "zh_CN (Simplified Chinese)"
