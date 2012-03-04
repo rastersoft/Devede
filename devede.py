@@ -136,7 +136,10 @@ else:
 #####################
 
 gettext.bindtextdomain('devede',share_locale)
-locale.setlocale(locale.LC_ALL,"")
+try:
+	locale.setlocale(locale.LC_ALL,"")
+except locale.Error:
+	pass
 gettext.textdomain('devede')
 gettext.install("devede",localedir=share_locale) # None is sys default locale
 #   Note also before python 2.3 you need the following if
