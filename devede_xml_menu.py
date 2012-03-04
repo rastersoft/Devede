@@ -1021,19 +1021,19 @@ class xml_files(devede_executor.executor):
 			comando=["spumux.exe"]
 			# The -i -o is with a custom patched version of
 			# dvdauthor.  Best and easiest way of making it work
-			comando.append(self.filefolder+self.filename+"_menu_"+str(counter)+".xml")
+			comando.append(os.path.join(self.filefolder,self.filename+"_menu_"+str(counter)+".xml"))
 			comando.append("-i")
-			comando.append(self.filefolder+self.filename+"_menu_"+str(counter)+".mpg")
+			comando.append(os.path.join(self.filefolder,self.filename+"_menu_"+str(counter)+".mpg"))
 			comando.append("-o")
-			comando.append(self.filefolder+self.filename+"_menu2_"+str(counter)+".mpg")
+			comando.append(os.path.join(self.filefolder,self.filename+"_menu2_"+str(counter)+".mpg"))
 			self.launch_program(comando)
 		else:
 			comando="spumux"
 			
-			comando+=' "' +self.filefolder+self.filename+'_menu_'+str(counter)+'.xml"'
+			comando+=' "' +os.path.join(self.filefolder,self.filename+'_menu_'+str(counter)+'.xml"')
 
 			print "Launch: "+comando
-			self.launch_shell(comando,stdinout=[self.filefolder+self.filename+"_menu_"+str(counter)+".mpg",self.filefolder+self.filename+"_menu2_"+str(counter)+".mpg"])
+			self.launch_shell(comando,stdinout=[os.path.join(self.filefolder,self.filename+"_menu_"+str(counter)+".mpg"),os.path.join(self.filefolder,self.filename+"_menu2_"+str(counter)+".mpg")])
 
 
 	def end_process(self,eraser,erase_temporary_files):
