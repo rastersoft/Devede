@@ -379,8 +379,8 @@ def calcula_tamano_parcial(vrate,arate,filesize,length,subs,ismpeg,isvob,cutting
 
 def calcule_menu_size(structure,sound_duration):
 
-	# each menu needs 2628 kbits/sec * sound_duration / 8
-	return (329*sound_duration)*((len(structure)+9)/10)
+	# each menu needs 2692 kbits/sec * sound_duration / 8
+	return (337*sound_duration)*((len(structure)+9)/10)
 
 
 def calcula_tamano_total(structure,sound_duration,disktype):

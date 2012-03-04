@@ -912,7 +912,7 @@ class xml_files(devede_executor.executor):
 		command_var.append("-b")
 		command_var.append("2500k")
 		command_var.append("-ab")
-		command_var.append("128000")
+		command_var.append("192000")
 		command_var.append("-maxrate")
 		command_var.append("4000k")
 		command_var.append("-minrate")
@@ -989,7 +989,7 @@ class xml_files(devede_executor.executor):
 			lavcopts+="ac3_fixed"
 		else:
 			lavcopts+="ac3"
-		lavcopts+=":abitrate=128:aspect="+wide
+		lavcopts+=":abitrate=192:aspect="+wide
 		command_var.append(lavcopts)
 		command_var.append("-o")
 		command_var.append(currentfile)
