@@ -910,15 +910,17 @@ class xml_files(devede_executor.executor):
 		command_var.append("-mbd")
 		command_var.append("2")
 		command_var.append("-b")
-		command_var.append("1000000")
+		command_var.append("2500k")
 		command_var.append("-ab")
 		command_var.append("128000")
+		command_var.append("-maxrate")
+		command_var.append("4000k")
+		command_var.append("-minrate")
+		command_var.append("2000k")
 		command_var.append("-aspect")
 		command_var.append("4:3")
 
-
 		#audio="/home/raster/Escritorio/lazy.mp3"
-
 		
 		command_var.append(currentfile)
 		origDir=os.getcwd()
@@ -981,7 +983,7 @@ class xml_files(devede_executor.executor):
 		else:
 			lavcopts=""
 		lavcopts+="vcodec=mpeg2video:sc_threshold=1000000000:cgop:trell:mbd=2:vstrict=0:"
-		lavcopts+="vrc_maxrate=7000:vrc_buf_size=1835:vbitrate=1000:keyint=12:"
+		lavcopts+="vrc_maxrate=4000:vrc_buf_size=1835:vbitrate=2500:keyint=12:"
 		lavcopts+="acodec="
 		if self.AC3_fix:
 			lavcopts+="ac3_fixed"
