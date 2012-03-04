@@ -390,7 +390,7 @@ class create_all:
 			pass
 		
 		try:
-			os.mkdir(filefolder2)
+			os.makedirs(filefolder2)
 		except:
 			pass
 	
