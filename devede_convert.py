@@ -479,9 +479,14 @@ class create_all:
 		
 		action=self.queue[self.current_action]
 		
+		if (self.global_vars["multicore"]!=1) and (self.global_vars["hyperthreading"]==False):
+			cores=self.global_vars["hypercores"]
+		else:
+			cores=self.global_vars["cores"]
+		
 		if action[0]=="M1":
 			self.runner=action[1]
-			self.runner.create_menu1(action[2],action[3],self.global_vars["multicore"])
+			self.runner.create_menu1(action[2],action[3],cores)
 			return True
 		
 		if (action[0]=='C') or (action[0]=='C1') or (action[0]=='C2'):
@@ -493,18 +498,18 @@ class create_all:
 				encpass = int(action[0][1])
 			print "Segundos "+str(self.seconds)
 			if (self.global_vars["use_ffmpeg"]):
-				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
+				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, encpass,self.global_vars["AC3_fix"])
 			else:
-				self.runner=devede_video_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, encpass,self.global_vars["AC3_fix"])
+				self.runner=devede_video_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, encpass,self.global_vars["AC3_fix"])
 			return True
 		
 		if action[0]=="C2":
 			title=action[1]
 			chapter=action[2]
 			if (self.global_vars["use_ffmpeg"]):
-				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
+				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, 2,self.global_vars["AC3_fix"])
 			else:
-				self.runner=devede_video_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,self.global_vars["multicore"],self.seconds, 2,self.global_vars["AC3_fix"])
+				self.runner=devede_video_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, 2,self.global_vars["AC3_fix"])
 			return True
 		
 		if action[0]=="S":

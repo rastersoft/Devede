@@ -443,14 +443,11 @@ class video_converter_ffmpeg(devede_executor.executor):
 
 		# Currently Mencoder supports up to 8 threads
 		if isvob==False:
-			if threads>8:
-				nthreads=8
-			else:
-				nthreads=threads
+			threads
 			
-			if nthreads>1:
+			if threads>1:
 				command_var.append("-threads")
-				command_var.append(str(nthreads))
+				command_var.append(str(threads))
 
 			command_var.append("-trellis")
 			if videofile["trellis"]:

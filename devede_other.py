@@ -422,6 +422,7 @@ def load_config(global_vars):
 	home=get_home_directory()
 	global_vars["PAL"]=True
 	global_vars["multicore"]=1 # it shouldn't use multicore by default
+	global_vars["hyperthreading"]=True # by default, use hyperthreading
 
 	# TODO change to allow a windows temp directory
 
@@ -465,6 +466,11 @@ def load_config(global_vars):
 					global_vars["multicore"]=1
 				else:
 					global_vars["multicore"]=global_vars["cores"]
+			if linea[:15]=="hyperthreading:":
+				if linea[15:]=="1":
+					global_vars["hyperthreading"]=True
+				else:
+					global_vars["hyperthreading"]=False
 			if linea[:13]=="final_folder:":
 				global_vars["finalfolder"]=linea[13:]
 			if linea[:13]=="sub_language:":
@@ -518,6 +524,10 @@ def save_config(global_vars):
 			archivo.write("video_format:ntsc\n")
 		archivo.write("temp_folder:"+global_vars["temp_folder"]+"\n")
 		archivo.write("multicore:"+str(global_vars["multicore"])+"\n")
+		if global_vars["hyperthreading"]:
+			archivo.write("hyperthreading:1\n")
+		else:
+			archivo.write("hyperthreading:0\n")
 		if global_vars["finalfolder"]!="":
 			archivo.write("final_folder:"+str(global_vars["finalfolder"])+"\n")
 		archivo.write("sub_language:"+str(global_vars["sub_language"])+"\n")

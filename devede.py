@@ -215,11 +215,18 @@ def get_number(line):
 	return int(line[pos+1:])
 
 def get_cores():
-		
+	
 	""" Returns the number of cores available in the system """
+	
+	try:
+		import multiprocessing
+		hyper=multiprocessing.cpu_count()
+	except:
+		hyper=1
+	
 	if (sys.platform=="win32") or (sys.platform=="win64"):
 		logical_cores = win32api.GetSystemInfo()[5] #Logical Cores
-		return logical_cores
+		return (logical_cores,logical_cores)
 
 	failed=False
 	try:
@@ -230,17 +237,14 @@ def get_cores():
 		
 	if failed:
 		# If can't read /proc/cpuinfo, try to use the multiprocessing module
-		try:
-			import multiprocessing
-			return multiprocessing.cpu_count()
-		except:
-			pass
-		return 1 # if we can't open /PROC/CPUINFO, return only one CPU (just in case)
+		
+		return (hyper,hyper) # if we can't open /PROC/CPUINFO, return only one CPU (just in case)
 	
 	siblings=1 # default values
 	cpu_cores=1 # for siblings and cpu cores
 	notfirst=False
 	ncores=0
+	nvirtcores=0
 	while(True):
 		line=proc.readline()
 		
@@ -258,15 +262,18 @@ def get_cores():
 			
 		if line[:9]=="processor":
 			notfirst=True
+			nvirtcores+=1
 		elif (line[:8]=="siblings"):
 			siblings=get_number(line)
 		elif (line[:9]=="cpu cores"):
 			cpu_cores=get_number(line)
 
+	if (nvirtcores==0):
+		nvirtcores=1
 	if(ncores<=1.0):
-		return 1
+		return (1,nvirtcores)
 	else:
-		return int(ncores)
+		return (int(ncores),nvirtcores)
 
 global_vars["PAL"]=True
 global_vars["disctocreate"]=""
@@ -286,7 +293,9 @@ global_vars["sub_codepage"]="ISO-8859-1"
 global_vars["sub_language"]="EN (ENGLISH)"
 global_vars["with_menu"]=True
 global_vars["AC3_fix"]=False
-global_vars["cores"]=get_cores()
+(a,b)=get_cores()
+global_vars["cores"]=a
+global_vars["hypercores"]=b
 global_vars["use_ffmpeg"]=True
 global_vars["warning_ffmpeg"]=False
 global_vars["shutdown_after_disc"]=False
@@ -297,7 +306,7 @@ global_vars["menu_left_margin"]=0.1
 global_vars["menu_right_margin"]=0.1
 #global_vars[""]=""
 
-print "Cores: "+str(global_vars["cores"])
+print "Cores: "+str(global_vars["cores"])+" Virtual cores: "+str(global_vars["hypercores"])
 
 if font_path[-1]!=os.sep:
 	font_path+=os.sep

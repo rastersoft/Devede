@@ -35,6 +35,11 @@ class devede_settings:
             self.ac3_fix.set_sensitive(False)
         else:
             self.ac3_fix.set_sensitive(True)
+        
+        if (self.multicore.get_active()):
+            self.hyper.set_sensitive(True)
+        else:
+            self.hyper.set_sensitive(False)
     
     def __init__(self,gladefile,structure,global_vars):
         
@@ -49,12 +54,17 @@ class devede_settings:
         w=self.tree.get_object("erase_files")
         w.set_active(self.global_vars["erase_files"])
         
-        w=self.tree.get_object("multicore")
+        self.hyper=self.tree.get_object("hyperthreading")
+        self.multicore=self.tree.get_object("multicore")
         if (self.global_vars["multicore"]==1):
-            w.set_active(False)
+            self.multicore.set_active(False)
+            self.hyper.set_active(False)
+            self.hyper.set_sensitive(False)
         else:
-            w.set_active(True)
+            self.multicore.set_active(True)
             self.global_vars["multicore"]=self.global_vars["cores"]
+            self.hyper.set_sensitive(True)
+            self.hyper.set_active(self.global_vars["hyperthreading"])
         
         self.ac3_fix=self.tree.get_object("AC3_fix")
         self.ac3_fix.set_active(self.global_vars["AC3_fix"])
@@ -82,8 +92,10 @@ class devede_settings:
         w=self.tree.get_object("multicore")
         if w.get_active():
             self.global_vars["multicore"]=self.global_vars["cores"]
+            self.global_vars["hyperthreading"]=self.hyper.get_active()
         else:
             self.global_vars["multicore"]=1
+            self.global_vars["hyperthreading"]=False
         
         self.global_vars["use_ffmpeg"]=self.use_ffmpeg.get_active()
             
