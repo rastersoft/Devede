@@ -322,9 +322,9 @@ class video_converter_ffmpeg(devede_executor.executor):
 				else:
 					command_var.append("pal-dvd")
 				command_var.append("-maxrate")
-				command_var.append("8000k")
+				command_var.append("7000k")
 				command_var.append("-minrate")
-				command_var.append("2000k")
+				command_var.append("2200k")
 			elif (disctype=="vcd"):
 				vcd=True
 				if final_framerate==30:
@@ -387,6 +387,11 @@ class video_converter_ffmpeg(devede_executor.executor):
 		elif gop12 and (isvob==False):
 			command_var.append("-g")
 			command_var.append("12")
+		
+		command_var.append("-bf")
+		command_var.append("2")
+		command_var.append("-strict")
+		command_var.append("1")
 		
 		if seconds!=0:
 			command_var.append("-t")
