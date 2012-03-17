@@ -321,10 +321,10 @@ class video_converter_ffmpeg(devede_executor.executor):
 					command_var.append("film-dvd")
 				else:
 					command_var.append("pal-dvd")
-				command_var.append("-maxrate")
-				command_var.append("7000k")
-				command_var.append("-minrate")
-				command_var.append("2200k")
+				#command_var.append("-maxrate")
+				#command_var.append("7000k")
+				#command_var.append("-minrate")
+				#command_var.append("2200k")
 			elif (disctype=="vcd"):
 				vcd=True
 				if final_framerate==30:
