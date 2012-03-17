@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-30 11:31+0100\n"
+"POT-Creation-Date: 2012-03-18 00:53+0100\n"
 "PO-Revision-Date: 2008-08-07 02:47+0200\n"
 "Last-Translator: Lars-Erik Aunevik Labori <translate@labori.nu>\n"
 "Language-Team: Norwegian/Bokmaal <i18n-nb@lister.ping.uio.no>\n"
@@ -186,42 +186,42 @@ msgstr "Ulagret diskstruktur"
 msgid "Title %(X)d"
 msgstr "Tittel %(X)d"
 
-#: ../devede_newfiles.py:484
+#: ../devede_newfiles.py:486
 #, fuzzy
 msgid "Subtitle"
 msgstr "Undertekster"
 
-#: ../devede_newfiles.py:487
+#: ../devede_newfiles.py:489
 msgid "Codepage"
 msgstr ""
 
-#: ../devede_newfiles.py:490
+#: ../devede_newfiles.py:492
 msgid "Language"
 msgstr ""
 
-#: ../devede_newfiles.py:564
+#: ../devede_newfiles.py:566
 msgid "Video files"
 msgstr ""
 
-#: ../devede_newfiles.py:571
+#: ../devede_newfiles.py:573
 msgid "All files"
 msgstr ""
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:918
+#: ../devede_newfiles.py:920
 msgid "File doesn't seem to be a video file."
 msgstr "Dette er ikke en videofil."
 
-#: ../devede_newfiles.py:920
+#: ../devede_newfiles.py:922
 msgid "File seems to be an audio file."
 msgstr "Dette ser ut som en lydfil."
 
-#: ../devede_newfiles.py:1043
+#: ../devede_newfiles.py:1045
 msgid "Please, add only one file each time."
 msgstr "Kun en fil om gangen."
 
-#: ../devede_newfiles.py:1056
+#: ../devede_newfiles.py:1058
 #, fuzzy
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Kun en fil om gangen."
@@ -350,23 +350,27 @@ msgid ""
 msgstr ""
 
 #: ../interface/settings.ui.h:5
+msgid "Don't use hyperthreading"
+msgstr ""
+
+#: ../interface/settings.ui.h:6
 msgid "Erase temporary files"
 msgstr "Slett midlertidige filer"
 
-#: ../interface/settings.ui.h:6
+#: ../interface/settings.ui.h:7
 msgid "Folder for temporary file"
 msgstr "Mappe for midlertidige filer"
 
-#: ../interface/settings.ui.h:7
+#: ../interface/settings.ui.h:8
 #, fuzzy
 msgid "Temporary files folder:"
 msgstr "Slett midlertidige filer"
 
-#: ../interface/settings.ui.h:8
+#: ../interface/settings.ui.h:9
 msgid "Use FFMPEG instead of Mencoder"
 msgstr ""
 
-#: ../interface/settings.ui.h:9
+#: ../interface/settings.ui.h:10
 msgid "Use optimizations for multicore CPUs"
 msgstr ""
 

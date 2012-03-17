@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: DeVeDe 3.17.0 - 20110703\n"
+"Project-Id-Version: DeVeDe 3.21.0 - 201203017\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-30 11:31+0100\n"
-"PO-Revision-Date: 2011-07-12 11:31+0100\n"
+"POT-Creation-Date: 2012-03-18 00:52+0100\n"
+"PO-Revision-Date: 2012-03-17 17:27+0100\n"
 "Last-Translator: csola48 <csola48@gmail.com>\n"
 "Language-Team: csola48 <csola48@gmail.com>\n"
 "Language: \n"
@@ -192,41 +192,41 @@ msgstr "Nem mentett lemez struktúra"
 msgid "Title %(X)d"
 msgstr "Cím %(X)d"
 
-#: ../devede_newfiles.py:484
+#: ../devede_newfiles.py:486
 msgid "Subtitle"
 msgstr "Felirat"
 
-#: ../devede_newfiles.py:487
+#: ../devede_newfiles.py:489
 msgid "Codepage"
 msgstr "Kódlap"
 
-#: ../devede_newfiles.py:490
+#: ../devede_newfiles.py:492
 msgid "Language"
 msgstr "Nyelv"
 
-#: ../devede_newfiles.py:564
+#: ../devede_newfiles.py:566
 msgid "Video files"
 msgstr "Videó fájl"
 
-#: ../devede_newfiles.py:571
+#: ../devede_newfiles.py:573
 msgid "All files"
 msgstr "Összes fájl"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:918
+#: ../devede_newfiles.py:920
 msgid "File doesn't seem to be a video file."
 msgstr "Ez a fájl nem tűnik videófájlnak."
 
-#: ../devede_newfiles.py:920
+#: ../devede_newfiles.py:922
 msgid "File seems to be an audio file."
 msgstr "Ez a fájl úgy tűnik, hogy egy hang fájl."
 
-#: ../devede_newfiles.py:1043
+#: ../devede_newfiles.py:1045
 msgid "Please, add only one file each time."
 msgstr "Egy időben csak egy fájlt adjon hozzá."
 
-#: ../devede_newfiles.py:1056
+#: ../devede_newfiles.py:1058
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Előbb a film fájlt, utána a feliratot kell hozzáadni."
 
@@ -322,10 +322,15 @@ msgid ""
 "install a version with MP3LAME\n"
 "support."
 msgstr ""
+"Az ön FFMpeg verziója MP3LAME \n"
+"támogatás nélkül van készítve, ezért a\n"
+"Devede nem tud DivX-et készíteni\n"
+"Készítsen saját FFMPEG kódot vagy \n"
+"installálja az MP3LAME támogatéást"
 
 #: ../interface/use_ffmpeg.ui.h:1
 msgid "Don't show this message at startup again"
-msgstr ""
+msgstr "Ne mutassa ezt az üzenetet többet"
 
 #: ../interface/use_ffmpeg.ui.h:2
 msgid ""
@@ -338,6 +343,12 @@ msgid ""
 "\n"
 "To test this mode, active it in Edit->Preferences"
 msgstr ""
+"A DeVeDe ezen verziója megengedi az FFMpeg használatát\n"
+"az Mencoder helyett a film konverziójához. Ez a kód még\n"
+"KÍSÉRLETI, de megfelelően használható\n"
+"Ha hibát észlel a videóban az FFMpeg használatával,\n"
+"akkor kapcsolja ki a többmagos támogatást\n"
+"A kísérleti mód aktiválása: Szerkesztés -> Beállítások "
 
 #: ../interface/settings.ui.h:1
 msgid "<b>Folders</b>"
@@ -357,22 +368,26 @@ msgid ""
 msgstr "Az AC3 fix áthidaló megoldás hang nélkül a Mencoder beta használatához"
 
 #: ../interface/settings.ui.h:5
+msgid "Don't use hyperthreading"
+msgstr ""
+
+#: ../interface/settings.ui.h:6
 msgid "Erase temporary files"
 msgstr "Ideiglenes fájlok törlése"
 
-#: ../interface/settings.ui.h:6
+#: ../interface/settings.ui.h:7
 msgid "Folder for temporary file"
 msgstr "Az ideiglenes fájlok gyűjtője"
 
-#: ../interface/settings.ui.h:7
+#: ../interface/settings.ui.h:8
 msgid "Temporary files folder:"
 msgstr "Ideiglenes fájlok gyűjtője:"
 
-#: ../interface/settings.ui.h:8
-msgid "Use FFMPEG instead of Mencoder"
-msgstr ""
-
 #: ../interface/settings.ui.h:9
+msgid "Use FFMPEG instead of Mencoder"
+msgstr "FFMPEG használata az Mencoder helyett"
+
+#: ../interface/settings.ui.h:10
 msgid "Use optimizations for multicore CPUs"
 msgstr "Többmagú CPU optimalizálás választása"
 
@@ -521,7 +536,7 @@ msgstr "Feladat rendben!"
 #: ../interface/wend_dialog.ui.h:3
 msgctxt "Means: "
 msgid "Burn"
-msgstr ""
+msgstr "A lemez írása"
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -612,9 +627,8 @@ msgid "<b>Division in chapters</b>"
 msgstr "<b>Fejezetek felosztása</b>"
 
 #: ../interface/wfile.ui.h:20
-#, fuzzy
 msgid "<b>Extra parameters for coder</b>"
-msgstr "<b>Mencoder extra paraméterei</b>"
+msgstr "<b>Extra paraméterek a kódoláshoz</b>"
 
 #: ../interface/wfile.ui.h:21
 msgid "<b>Field order</b>"
@@ -933,7 +947,7 @@ msgstr ""
 
 #: ../interface/wfolder_dialog.ui.h:3
 msgid "Shutdown computer when disc is done"
-msgstr ""
+msgstr "A számítógép kikapcsolásaa, mikor a lemezírás kész"
 
 #: ../interface/wloadconfig.ui.h:1
 msgid "Load a disc structure"
@@ -1094,14 +1108,13 @@ msgid "<b>Disc startup options</b>"
 msgstr "<b>Lemez indulási opciók</b>"
 
 #: ../interface/wmenu_properties.ui.h:2
-#, fuzzy
 msgid "<b>Horizontal</b>"
-msgstr "<b>Vízszintes igazítás</b>"
+msgstr "<b>Vízszintes</b>"
 
 #: ../interface/wmenu_properties.ui.h:4
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<b>Margins (%)</b>"
-msgstr "<b>Menü</b>"
+msgstr "<b>Margó (%)</b>"
 
 #: ../interface/wmenu_properties.ui.h:5
 msgid "<b>Menu background (only PNG)</b>"
@@ -1124,9 +1137,8 @@ msgid "<b>Menu title</b>"
 msgstr "<b>Menü címe</b>"
 
 #: ../interface/wmenu_properties.ui.h:10
-#, fuzzy
 msgid "<b>Vertical</b>"
-msgstr "<b>Speciális</b>"
+msgstr "<b>Függőleges</b>"
 
 #: ../interface/wmenu_properties.ui.h:11
 msgid "Background color for titles: "

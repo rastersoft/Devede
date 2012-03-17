@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devede-3.14.0_de_DE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-30 11:31+0100\n"
+"POT-Creation-Date: 2012-03-18 00:52+0100\n"
 "PO-Revision-Date: 2010-01-29 20:37+0100\n"
 "Last-Translator: Holger Wansing <linux@wansing-online.de>\n"
 "Language-Team: german <debian-l10n-german@lists.debian.org>\n"
@@ -194,41 +194,41 @@ msgstr "Struktur der Disk nicht gesichert"
 msgid "Title %(X)d"
 msgstr "Titel %(X)d"
 
-#: ../devede_newfiles.py:484
+#: ../devede_newfiles.py:486
 msgid "Subtitle"
 msgstr "Untertitel"
 
-#: ../devede_newfiles.py:487
+#: ../devede_newfiles.py:489
 msgid "Codepage"
 msgstr "Codepage"
 
-#: ../devede_newfiles.py:490
+#: ../devede_newfiles.py:492
 msgid "Language"
 msgstr "Sprache"
 
-#: ../devede_newfiles.py:564
+#: ../devede_newfiles.py:566
 msgid "Video files"
 msgstr "Videodateien"
 
-#: ../devede_newfiles.py:571
+#: ../devede_newfiles.py:573
 msgid "All files"
 msgstr "Alle Dateien"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:918
+#: ../devede_newfiles.py:920
 msgid "File doesn't seem to be a video file."
 msgstr "Diese Datei scheint keine Videodatei zu sein."
 
-#: ../devede_newfiles.py:920
+#: ../devede_newfiles.py:922
 msgid "File seems to be an audio file."
 msgstr "Diese Datei scheint eine Audiodatei zu sein."
 
-#: ../devede_newfiles.py:1043
+#: ../devede_newfiles.py:1045
 msgid "Please, add only one file each time."
 msgstr "Bitte jeweils immer nur eine Datei einfügen."
 
-#: ../devede_newfiles.py:1056
+#: ../devede_newfiles.py:1058
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Bitte fügen Sie eine Filmdatei hinzu, bevor Sie Untertitel einzufügen."
 
@@ -361,22 +361,26 @@ msgid ""
 msgstr ""
 
 #: ../interface/settings.ui.h:5
+msgid "Don't use hyperthreading"
+msgstr ""
+
+#: ../interface/settings.ui.h:6
 msgid "Erase temporary files"
 msgstr "Temporäre Dateien löschen"
 
-#: ../interface/settings.ui.h:6
+#: ../interface/settings.ui.h:7
 msgid "Folder for temporary file"
 msgstr "Verzeichnis für temporäre Dateien"
 
-#: ../interface/settings.ui.h:7
+#: ../interface/settings.ui.h:8
 msgid "Temporary files folder:"
 msgstr "Verzeichnis für temporäre Dateien:"
 
-#: ../interface/settings.ui.h:8
+#: ../interface/settings.ui.h:9
 msgid "Use FFMPEG instead of Mencoder"
 msgstr ""
 
-#: ../interface/settings.ui.h:9
+#: ../interface/settings.ui.h:10
 msgid "Use optimizations for multicore CPUs"
 msgstr "Optimierungen für Multicore-CPUs verwenden"
 

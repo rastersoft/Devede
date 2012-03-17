@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-30 11:31+0100\n"
+"POT-Creation-Date: 2012-03-18 00:52+0100\n"
 "PO-Revision-Date: 2011-12-30 11:35+0100\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -193,41 +193,41 @@ msgstr "Estrutura de disco non gardada"
 msgid "Title %(X)d"
 msgstr "Título %(X)d"
 
-#: ../devede_newfiles.py:484
+#: ../devede_newfiles.py:486
 msgid "Subtitle"
 msgstr "Subtítulo"
 
-#: ../devede_newfiles.py:487
+#: ../devede_newfiles.py:489
 msgid "Codepage"
 msgstr "Páxina de códigos"
 
-#: ../devede_newfiles.py:490
+#: ../devede_newfiles.py:492
 msgid "Language"
 msgstr "Idioma"
 
-#: ../devede_newfiles.py:564
+#: ../devede_newfiles.py:566
 msgid "Video files"
 msgstr "Ficheiros de vídeo"
 
-#: ../devede_newfiles.py:571
+#: ../devede_newfiles.py:573
 msgid "All files"
 msgstr "Todos os ficheiros"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:918
+#: ../devede_newfiles.py:920
 msgid "File doesn't seem to be a video file."
 msgstr "Non semella ser un ficheiro de vídeo."
 
-#: ../devede_newfiles.py:920
+#: ../devede_newfiles.py:922
 msgid "File seems to be an audio file."
 msgstr "Semella ser un ficheiro de son."
 
-#: ../devede_newfiles.py:1043
+#: ../devede_newfiles.py:1045
 msgid "Please, add only one file each time."
 msgstr "Por favor, engada só un ficheiro de cada vez."
 
-#: ../devede_newfiles.py:1056
+#: ../devede_newfiles.py:1058
 msgid "Please, add a movie file before adding subtitles."
 msgstr "Por favor, engada un filme antes de engadir os subtítulos."
 
@@ -365,22 +365,26 @@ msgstr ""
 "Apaño AC3_FIXED para correxir o erro de discos sen son ó usar Mencoder beta"
 
 #: ../interface/settings.ui.h:5
+msgid "Don't use hyperthreading"
+msgstr ""
+
+#: ../interface/settings.ui.h:6
 msgid "Erase temporary files"
 msgstr "Borrar ficheiros temporais"
 
-#: ../interface/settings.ui.h:6
+#: ../interface/settings.ui.h:7
 msgid "Folder for temporary file"
 msgstr "Directorio para ficheiros temporais"
 
-#: ../interface/settings.ui.h:7
+#: ../interface/settings.ui.h:8
 msgid "Temporary files folder:"
 msgstr "Directorio para os ficheiros temporais:"
 
-#: ../interface/settings.ui.h:8
+#: ../interface/settings.ui.h:9
 msgid "Use FFMPEG instead of Mencoder"
 msgstr "Usar FFMPEG en troques de Mencoder"
 
-#: ../interface/settings.ui.h:9
+#: ../interface/settings.ui.h:10
 msgid "Use optimizations for multicore CPUs"
 msgstr "Usar optimizacións para CPU multinúcleo"
 

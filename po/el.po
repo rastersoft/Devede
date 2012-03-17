@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12.2 (win32)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-30 11:31+0100\n"
+"POT-Creation-Date: 2012-03-18 00:52+0100\n"
 "PO-Revision-Date: 2010-01-25 09:08+0300\n"
 "Last-Translator: Stamatis H. Stamatellos <ydatografida@gmail.com>\n"
 "Language-Team: Ydatografida <ydatografida@gmail.com>\n"
@@ -194,41 +194,41 @@ msgstr "Μη αποθηκευμένη δομή δίσκου"
 msgid "Title %(X)d"
 msgstr "Τίτλος %(X)d"
 
-#: ../devede_newfiles.py:484
+#: ../devede_newfiles.py:486
 msgid "Subtitle"
 msgstr "Υπότιτλοι "
 
-#: ../devede_newfiles.py:487
+#: ../devede_newfiles.py:489
 msgid "Codepage"
 msgstr "Κωδικοποίηση χαρακτήρων"
 
-#: ../devede_newfiles.py:490
+#: ../devede_newfiles.py:492
 msgid "Language"
 msgstr "Γλώσσα"
 
-#: ../devede_newfiles.py:564
+#: ../devede_newfiles.py:566
 msgid "Video files"
 msgstr "Αρχεία βίντεο"
 
-#: ../devede_newfiles.py:571
+#: ../devede_newfiles.py:573
 msgid "All files"
 msgstr "Όλα τα αρχεία"
 
 #. it's not a video file
 #. it's not a multimedia file
-#: ../devede_newfiles.py:918
+#: ../devede_newfiles.py:920
 msgid "File doesn't seem to be a video file."
 msgstr "Το εν λόγω αρχείο δεν είναι αρχείο βίντεο."
 
-#: ../devede_newfiles.py:920
+#: ../devede_newfiles.py:922
 msgid "File seems to be an audio file."
 msgstr "Το εν λόγω αρχείο δεν είναι αρχείο ήχου."
 
-#: ../devede_newfiles.py:1043
+#: ../devede_newfiles.py:1045
 msgid "Please, add only one file each time."
 msgstr "Παρακαλώ, προσθέστε μόνο ένα αρχείο κάθε φορά."
 
-#: ../devede_newfiles.py:1056
+#: ../devede_newfiles.py:1058
 msgid "Please, add a movie file before adding subtitles."
 msgstr ""
 "Παρακαλώ, προσθέστε το αρχείο της ταινίας πρίν από τη προσθήκη των υπότιτλων."
@@ -362,22 +362,26 @@ msgid ""
 msgstr ""
 
 #: ../interface/settings.ui.h:5
+msgid "Don't use hyperthreading"
+msgstr ""
+
+#: ../interface/settings.ui.h:6
 msgid "Erase temporary files"
 msgstr "Διαγραφή προσωρινών αρχείων"
 
-#: ../interface/settings.ui.h:6
+#: ../interface/settings.ui.h:7
 msgid "Folder for temporary file"
 msgstr "Φάκελος για το προσωρινό αρχείο"
 
-#: ../interface/settings.ui.h:7
+#: ../interface/settings.ui.h:8
 msgid "Temporary files folder:"
 msgstr "Φάκελος προσωρινών αρχείων:"
 
-#: ../interface/settings.ui.h:8
+#: ../interface/settings.ui.h:9
 msgid "Use FFMPEG instead of Mencoder"
 msgstr ""
 
-#: ../interface/settings.ui.h:9
+#: ../interface/settings.ui.h:10
 msgid "Use optimizations for multicore CPUs"
 msgstr "Βελτιστοποίηση λειτουργίας για χρήση σε πολυπύρηνους επεξεργαστές"
 
