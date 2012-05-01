@@ -875,6 +875,7 @@ class xml_files(devede_executor.executor):
 		self.mplexed=False
 		command_var=[]
 		command_var.append("ffmpeg")
+		#command_var.append("avconv")
 	
 		currentfile=self.filefolder+self.filename+"_menu_"+str(counter)+".mpg"
 	
@@ -914,10 +915,10 @@ class xml_files(devede_executor.executor):
 #		command_var.append("1")
 #		command_var.append("-mbd")
 #		command_var.append("2")
-#		command_var.append("-b")
-#		command_var.append("2500k")
-#		command_var.append("-ab")
-#		command_var.append("192000")
+		command_var.append("-b")
+		command_var.append("2500k")
+		command_var.append("-ab")
+		command_var.append("192000")
 #		command_var.append("-maxrate")
 #		command_var.append("4000k")
 #		command_var.append("-minrate")
