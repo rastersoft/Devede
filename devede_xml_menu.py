@@ -879,7 +879,8 @@ class xml_files(devede_executor.executor):
 		currentfile=self.filefolder+self.filename+"_menu_"+str(counter)+".mpg"
 	
 		audio=self.menu_sound
-		command_var.append("-loop_input")
+		command_var.append("-loop")
+		command_var.append("1")
 		
 		command_var.append("-f")
 		command_var.append("image2")
