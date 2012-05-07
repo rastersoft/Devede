@@ -151,7 +151,7 @@
                         </child>
                         <child>
                           <object class="GtkCheckButton" id="use_ffmpeg">
-                            <property name="label" translatable="yes">Use FFMPEG instead of Mencoder</property>
+                            <property name="label" translatable="yes">Use FFMPEG instead of Mencoder for videos</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -163,6 +163,21 @@
                             <property name="expand">True</property>
                             <property name="fill">True</property>
                             <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkCheckButton" id="use_ffmpeg_menu">
+                            <property name="label" translatable="yes">Use FFMPEG instead of Mencoder for menu</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="use_action_appearance">False</property>
+                            <property name="draw_indicator">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">4</property>
                           </packing>
                         </child>
                       </object>

@@ -44,6 +44,7 @@ class xml_files(devede_executor.executor):
 		self.structure=structure
 		self.AC3_fix=global_vars["AC3_fix"]
 		self.use_ffmpeg=global_vars["use_ffmpeg"]
+		self.use_ffmpeg_menu=global_vars["use_ffmpeg_menu"]
 		self.with_menu=global_vars["with_menu"]
 		if (len(structure)==1) and (len(structure[0])==2) and (not self.with_menu):
 			self.onlyone=True
@@ -939,7 +940,7 @@ class xml_files(devede_executor.executor):
 	
 		print "Creating menus"
 	
-		if (self.use_ffmpeg):
+		if (self.use_ffmpeg_menu):
 			self.create_menu_mpg_ffmpeg(counter)
 			return
 	

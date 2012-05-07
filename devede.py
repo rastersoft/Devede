@@ -34,7 +34,7 @@ import shutil
 import pickle
 import cairo
 
-print "DeVeDe 3.22.0beta1"
+print "DeVeDe 3.22.0beta2"
 if (sys.platform!="win32") and (sys.platform!="win64"):
 	try:
 		print "Locale: "+str(os.environ["LANG"])
@@ -297,6 +297,7 @@ global_vars["AC3_fix"]=False
 global_vars["cores"]=a
 global_vars["hypercores"]=b
 global_vars["use_ffmpeg"]=True
+global_vars["use_ffmpeg_menu"]=False
 global_vars["warning_ffmpeg"]=False
 global_vars["shutdown_after_disc"]=False
 

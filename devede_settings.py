@@ -71,6 +71,8 @@ class devede_settings:
 
         self.use_ffmpeg=self.tree.get_object("use_ffmpeg")
         self.use_ffmpeg.set_active(self.global_vars["use_ffmpeg"])
+        self.use_ffmpeg_menu=self.tree.get_object("use_ffmpeg_menu")
+        self.use_ffmpeg_menu.set_active(self.global_vars["use_ffmpeg_menu"])
             
         
         print "Path: "+str(global_vars["temp_folder"])
@@ -98,6 +100,7 @@ class devede_settings:
             self.global_vars["hyperthreading"]=False
         
         self.global_vars["use_ffmpeg"]=self.use_ffmpeg.get_active()
+        self.global_vars["use_ffmpeg_menu"]=self.use_ffmpeg_menu.get_active()
             
         self.global_vars["AC3_fix"]=self.ac3_fix.get_active()
         
