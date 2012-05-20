@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-18 00:53+0100\n"
+"POT-Creation-Date: 2012-05-20 12:55+0200\n"
 "PO-Revision-Date: 2010-11-28 15:13+0200\n"
 "Last-Translator: Ozan Aydın <ozanaydin@hotmail.com>\n"
 "Language-Team: Turkish <>\n"
@@ -55,9 +55,9 @@ msgstr ""
 "mevcut."
 
 #: ../devede_convert.py:275 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:92 ../devede_xml_menu.py:137
-#: ../devede_xml_menu.py:488 ../devede_xml_menu.py:496
-#: ../devede_xml_menu.py:500 ../devede_xml_menu.py:504
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:138
+#: ../devede_xml_menu.py:489 ../devede_xml_menu.py:497
+#: ../devede_xml_menu.py:501 ../devede_xml_menu.py:505
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -101,7 +101,7 @@ msgstr ""
 msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr "Menü sesi hasarlı görünüyor. Varsayılan sessiz tema kullanılıyor."
 
-#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:492
+#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:493
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -293,11 +293,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr "Menüler yaratılamadı."
 
-#: ../devede_xml_menu.py:117 ../devede_xml_menu.py:508
+#: ../devede_xml_menu.py:118 ../devede_xml_menu.py:509
 msgid "Menu generation failed."
 msgstr "Menü yaratma başarısız."
 
-#: ../devede_xml_menu.py:124 ../devede_xml_menu.py:517
+#: ../devede_xml_menu.py:125 ../devede_xml_menu.py:518
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -305,7 +305,7 @@ msgstr ""
 "Menü düğmeleri eklenemedi.\n"
 "SPUMUX hatası gibi görünüyor."
 
-#: ../devede_xml_menu.py:483
+#: ../devede_xml_menu.py:484
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Menü yaratılıyor %(menu_number)d"
@@ -322,10 +322,6 @@ msgid ""
 msgstr ""
 
 #: ../interface/use_ffmpeg.ui.h:1
-msgid "Don't show this message at startup again"
-msgstr ""
-
-#: ../interface/use_ffmpeg.ui.h:2
 msgid ""
 "This version of Devede allows to use FFMPEG instead\n"
 "of Mencoder for movie conversion. This code is still\n"
@@ -337,62 +333,70 @@ msgid ""
 "To test this mode, active it in Edit->Preferences"
 msgstr ""
 
+#: ../interface/use_ffmpeg.ui.h:9
+msgid "Don't show this message at startup again"
+msgstr ""
+
 #: ../interface/settings.ui.h:1
+msgid "Erase temporary files"
+msgstr "Geçici dosyaları sil"
+
+#: ../interface/settings.ui.h:2
+msgid "Use optimizations for multicore CPUs"
+msgstr "Çok çekirdekli işlemciler için optimizasyon kullan"
+
+#: ../interface/settings.ui.h:3
+msgid "Don't use hyperthreading"
+msgstr ""
+
+#: ../interface/settings.ui.h:4
+msgid "Use FFMPEG instead of Mencoder for videos"
+msgstr ""
+
+#: ../interface/settings.ui.h:5
+msgid "Use FFMPEG instead of Mencoder for menu"
+msgstr ""
+
+#: ../interface/settings.ui.h:6
+msgid "<b>Options</b>"
+msgstr "<b>Seçenekler</b>"
+
+#: ../interface/settings.ui.h:7
+msgid "Temporary files folder:"
+msgstr "Geçici dosya dizini:"
+
+#: ../interface/settings.ui.h:8
+msgid "Folder for temporary file"
+msgstr "Geçici dosya dizini"
+
+#: ../interface/settings.ui.h:9
 #, fuzzy
 msgid "<b>Folders</b>"
 msgstr "<b>Dosyalar</b>"
 
-#: ../interface/settings.ui.h:2
-msgid "<b>Options</b>"
-msgstr "<b>Seçenekler</b>"
-
-#: ../interface/settings.ui.h:3
-#, fuzzy
-msgid "<b>Workarounds</b>"
-msgstr "<b>Rotasyon</b>"
-
-#: ../interface/settings.ui.h:4
+#: ../interface/settings.ui.h:10
 msgid ""
 "AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
 msgstr ""
 
-#: ../interface/settings.ui.h:5
-msgid "Don't use hyperthreading"
-msgstr ""
+#: ../interface/settings.ui.h:11
+#, fuzzy
+msgid "<b>Workarounds</b>"
+msgstr "<b>Rotasyon</b>"
 
-#: ../interface/settings.ui.h:6
-msgid "Erase temporary files"
-msgstr "Geçici dosyaları sil"
-
-#: ../interface/settings.ui.h:7
-msgid "Folder for temporary file"
-msgstr "Geçici dosya dizini"
-
-#: ../interface/settings.ui.h:8
-msgid "Temporary files folder:"
-msgstr "Geçici dosya dizini:"
-
-#: ../interface/settings.ui.h:9
-msgid "Use FFMPEG instead of Mencoder"
-msgstr ""
-
-#: ../interface/settings.ui.h:10
-msgid "Use optimizations for multicore CPUs"
-msgstr "Çok çekirdekli işlemciler için optimizasyon kullan"
-
-#: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:3
-msgid "Clear"
-msgstr "Temizle"
-
-#: ../interface/add_subtitle2.ui.h:2 ../interface/add_subtitle.ui.h:4
-msgid "Encoding: "
-msgstr "Kodlanıyor:"
-
-#: ../interface/add_subtitle2.ui.h:3 ../interface/add_subtitle.ui.h:5
+#: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:2
 msgid "File: "
 msgstr "Dosya:"
 
-#: ../interface/add_subtitle2.ui.h:4 ../interface/add_subtitle.ui.h:6
+#: ../interface/add_subtitle2.ui.h:2 ../interface/add_subtitle.ui.h:4
+msgid "Clear"
+msgstr "Temizle"
+
+#: ../interface/add_subtitle2.ui.h:3 ../interface/add_subtitle.ui.h:6
+msgid "Encoding: "
+msgstr "Kodlanıyor:"
+
+#: ../interface/add_subtitle2.ui.h:4 ../interface/add_subtitle.ui.h:5
 msgid "Language: "
 msgstr "Dil:"
 
@@ -404,7 +408,7 @@ msgstr "Alt yazıyı yükselt"
 msgid "Add subtitles"
 msgstr "Alt yazı ekle"
 
-#: ../interface/add_subtitle.ui.h:2
+#: ../interface/add_subtitle.ui.h:3
 msgid "Choose a file"
 msgstr "Bir dosya seç"
 
@@ -413,12 +417,12 @@ msgid "Aborted. There can be temporary files at the destination directory."
 msgstr "Sonlandırıldı. Hedef dizindeki dosya geçici olabilir."
 
 #: ../interface/wcancel_dialog.ui.h:1
-msgid "Abort the current DVD and exit?"
-msgstr "Güncel DVD işlemini sonlandırıp, kapatmak istiyor musunuz?"
-
-#: ../interface/wcancel_dialog.ui.h:2
 msgid "Exit DeVeDe"
 msgstr "DeVeDe'yi kapat"
+
+#: ../interface/wcancel_dialog.ui.h:2
+msgid "Abort the current DVD and exit?"
+msgstr "Güncel DVD işlemini sonlandırıp, kapatmak istiyor musunuz?"
 
 #: ../interface/wcancel_job_dialog.ui.h:1
 msgid "Cancel job?"
@@ -429,17 +433,17 @@ msgid "Delete chapter"
 msgstr "Parçayı sil"
 
 #: ../interface/wdel_chapter_dialog.ui.h:2
-#: ../interface/wdel_title_dialog.ui.h:2
-msgid "Proceed?"
-msgstr "Devam etmek istiyor musunuz?"
-
-#: ../interface/wdel_chapter_dialog.ui.h:3
 msgid ""
 "You chose to delete this chapter and\n"
 "reorder the other ones:"
 msgstr ""
 "Bu parçayı silmeyi ve\n"
 "diğerini yeniden düzenlemeyi seçtiniz:"
+
+#: ../interface/wdel_chapter_dialog.ui.h:4
+#: ../interface/wdel_title_dialog.ui.h:4
+msgid "Proceed?"
+msgstr "Devam etmek istiyor musunuz?"
 
 #: ../interface/wdel_subtitle.ui.h:1
 msgid "Delete subtitle"
@@ -453,7 +457,7 @@ msgstr "Seçilen alt yazı dosyasını sil"
 msgid "Delete title"
 msgstr "Filme adını sil"
 
-#: ../interface/wdel_title_dialog.ui.h:3
+#: ../interface/wdel_title_dialog.ui.h:2
 msgid ""
 "You chose to delete this title and\n"
 "reorder the other ones:"
@@ -462,34 +466,14 @@ msgstr ""
 "diğerini yeniden düzenlemeyi seçtiniz:"
 
 #: ../interface/wdisk_type.ui.h:1
-msgid ""
-"<b>China VideoDisc</b>\n"
-"Another kind of Super VideoCD"
-msgstr ""
-"<b>China VideoDisc</b>\n"
-"Super VideoCD'nin bir başka türü"
+msgid "Disc type selection"
+msgstr "Disk tipi seçimi"
 
-#: ../interface/wdisk_type.ui.h:3
+#: ../interface/wdisk_type.ui.h:2
 msgid "<b>Choose the disc type you want to create with DeVeDe</b>"
 msgstr "<b>DeVeDe ile yaratmak istediğiniz disk tipini seçin</b>"
 
-#: ../interface/wdisk_type.ui.h:4
-msgid ""
-"<b>DivX / MPEG-4</b>\n"
-"Creates files compliant with DivX home players"
-msgstr ""
-"<b>DivX / MPEG-4</b>\n"
-"DivX oynatıcılarında çalışacak disk ortamları yaratır"
-
-#: ../interface/wdisk_type.ui.h:6
-msgid ""
-"<b>Super VideoCD</b>\n"
-"Creates a VideoCD with better picture quality"
-msgstr ""
-"<b>Super VideoCD</b>\n"
-"Normalden daha kaliteli VCD yaratır"
-
-#: ../interface/wdisk_type.ui.h:8
+#: ../interface/wdisk_type.ui.h:3
 msgid ""
 "<b>Video DVD</b>\n"
 "Creates a video DVD suitable for all DVD home players"
@@ -497,7 +481,7 @@ msgstr ""
 "<b>Video DVD</b>\n"
 "Standart DVD oynatıcılarda çalışacak DVD yaratır"
 
-#: ../interface/wdisk_type.ui.h:10
+#: ../interface/wdisk_type.ui.h:5
 msgid ""
 "<b>VideoCD</b>\n"
 "Creates a VideoCD, with a picture quality equivalent to VHS"
@@ -505,9 +489,29 @@ msgstr ""
 "<b>VideoCD</b>\n"
 "Resim kalitesi VHS'ye eşdeğer VCD yaratır"
 
-#: ../interface/wdisk_type.ui.h:12
-msgid "Disc type selection"
-msgstr "Disk tipi seçimi"
+#: ../interface/wdisk_type.ui.h:7
+msgid ""
+"<b>Super VideoCD</b>\n"
+"Creates a VideoCD with better picture quality"
+msgstr ""
+"<b>Super VideoCD</b>\n"
+"Normalden daha kaliteli VCD yaratır"
+
+#: ../interface/wdisk_type.ui.h:9
+msgid ""
+"<b>China VideoDisc</b>\n"
+"Another kind of Super VideoCD"
+msgstr ""
+"<b>China VideoDisc</b>\n"
+"Super VideoCD'nin bir başka türü"
+
+#: ../interface/wdisk_type.ui.h:11
+msgid ""
+"<b>DivX / MPEG-4</b>\n"
+"Creates files compliant with DivX home players"
+msgstr ""
+"<b>DivX / MPEG-4</b>\n"
+"DivX oynatıcılarında çalışacak disk ortamları yaratır"
 
 #: ../interface/wempty_titles_dialog.ui.h:1
 msgid ""
@@ -517,15 +521,15 @@ msgstr ""
 "DVD yapısı içi boş başlıklar içeriyor.\n"
 "Devam etmek istiyor musunuz?"
 
-#: ../interface/wend_dialog.ui.h:1
-msgid "Job done!"
-msgstr "İşlem tamamlandı!"
-
 #. Means: "Burn the ISO image in a CD/DVD"
-#: ../interface/wend_dialog.ui.h:3
+#: ../interface/wend_dialog.ui.h:2
 msgctxt "Means: "
 msgid "Burn"
 msgstr ""
+
+#: ../interface/wend_dialog.ui.h:3
+msgid "Job done!"
+msgstr "İşlem tamamlandı!"
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -535,399 +539,395 @@ msgstr "Mevcut disk yapısını silmek istiyor musunuz?"
 msgid "Delete the current disc structure and start again?"
 msgstr "Mevcut disk yapısını silmek ve yeniden başlamak istiyor musunuz?"
 
-#: ../interface/werror_dialog.ui.h:1 ../interface/wprograms.ui.h:3
+#: ../interface/werror_dialog.ui.h:1 ../interface/wprograms.ui.h:1
 msgid "Error"
 msgstr "Hata"
 
 #: ../interface/wfile.ui.h:1
-msgid "-LAMEOPTS (X:Y)"
-msgstr "-LAMEOPTS (X:Y)"
+msgid "File properties"
+msgstr "Dosya özellikleri"
 
 #: ../interface/wfile.ui.h:2
-msgid "-LAVCOPTS (X:Y)"
-msgstr "-LAVCOPTS (X:Y)"
+msgid "<b>File</b>"
+msgstr "<b>Dosya</b>"
 
-#: ../interface/wfile.ui.h:3
-msgid "-VF (X,Y)"
-msgstr "-VF (X,Y)"
+#: ../interface/wfile.ui.h:3 ../interface/wmain.ui.h:15
+msgid "Frames per second: "
+msgstr "Saniye başına kare sayısı:"
 
 #: ../interface/wfile.ui.h:4
-msgid "1280x720"
-msgstr "1280x720"
+msgid "Original length (seconds): "
+msgstr "Orijinal uzunluk (saniye):"
 
 #: ../interface/wfile.ui.h:5
-msgid "160x128"
-msgstr "160x128"
+msgid "Original audio rate (Kbits/sec):"
+msgstr "Orijinal ses hızı (Kbits/sn):"
 
 #: ../interface/wfile.ui.h:6
-msgid "16:9"
-msgstr "16:9"
+msgid "Original video rate (Kbits/sec):"
+msgstr "Orijinal video hızı (Kbits/sn):"
 
-#: ../interface/wfile.ui.h:7
-msgid "1920x1080"
-msgstr "1920x1080"
+#: ../interface/wfile.ui.h:7 ../interface/wmain.ui.h:20
+msgid "Original size (pixels): "
+msgstr "Orijinal boyut (piksel):"
 
-#: ../interface/wfile.ui.h:8
-msgid "352x240"
-msgstr "352x240"
+#: ../interface/wfile.ui.h:8 ../interface/wmain.ui.h:16
+msgid "Final size (pixels):"
+msgstr "İşlem sonu boyutu (piksel):"
 
 #: ../interface/wfile.ui.h:9
-msgid "352x480"
-msgstr "352x480"
+msgid "Estimated final length (MBytes): "
+msgstr "Tahmini işlem sonu boyut (MBytes):"
 
-#: ../interface/wfile.ui.h:10
-msgid "480x480"
-msgstr "480x480"
+#: ../interface/wfile.ui.h:10 ../interface/wmain.ui.h:24
+msgid "<b>File info</b>"
+msgstr "<b>Dosya bilgisi</b>"
 
 #: ../interface/wfile.ui.h:11
-msgid "4:3"
-msgstr "4:3"
+msgid "PAL/SECAM"
+msgstr "PAL/SECAM"
 
-#: ../interface/wfile.ui.h:12
-msgid "704x480"
-msgstr "704x480"
+#: ../interface/wfile.ui.h:12 ../interface/wmain.ui.h:31
+msgid "NTSC"
+msgstr "NTSC"
 
 #: ../interface/wfile.ui.h:13
-msgid "720x480"
-msgstr "720x480"
+msgid "<b>Video format</b>"
+msgstr "<b>Video formatı</b>"
 
 #: ../interface/wfile.ui.h:14
-msgid "<b>Aspect ratio</b>"
-msgstr "<b>En boy oranı</b>"
+msgid "Audio track: "
+msgstr "Ses parçası:"
 
 #: ../interface/wfile.ui.h:15
-msgid "<b>Audio rate (Kbits/sec)</b>"
-msgstr "<b>Ses hızı (Kbits/sn)</b>"
+msgid "This video file has no audio tracks."
+msgstr "Bu video dosyası bir ses parçası içermiyor"
 
 #: ../interface/wfile.ui.h:16
 msgid "<b>Audio tracks</b>"
 msgstr "<b>Ses parçaları</b>"
 
 #: ../interface/wfile.ui.h:17
-msgid "<b>Audio</b>"
-msgstr "<b>Ses</b>"
-
-#: ../interface/wfile.ui.h:18
-msgid "<b>Deinterlacing</b>"
-msgstr "<b>Deinterlacing</b>"
-
-#: ../interface/wfile.ui.h:19
-msgid "<b>Division in chapters</b>"
-msgstr "<b>Bölümler içindeki ayırım</b>"
-
-#: ../interface/wfile.ui.h:20
-#, fuzzy
-msgid "<b>Extra parameters for coder</b>"
-msgstr "<b>Mencoder için ekstra parametreler</b>"
-
-#: ../interface/wfile.ui.h:21
-msgid "<b>Field order</b>"
-msgstr "<b>Alan düzeni</b>"
-
-#: ../interface/wfile.ui.h:22 ../interface/wmain.ui.h:13
-msgid "<b>File info</b>"
-msgstr "<b>Dosya bilgisi</b>"
-
-#: ../interface/wfile.ui.h:23
-msgid "<b>File split</b>"
-msgstr "<b>Dosya bölümü</b>"
-
-#: ../interface/wfile.ui.h:24
-msgid "<b>File</b>"
-msgstr "<b>Dosya</b>"
-
-#: ../interface/wfile.ui.h:25
-msgid "<b>Final size</b>"
-msgstr "<b>Tamamlanmış boyut</b>"
-
-#: ../interface/wfile.ui.h:26
-msgid "<b>MacroBlock decision algorithm and Trellis searched quantization</b>"
-msgstr "<b>MacroBlock karar algoritması ve kafes aramalı niceleme</b>"
-
-#: ../interface/wfile.ui.h:27
-msgid "<b>Mirror</b>"
-msgstr "<b>Ayna</b>"
-
-#: ../interface/wfile.ui.h:28
-msgid "<b>Rotation</b>"
-msgstr "<b>Rotasyon</b>"
-
-#: ../interface/wfile.ui.h:29
-msgid "<b>Scaling mode</b>"
-msgstr "<b>Ölçekleme modu</b>"
-
-#: ../interface/wfile.ui.h:30
-msgid "<b>Special</b>"
-msgstr "<b>Özel</b>"
-
-#: ../interface/wfile.ui.h:31
-msgid "<b>Subtitles</b>"
-msgstr "<b>Alt yazılar</b>"
-
-#: ../interface/wfile.ui.h:32
-msgid "<b>Two pass encoding</b>"
-msgstr "<b>İki geçişli kodlama</b>"
-
-#: ../interface/wfile.ui.h:33
-msgid "<b>Video format</b>"
-msgstr "<b>Video formatı</b>"
-
-#: ../interface/wfile.ui.h:34
-msgid "<b>Video rate (Kbits/sec)</b>"
-msgstr "<b>Video hızı (Kbits/sn)</b>"
-
-#: ../interface/wfile.ui.h:36
-#, no-c-format
-msgid "<b>Volume (%)</b>"
-msgstr "<b>Ses seviyesi (%)</b>"
-
-#: ../interface/wfile.ui.h:37
-msgid "Add black bars"
-msgstr "Siyah boşluklar ekle"
-
-#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:18
-msgid "Advanced options"
-msgstr "Gelişmiş seçenekler"
-
-#: ../interface/wfile.ui.h:39
-msgid "Audio"
-msgstr "Ses"
-
-#: ../interface/wfile.ui.h:40
-msgid "Audio delay (in seconds):"
-msgstr "Ses gecikmesi (saniye):"
-
-#: ../interface/wfile.ui.h:41
-msgid "Audio track: "
-msgstr "Ses parçası:"
-
-#: ../interface/wfile.ui.h:42
-msgid "Create DVD with 5.1 channel sound"
-msgstr "DVD'yi 5.1kanallı ses  ile yarat"
-
-#: ../interface/wfile.ui.h:43
-msgid "Default"
-msgstr "Varsayılan"
-
-#: ../interface/wfile.ui.h:44
-msgid "DivX format doesn't support subtitles. Please, read the FAQ."
-msgstr ""
-"DivX formatı alt yazıları desteklemez. Lütfen sık sorulan soruları okuyun."
-
-#: ../interface/wfile.ui.h:45
-msgid "Don't deinterlace"
-msgstr "Deinterlace yapma"
-
-#: ../interface/wfile.ui.h:46
-msgid "Estimated final length (MBytes): "
-msgstr "Tahmini işlem sonu boyut (MBytes):"
-
-#: ../interface/wfile.ui.h:47
-msgid "FFMpeg deinterlacing filter"
-msgstr "FFMpeg deinterlacing filtresi"
-
-#: ../interface/wfile.ui.h:48
-msgid "File properties"
-msgstr "Dosya özellikleri"
-
-#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:25
-msgid "Final size (pixels):"
-msgstr "İşlem sonu boyutu (piksel):"
-
-#: ../interface/wfile.ui.h:50
-msgid "Font size:"
-msgstr "Yazı tipi boyutu:"
-
-#: ../interface/wfile.ui.h:51
-msgid "Force subtitles"
-msgstr "Alt yazıları kuvvetlendir"
-
-#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:26
-msgid "Frames per second: "
-msgstr "Saniye başına kare sayısı:"
-
-#: ../interface/wfile.ui.h:53
-msgid "General"
-msgstr "Genel"
-
-#: ../interface/wfile.ui.h:54
-msgid "Horizontal mirror"
-msgstr "Yatay aynalama"
-
-#: ../interface/wfile.ui.h:55
-msgid "Linear blend"
-msgstr "Doğrusal karışım"
-
-#: ../interface/wfile.ui.h:56
-msgid "Lowpass5 deinterlacing filter"
-msgstr "Lowpass5 deinterlacing filtresi"
-
-#: ../interface/wfile.ui.h:57
-msgid "Main (-X -Y)"
-msgstr "Main (-X -Y)"
-
-#: ../interface/wfile.ui.h:58
-msgid "Median deinterlacing filter"
-msgstr "Median deinterlacing filtresi"
-
-#: ../interface/wfile.ui.h:59
-msgid "Misc"
-msgstr "Çeşitli"
-
-#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:29
-msgid "NTSC"
-msgstr "NTSC"
-
-#: ../interface/wfile.ui.h:61
-msgid "No rotation"
-msgstr "Rotasyon yapma"
-
-#: ../interface/wfile.ui.h:62
-msgid "Original audio rate (Kbits/sec):"
-msgstr "Orijinal ses hızı (Kbits/sn):"
-
-#: ../interface/wfile.ui.h:63
-msgid "Original length (seconds): "
-msgstr "Orijinal uzunluk (saniye):"
-
-#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:31
-msgid "Original size (pixels): "
-msgstr "Orijinal boyut (piksel):"
-
-#: ../interface/wfile.ui.h:65
-msgid "Original video rate (Kbits/sec):"
-msgstr "Orijinal video hızı (Kbits/sn):"
-
-#: ../interface/wfile.ui.h:66
-msgid "PAL/SECAM"
-msgstr "PAL/SECAM"
-
-#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:34
-msgid "Preview"
-msgstr "Önizleme"
-
-#: ../interface/wfile.ui.h:68
-msgid "Quality"
-msgstr "Kalite"
-
-#: ../interface/wfile.ui.h:69
-msgid "Repack audio and video without reencoding (useful for VOB files)"
-msgstr ""
-"Yeniden kodlama yapmadan ses ve videoyu tekrar paketle (VOB dosyaları için "
-"kullanılabilir)"
-
-#: ../interface/wfile.ui.h:70
 msgid "Reset"
 msgstr "Sıfırla"
 
-#: ../interface/wfile.ui.h:72
+#: ../interface/wfile.ui.h:19
 #, no-c-format
 msgid "Resets the volume to 100%"
 msgstr "Ses seviyesini %100'e ayarla"
 
-#: ../interface/wfile.ui.h:73
-msgid "Rotate 180 degrees"
-msgstr "180 derece döndür"
+#: ../interface/wfile.ui.h:21
+#, no-c-format
+msgid "<b>Volume (%)</b>"
+msgstr "<b>Ses seviyesi (%)</b>"
 
-#: ../interface/wfile.ui.h:74
-msgid "Rotate 90 degrees clockwise"
-msgstr "Saat yönünde 90 derece döndür"
-
-#: ../interface/wfile.ui.h:75
-msgid "Rotate 90 degrees counter-clockwise"
-msgstr "Saat yönünün tersine 90 derece döndür"
-
-#: ../interface/wfile.ui.h:76
-msgid "Scale picture"
-msgstr "Görüntü ölçekleme"
-
-#: ../interface/wfile.ui.h:77
-msgid "Select MBD mode which needs the fewest bits"
-msgstr "En düşük bit hızı gerektiren MBD modunu seç"
-
-#: ../interface/wfile.ui.h:78
-msgid "Select the MBD mode which has the best rate distortion (better quality)"
-msgstr "En iyi hız bozunumuna sahip MBD modunu seç (daha iyi kalite)"
-
-#: ../interface/wfile.ui.h:79
-msgid "Size (in minutes) for each chapter: "
-msgstr "Her bölüm için boyut (dakika):"
-
-#: ../interface/wfile.ui.h:80
-msgid "Split the file in chapters (for easy seeking)"
-msgstr "Dosyayı bölümün içinde böl"
-
-#: ../interface/wfile.ui.h:81
+#: ../interface/wfile.ui.h:22
 msgid "Store full length"
 msgstr "Tam uzunlukta depola"
 
-#: ../interface/wfile.ui.h:82
+#: ../interface/wfile.ui.h:23
 msgid "Store the first half"
 msgstr "İlk yarısında depola"
 
-#: ../interface/wfile.ui.h:83
+#: ../interface/wfile.ui.h:24
 msgid "Store the second half"
 msgstr "İkinci yarısında depola"
 
-#: ../interface/wfile.ui.h:84
+#: ../interface/wfile.ui.h:25
+msgid "<b>File split</b>"
+msgstr "<b>Dosya bölümü</b>"
+
+#: ../interface/wfile.ui.h:26
+msgid "Font size:"
+msgstr "Yazı tipi boyutu:"
+
+#: ../interface/wfile.ui.h:27
+msgid "Force subtitles"
+msgstr "Alt yazıları kuvvetlendir"
+
+#: ../interface/wfile.ui.h:28
+msgid "DivX format doesn't support subtitles. Please, read the FAQ."
+msgstr ""
+"DivX formatı alt yazıları desteklemez. Lütfen sık sorulan soruları okuyun."
+
+#: ../interface/wfile.ui.h:29
+msgid "<b>Subtitles</b>"
+msgstr "<b>Alt yazılar</b>"
+
+#: ../interface/wfile.ui.h:30
+msgid "<b>Video rate (Kbits/sec)</b>"
+msgstr "<b>Video hızı (Kbits/sn)</b>"
+
+#: ../interface/wfile.ui.h:31
+msgid "<b>Audio rate (Kbits/sec)</b>"
+msgstr "<b>Ses hızı (Kbits/sn)</b>"
+
+#: ../interface/wfile.ui.h:32
+msgid "Split the file in chapters (for easy seeking)"
+msgstr "Dosyayı bölümün içinde böl"
+
+#: ../interface/wfile.ui.h:33
+msgid "Size (in minutes) for each chapter: "
+msgstr "Her bölüm için boyut (dakika):"
+
+#: ../interface/wfile.ui.h:34
+msgid "<b>Division in chapters</b>"
+msgstr "<b>Bölümler içindeki ayırım</b>"
+
+#: ../interface/wfile.ui.h:35
+msgid "General"
+msgstr "Genel"
+
+#: ../interface/wfile.ui.h:36
+msgid "352x240"
+msgstr "352x240"
+
+#: ../interface/wfile.ui.h:37
+msgid "Default"
+msgstr "Varsayılan"
+
+#: ../interface/wfile.ui.h:38
+msgid "352x480"
+msgstr "352x480"
+
+#: ../interface/wfile.ui.h:39
+msgid "480x480"
+msgstr "480x480"
+
+#: ../interface/wfile.ui.h:40
+msgid "720x480"
+msgstr "720x480"
+
+#: ../interface/wfile.ui.h:41
+msgid "704x480"
+msgstr "704x480"
+
+#: ../interface/wfile.ui.h:42
+msgid "1920x1080"
+msgstr "1920x1080"
+
+#: ../interface/wfile.ui.h:43
+msgid "1280x720"
+msgstr "1280x720"
+
+#: ../interface/wfile.ui.h:44
+msgid "160x128"
+msgstr "160x128"
+
+#: ../interface/wfile.ui.h:45
+msgid "<b>Final size</b>"
+msgstr "<b>Tamamlanmış boyut</b>"
+
+#: ../interface/wfile.ui.h:46
+msgid "4:3"
+msgstr "4:3"
+
+#: ../interface/wfile.ui.h:47
+msgid "16:9"
+msgstr "16:9"
+
+#: ../interface/wfile.ui.h:48
+msgid "<b>Aspect ratio</b>"
+msgstr "<b>En boy oranı</b>"
+
+#: ../interface/wfile.ui.h:49
+msgid "Video format"
+msgstr "Video formatı"
+
+#: ../interface/wfile.ui.h:50
+msgid "No rotation"
+msgstr "Rotasyon yapma"
+
+#: ../interface/wfile.ui.h:51
+msgid "Rotate 180 degrees"
+msgstr "180 derece döndür"
+
+#: ../interface/wfile.ui.h:52
+msgid "Rotate 90 degrees clockwise"
+msgstr "Saat yönünde 90 derece döndür"
+
+#: ../interface/wfile.ui.h:53
+msgid "Rotate 90 degrees counter-clockwise"
+msgstr "Saat yönünün tersine 90 derece döndür"
+
+#: ../interface/wfile.ui.h:54
+msgid "<b>Rotation</b>"
+msgstr "<b>Rotasyon</b>"
+
+#: ../interface/wfile.ui.h:55
+msgid "Horizontal mirror"
+msgstr "Yatay aynalama"
+
+#: ../interface/wfile.ui.h:56
+msgid "Vertical mirror"
+msgstr "Dikey aynalama"
+
+#: ../interface/wfile.ui.h:57
+msgid "<b>Mirror</b>"
+msgstr "<b>Ayna</b>"
+
+#: ../interface/wfile.ui.h:58
 msgid "Swap fields"
 msgstr "Takas alanları"
 
-#: ../interface/wfile.ui.h:85
+#: ../interface/wfile.ui.h:59
+msgid "<b>Field order</b>"
+msgstr "<b>Alan düzeni</b>"
+
+#: ../interface/wfile.ui.h:60
+msgid "Add black bars"
+msgstr "Siyah boşluklar ekle"
+
+#: ../interface/wfile.ui.h:61
+msgid "Scale picture"
+msgstr "Görüntü ölçekleme"
+
+#: ../interface/wfile.ui.h:62
+msgid "<b>Scaling mode</b>"
+msgstr "<b>Ölçekleme modu</b>"
+
+#: ../interface/wfile.ui.h:63
+msgid "Video options"
+msgstr "Video seçenekleri"
+
+#: ../interface/wfile.ui.h:64
+msgid "Use MBCMP (faster)"
+msgstr "MBCMP kullan (daha hızlı)"
+
+#: ../interface/wfile.ui.h:65
+msgid "Select MBD mode which needs the fewest bits"
+msgstr "En düşük bit hızı gerektiren MBD modunu seç"
+
+#: ../interface/wfile.ui.h:66
+msgid "Select the MBD mode which has the best rate distortion (better quality)"
+msgstr "En iyi hız bozunumuna sahip MBD modunu seç (daha iyi kalite)"
+
+#: ../interface/wfile.ui.h:67
+msgid "Use Trellis Searched Quantization (better quality, slower conversion)"
+msgstr "Kafes aramalı niceleme kullan (daha iyi kalite, daha yavaş dönüştürme)"
+
+#: ../interface/wfile.ui.h:68
+msgid "<b>MacroBlock decision algorithm and Trellis searched quantization</b>"
+msgstr "<b>MacroBlock karar algoritması ve kafes aramalı niceleme</b>"
+
+#: ../interface/wfile.ui.h:69
+msgid "Use dual pass encoding (better quality, much slower conversion)"
+msgstr "İkili kodlama kullan (daha iyi kalite, daha yavaş kodlama)"
+
+#: ../interface/wfile.ui.h:70
+msgid "Turbo 1st pass"
+msgstr "Birinci kodlamayı hızlı geç"
+
+#: ../interface/wfile.ui.h:71
+msgid "<b>Two pass encoding</b>"
+msgstr "<b>İki geçişli kodlama</b>"
+
+#: ../interface/wfile.ui.h:72
+msgid "Median deinterlacing filter"
+msgstr "Median deinterlacing filtresi"
+
+#: ../interface/wfile.ui.h:73
+msgid "Don't deinterlace"
+msgstr "Deinterlace yapma"
+
+#: ../interface/wfile.ui.h:74
+msgid "YADIF deinterlacing filter"
+msgstr "YADIF deinterlace filtresi"
+
+#: ../interface/wfile.ui.h:75
+msgid "FFMpeg deinterlacing filter"
+msgstr "FFMpeg deinterlacing filtresi"
+
+#: ../interface/wfile.ui.h:76
+msgid "Linear blend"
+msgstr "Doğrusal karışım"
+
+#: ../interface/wfile.ui.h:77
+msgid "Lowpass5 deinterlacing filter"
+msgstr "Lowpass5 deinterlacing filtresi"
+
+#: ../interface/wfile.ui.h:78
+msgid "<b>Deinterlacing</b>"
+msgstr "<b>Deinterlacing</b>"
+
+#: ../interface/wfile.ui.h:79
+msgid "Quality"
+msgstr "Kalite"
+
+#: ../interface/wfile.ui.h:80
+msgid "Audio delay (in seconds):"
+msgstr "Ses gecikmesi (saniye):"
+
+#: ../interface/wfile.ui.h:81
+msgid "Create DVD with 5.1 channel sound"
+msgstr "DVD'yi 5.1kanallı ses  ile yarat"
+
+#: ../interface/wfile.ui.h:82
 msgid ""
 "This file already has AC3 sound (copy audio data instead of recompress it)"
 msgstr ""
 "Bu dosya halihazırda AC3 sese sahip (ses datasını sıkıştırmadan kopyala)"
 
-#: ../interface/wfile.ui.h:86
+#: ../interface/wfile.ui.h:83
+msgid "<b>Audio</b>"
+msgstr "<b>Ses</b>"
+
+#: ../interface/wfile.ui.h:84
+msgid "Audio"
+msgstr "Ses"
+
+#: ../interface/wfile.ui.h:85
 msgid "This file is already a DVD/xCD-suitable MPEG-PS file"
 msgstr "Bu dosya halihazırda DVD/xCD-uyumlu MPEG-PS dosyası"
 
+#: ../interface/wfile.ui.h:86
+msgid "Repack audio and video without reencoding (useful for VOB files)"
+msgstr ""
+"Yeniden kodlama yapmadan ses ve videoyu tekrar paketle (VOB dosyaları için "
+"kullanılabilir)"
+
 #: ../interface/wfile.ui.h:87
-msgid "This video file has no audio tracks."
-msgstr "Bu video dosyası bir ses parçası içermiyor"
-
-#: ../interface/wfile.ui.h:88
-msgid "Turbo 1st pass"
-msgstr "Birinci kodlamayı hızlı geç"
-
-#: ../interface/wfile.ui.h:89
-msgid "Use MBCMP (faster)"
-msgstr "MBCMP kullan (daha hızlı)"
-
-#: ../interface/wfile.ui.h:90
-msgid "Use Trellis Searched Quantization (better quality, slower conversion)"
-msgstr "Kafes aramalı niceleme kullan (daha iyi kalite, daha yavaş dönüştürme)"
-
-#: ../interface/wfile.ui.h:91
 msgid "Use a GOP of 12 frames (improves compatibility)"
 msgstr "GOP kullan (uyumluluğu arttırır)"
 
+#: ../interface/wfile.ui.h:88
+msgid "<b>Special</b>"
+msgstr "<b>Özel</b>"
+
+#: ../interface/wfile.ui.h:89
+msgid "Main (-X -Y)"
+msgstr "Main (-X -Y)"
+
+#: ../interface/wfile.ui.h:90
+msgid "-VF (X,Y)"
+msgstr "-VF (X,Y)"
+
+#: ../interface/wfile.ui.h:91
+msgid "-LAVCOPTS (X:Y)"
+msgstr "-LAVCOPTS (X:Y)"
+
 #: ../interface/wfile.ui.h:92
-msgid "Use dual pass encoding (better quality, much slower conversion)"
-msgstr "İkili kodlama kullan (daha iyi kalite, daha yavaş kodlama)"
+msgid "-LAMEOPTS (X:Y)"
+msgstr "-LAMEOPTS (X:Y)"
 
 #: ../interface/wfile.ui.h:93
-msgid "Vertical mirror"
-msgstr "Dikey aynalama"
+#, fuzzy
+msgid "<b>Extra parameters for coder</b>"
+msgstr "<b>Mencoder için ekstra parametreler</b>"
 
 #: ../interface/wfile.ui.h:94
-msgid "Video format"
-msgstr "Video formatı"
+msgid "Misc"
+msgstr "Çeşitli"
 
-#: ../interface/wfile.ui.h:95
-msgid "Video options"
-msgstr "Video seçenekleri"
+#: ../interface/wfile.ui.h:95 ../interface/wmain.ui.h:41
+msgid "Advanced options"
+msgstr "Gelişmiş seçenekler"
 
-#: ../interface/wfile.ui.h:96
-msgid "YADIF deinterlacing filter"
-msgstr "YADIF deinterlace filtresi"
+#: ../interface/wfile.ui.h:96 ../interface/wmain.ui.h:13
+msgid "Preview"
+msgstr "Önizleme"
 
 #: ../interface/wfolder_dialog.ui.h:1
-msgid "Choose a folder"
-msgstr "Bir klasör seç"
-
-#: ../interface/wfolder_dialog.ui.h:2
 msgid ""
 "Choose the folder where DeVeDe will create the DVD image and a name for it. "
 "Don't use a folder in a VFAT/FAT32 drive. Characters /, | and \\ are not "
@@ -935,6 +935,10 @@ msgid ""
 msgstr ""
 "DeVeDe'nin DVD imajı yaratacağı bir dizin seçin ve isimlendirin. VFAT/FAT32 "
 "formatında bir dizin kullanmayın. \"/ , and \\\" karakterleri kullanılamaz. "
+
+#: ../interface/wfolder_dialog.ui.h:2
+msgid "Choose a folder"
+msgstr "Bir klasör seç"
 
 #: ../interface/wfolder_dialog.ui.h:3
 msgid "Shutdown computer when disc is done"
@@ -945,6 +949,10 @@ msgid "Load a disc structure"
 msgstr "Bir disk yapısı yükleyin"
 
 #: ../interface/wloosecurrent.ui.h:1
+msgid "Warning: you already have a disc structure"
+msgstr "Uyarı: Zaten bir bir disk yapısı mevcut"
+
+#: ../interface/wloosecurrent.ui.h:2
 msgid ""
 "If you load a disc structure you will loose your current structure (unless "
 "you saved it). Continue?"
@@ -952,142 +960,138 @@ msgstr ""
 "Eğer yeni bir disk yapısı yüklerseniz kaydedilmemiş mevcut yapıyı "
 "kaybedeceksiniz. Devam etmek istiyor musunuz?"
 
-#: ../interface/wloosecurrent.ui.h:2
-msgid "Warning: you already have a disc structure"
-msgstr "Uyarı: Zaten bir bir disk yapısı mevcut"
-
 #: ../interface/wmain.ui.h:1
-msgid " Media size: "
-msgstr "Medya boyutu:"
+msgid "185 MB CD"
+msgstr "185 MB CD"
+
+#: ../interface/wmain.ui.h:2
+msgid "650 MB CD"
+msgstr "650 MB CD"
 
 #: ../interface/wmain.ui.h:3
-#, no-c-format
-msgid "0.0%"
-msgstr "0.0%"
+msgid "700 MB CD"
+msgstr "700 MB CD"
 
 #: ../interface/wmain.ui.h:4
 msgid "1.4 GB DVD"
 msgstr "1.4 GB DVD"
 
 #: ../interface/wmain.ui.h:5
-msgid "185 MB CD"
-msgstr "185 MB CD"
-
-#: ../interface/wmain.ui.h:6
 msgid "4.7 GB DVD"
 msgstr "4.7 GB DVD"
 
-#: ../interface/wmain.ui.h:7
-msgid "650 MB CD"
-msgstr "650 MB CD"
-
-#: ../interface/wmain.ui.h:8
-msgid "700 MB CD"
-msgstr "700 MB CD"
-
-#: ../interface/wmain.ui.h:9
+#: ../interface/wmain.ui.h:6
 msgid "8.5 GB DVD"
 msgstr "8.5 GB DVD"
 
+#: ../interface/wmain.ui.h:7
+msgid "DeVeDe"
+msgstr "DeVeDe"
+
+#: ../interface/wmain.ui.h:8
+msgid "_File"
+msgstr "_Dosya"
+
+#: ../interface/wmain.ui.h:9
+msgid "_Edit"
+msgstr ""
+
 #: ../interface/wmain.ui.h:10
-msgid "<b>Action</b>"
-msgstr "<b>Eylem</b>"
+msgid "_Preferences"
+msgstr ""
 
 #: ../interface/wmain.ui.h:11
-msgid "<b>Default format</b>"
-msgstr "<b>Varsayılan format</b>"
+msgid "_Help"
+msgstr "_Yardım"
 
 #: ../interface/wmain.ui.h:12
-msgid "<b>Disc usage</b>"
-msgstr "<b>Disk kullanımı</b>"
+msgid "<b>Titles</b>"
+msgstr "<b>Başlıklar</b>"
 
 #: ../interface/wmain.ui.h:14
 msgid "<b>Files</b>"
 msgstr "<b>Dosyalar</b>"
 
-#: ../interface/wmain.ui.h:15
-msgid "<b>Menus</b>"
-msgstr "<b>Menüler</b>"
-
-#: ../interface/wmain.ui.h:16
-msgid "<b>Titles</b>"
-msgstr "<b>Başlıklar</b>"
-
 #: ../interface/wmain.ui.h:17
-msgid "Adjust disc usage"
-msgstr "Disk kullanımını ayarla"
+msgid "Length (seconds): "
+msgstr "Uzunluk (saniye):"
+
+#: ../interface/wmain.ui.h:18
+msgid "Video rate (Kbits/sec): "
+msgstr "Video hızı (Kbits/sn):"
 
 #: ../interface/wmain.ui.h:19
 msgid "Audio rate (Kbits/sec): "
 msgstr "Ses hızı (Kbits/sn): "
 
-#: ../interface/wmain.ui.h:20
-msgid "Create a menu with the titles"
-msgstr "Başlıklarla bir menü yarat"
-
 #: ../interface/wmain.ui.h:21
-msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
-msgstr "Diske yazmaya hazır bir ISO ya da BIN/CUE imajı yarat"
-
-#: ../interface/wmain.ui.h:22
-msgid "Create disc structure"
-msgstr "Disk yapısı yarat"
-
-#: ../interface/wmain.ui.h:23
-msgid "DeVeDe"
-msgstr "DeVeDe"
-
-#: ../interface/wmain.ui.h:24
 msgid "Estimated length (MBytes): "
 msgstr "Tahmini boyut (MBytes):"
 
-#: ../interface/wmain.ui.h:27
-msgid "Length (seconds): "
-msgstr "Uzunluk (saniye):"
-
-#: ../interface/wmain.ui.h:28
-msgid "Menu options"
-msgstr "Menü seçenekleri"
-
-#: ../interface/wmain.ui.h:30
-msgid "Only convert film files to compliant MPEG files"
-msgstr "Film dosyalarını yalnızca MPEG dosyalarına uyumlu hale dönüştür"
-
-#: ../interface/wmain.ui.h:32
+#: ../interface/wmain.ui.h:22
 msgid "Output aspect ratio:"
 msgstr "Çıkış boy oranı:"
 
-#: ../interface/wmain.ui.h:33
+#: ../interface/wmain.ui.h:23
+msgid "Size of chapters:"
+msgstr "Bölüm boyutu:"
+
+#: ../interface/wmain.ui.h:25
+msgid "Adjust disc usage"
+msgstr "Disk kullanımını ayarla"
+
+#: ../interface/wmain.ui.h:27
+#, no-c-format
+msgid "0.0%"
+msgstr "0.0%"
+
+#: ../interface/wmain.ui.h:28
+msgid " Media size: "
+msgstr "Medya boyutu:"
+
+#: ../interface/wmain.ui.h:29
+msgid "<b>Disc usage</b>"
+msgstr "<b>Disk kullanımı</b>"
+
+#: ../interface/wmain.ui.h:30
 msgid "PAL"
 msgstr "PAL"
 
-#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:22
+#: ../interface/wmain.ui.h:32
+msgid "<b>Default format</b>"
+msgstr "<b>Varsayılan format</b>"
+
+#: ../interface/wmain.ui.h:33
+msgid "Create a menu with the titles"
+msgstr "Başlıklarla bir menü yarat"
+
+#: ../interface/wmain.ui.h:34
+msgid "Menu options"
+msgstr "Menü seçenekleri"
+
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:31
 msgid "Preview menu"
 msgstr "Menü Önizlemesi"
 
 #: ../interface/wmain.ui.h:36
-msgid "Size of chapters:"
-msgstr "Bölüm boyutu:"
+msgid "<b>Menus</b>"
+msgstr "<b>Menüler</b>"
 
 #: ../interface/wmain.ui.h:37
-msgid "Video rate (Kbits/sec): "
-msgstr "Video hızı (Kbits/sn):"
+msgid "Only convert film files to compliant MPEG files"
+msgstr "Film dosyalarını yalnızca MPEG dosyalarına uyumlu hale dönüştür"
 
 #: ../interface/wmain.ui.h:38
-msgid "_Edit"
-msgstr ""
+msgid "Create disc structure"
+msgstr "Disk yapısı yarat"
 
 #: ../interface/wmain.ui.h:39
-msgid "_File"
-msgstr "_Dosya"
+msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
+msgstr "Diske yazmaya hazır bir ISO ya da BIN/CUE imajı yarat"
 
 #: ../interface/wmain.ui.h:40
-msgid "_Help"
-msgstr "_Yardım"
-
-#: ../interface/wmain.ui.h:41
-msgid "_Preferences"
-msgstr ""
+msgid "<b>Action</b>"
+msgstr "<b>Eylem</b>"
 
 #: ../interface/wmenu_preview_ntsc.ui.h:1
 #: ../interface/wmenu_preview_pal.ui.h:1
@@ -1095,123 +1099,123 @@ msgid "Menu preview"
 msgstr "Menü önizleme"
 
 #: ../interface/wmenu_properties.ui.h:1
-msgid "<b>Disc startup options</b>"
-msgstr "<b>Disk başlangıç seçenekleri</b>"
+msgid "Shadow color: "
+msgstr "Gölge rengi:"
 
 #: ../interface/wmenu_properties.ui.h:2
+msgid "Text color: "
+msgstr "Metin rengi:"
+
+#: ../interface/wmenu_properties.ui.h:3
+msgid "Text: "
+msgstr "Metin:"
+
+#: ../interface/wmenu_properties.ui.h:4
+msgid "Font: "
+msgstr "Yazı tipi:"
+
+#: ../interface/wmenu_properties.ui.h:5
+msgid "<b>Menu title</b>"
+msgstr "<b>Menü başlığı</b>"
+
+#: ../interface/wmenu_properties.ui.h:6
+msgid "Select a picture to be used as background for disc's menu"
+msgstr "Disk menüsünde arka plan olarak kullanılacak resmi seç"
+
+#: ../interface/wmenu_properties.ui.h:7
+msgid "Set default background"
+msgstr "Varsayılan arka planı ayarla"
+
+#: ../interface/wmenu_properties.ui.h:8
+msgid "<b>Menu background (only PNG)</b>"
+msgstr "<b>Menü arkaplanı (sadece PNG)</b>"
+
+#: ../interface/wmenu_properties.ui.h:9
+msgid "Choose a music file"
+msgstr "Bir müzik dosyası seç"
+
+#: ../interface/wmenu_properties.ui.h:10
+msgid "Set menus without sound"
+msgstr "Menüleri sessiz ayarla"
+
+#: ../interface/wmenu_properties.ui.h:11
+msgid "<b>Menu music</b>"
+msgstr "<b>Menü müziği</b>"
+
+#: ../interface/wmenu_properties.ui.h:12
 #, fuzzy
 msgid "<b>Horizontal</b>"
 msgstr "<b>Yatay hizalama</b>"
 
-#: ../interface/wmenu_properties.ui.h:4
-#, fuzzy, no-c-format
-msgid "<b>Margins (%)</b>"
-msgstr "<b>Menüler</b>"
-
-#: ../interface/wmenu_properties.ui.h:5
-msgid "<b>Menu background (only PNG)</b>"
-msgstr "<b>Menü arkaplanı (sadece PNG)</b>"
-
-#: ../interface/wmenu_properties.ui.h:6
-msgid "<b>Menu font and colors</b>"
-msgstr "<b>Menü yazı tipi ve rengi</b>"
-
-#: ../interface/wmenu_properties.ui.h:7
-msgid "<b>Menu music</b>"
-msgstr "<b>Menü müziği</b>"
-
-#: ../interface/wmenu_properties.ui.h:8
-msgid "<b>Menu position</b>"
-msgstr "<b>Menü yerleşimi</b>"
-
-#: ../interface/wmenu_properties.ui.h:9
-msgid "<b>Menu title</b>"
-msgstr "<b>Menü başlığı</b>"
-
-#: ../interface/wmenu_properties.ui.h:10
+#: ../interface/wmenu_properties.ui.h:13
 #, fuzzy
 msgid "<b>Vertical</b>"
 msgstr "<b>Özel</b>"
 
-#: ../interface/wmenu_properties.ui.h:11
-msgid "Background color for titles: "
-msgstr "Başlıkların arkaplan rengi: "
-
-#: ../interface/wmenu_properties.ui.h:12
-msgid "Bottom"
-msgstr "Alt"
-
-#: ../interface/wmenu_properties.ui.h:13
-msgid "Center"
-msgstr "Merkez"
-
 #: ../interface/wmenu_properties.ui.h:14
-msgid "Choose a music file"
-msgstr "Bir müzik dosyası seç"
+msgid "Top"
+msgstr "Üst"
 
 #: ../interface/wmenu_properties.ui.h:15
-msgid "Color for selected title: "
-msgstr "Seçili başlığı renklendir:"
-
-#: ../interface/wmenu_properties.ui.h:16
-msgid "Color for shadows: "
-msgstr "Gölge rengi: "
-
-#: ../interface/wmenu_properties.ui.h:17
-msgid "Color for unselected titles: "
-msgstr "Seçili olmayan başlıkların rengi:"
-
-#: ../interface/wmenu_properties.ui.h:18
-msgid "Font: "
-msgstr "Yazı tipi:"
-
-#: ../interface/wmenu_properties.ui.h:19
-msgid "Jump to the first title at startup"
-msgstr "Başlangıçta ilk başlığa git"
-
-#: ../interface/wmenu_properties.ui.h:20
-msgid "Left"
-msgstr "Sol"
-
-#: ../interface/wmenu_properties.ui.h:21
 msgid "Middle"
 msgstr "Orta"
 
-#: ../interface/wmenu_properties.ui.h:23
+#: ../interface/wmenu_properties.ui.h:16
+msgid "Bottom"
+msgstr "Alt"
+
+#: ../interface/wmenu_properties.ui.h:17
+msgid "Left"
+msgstr "Sol"
+
+#: ../interface/wmenu_properties.ui.h:18
+msgid "Center"
+msgstr "Merkez"
+
+#: ../interface/wmenu_properties.ui.h:19
 msgid "Right"
 msgstr "Sağ"
 
+#: ../interface/wmenu_properties.ui.h:21
+#, fuzzy, no-c-format
+msgid "<b>Margins (%)</b>"
+msgstr "<b>Menüler</b>"
+
+#: ../interface/wmenu_properties.ui.h:22
+msgid "<b>Menu position</b>"
+msgstr "<b>Menü yerleşimi</b>"
+
+#: ../interface/wmenu_properties.ui.h:23
+msgid "Color for unselected titles: "
+msgstr "Seçili olmayan başlıkların rengi:"
+
 #: ../interface/wmenu_properties.ui.h:24
-msgid "Select a picture to be used as background for disc's menu"
-msgstr "Disk menüsünde arka plan olarak kullanılacak resmi seç"
+msgid "Color for shadows: "
+msgstr "Gölge rengi: "
 
 #: ../interface/wmenu_properties.ui.h:25
-msgid "Set default background"
-msgstr "Varsayılan arka planı ayarla"
+msgid "Color for selected title: "
+msgstr "Seçili başlığı renklendir:"
 
 #: ../interface/wmenu_properties.ui.h:26
-msgid "Set menus without sound"
-msgstr "Menüleri sessiz ayarla"
+msgid "Background color for titles: "
+msgstr "Başlıkların arkaplan rengi: "
 
 #: ../interface/wmenu_properties.ui.h:27
-msgid "Shadow color: "
-msgstr "Gölge rengi:"
+msgid "<b>Menu font and colors</b>"
+msgstr "<b>Menü yazı tipi ve rengi</b>"
 
 #: ../interface/wmenu_properties.ui.h:28
 msgid "Show menu at disc startup"
 msgstr "Disk başlangıcında menüyü göster"
 
 #: ../interface/wmenu_properties.ui.h:29
-msgid "Text color: "
-msgstr "Metin rengi:"
+msgid "Jump to the first title at startup"
+msgstr "Başlangıçta ilk başlığa git"
 
 #: ../interface/wmenu_properties.ui.h:30
-msgid "Text: "
-msgstr "Metin:"
-
-#: ../interface/wmenu_properties.ui.h:31
-msgid "Top"
-msgstr "Üst"
+msgid "<b>Disc startup options</b>"
+msgstr "<b>Disk başlangıç seçenekleri</b>"
 
 #: ../interface/wnofonts.ui.h:1
 msgid "Can't find the font for subtitles. Aborting."
@@ -1237,11 +1241,11 @@ msgstr ""
 msgid "Preview length:"
 msgstr "Önizleme uzunluğu"
 
-#: ../interface/wprograms.ui.h:1
+#: ../interface/wprograms.ui.h:2
 msgid "Can't find the following programs:"
 msgstr "Aşağıdaki uygulamalar bulunamadı:"
 
-#: ../interface/wprograms.ui.h:2
+#: ../interface/wprograms.ui.h:3
 msgid ""
 "DeVeDe needs them in order to work. If you want to use DeVeDe, you must "
 "install all of them."
@@ -1258,40 +1262,40 @@ msgid "Save current disc structure"
 msgstr "Mevcut disk yapısını kaydet"
 
 #: ../interface/wtitle_properties_dialog.ui.h:1
-msgid "<b>Action to perform when this title ends</b>"
-msgstr "<b>Bu başlık bittiğinde gerçekleştirilecek eylem </b>"
+msgid "Title properties"
+msgstr "Başlık özellikleri"
 
 #: ../interface/wtitle_properties_dialog.ui.h:2
 msgid "<b>Title's name</b>"
 msgstr "<b>Başlık isimleri</b>"
 
 #: ../interface/wtitle_properties_dialog.ui.h:3
-msgid "Play the first title"
-msgstr "İlk başlığı yürüt"
-
-#: ../interface/wtitle_properties_dialog.ui.h:4
-msgid "Play the last title"
-msgstr "Son başlığı yürüt"
-
-#: ../interface/wtitle_properties_dialog.ui.h:5
-msgid "Play the next title"
-msgstr "Sıradaki başlığı yürüt"
-
-#: ../interface/wtitle_properties_dialog.ui.h:6
-msgid "Play the previous title"
-msgstr "Önceki başlığı yürüt"
-
-#: ../interface/wtitle_properties_dialog.ui.h:7
-msgid "Play this title again (loop)"
-msgstr "Bu başlığı tekrar oynat"
-
-#: ../interface/wtitle_properties_dialog.ui.h:8
 msgid "Stop reproduction/show disc menu"
 msgstr "Yeniden üretimi durdur/Disk menüsünü göster"
 
+#: ../interface/wtitle_properties_dialog.ui.h:4
+msgid "Play the first title"
+msgstr "İlk başlığı yürüt"
+
+#: ../interface/wtitle_properties_dialog.ui.h:5
+msgid "Play the previous title"
+msgstr "Önceki başlığı yürüt"
+
+#: ../interface/wtitle_properties_dialog.ui.h:6
+msgid "Play this title again (loop)"
+msgstr "Bu başlığı tekrar oynat"
+
+#: ../interface/wtitle_properties_dialog.ui.h:7
+msgid "Play the next title"
+msgstr "Sıradaki başlığı yürüt"
+
+#: ../interface/wtitle_properties_dialog.ui.h:8
+msgid "Play the last title"
+msgstr "Son başlığı yürüt"
+
 #: ../interface/wtitle_properties_dialog.ui.h:9
-msgid "Title properties"
-msgstr "Başlık özellikleri"
+msgid "<b>Action to perform when this title ends</b>"
+msgstr "<b>Bu başlık bittiğinde gerçekleştirilecek eylem </b>"
 
 #: ../interface/wwarning_dialog.ui.h:1
 msgid "Warning"

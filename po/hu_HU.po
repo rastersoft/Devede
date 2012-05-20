@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.21.0 - 201203017\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-18 00:52+0100\n"
+"POT-Creation-Date: 2012-05-20 12:55+0200\n"
 "PO-Revision-Date: 2012-03-17 17:27+0100\n"
 "Last-Translator: csola48 <csola48@gmail.com>\n"
 "Language-Team: csola48 <csola48@gmail.com>\n"
@@ -55,9 +55,9 @@ msgstr ""
 "%(total)d MB lenne szükséges, de csak %(free)d MB használható."
 
 #: ../devede_convert.py:275 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:92 ../devede_xml_menu.py:137
-#: ../devede_xml_menu.py:488 ../devede_xml_menu.py:496
-#: ../devede_xml_menu.py:500 ../devede_xml_menu.py:504
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:138
+#: ../devede_xml_menu.py:489 ../devede_xml_menu.py:497
+#: ../devede_xml_menu.py:501 ../devede_xml_menu.py:505
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -101,7 +101,7 @@ msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr ""
 "A menü hangsávja sérült lehet. Használja az eredeti silent.ogg hangsávot."
 
-#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:492
+#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:493
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -295,11 +295,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr "Hiba a menü készítésénél."
 
-#: ../devede_xml_menu.py:117 ../devede_xml_menu.py:508
+#: ../devede_xml_menu.py:118 ../devede_xml_menu.py:509
 msgid "Menu generation failed."
 msgstr "Menü készítése hibás."
 
-#: ../devede_xml_menu.py:124 ../devede_xml_menu.py:517
+#: ../devede_xml_menu.py:125 ../devede_xml_menu.py:518
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -307,7 +307,7 @@ msgstr ""
 "Nem tudja hozzáadni a gombokat a menühöz.\n"
 "Ez a SPUMUX program hibájának tűnik."
 
-#: ../devede_xml_menu.py:483
+#: ../devede_xml_menu.py:484
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Menü készítése %(menu_number)d"
@@ -329,10 +329,6 @@ msgstr ""
 "installálja az MP3LAME támogatéást"
 
 #: ../interface/use_ffmpeg.ui.h:1
-msgid "Don't show this message at startup again"
-msgstr "Ne mutassa ezt az üzenetet többet"
-
-#: ../interface/use_ffmpeg.ui.h:2
 msgid ""
 "This version of Devede allows to use FFMPEG instead\n"
 "of Mencoder for movie conversion. This code is still\n"
@@ -350,60 +346,70 @@ msgstr ""
 "akkor kapcsolja ki a többmagos támogatást\n"
 "A kísérleti mód aktiválása: Szerkesztés -> Beállítások "
 
+#: ../interface/use_ffmpeg.ui.h:9
+msgid "Don't show this message at startup again"
+msgstr "Ne mutassa ezt az üzenetet többet"
+
 #: ../interface/settings.ui.h:1
-msgid "<b>Folders</b>"
-msgstr "<b>Gyűjtők</b>"
+msgid "Erase temporary files"
+msgstr "Ideiglenes fájlok törlése"
 
 #: ../interface/settings.ui.h:2
+msgid "Use optimizations for multicore CPUs"
+msgstr "Többmagú CPU optimalizálás választása"
+
+#: ../interface/settings.ui.h:3
+msgid "Don't use hyperthreading"
+msgstr ""
+
+#: ../interface/settings.ui.h:4
+#, fuzzy
+msgid "Use FFMPEG instead of Mencoder for videos"
+msgstr "FFMPEG használata az Mencoder helyett"
+
+#: ../interface/settings.ui.h:5
+#, fuzzy
+msgid "Use FFMPEG instead of Mencoder for menu"
+msgstr "FFMPEG használata az Mencoder helyett"
+
+#: ../interface/settings.ui.h:6
 msgid "<b>Options</b>"
 msgstr "<b>Opciók</b>"
 
-#: ../interface/settings.ui.h:3
-msgid "<b>Workarounds</b>"
-msgstr "<b>Áthidaló megoldások</b>"
+#: ../interface/settings.ui.h:7
+msgid "Temporary files folder:"
+msgstr "Ideiglenes fájlok gyűjtője:"
 
-#: ../interface/settings.ui.h:4
+#: ../interface/settings.ui.h:8
+msgid "Folder for temporary file"
+msgstr "Az ideiglenes fájlok gyűjtője"
+
+#: ../interface/settings.ui.h:9
+msgid "<b>Folders</b>"
+msgstr "<b>Gyűjtők</b>"
+
+#: ../interface/settings.ui.h:10
 msgid ""
 "AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
 msgstr "Az AC3 fix áthidaló megoldás hang nélkül a Mencoder beta használatához"
 
-#: ../interface/settings.ui.h:5
-msgid "Don't use hyperthreading"
-msgstr ""
+#: ../interface/settings.ui.h:11
+msgid "<b>Workarounds</b>"
+msgstr "<b>Áthidaló megoldások</b>"
 
-#: ../interface/settings.ui.h:6
-msgid "Erase temporary files"
-msgstr "Ideiglenes fájlok törlése"
-
-#: ../interface/settings.ui.h:7
-msgid "Folder for temporary file"
-msgstr "Az ideiglenes fájlok gyűjtője"
-
-#: ../interface/settings.ui.h:8
-msgid "Temporary files folder:"
-msgstr "Ideiglenes fájlok gyűjtője:"
-
-#: ../interface/settings.ui.h:9
-msgid "Use FFMPEG instead of Mencoder"
-msgstr "FFMPEG használata az Mencoder helyett"
-
-#: ../interface/settings.ui.h:10
-msgid "Use optimizations for multicore CPUs"
-msgstr "Többmagú CPU optimalizálás választása"
-
-#: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:3
-msgid "Clear"
-msgstr "Törlés"
-
-#: ../interface/add_subtitle2.ui.h:2 ../interface/add_subtitle.ui.h:4
-msgid "Encoding: "
-msgstr "Kódolás:"
-
-#: ../interface/add_subtitle2.ui.h:3 ../interface/add_subtitle.ui.h:5
+#: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:2
 msgid "File: "
 msgstr "Fájl:"
 
-#: ../interface/add_subtitle2.ui.h:4 ../interface/add_subtitle.ui.h:6
+#: ../interface/add_subtitle2.ui.h:2 ../interface/add_subtitle.ui.h:4
+msgid "Clear"
+msgstr "Törlés"
+
+#: ../interface/add_subtitle2.ui.h:3 ../interface/add_subtitle.ui.h:6
+msgid "Encoding: "
+msgstr "Kódolás:"
+
+#: ../interface/add_subtitle2.ui.h:4 ../interface/add_subtitle.ui.h:5
 msgid "Language: "
 msgstr "Nyelv:"
 
@@ -415,7 +421,7 @@ msgstr "Tegye a feliratot felülre"
 msgid "Add subtitles"
 msgstr "Felirat hozzáadása"
 
-#: ../interface/add_subtitle.ui.h:2
+#: ../interface/add_subtitle.ui.h:3
 msgid "Choose a file"
 msgstr "Egy fájl választása"
 
@@ -424,12 +430,12 @@ msgid "Aborted. There can be temporary files at the destination directory."
 msgstr "Megszakítás. Az ideiglenes fájlok a célkönyvtárban."
 
 #: ../interface/wcancel_dialog.ui.h:1
-msgid "Abort the current DVD and exit?"
-msgstr "Aktuális folyamat megszakítása és kilépés?"
-
-#: ../interface/wcancel_dialog.ui.h:2
 msgid "Exit DeVeDe"
 msgstr "Kilépés a DeVeDe programból"
+
+#: ../interface/wcancel_dialog.ui.h:2
+msgid "Abort the current DVD and exit?"
+msgstr "Aktuális folyamat megszakítása és kilépés?"
 
 #: ../interface/wcancel_job_dialog.ui.h:1
 msgid "Cancel job?"
@@ -440,17 +446,17 @@ msgid "Delete chapter"
 msgstr "Fejezet törlése"
 
 #: ../interface/wdel_chapter_dialog.ui.h:2
-#: ../interface/wdel_title_dialog.ui.h:2
-msgid "Proceed?"
-msgstr "Folytatás?"
-
-#: ../interface/wdel_chapter_dialog.ui.h:3
 msgid ""
 "You chose to delete this chapter and\n"
 "reorder the other ones:"
 msgstr ""
 "Kiválasztott fejezet törlése és\n"
 "egy új fejezet megadása:"
+
+#: ../interface/wdel_chapter_dialog.ui.h:4
+#: ../interface/wdel_title_dialog.ui.h:4
+msgid "Proceed?"
+msgstr "Folytatás?"
 
 #: ../interface/wdel_subtitle.ui.h:1
 msgid "Delete subtitle"
@@ -464,7 +470,7 @@ msgstr "A kijelölt felirat fájl eltávolítása?"
 msgid "Delete title"
 msgstr "Cím törlése"
 
-#: ../interface/wdel_title_dialog.ui.h:3
+#: ../interface/wdel_title_dialog.ui.h:2
 msgid ""
 "You chose to delete this title and\n"
 "reorder the other ones:"
@@ -473,34 +479,14 @@ msgstr ""
 "egy új cím megadása: "
 
 #: ../interface/wdisk_type.ui.h:1
-msgid ""
-"<b>China VideoDisc</b>\n"
-"Another kind of Super VideoCD"
-msgstr ""
-"<b>China Videó Disc</b>\n"
-"vagy másféle Super Videó CD készítése"
+msgid "Disc type selection"
+msgstr "Lemez típus kiválasztása"
 
-#: ../interface/wdisk_type.ui.h:3
+#: ../interface/wdisk_type.ui.h:2
 msgid "<b>Choose the disc type you want to create with DeVeDe</b>"
 msgstr "<b>Lemez típus választása, amelyre a DVD-t készíti a DeVeDe-vel</b>"
 
-#: ../interface/wdisk_type.ui.h:4
-msgid ""
-"<b>DivX / MPEG-4</b>\n"
-"Creates files compliant with DivX home players"
-msgstr ""
-"<b>DivX / MPEG-4</b>\n"
-"DVD készítése DivX-képes otthoni lejátszókhoz"
-
-#: ../interface/wdisk_type.ui.h:6
-msgid ""
-"<b>Super VideoCD</b>\n"
-"Creates a VideoCD with better picture quality"
-msgstr ""
-"<b>Super Videó CD</b>\n"
-"Videó CD készítése a legjobb képminőséggel"
-
-#: ../interface/wdisk_type.ui.h:8
+#: ../interface/wdisk_type.ui.h:3
 msgid ""
 "<b>Video DVD</b>\n"
 "Creates a video DVD suitable for all DVD home players"
@@ -508,7 +494,7 @@ msgstr ""
 "<b>Videó DVD</b>\n"
 "Videó DVD készítése a legtöbb otthoni DVD lejátszóhoz"
 
-#: ../interface/wdisk_type.ui.h:10
+#: ../interface/wdisk_type.ui.h:5
 msgid ""
 "<b>VideoCD</b>\n"
 "Creates a VideoCD, with a picture quality equivalent to VHS"
@@ -516,9 +502,29 @@ msgstr ""
 "<b>Videó CD</b>\n"
 "Videó CD készítése VHS képminőséggel"
 
-#: ../interface/wdisk_type.ui.h:12
-msgid "Disc type selection"
-msgstr "Lemez típus kiválasztása"
+#: ../interface/wdisk_type.ui.h:7
+msgid ""
+"<b>Super VideoCD</b>\n"
+"Creates a VideoCD with better picture quality"
+msgstr ""
+"<b>Super Videó CD</b>\n"
+"Videó CD készítése a legjobb képminőséggel"
+
+#: ../interface/wdisk_type.ui.h:9
+msgid ""
+"<b>China VideoDisc</b>\n"
+"Another kind of Super VideoCD"
+msgstr ""
+"<b>China Videó Disc</b>\n"
+"vagy másféle Super Videó CD készítése"
+
+#: ../interface/wdisk_type.ui.h:11
+msgid ""
+"<b>DivX / MPEG-4</b>\n"
+"Creates files compliant with DivX home players"
+msgstr ""
+"<b>DivX / MPEG-4</b>\n"
+"DVD készítése DivX-képes otthoni lejátszókhoz"
 
 #: ../interface/wempty_titles_dialog.ui.h:1
 msgid ""
@@ -528,15 +534,15 @@ msgstr ""
 "A DVD struktúra üres címeket tartalmaz.\n"
 "Folytatja?"
 
-#: ../interface/wend_dialog.ui.h:1
-msgid "Job done!"
-msgstr "Feladat rendben!"
-
 #. Means: "Burn the ISO image in a CD/DVD"
-#: ../interface/wend_dialog.ui.h:3
+#: ../interface/wend_dialog.ui.h:2
 msgctxt "Means: "
 msgid "Burn"
 msgstr "A lemez írása"
+
+#: ../interface/wend_dialog.ui.h:3
+msgid "Job done!"
+msgstr "Feladat rendben!"
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -546,396 +552,392 @@ msgstr "A jelenlegi lemez struktúra törlése?"
 msgid "Delete the current disc structure and start again?"
 msgstr "A jelenlegi lemez struktúra törlése és újraindítás?"
 
-#: ../interface/werror_dialog.ui.h:1 ../interface/wprograms.ui.h:3
+#: ../interface/werror_dialog.ui.h:1 ../interface/wprograms.ui.h:1
 msgid "Error"
 msgstr "Hiba"
 
 #: ../interface/wfile.ui.h:1
-msgid "-LAMEOPTS (X:Y)"
-msgstr "-LAMEOPTS (X:Y)"
+msgid "File properties"
+msgstr "Fájl jellemzők"
 
 #: ../interface/wfile.ui.h:2
-msgid "-LAVCOPTS (X:Y)"
-msgstr "-LAVCOPTS (X:Y)"
+msgid "<b>File</b>"
+msgstr "<b>Fájl</b>"
 
-#: ../interface/wfile.ui.h:3
-msgid "-VF (X,Y)"
-msgstr "-VF (X,Y)"
+#: ../interface/wfile.ui.h:3 ../interface/wmain.ui.h:15
+msgid "Frames per second: "
+msgstr "Képkocka másodpercenként:"
 
 #: ../interface/wfile.ui.h:4
-msgid "1280x720"
-msgstr "1280x720"
+msgid "Original length (seconds): "
+msgstr "Eredeti hossz (másodperc):"
 
 #: ../interface/wfile.ui.h:5
-msgid "160x128"
-msgstr "160x128"
+msgid "Original audio rate (Kbits/sec):"
+msgstr "Eredeti hang sebesség (kbit/sec):"
 
 #: ../interface/wfile.ui.h:6
-msgid "16:9"
-msgstr "16:9"
+msgid "Original video rate (Kbits/sec):"
+msgstr "Eredeti videó sebesség (kbit/sec):"
 
-#: ../interface/wfile.ui.h:7
-msgid "1920x1080"
-msgstr "1920x1080"
+#: ../interface/wfile.ui.h:7 ../interface/wmain.ui.h:20
+msgid "Original size (pixels): "
+msgstr "Eredeti méret (pixel):"
 
-#: ../interface/wfile.ui.h:8
-msgid "352x240"
-msgstr "352x240"
+#: ../interface/wfile.ui.h:8 ../interface/wmain.ui.h:16
+msgid "Final size (pixels):"
+msgstr "Kész méret (pixelben):"
 
 #: ../interface/wfile.ui.h:9
-msgid "352x480"
-msgstr "352x480"
+msgid "Estimated final length (MBytes): "
+msgstr "Becsült végső hossz (MB):"
 
-#: ../interface/wfile.ui.h:10
-msgid "480x480"
-msgstr "480x480"
+#: ../interface/wfile.ui.h:10 ../interface/wmain.ui.h:24
+msgid "<b>File info</b>"
+msgstr "<b>Fájl infó</b>"
 
 #: ../interface/wfile.ui.h:11
-msgid "4:3"
-msgstr "4:3"
+msgid "PAL/SECAM"
+msgstr "PAL/SECAM"
 
-#: ../interface/wfile.ui.h:12
-msgid "704x480"
-msgstr "704x480"
+#: ../interface/wfile.ui.h:12 ../interface/wmain.ui.h:31
+msgid "NTSC"
+msgstr "NTSC"
 
 #: ../interface/wfile.ui.h:13
-msgid "720x480"
-msgstr "720x480"
+msgid "<b>Video format</b>"
+msgstr "<b>Videó formátum</b>"
 
 #: ../interface/wfile.ui.h:14
-msgid "<b>Aspect ratio</b>"
-msgstr "<b>Kép arány</b>"
+msgid "Audio track: "
+msgstr "Hangsáv:"
 
 #: ../interface/wfile.ui.h:15
-msgid "<b>Audio rate (Kbits/sec)</b>"
-msgstr "<b>Hangsebesség (kbit/sec)</b>"
+msgid "This video file has no audio tracks."
+msgstr "Ennek a videó fájlnak nincs hangsávja."
 
 #: ../interface/wfile.ui.h:16
 msgid "<b>Audio tracks</b>"
 msgstr "<b>Hang sáv</b>"
 
 #: ../interface/wfile.ui.h:17
-msgid "<b>Audio</b>"
-msgstr "<b>Hang</b>"
-
-#: ../interface/wfile.ui.h:18
-msgid "<b>Deinterlacing</b>"
-msgstr "<b>Deinterlace</b>"
-
-#: ../interface/wfile.ui.h:19
-msgid "<b>Division in chapters</b>"
-msgstr "<b>Fejezetek felosztása</b>"
-
-#: ../interface/wfile.ui.h:20
-msgid "<b>Extra parameters for coder</b>"
-msgstr "<b>Extra paraméterek a kódoláshoz</b>"
-
-#: ../interface/wfile.ui.h:21
-msgid "<b>Field order</b>"
-msgstr "<b>Mező szabályok</b>"
-
-#: ../interface/wfile.ui.h:22 ../interface/wmain.ui.h:13
-msgid "<b>File info</b>"
-msgstr "<b>Fájl infó</b>"
-
-#: ../interface/wfile.ui.h:23
-msgid "<b>File split</b>"
-msgstr "<b>Fájl szeletelés</b>"
-
-#: ../interface/wfile.ui.h:24
-msgid "<b>File</b>"
-msgstr "<b>Fájl</b>"
-
-#: ../interface/wfile.ui.h:25
-msgid "<b>Final size</b>"
-msgstr "<b>Végső méret</b>"
-
-#: ../interface/wfile.ui.h:26
-msgid "<b>MacroBlock decision algorithm and Trellis searched quantization</b>"
-msgstr "<b>MacroBlock döntési algoritmus és Trellis quantálás</b>"
-
-#: ../interface/wfile.ui.h:27
-msgid "<b>Mirror</b>"
-msgstr "<b>Tükrözés</b>"
-
-#: ../interface/wfile.ui.h:28
-msgid "<b>Rotation</b>"
-msgstr "<b>Forgatás</b>"
-
-#: ../interface/wfile.ui.h:29
-msgid "<b>Scaling mode</b>"
-msgstr "<b>Méretezési módszer</b>"
-
-#: ../interface/wfile.ui.h:30
-msgid "<b>Special</b>"
-msgstr "<b>Speciális</b>"
-
-#: ../interface/wfile.ui.h:31
-msgid "<b>Subtitles</b>"
-msgstr "<b>Felirat</b>"
-
-#: ../interface/wfile.ui.h:32
-msgid "<b>Two pass encoding</b>"
-msgstr "<b>Két átfutásos kódolás</b>"
-
-#: ../interface/wfile.ui.h:33
-msgid "<b>Video format</b>"
-msgstr "<b>Videó formátum</b>"
-
-#: ../interface/wfile.ui.h:34
-msgid "<b>Video rate (Kbits/sec)</b>"
-msgstr "<b>Videó sebesség (kbit/sec)</b>"
-
-#: ../interface/wfile.ui.h:36
-#, no-c-format
-msgid "<b>Volume (%)</b>"
-msgstr "<b>Hangerő (%)</b>"
-
-#: ../interface/wfile.ui.h:37
-msgid "Add black bars"
-msgstr "Fekete sáv hozzáadása"
-
-#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:18
-msgid "Advanced options"
-msgstr "További opciók"
-
-#: ../interface/wfile.ui.h:39
-msgid "Audio"
-msgstr "Hang"
-
-#: ../interface/wfile.ui.h:40
-msgid "Audio delay (in seconds):"
-msgstr "Hang késleltetése (másodpercben):"
-
-#: ../interface/wfile.ui.h:41
-msgid "Audio track: "
-msgstr "Hangsáv:"
-
-#: ../interface/wfile.ui.h:42
-msgid "Create DVD with 5.1 channel sound"
-msgstr "DVD készítése 5.1 csatornás hanggal"
-
-#: ../interface/wfile.ui.h:43
-msgid "Default"
-msgstr "Alapértelmezés"
-
-#: ../interface/wfile.ui.h:44
-msgid "DivX format doesn't support subtitles. Please, read the FAQ."
-msgstr "DivX formátum nem támogatja a feliratot. Olvassa el a FAQ-ot."
-
-#: ../interface/wfile.ui.h:45
-msgid "Don't deinterlace"
-msgstr "Ne legyen deinterlace"
-
-#: ../interface/wfile.ui.h:46
-msgid "Estimated final length (MBytes): "
-msgstr "Becsült végső hossz (MB):"
-
-#: ../interface/wfile.ui.h:47
-msgid "FFMpeg deinterlacing filter"
-msgstr "FFMpeg deinterlace szűrő"
-
-#: ../interface/wfile.ui.h:48
-msgid "File properties"
-msgstr "Fájl jellemzők"
-
-#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:25
-msgid "Final size (pixels):"
-msgstr "Kész méret (pixelben):"
-
-#: ../interface/wfile.ui.h:50
-msgid "Font size:"
-msgstr "Betűméret:"
-
-#: ../interface/wfile.ui.h:51
-msgid "Force subtitles"
-msgstr "Felirat kényszerítése"
-
-#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:26
-msgid "Frames per second: "
-msgstr "Képkocka másodpercenként:"
-
-#: ../interface/wfile.ui.h:53
-msgid "General"
-msgstr "Általános"
-
-#: ../interface/wfile.ui.h:54
-msgid "Horizontal mirror"
-msgstr "Vízszintes tükrözés"
-
-#: ../interface/wfile.ui.h:55
-msgid "Linear blend"
-msgstr "Lineáris keverés"
-
-#: ../interface/wfile.ui.h:56
-msgid "Lowpass5 deinterlacing filter"
-msgstr "Lowpass5 deinterlace szűrő"
-
-#: ../interface/wfile.ui.h:57
-msgid "Main (-X -Y)"
-msgstr "Menü (-X -Y)"
-
-#: ../interface/wfile.ui.h:58
-msgid "Median deinterlacing filter"
-msgstr "Median deinterlace szűrő"
-
-#: ../interface/wfile.ui.h:59
-msgid "Misc"
-msgstr "Különfélék"
-
-#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:29
-msgid "NTSC"
-msgstr "NTSC"
-
-#: ../interface/wfile.ui.h:61
-msgid "No rotation"
-msgstr "Nincs forgatás"
-
-#: ../interface/wfile.ui.h:62
-msgid "Original audio rate (Kbits/sec):"
-msgstr "Eredeti hang sebesség (kbit/sec):"
-
-#: ../interface/wfile.ui.h:63
-msgid "Original length (seconds): "
-msgstr "Eredeti hossz (másodperc):"
-
-#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:31
-msgid "Original size (pixels): "
-msgstr "Eredeti méret (pixel):"
-
-#: ../interface/wfile.ui.h:65
-msgid "Original video rate (Kbits/sec):"
-msgstr "Eredeti videó sebesség (kbit/sec):"
-
-#: ../interface/wfile.ui.h:66
-msgid "PAL/SECAM"
-msgstr "PAL/SECAM"
-
-#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:34
-msgid "Preview"
-msgstr "Előnézet"
-
-#: ../interface/wfile.ui.h:68
-msgid "Quality"
-msgstr "Minőség"
-
-#: ../interface/wfile.ui.h:69
-msgid "Repack audio and video without reencoding (useful for VOB files)"
-msgstr "Videó és hang újracsomagolása (felhasználva a VOB fájlokat)"
-
-#: ../interface/wfile.ui.h:70
 msgid "Reset"
 msgstr "Törlés"
 
-#: ../interface/wfile.ui.h:72
+#: ../interface/wfile.ui.h:19
 #, no-c-format
 msgid "Resets the volume to 100%"
 msgstr "Hangerő visszaállítása 100%-ra"
 
-#: ../interface/wfile.ui.h:73
+#: ../interface/wfile.ui.h:21
+#, no-c-format
+msgid "<b>Volume (%)</b>"
+msgstr "<b>Hangerő (%)</b>"
+
+#: ../interface/wfile.ui.h:22
+msgid "Store full length"
+msgstr "A teljes hossz tárolása"
+
+#: ../interface/wfile.ui.h:23
+msgid "Store the first half"
+msgstr "A teljes hossz első felének tárolása"
+
+#: ../interface/wfile.ui.h:24
+msgid "Store the second half"
+msgstr "A teljes hossz második felének tárolása"
+
+#: ../interface/wfile.ui.h:25
+msgid "<b>File split</b>"
+msgstr "<b>Fájl szeletelés</b>"
+
+#: ../interface/wfile.ui.h:26
+msgid "Font size:"
+msgstr "Betűméret:"
+
+#: ../interface/wfile.ui.h:27
+msgid "Force subtitles"
+msgstr "Felirat kényszerítése"
+
+#: ../interface/wfile.ui.h:28
+msgid "DivX format doesn't support subtitles. Please, read the FAQ."
+msgstr "DivX formátum nem támogatja a feliratot. Olvassa el a FAQ-ot."
+
+#: ../interface/wfile.ui.h:29
+msgid "<b>Subtitles</b>"
+msgstr "<b>Felirat</b>"
+
+#: ../interface/wfile.ui.h:30
+msgid "<b>Video rate (Kbits/sec)</b>"
+msgstr "<b>Videó sebesség (kbit/sec)</b>"
+
+#: ../interface/wfile.ui.h:31
+msgid "<b>Audio rate (Kbits/sec)</b>"
+msgstr "<b>Hangsebesség (kbit/sec)</b>"
+
+#: ../interface/wfile.ui.h:32
+msgid "Split the file in chapters (for easy seeking)"
+msgstr "A fejezetekben a fájl felosztása (könnyebb keresés)"
+
+#: ../interface/wfile.ui.h:33
+msgid "Size (in minutes) for each chapter: "
+msgstr "Minden fejezet mérete (percben):"
+
+#: ../interface/wfile.ui.h:34
+msgid "<b>Division in chapters</b>"
+msgstr "<b>Fejezetek felosztása</b>"
+
+#: ../interface/wfile.ui.h:35
+msgid "General"
+msgstr "Általános"
+
+#: ../interface/wfile.ui.h:36
+msgid "352x240"
+msgstr "352x240"
+
+#: ../interface/wfile.ui.h:37
+msgid "Default"
+msgstr "Alapértelmezés"
+
+#: ../interface/wfile.ui.h:38
+msgid "352x480"
+msgstr "352x480"
+
+#: ../interface/wfile.ui.h:39
+msgid "480x480"
+msgstr "480x480"
+
+#: ../interface/wfile.ui.h:40
+msgid "720x480"
+msgstr "720x480"
+
+#: ../interface/wfile.ui.h:41
+msgid "704x480"
+msgstr "704x480"
+
+#: ../interface/wfile.ui.h:42
+msgid "1920x1080"
+msgstr "1920x1080"
+
+#: ../interface/wfile.ui.h:43
+msgid "1280x720"
+msgstr "1280x720"
+
+#: ../interface/wfile.ui.h:44
+msgid "160x128"
+msgstr "160x128"
+
+#: ../interface/wfile.ui.h:45
+msgid "<b>Final size</b>"
+msgstr "<b>Végső méret</b>"
+
+#: ../interface/wfile.ui.h:46
+msgid "4:3"
+msgstr "4:3"
+
+#: ../interface/wfile.ui.h:47
+msgid "16:9"
+msgstr "16:9"
+
+#: ../interface/wfile.ui.h:48
+msgid "<b>Aspect ratio</b>"
+msgstr "<b>Kép arány</b>"
+
+#: ../interface/wfile.ui.h:49
+msgid "Video format"
+msgstr "Videó formátum"
+
+#: ../interface/wfile.ui.h:50
+msgid "No rotation"
+msgstr "Nincs forgatás"
+
+#: ../interface/wfile.ui.h:51
 msgid "Rotate 180 degrees"
 msgstr "Elforgatás 180 fokkal"
 
-#: ../interface/wfile.ui.h:74
+#: ../interface/wfile.ui.h:52
 msgid "Rotate 90 degrees clockwise"
 msgstr "Elforgatás 90 fokkal órajárással egyező irányban"
 
-#: ../interface/wfile.ui.h:75
+#: ../interface/wfile.ui.h:53
 msgid "Rotate 90 degrees counter-clockwise"
 msgstr "Elforgatás 90 fokkal órajárással ellentétes irányban"
 
-#: ../interface/wfile.ui.h:76
+#: ../interface/wfile.ui.h:54
+msgid "<b>Rotation</b>"
+msgstr "<b>Forgatás</b>"
+
+#: ../interface/wfile.ui.h:55
+msgid "Horizontal mirror"
+msgstr "Vízszintes tükrözés"
+
+#: ../interface/wfile.ui.h:56
+msgid "Vertical mirror"
+msgstr "Függőleges tükrözés"
+
+#: ../interface/wfile.ui.h:57
+msgid "<b>Mirror</b>"
+msgstr "<b>Tükrözés</b>"
+
+#: ../interface/wfile.ui.h:58
+msgid "Swap fields"
+msgstr "Mezők cseréje"
+
+#: ../interface/wfile.ui.h:59
+msgid "<b>Field order</b>"
+msgstr "<b>Mező szabályok</b>"
+
+#: ../interface/wfile.ui.h:60
+msgid "Add black bars"
+msgstr "Fekete sáv hozzáadása"
+
+#: ../interface/wfile.ui.h:61
 msgid "Scale picture"
 msgstr "Kép mértezése"
 
-#: ../interface/wfile.ui.h:77
+#: ../interface/wfile.ui.h:62
+msgid "<b>Scaling mode</b>"
+msgstr "<b>Méretezési módszer</b>"
+
+#: ../interface/wfile.ui.h:63
+msgid "Video options"
+msgstr "Videó opciók"
+
+#: ../interface/wfile.ui.h:64
+msgid "Use MBCMP (faster)"
+msgstr "MBCMP használata (gyorsabb)"
+
+#: ../interface/wfile.ui.h:65
 msgid "Select MBD mode which needs the fewest bits"
 msgstr "MBD módszer választása, amely a legkevesebb bitet igényli"
 
-#: ../interface/wfile.ui.h:78
+#: ../interface/wfile.ui.h:66
 msgid "Select the MBD mode which has the best rate distortion (better quality)"
 msgstr ""
 "MBD módszer választása, amely a legkisebb torzítást adja (jobb minőség)"
 
-#: ../interface/wfile.ui.h:79
-msgid "Size (in minutes) for each chapter: "
-msgstr "Minden fejezet mérete (percben):"
-
-#: ../interface/wfile.ui.h:80
-msgid "Split the file in chapters (for easy seeking)"
-msgstr "A fejezetekben a fájl felosztása (könnyebb keresés)"
-
-#: ../interface/wfile.ui.h:81
-msgid "Store full length"
-msgstr "A teljes hossz tárolása"
-
-#: ../interface/wfile.ui.h:82
-msgid "Store the first half"
-msgstr "A teljes hossz első felének tárolása"
-
-#: ../interface/wfile.ui.h:83
-msgid "Store the second half"
-msgstr "A teljes hossz második felének tárolása"
-
-#: ../interface/wfile.ui.h:84
-msgid "Swap fields"
-msgstr "Mezők cseréje"
-
-#: ../interface/wfile.ui.h:85
-msgid ""
-"This file already has AC3 sound (copy audio data instead of recompress it)"
-msgstr "Ez a fájl már AC3 hanggal rendelkezik"
-
-#: ../interface/wfile.ui.h:86
-msgid "This file is already a DVD/xCD-suitable MPEG-PS file"
-msgstr "Ez a fájl már DVD/xCD-képes MPEG-PS fájl"
-
-#: ../interface/wfile.ui.h:87
-msgid "This video file has no audio tracks."
-msgstr "Ennek a videó fájlnak nincs hangsávja."
-
-#: ../interface/wfile.ui.h:88
-msgid "Turbo 1st pass"
-msgstr "Turbó első átfutás"
-
-#: ../interface/wfile.ui.h:89
-msgid "Use MBCMP (faster)"
-msgstr "MBCMP használata (gyorsabb)"
-
-#: ../interface/wfile.ui.h:90
+#: ../interface/wfile.ui.h:67
 msgid "Use Trellis Searched Quantization (better quality, slower conversion)"
 msgstr "Trellis kereső quantálás használata (jobb minőség, lassabb konverzió)"
 
-#: ../interface/wfile.ui.h:91
-msgid "Use a GOP of 12 frames (improves compatibility)"
-msgstr "12 keretes GOP használata (javítja a kompatibilitást)"
+#: ../interface/wfile.ui.h:68
+msgid "<b>MacroBlock decision algorithm and Trellis searched quantization</b>"
+msgstr "<b>MacroBlock döntési algoritmus és Trellis quantálás</b>"
 
-#: ../interface/wfile.ui.h:92
+#: ../interface/wfile.ui.h:69
 msgid "Use dual pass encoding (better quality, much slower conversion)"
 msgstr ""
 "Kettős átfutású kódolás használata (jobb minőség, de lassabb konverzió)"
 
-#: ../interface/wfile.ui.h:93
-msgid "Vertical mirror"
-msgstr "Függőleges tükrözés"
+#: ../interface/wfile.ui.h:70
+msgid "Turbo 1st pass"
+msgstr "Turbó első átfutás"
 
-#: ../interface/wfile.ui.h:94
-msgid "Video format"
-msgstr "Videó formátum"
+#: ../interface/wfile.ui.h:71
+msgid "<b>Two pass encoding</b>"
+msgstr "<b>Két átfutásos kódolás</b>"
 
-#: ../interface/wfile.ui.h:95
-msgid "Video options"
-msgstr "Videó opciók"
+#: ../interface/wfile.ui.h:72
+msgid "Median deinterlacing filter"
+msgstr "Median deinterlace szűrő"
 
-#: ../interface/wfile.ui.h:96
+#: ../interface/wfile.ui.h:73
+msgid "Don't deinterlace"
+msgstr "Ne legyen deinterlace"
+
+#: ../interface/wfile.ui.h:74
 msgid "YADIF deinterlacing filter"
 msgstr "YADIF deinterlace szűrő"
 
-#: ../interface/wfolder_dialog.ui.h:1
-msgid "Choose a folder"
-msgstr "Válasszon egy gyűjtőt"
+#: ../interface/wfile.ui.h:75
+msgid "FFMpeg deinterlacing filter"
+msgstr "FFMpeg deinterlace szűrő"
 
-#: ../interface/wfolder_dialog.ui.h:2
+#: ../interface/wfile.ui.h:76
+msgid "Linear blend"
+msgstr "Lineáris keverés"
+
+#: ../interface/wfile.ui.h:77
+msgid "Lowpass5 deinterlacing filter"
+msgstr "Lowpass5 deinterlace szűrő"
+
+#: ../interface/wfile.ui.h:78
+msgid "<b>Deinterlacing</b>"
+msgstr "<b>Deinterlace</b>"
+
+#: ../interface/wfile.ui.h:79
+msgid "Quality"
+msgstr "Minőség"
+
+#: ../interface/wfile.ui.h:80
+msgid "Audio delay (in seconds):"
+msgstr "Hang késleltetése (másodpercben):"
+
+#: ../interface/wfile.ui.h:81
+msgid "Create DVD with 5.1 channel sound"
+msgstr "DVD készítése 5.1 csatornás hanggal"
+
+#: ../interface/wfile.ui.h:82
+msgid ""
+"This file already has AC3 sound (copy audio data instead of recompress it)"
+msgstr "Ez a fájl már AC3 hanggal rendelkezik"
+
+#: ../interface/wfile.ui.h:83
+msgid "<b>Audio</b>"
+msgstr "<b>Hang</b>"
+
+#: ../interface/wfile.ui.h:84
+msgid "Audio"
+msgstr "Hang"
+
+#: ../interface/wfile.ui.h:85
+msgid "This file is already a DVD/xCD-suitable MPEG-PS file"
+msgstr "Ez a fájl már DVD/xCD-képes MPEG-PS fájl"
+
+#: ../interface/wfile.ui.h:86
+msgid "Repack audio and video without reencoding (useful for VOB files)"
+msgstr "Videó és hang újracsomagolása (felhasználva a VOB fájlokat)"
+
+#: ../interface/wfile.ui.h:87
+msgid "Use a GOP of 12 frames (improves compatibility)"
+msgstr "12 keretes GOP használata (javítja a kompatibilitást)"
+
+#: ../interface/wfile.ui.h:88
+msgid "<b>Special</b>"
+msgstr "<b>Speciális</b>"
+
+#: ../interface/wfile.ui.h:89
+msgid "Main (-X -Y)"
+msgstr "Menü (-X -Y)"
+
+#: ../interface/wfile.ui.h:90
+msgid "-VF (X,Y)"
+msgstr "-VF (X,Y)"
+
+#: ../interface/wfile.ui.h:91
+msgid "-LAVCOPTS (X:Y)"
+msgstr "-LAVCOPTS (X:Y)"
+
+#: ../interface/wfile.ui.h:92
+msgid "-LAMEOPTS (X:Y)"
+msgstr "-LAMEOPTS (X:Y)"
+
+#: ../interface/wfile.ui.h:93
+msgid "<b>Extra parameters for coder</b>"
+msgstr "<b>Extra paraméterek a kódoláshoz</b>"
+
+#: ../interface/wfile.ui.h:94
+msgid "Misc"
+msgstr "Különfélék"
+
+#: ../interface/wfile.ui.h:95 ../interface/wmain.ui.h:41
+msgid "Advanced options"
+msgstr "További opciók"
+
+#: ../interface/wfile.ui.h:96 ../interface/wmain.ui.h:13
+msgid "Preview"
+msgstr "Előnézet"
+
+#: ../interface/wfolder_dialog.ui.h:1
 msgid ""
 "Choose the folder where DeVeDe will create the DVD image and a name for it. "
 "Don't use a folder in a VFAT/FAT32 drive. Characters /, | and \\ are not "
@@ -944,6 +946,10 @@ msgstr ""
 "Válasszon egy gyűjtőt és adjon meg egy nevet, ahová a DeVeDe elkészíti a DVD "
 "képet. Nem lehet ez VFAT/FAT32 fájlrendszeren. A /, | és \\ karakterek nem "
 "megengedettek és _-re lesznek cserélve"
+
+#: ../interface/wfolder_dialog.ui.h:2
+msgid "Choose a folder"
+msgstr "Válasszon egy gyűjtőt"
 
 #: ../interface/wfolder_dialog.ui.h:3
 msgid "Shutdown computer when disc is done"
@@ -954,6 +960,10 @@ msgid "Load a disc structure"
 msgstr "A lemez struktúra betöltése"
 
 #: ../interface/wloosecurrent.ui.h:1
+msgid "Warning: you already have a disc structure"
+msgstr "Vigyázat: a lemezstruktúra már létezik"
+
+#: ../interface/wloosecurrent.ui.h:2
 msgid ""
 "If you load a disc structure you will loose your current structure (unless "
 "you saved it). Continue?"
@@ -961,142 +971,138 @@ msgstr ""
 "Amennyiben betölti a lemezstruktúrát, úgy a jelenlegi még nem mentett "
 "struktúra el fog veszni. Folytatja?"
 
-#: ../interface/wloosecurrent.ui.h:2
-msgid "Warning: you already have a disc structure"
-msgstr "Vigyázat: a lemezstruktúra már létezik"
-
 #: ../interface/wmain.ui.h:1
-msgid " Media size: "
-msgstr "Média mérete:"
+msgid "185 MB CD"
+msgstr "185 MB CD"
+
+#: ../interface/wmain.ui.h:2
+msgid "650 MB CD"
+msgstr "650 MB CD"
 
 #: ../interface/wmain.ui.h:3
-#, no-c-format
-msgid "0.0%"
-msgstr "0.0%"
+msgid "700 MB CD"
+msgstr "700 MB CD"
 
 #: ../interface/wmain.ui.h:4
 msgid "1.4 GB DVD"
 msgstr "1.4 GB DVD"
 
 #: ../interface/wmain.ui.h:5
-msgid "185 MB CD"
-msgstr "185 MB CD"
-
-#: ../interface/wmain.ui.h:6
 msgid "4.7 GB DVD"
 msgstr "4.7 GB DVD"
 
-#: ../interface/wmain.ui.h:7
-msgid "650 MB CD"
-msgstr "650 MB CD"
-
-#: ../interface/wmain.ui.h:8
-msgid "700 MB CD"
-msgstr "700 MB CD"
-
-#: ../interface/wmain.ui.h:9
+#: ../interface/wmain.ui.h:6
 msgid "8.5 GB DVD"
 msgstr "8.5 GB DVD"
 
+#: ../interface/wmain.ui.h:7
+msgid "DeVeDe"
+msgstr "DeVeDe"
+
+#: ../interface/wmain.ui.h:8
+msgid "_File"
+msgstr "_Fájl"
+
+#: ../interface/wmain.ui.h:9
+msgid "_Edit"
+msgstr "Sz_erkesztés"
+
 #: ../interface/wmain.ui.h:10
-msgid "<b>Action</b>"
-msgstr "<b>Akció</b>"
+msgid "_Preferences"
+msgstr "_Beállítások"
 
 #: ../interface/wmain.ui.h:11
-msgid "<b>Default format</b>"
-msgstr "<b>Alapértelmezett formátum</b>"
+msgid "_Help"
+msgstr "_Súgó"
 
 #: ../interface/wmain.ui.h:12
-msgid "<b>Disc usage</b>"
-msgstr "<b>Lemez használat</b>"
+msgid "<b>Titles</b>"
+msgstr "<b>Cím</b>"
 
 #: ../interface/wmain.ui.h:14
 msgid "<b>Files</b>"
 msgstr "<b>Fájlok</b>"
 
-#: ../interface/wmain.ui.h:15
-msgid "<b>Menus</b>"
-msgstr "<b>Menü</b>"
-
-#: ../interface/wmain.ui.h:16
-msgid "<b>Titles</b>"
-msgstr "<b>Cím</b>"
-
 #: ../interface/wmain.ui.h:17
-msgid "Adjust disc usage"
-msgstr "Lemez használat beállítása"
+msgid "Length (seconds): "
+msgstr "Hossz (másodperc):"
+
+#: ../interface/wmain.ui.h:18
+msgid "Video rate (Kbits/sec): "
+msgstr "Videó sebesség (kbit/sec):"
 
 #: ../interface/wmain.ui.h:19
 msgid "Audio rate (Kbits/sec): "
 msgstr "Hang sebesség (kbit/sec):"
 
-#: ../interface/wmain.ui.h:20
-msgid "Create a menu with the titles"
-msgstr "Menü készítése a címekkel"
-
 #: ../interface/wmain.ui.h:21
-msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
-msgstr "ISO vagy BIN/CUE kép készítése a közvetlen lemezre való íráshoz"
-
-#: ../interface/wmain.ui.h:22
-msgid "Create disc structure"
-msgstr "Lemez struktúra felépítése"
-
-#: ../interface/wmain.ui.h:23
-msgid "DeVeDe"
-msgstr "DeVeDe"
-
-#: ../interface/wmain.ui.h:24
 msgid "Estimated length (MBytes): "
 msgstr "Becsült hossz (MB):"
 
-#: ../interface/wmain.ui.h:27
-msgid "Length (seconds): "
-msgstr "Hossz (másodperc):"
-
-#: ../interface/wmain.ui.h:28
-msgid "Menu options"
-msgstr "Menü opciók"
-
-#: ../interface/wmain.ui.h:30
-msgid "Only convert film files to compliant MPEG files"
-msgstr "Csak a film fájl konvertálása MPEG fájlba"
-
-#: ../interface/wmain.ui.h:32
+#: ../interface/wmain.ui.h:22
 msgid "Output aspect ratio:"
 msgstr "Kimenő képarány:"
 
-#: ../interface/wmain.ui.h:33
+#: ../interface/wmain.ui.h:23
+msgid "Size of chapters:"
+msgstr "A fejezet hossza:"
+
+#: ../interface/wmain.ui.h:25
+msgid "Adjust disc usage"
+msgstr "Lemez használat beállítása"
+
+#: ../interface/wmain.ui.h:27
+#, no-c-format
+msgid "0.0%"
+msgstr "0.0%"
+
+#: ../interface/wmain.ui.h:28
+msgid " Media size: "
+msgstr "Média mérete:"
+
+#: ../interface/wmain.ui.h:29
+msgid "<b>Disc usage</b>"
+msgstr "<b>Lemez használat</b>"
+
+#: ../interface/wmain.ui.h:30
 msgid "PAL"
 msgstr "PAL"
 
-#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:22
+#: ../interface/wmain.ui.h:32
+msgid "<b>Default format</b>"
+msgstr "<b>Alapértelmezett formátum</b>"
+
+#: ../interface/wmain.ui.h:33
+msgid "Create a menu with the titles"
+msgstr "Menü készítése a címekkel"
+
+#: ../interface/wmain.ui.h:34
+msgid "Menu options"
+msgstr "Menü opciók"
+
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:31
 msgid "Preview menu"
 msgstr "Menü előnézete"
 
 #: ../interface/wmain.ui.h:36
-msgid "Size of chapters:"
-msgstr "A fejezet hossza:"
+msgid "<b>Menus</b>"
+msgstr "<b>Menü</b>"
 
 #: ../interface/wmain.ui.h:37
-msgid "Video rate (Kbits/sec): "
-msgstr "Videó sebesség (kbit/sec):"
+msgid "Only convert film files to compliant MPEG files"
+msgstr "Csak a film fájl konvertálása MPEG fájlba"
 
 #: ../interface/wmain.ui.h:38
-msgid "_Edit"
-msgstr "Sz_erkesztés"
+msgid "Create disc structure"
+msgstr "Lemez struktúra felépítése"
 
 #: ../interface/wmain.ui.h:39
-msgid "_File"
-msgstr "_Fájl"
+msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
+msgstr "ISO vagy BIN/CUE kép készítése a közvetlen lemezre való íráshoz"
 
 #: ../interface/wmain.ui.h:40
-msgid "_Help"
-msgstr "_Súgó"
-
-#: ../interface/wmain.ui.h:41
-msgid "_Preferences"
-msgstr "_Beállítások"
+msgid "<b>Action</b>"
+msgstr "<b>Akció</b>"
 
 #: ../interface/wmenu_preview_ntsc.ui.h:1
 #: ../interface/wmenu_preview_pal.ui.h:1
@@ -1104,121 +1110,121 @@ msgid "Menu preview"
 msgstr "A menü előnézete"
 
 #: ../interface/wmenu_properties.ui.h:1
-msgid "<b>Disc startup options</b>"
-msgstr "<b>Lemez indulási opciók</b>"
+msgid "Shadow color: "
+msgstr "Árnyék színe:"
 
 #: ../interface/wmenu_properties.ui.h:2
+msgid "Text color: "
+msgstr "A szöveg színe:"
+
+#: ../interface/wmenu_properties.ui.h:3
+msgid "Text: "
+msgstr "Szöveg:"
+
+#: ../interface/wmenu_properties.ui.h:4
+msgid "Font: "
+msgstr "Betűtípus:"
+
+#: ../interface/wmenu_properties.ui.h:5
+msgid "<b>Menu title</b>"
+msgstr "<b>Menü címe</b>"
+
+#: ../interface/wmenu_properties.ui.h:6
+msgid "Select a picture to be used as background for disc's menu"
+msgstr "Válasszon egy képet a lemez menü hátterének"
+
+#: ../interface/wmenu_properties.ui.h:7
+msgid "Set default background"
+msgstr "Háttér alapbeállítás"
+
+#: ../interface/wmenu_properties.ui.h:8
+msgid "<b>Menu background (only PNG)</b>"
+msgstr "<b>Menü háttér (csak PNG kép)</b>"
+
+#: ../interface/wmenu_properties.ui.h:9
+msgid "Choose a music file"
+msgstr "Válasszon egy zene fájlt"
+
+#: ../interface/wmenu_properties.ui.h:10
+msgid "Set menus without sound"
+msgstr "Menü beállítása hang nélkül"
+
+#: ../interface/wmenu_properties.ui.h:11
+msgid "<b>Menu music</b>"
+msgstr "<b>Menü zene</b>"
+
+#: ../interface/wmenu_properties.ui.h:12
 msgid "<b>Horizontal</b>"
 msgstr "<b>Vízszintes</b>"
 
-#: ../interface/wmenu_properties.ui.h:4
+#: ../interface/wmenu_properties.ui.h:13
+msgid "<b>Vertical</b>"
+msgstr "<b>Függőleges</b>"
+
+#: ../interface/wmenu_properties.ui.h:14
+msgid "Top"
+msgstr "Teteje"
+
+#: ../interface/wmenu_properties.ui.h:15
+msgid "Middle"
+msgstr "Közép"
+
+#: ../interface/wmenu_properties.ui.h:16
+msgid "Bottom"
+msgstr "Alul"
+
+#: ../interface/wmenu_properties.ui.h:17
+msgid "Left"
+msgstr "Bal"
+
+#: ../interface/wmenu_properties.ui.h:18
+msgid "Center"
+msgstr "Középen"
+
+#: ../interface/wmenu_properties.ui.h:19
+msgid "Right"
+msgstr "Jobb"
+
+#: ../interface/wmenu_properties.ui.h:21
 #, no-c-format
 msgid "<b>Margins (%)</b>"
 msgstr "<b>Margó (%)</b>"
 
-#: ../interface/wmenu_properties.ui.h:5
-msgid "<b>Menu background (only PNG)</b>"
-msgstr "<b>Menü háttér (csak PNG kép)</b>"
-
-#: ../interface/wmenu_properties.ui.h:6
-msgid "<b>Menu font and colors</b>"
-msgstr "<b>Menü betűtípus és színek</b>"
-
-#: ../interface/wmenu_properties.ui.h:7
-msgid "<b>Menu music</b>"
-msgstr "<b>Menü zene</b>"
-
-#: ../interface/wmenu_properties.ui.h:8
+#: ../interface/wmenu_properties.ui.h:22
 msgid "<b>Menu position</b>"
 msgstr "<b>Menü helyzete</b>"
 
-#: ../interface/wmenu_properties.ui.h:9
-msgid "<b>Menu title</b>"
-msgstr "<b>Menü címe</b>"
-
-#: ../interface/wmenu_properties.ui.h:10
-msgid "<b>Vertical</b>"
-msgstr "<b>Függőleges</b>"
-
-#: ../interface/wmenu_properties.ui.h:11
-msgid "Background color for titles: "
-msgstr "A cím hátterének színe:"
-
-#: ../interface/wmenu_properties.ui.h:12
-msgid "Bottom"
-msgstr "Alul"
-
-#: ../interface/wmenu_properties.ui.h:13
-msgid "Center"
-msgstr "Középen"
-
-#: ../interface/wmenu_properties.ui.h:14
-msgid "Choose a music file"
-msgstr "Válasszon egy zene fájlt"
-
-#: ../interface/wmenu_properties.ui.h:15
-msgid "Color for selected title: "
-msgstr "A választott cím színe:"
-
-#: ../interface/wmenu_properties.ui.h:16
-msgid "Color for shadows: "
-msgstr "Az árnyék színe:"
-
-#: ../interface/wmenu_properties.ui.h:17
+#: ../interface/wmenu_properties.ui.h:23
 msgid "Color for unselected titles: "
 msgstr "A nem választott címek színe:"
 
-#: ../interface/wmenu_properties.ui.h:18
-msgid "Font: "
-msgstr "Betűtípus:"
-
-#: ../interface/wmenu_properties.ui.h:19
-msgid "Jump to the first title at startup"
-msgstr "Induláskor az első címre ugrás"
-
-#: ../interface/wmenu_properties.ui.h:20
-msgid "Left"
-msgstr "Bal"
-
-#: ../interface/wmenu_properties.ui.h:21
-msgid "Middle"
-msgstr "Közép"
-
-#: ../interface/wmenu_properties.ui.h:23
-msgid "Right"
-msgstr "Jobb"
-
 #: ../interface/wmenu_properties.ui.h:24
-msgid "Select a picture to be used as background for disc's menu"
-msgstr "Válasszon egy képet a lemez menü hátterének"
+msgid "Color for shadows: "
+msgstr "Az árnyék színe:"
 
 #: ../interface/wmenu_properties.ui.h:25
-msgid "Set default background"
-msgstr "Háttér alapbeállítás"
+msgid "Color for selected title: "
+msgstr "A választott cím színe:"
 
 #: ../interface/wmenu_properties.ui.h:26
-msgid "Set menus without sound"
-msgstr "Menü beállítása hang nélkül"
+msgid "Background color for titles: "
+msgstr "A cím hátterének színe:"
 
 #: ../interface/wmenu_properties.ui.h:27
-msgid "Shadow color: "
-msgstr "Árnyék színe:"
+msgid "<b>Menu font and colors</b>"
+msgstr "<b>Menü betűtípus és színek</b>"
 
 #: ../interface/wmenu_properties.ui.h:28
 msgid "Show menu at disc startup"
 msgstr "Menü mutatása indításkor"
 
 #: ../interface/wmenu_properties.ui.h:29
-msgid "Text color: "
-msgstr "A szöveg színe:"
+msgid "Jump to the first title at startup"
+msgstr "Induláskor az első címre ugrás"
 
 #: ../interface/wmenu_properties.ui.h:30
-msgid "Text: "
-msgstr "Szöveg:"
-
-#: ../interface/wmenu_properties.ui.h:31
-msgid "Top"
-msgstr "Teteje"
+msgid "<b>Disc startup options</b>"
+msgstr "<b>Lemez indulási opciók</b>"
 
 #: ../interface/wnofonts.ui.h:1
 msgid "Can't find the font for subtitles. Aborting."
@@ -1244,11 +1250,11 @@ msgstr ""
 msgid "Preview length:"
 msgstr "Előnézet hossza:"
 
-#: ../interface/wprograms.ui.h:1
+#: ../interface/wprograms.ui.h:2
 msgid "Can't find the following programs:"
 msgstr "Nem érhető el a következő program:"
 
-#: ../interface/wprograms.ui.h:2
+#: ../interface/wprograms.ui.h:3
 msgid ""
 "DeVeDe needs them in order to work. If you want to use DeVeDe, you must "
 "install all of them."
@@ -1263,40 +1269,40 @@ msgid "Save current disc structure"
 msgstr "Az aktuális lemez struktúra mentése"
 
 #: ../interface/wtitle_properties_dialog.ui.h:1
-msgid "<b>Action to perform when this title ends</b>"
-msgstr "<b>Teendő, amikor ezen cím lejátszása véget ér</b>"
+msgid "Title properties"
+msgstr "Cím tulajdonságai"
 
 #: ../interface/wtitle_properties_dialog.ui.h:2
 msgid "<b>Title's name</b>"
 msgstr "<b>Címek</b>"
 
 #: ../interface/wtitle_properties_dialog.ui.h:3
-msgid "Play the first title"
-msgstr "Az első cím játszása"
-
-#: ../interface/wtitle_properties_dialog.ui.h:4
-msgid "Play the last title"
-msgstr "Az utolsó cím játszása"
-
-#: ../interface/wtitle_properties_dialog.ui.h:5
-msgid "Play the next title"
-msgstr "A következő cím játszása"
-
-#: ../interface/wtitle_properties_dialog.ui.h:6
-msgid "Play the previous title"
-msgstr "Az előző cím játszása"
-
-#: ../interface/wtitle_properties_dialog.ui.h:7
-msgid "Play this title again (loop)"
-msgstr "Ezen cím újra játszása (ismétlés)"
-
-#: ../interface/wtitle_properties_dialog.ui.h:8
 msgid "Stop reproduction/show disc menu"
 msgstr "Reprodukció megállítása/lemez menü mutatása"
 
+#: ../interface/wtitle_properties_dialog.ui.h:4
+msgid "Play the first title"
+msgstr "Az első cím játszása"
+
+#: ../interface/wtitle_properties_dialog.ui.h:5
+msgid "Play the previous title"
+msgstr "Az előző cím játszása"
+
+#: ../interface/wtitle_properties_dialog.ui.h:6
+msgid "Play this title again (loop)"
+msgstr "Ezen cím újra játszása (ismétlés)"
+
+#: ../interface/wtitle_properties_dialog.ui.h:7
+msgid "Play the next title"
+msgstr "A következő cím játszása"
+
+#: ../interface/wtitle_properties_dialog.ui.h:8
+msgid "Play the last title"
+msgstr "Az utolsó cím játszása"
+
 #: ../interface/wtitle_properties_dialog.ui.h:9
-msgid "Title properties"
-msgstr "Cím tulajdonságai"
+msgid "<b>Action to perform when this title ends</b>"
+msgstr "<b>Teendő, amikor ezen cím lejátszása véget ér</b>"
 
 #: ../interface/wwarning_dialog.ui.h:1
 msgid "Warning"

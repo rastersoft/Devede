@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DeVeDe 3.12.2 (win32)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-18 00:52+0100\n"
+"POT-Creation-Date: 2012-05-20 12:55+0200\n"
 "PO-Revision-Date: 2010-01-25 09:08+0300\n"
 "Last-Translator: Stamatis H. Stamatellos <ydatografida@gmail.com>\n"
 "Language-Team: Ydatografida <ydatografida@gmail.com>\n"
@@ -55,9 +55,9 @@ msgstr ""
 "%(total)d MBytes απαιτούνται, αλλά μόνο %(free)d MBytes είναι διαθέσιμα."
 
 #: ../devede_convert.py:275 ../devede_subtitles.py:75
-#: ../devede_subtitles.py:92 ../devede_xml_menu.py:137
-#: ../devede_xml_menu.py:488 ../devede_xml_menu.py:496
-#: ../devede_xml_menu.py:500 ../devede_xml_menu.py:504
+#: ../devede_subtitles.py:92 ../devede_xml_menu.py:138
+#: ../devede_xml_menu.py:489 ../devede_xml_menu.py:497
+#: ../devede_xml_menu.py:501 ../devede_xml_menu.py:505
 msgid ""
 "Failed to write to the destination directory.\n"
 "Check that you have privileges and free space there."
@@ -101,7 +101,7 @@ msgid "The menu soundtrack seems damaged. Using the default silent soundtrack."
 msgstr ""
 "Το αρχείο soundtrack του μένού υπέστη ζημιά. Θα χρησιμοποιήσει βουβό μενού."
 
-#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:492
+#: ../devede_dvdmenu.py:402 ../devede_xml_menu.py:493
 msgid ""
 "Can't find the menu background.\n"
 "Check the menu options."
@@ -298,11 +298,11 @@ msgstr ""
 msgid "Failed to create the menues."
 msgstr "Απέτυχε η δημιουργία των μενού."
 
-#: ../devede_xml_menu.py:117 ../devede_xml_menu.py:508
+#: ../devede_xml_menu.py:118 ../devede_xml_menu.py:509
 msgid "Menu generation failed."
 msgstr "Απέτυχε η δημιουργία μενού."
 
-#: ../devede_xml_menu.py:124 ../devede_xml_menu.py:517
+#: ../devede_xml_menu.py:125 ../devede_xml_menu.py:518
 msgid ""
 "Can't add the buttons to the menus.\n"
 "It seems a bug of SPUMUX."
@@ -310,7 +310,7 @@ msgstr ""
 "Αδυναμία προσθήκης πλήκτρων επιλογής στα μενού.\n"
 "Πιθανό λάθος στο SPUMUX."
 
-#: ../devede_xml_menu.py:483
+#: ../devede_xml_menu.py:484
 #, python-format
 msgid "Creating menu %(menu_number)d"
 msgstr "Δημιουργία μενού %(menu_number)d"
@@ -327,10 +327,6 @@ msgid ""
 msgstr ""
 
 #: ../interface/use_ffmpeg.ui.h:1
-msgid "Don't show this message at startup again"
-msgstr ""
-
-#: ../interface/use_ffmpeg.ui.h:2
 msgid ""
 "This version of Devede allows to use FFMPEG instead\n"
 "of Mencoder for movie conversion. This code is still\n"
@@ -342,62 +338,70 @@ msgid ""
 "To test this mode, active it in Edit->Preferences"
 msgstr ""
 
+#: ../interface/use_ffmpeg.ui.h:9
+msgid "Don't show this message at startup again"
+msgstr ""
+
 #: ../interface/settings.ui.h:1
+msgid "Erase temporary files"
+msgstr "Διαγραφή προσωρινών αρχείων"
+
+#: ../interface/settings.ui.h:2
+msgid "Use optimizations for multicore CPUs"
+msgstr "Βελτιστοποίηση λειτουργίας για χρήση σε πολυπύρηνους επεξεργαστές"
+
+#: ../interface/settings.ui.h:3
+msgid "Don't use hyperthreading"
+msgstr ""
+
+#: ../interface/settings.ui.h:4
+msgid "Use FFMPEG instead of Mencoder for videos"
+msgstr ""
+
+#: ../interface/settings.ui.h:5
+msgid "Use FFMPEG instead of Mencoder for menu"
+msgstr ""
+
+#: ../interface/settings.ui.h:6
+msgid "<b>Options</b>"
+msgstr "<b>Ρυθμίσεις</b>"
+
+#: ../interface/settings.ui.h:7
+msgid "Temporary files folder:"
+msgstr "Φάκελος προσωρινών αρχείων:"
+
+#: ../interface/settings.ui.h:8
+msgid "Folder for temporary file"
+msgstr "Φάκελος για το προσωρινό αρχείο"
+
+#: ../interface/settings.ui.h:9
 #, fuzzy
 msgid "<b>Folders</b>"
 msgstr "<b>Αρχεία</b>"
 
-#: ../interface/settings.ui.h:2
-msgid "<b>Options</b>"
-msgstr "<b>Ρυθμίσεις</b>"
-
-#: ../interface/settings.ui.h:3
-#, fuzzy
-msgid "<b>Workarounds</b>"
-msgstr "<b>Περιστροφή</b>"
-
-#: ../interface/settings.ui.h:4
+#: ../interface/settings.ui.h:10
 msgid ""
 "AC3_FIXED workaround to fix discs without sound when using Mencoder beta"
 msgstr ""
 
-#: ../interface/settings.ui.h:5
-msgid "Don't use hyperthreading"
-msgstr ""
+#: ../interface/settings.ui.h:11
+#, fuzzy
+msgid "<b>Workarounds</b>"
+msgstr "<b>Περιστροφή</b>"
 
-#: ../interface/settings.ui.h:6
-msgid "Erase temporary files"
-msgstr "Διαγραφή προσωρινών αρχείων"
-
-#: ../interface/settings.ui.h:7
-msgid "Folder for temporary file"
-msgstr "Φάκελος για το προσωρινό αρχείο"
-
-#: ../interface/settings.ui.h:8
-msgid "Temporary files folder:"
-msgstr "Φάκελος προσωρινών αρχείων:"
-
-#: ../interface/settings.ui.h:9
-msgid "Use FFMPEG instead of Mencoder"
-msgstr ""
-
-#: ../interface/settings.ui.h:10
-msgid "Use optimizations for multicore CPUs"
-msgstr "Βελτιστοποίηση λειτουργίας για χρήση σε πολυπύρηνους επεξεργαστές"
-
-#: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:3
-msgid "Clear"
-msgstr "Καθαρός"
-
-#: ../interface/add_subtitle2.ui.h:2 ../interface/add_subtitle.ui.h:4
-msgid "Encoding: "
-msgstr "Κωδικοποίηση:"
-
-#: ../interface/add_subtitle2.ui.h:3 ../interface/add_subtitle.ui.h:5
+#: ../interface/add_subtitle2.ui.h:1 ../interface/add_subtitle.ui.h:2
 msgid "File: "
 msgstr "Αρχείο: "
 
-#: ../interface/add_subtitle2.ui.h:4 ../interface/add_subtitle.ui.h:6
+#: ../interface/add_subtitle2.ui.h:2 ../interface/add_subtitle.ui.h:4
+msgid "Clear"
+msgstr "Καθαρός"
+
+#: ../interface/add_subtitle2.ui.h:3 ../interface/add_subtitle.ui.h:6
+msgid "Encoding: "
+msgstr "Κωδικοποίηση:"
+
+#: ../interface/add_subtitle2.ui.h:4 ../interface/add_subtitle.ui.h:5
 msgid "Language: "
 msgstr "Γλώσσα: "
 
@@ -409,7 +413,7 @@ msgstr "Τοποθέτηση υπότιτλων από πάνω"
 msgid "Add subtitles"
 msgstr "Προσθήκη υπότιτλων "
 
-#: ../interface/add_subtitle.ui.h:2
+#: ../interface/add_subtitle.ui.h:3
 msgid "Choose a file"
 msgstr "Επιλογή αρχείου"
 
@@ -418,12 +422,12 @@ msgid "Aborted. There can be temporary files at the destination directory."
 msgstr "Διεκόπη. Τα προσωρινά αρχεία ίσως παραμένουν στο φάκελο προορισμού."
 
 #: ../interface/wcancel_dialog.ui.h:1
-msgid "Abort the current DVD and exit?"
-msgstr "Διακοπη των εργασιων δημιουργίας δίσκου και έξοδος;"
-
-#: ../interface/wcancel_dialog.ui.h:2
 msgid "Exit DeVeDe"
 msgstr "Έξοδος από DeVeDe"
+
+#: ../interface/wcancel_dialog.ui.h:2
+msgid "Abort the current DVD and exit?"
+msgstr "Διακοπη των εργασιων δημιουργίας δίσκου και έξοδος;"
 
 #: ../interface/wcancel_job_dialog.ui.h:1
 msgid "Cancel job?"
@@ -434,17 +438,17 @@ msgid "Delete chapter"
 msgstr "Διαγραφή κεφαλαίου"
 
 #: ../interface/wdel_chapter_dialog.ui.h:2
-#: ../interface/wdel_title_dialog.ui.h:2
-msgid "Proceed?"
-msgstr "Να συνεχίσω;"
-
-#: ../interface/wdel_chapter_dialog.ui.h:3
 msgid ""
 "You chose to delete this chapter and\n"
 "reorder the other ones:"
 msgstr ""
 "Επιλέξατε τη διαγραφή αυτού του κεφαλαίου και\n"
 "αναδιοργάνωση του άλλου:"
+
+#: ../interface/wdel_chapter_dialog.ui.h:4
+#: ../interface/wdel_title_dialog.ui.h:4
+msgid "Proceed?"
+msgstr "Να συνεχίσω;"
 
 #: ../interface/wdel_subtitle.ui.h:1
 msgid "Delete subtitle"
@@ -458,7 +462,7 @@ msgstr "Να αφαιρεθεί το επιλεγμένο αρχείο υποτ�
 msgid "Delete title"
 msgstr "Διαγραφή τίτλου"
 
-#: ../interface/wdel_title_dialog.ui.h:3
+#: ../interface/wdel_title_dialog.ui.h:2
 msgid ""
 "You chose to delete this title and\n"
 "reorder the other ones:"
@@ -467,35 +471,15 @@ msgstr ""
 "αναδιοργάνωση του άλλου:"
 
 #: ../interface/wdisk_type.ui.h:1
-msgid ""
-"<b>China VideoDisc</b>\n"
-"Another kind of Super VideoCD"
-msgstr ""
-"<b>China VideoDisc</b>\n"
-"Μία άλλη μορφή Super VideoCD"
+msgid "Disc type selection"
+msgstr "Επιλογή του τύπου δίσκου"
 
-#: ../interface/wdisk_type.ui.h:3
+#: ../interface/wdisk_type.ui.h:2
 msgid "<b>Choose the disc type you want to create with DeVeDe</b>"
 msgstr ""
 "<b>Επιλέξτε τον τύπο του δίσκου που θέλετε να δημιουργήσετε με το DeVeDe</b>"
 
-#: ../interface/wdisk_type.ui.h:4
-msgid ""
-"<b>DivX / MPEG-4</b>\n"
-"Creates files compliant with DivX home players"
-msgstr ""
-"<b>DivX / MPEG-4</b>\n"
-"Δημιουργία αρχείων συμβατών με οικιακό αναπαραγωγέα πολυμέσων DivX "
-
-#: ../interface/wdisk_type.ui.h:6
-msgid ""
-"<b>Super VideoCD</b>\n"
-"Creates a VideoCD with better picture quality"
-msgstr ""
-"<b>Super VideoCD</b>\n"
-"Δημιουργία VideoCD, με τη μέγιστη δυνατή ποιότητα εικόνας"
-
-#: ../interface/wdisk_type.ui.h:8
+#: ../interface/wdisk_type.ui.h:3
 msgid ""
 "<b>Video DVD</b>\n"
 "Creates a video DVD suitable for all DVD home players"
@@ -503,7 +487,7 @@ msgstr ""
 "<b>Video DVD</b>\n"
 "Δημιουργία video DVD, συμβατού με όλους τους οικιακούς αναπαραγωγείς"
 
-#: ../interface/wdisk_type.ui.h:10
+#: ../interface/wdisk_type.ui.h:5
 msgid ""
 "<b>VideoCD</b>\n"
 "Creates a VideoCD, with a picture quality equivalent to VHS"
@@ -511,9 +495,29 @@ msgstr ""
 "<b>VideoCD</b>\n"
 "Δημιουργία VideoCD, με ποιότητα εικόνας ισοδύναμης με VHS"
 
-#: ../interface/wdisk_type.ui.h:12
-msgid "Disc type selection"
-msgstr "Επιλογή του τύπου δίσκου"
+#: ../interface/wdisk_type.ui.h:7
+msgid ""
+"<b>Super VideoCD</b>\n"
+"Creates a VideoCD with better picture quality"
+msgstr ""
+"<b>Super VideoCD</b>\n"
+"Δημιουργία VideoCD, με τη μέγιστη δυνατή ποιότητα εικόνας"
+
+#: ../interface/wdisk_type.ui.h:9
+msgid ""
+"<b>China VideoDisc</b>\n"
+"Another kind of Super VideoCD"
+msgstr ""
+"<b>China VideoDisc</b>\n"
+"Μία άλλη μορφή Super VideoCD"
+
+#: ../interface/wdisk_type.ui.h:11
+msgid ""
+"<b>DivX / MPEG-4</b>\n"
+"Creates files compliant with DivX home players"
+msgstr ""
+"<b>DivX / MPEG-4</b>\n"
+"Δημιουργία αρχείων συμβατών με οικιακό αναπαραγωγέα πολυμέσων DivX "
 
 #: ../interface/wempty_titles_dialog.ui.h:1
 msgid ""
@@ -523,15 +527,15 @@ msgstr ""
 "Η δομή του DVD σας περιέχει κενούς τίτλους.\n"
 "Παρόλα αυτά να συνεχιστει;"
 
-#: ../interface/wend_dialog.ui.h:1
-msgid "Job done!"
-msgstr "Το έργο ολοκληρώθηκε!"
-
 #. Means: "Burn the ISO image in a CD/DVD"
-#: ../interface/wend_dialog.ui.h:3
+#: ../interface/wend_dialog.ui.h:2
 msgctxt "Means: "
 msgid "Burn"
 msgstr ""
+
+#: ../interface/wend_dialog.ui.h:3
+msgid "Job done!"
+msgstr "Το έργο ολοκληρώθηκε!"
 
 #: ../interface/werase_dialog.ui.h:1
 msgid "Delete current disc structure?"
@@ -541,403 +545,398 @@ msgstr "Διαγραφή της τρέχουσας δομής δίσκου;"
 msgid "Delete the current disc structure and start again?"
 msgstr "Διαγραφή της τρέχουσας δομής δίσκου και ξεκίνημα από την αρχή;"
 
-#: ../interface/werror_dialog.ui.h:1 ../interface/wprograms.ui.h:3
+#: ../interface/werror_dialog.ui.h:1 ../interface/wprograms.ui.h:1
 msgid "Error"
 msgstr "Σφάλμα"
 
 #: ../interface/wfile.ui.h:1
-msgid "-LAMEOPTS (X:Y)"
-msgstr "-LAMEOPTS (X:Y)"
+msgid "File properties"
+msgstr "Ιδιότητες αρχείου"
 
 #: ../interface/wfile.ui.h:2
-msgid "-LAVCOPTS (X:Y)"
-msgstr "-LAVCOPTS (X:Y)"
+msgid "<b>File</b>"
+msgstr "<b>Αρχείο</b>"
 
-#: ../interface/wfile.ui.h:3
-msgid "-VF (X,Y)"
-msgstr "-VF (X,Y)"
+#: ../interface/wfile.ui.h:3 ../interface/wmain.ui.h:15
+msgid "Frames per second: "
+msgstr "Καρέ ανά δευτερόλεπτο: "
 
 #: ../interface/wfile.ui.h:4
-msgid "1280x720"
-msgstr "1280x720"
+msgid "Original length (seconds): "
+msgstr "Αρχικό μήκος (δευτερόλεπτα): "
 
 #: ../interface/wfile.ui.h:5
-msgid "160x128"
-msgstr "160x128"
+msgid "Original audio rate (Kbits/sec):"
+msgstr "Αρχικός ρυθμός ήχου (Kbits/sec):"
 
 #: ../interface/wfile.ui.h:6
-msgid "16:9"
-msgstr "16:9"
+msgid "Original video rate (Kbits/sec):"
+msgstr "Αρχικός ρυθμός βίντεο (Kbits/sec):"
 
-#: ../interface/wfile.ui.h:7
-msgid "1920x1080"
-msgstr "1920x1080"
+#: ../interface/wfile.ui.h:7 ../interface/wmain.ui.h:20
+msgid "Original size (pixels): "
+msgstr "Αρχικό μέγεθος (εικονοστοιχεία): "
 
-#: ../interface/wfile.ui.h:8
-msgid "352x240"
-msgstr "352x240"
+#: ../interface/wfile.ui.h:8 ../interface/wmain.ui.h:16
+msgid "Final size (pixels):"
+msgstr "Τελικό μέγεθος (εικονοστοιχεία):"
 
 #: ../interface/wfile.ui.h:9
-msgid "352x480"
-msgstr "352x480"
+msgid "Estimated final length (MBytes): "
+msgstr "Εκτιμώμενο τελικό μέγεθος (MBytes):"
 
-#: ../interface/wfile.ui.h:10
-msgid "480x480"
-msgstr "480x480"
+#: ../interface/wfile.ui.h:10 ../interface/wmain.ui.h:24
+msgid "<b>File info</b>"
+msgstr "<b>Πληροφορίες αρχείου</b>"
 
 #: ../interface/wfile.ui.h:11
-msgid "4:3"
-msgstr "4:3"
+msgid "PAL/SECAM"
+msgstr "PAL/SECAM"
 
-#: ../interface/wfile.ui.h:12
-msgid "704x480"
-msgstr "704x480"
+#: ../interface/wfile.ui.h:12 ../interface/wmain.ui.h:31
+msgid "NTSC"
+msgstr "NTSC"
 
 #: ../interface/wfile.ui.h:13
-msgid "720x480"
-msgstr "720x480"
+msgid "<b>Video format</b>"
+msgstr "<b>Μορφή βίντεο</b>"
 
 #: ../interface/wfile.ui.h:14
-msgid "<b>Aspect ratio</b>"
-msgstr "<b>Λόγος θέασης</b>"
+msgid "Audio track: "
+msgstr "Κομμάτι ήχου: "
 
 #: ../interface/wfile.ui.h:15
-msgid "<b>Audio rate (Kbits/sec)</b>"
-msgstr "<b>Ρυθμός ροής ήχου (Kbits/sec)</b>"
+msgid "This video file has no audio tracks."
+msgstr "Το βίντεο αυτό δεν περιέχει κανένα κομμάτι ήχου"
 
 #: ../interface/wfile.ui.h:16
 msgid "<b>Audio tracks</b>"
 msgstr "<b>Κομμάτια ήχου</b>"
 
 #: ../interface/wfile.ui.h:17
-msgid "<b>Audio</b>"
-msgstr "<b>Ήχος</b>"
-
-#: ../interface/wfile.ui.h:18
-msgid "<b>Deinterlacing</b>"
-msgstr "<b>Απόπλεξη</b>"
-
-#: ../interface/wfile.ui.h:19
-msgid "<b>Division in chapters</b>"
-msgstr "<b>Διαίρεση σε κεφάλαια</b>"
-
-#: ../interface/wfile.ui.h:20
-#, fuzzy
-msgid "<b>Extra parameters for coder</b>"
-msgstr "<b>Πρόσθετες παράμετροι για το Mencoder</b>"
-
-#: ../interface/wfile.ui.h:21
-msgid "<b>Field order</b>"
-msgstr "<b>Σειρά πεδίου</b>"
-
-#: ../interface/wfile.ui.h:22 ../interface/wmain.ui.h:13
-msgid "<b>File info</b>"
-msgstr "<b>Πληροφορίες αρχείου</b>"
-
-#: ../interface/wfile.ui.h:23
-msgid "<b>File split</b>"
-msgstr "<b>Τεμαχισμός αρχείου</b>"
-
-#: ../interface/wfile.ui.h:24
-msgid "<b>File</b>"
-msgstr "<b>Αρχείο</b>"
-
-#: ../interface/wfile.ui.h:25
-msgid "<b>Final size</b>"
-msgstr "<b>Τελικό μέγεθος</b>"
-
-#: ../interface/wfile.ui.h:26
-#, fuzzy
-msgid "<b>MacroBlock decision algorithm and Trellis searched quantization</b>"
-msgstr "<b>Αλγόριθμος MacroBlock decision</b>"
-
-#: ../interface/wfile.ui.h:27
-msgid "<b>Mirror</b>"
-msgstr "<b>Κατοπτρισμός</b>"
-
-#: ../interface/wfile.ui.h:28
-msgid "<b>Rotation</b>"
-msgstr "<b>Περιστροφή</b>"
-
-#: ../interface/wfile.ui.h:29
-msgid "<b>Scaling mode</b>"
-msgstr "<b>Κατάσταση κλιμάκωσης</b>"
-
-#: ../interface/wfile.ui.h:30
-msgid "<b>Special</b>"
-msgstr "<b>Ειδικές</b>"
-
-#: ../interface/wfile.ui.h:31
-msgid "<b>Subtitles</b>"
-msgstr "<b>Υπότιτλοι</b>"
-
-#: ../interface/wfile.ui.h:32
-msgid "<b>Two pass encoding</b>"
-msgstr "<b>Κωδικοποίηση δύο σταδίων</b>"
-
-#: ../interface/wfile.ui.h:33
-msgid "<b>Video format</b>"
-msgstr "<b>Μορφή βίντεο</b>"
-
-#: ../interface/wfile.ui.h:34
-msgid "<b>Video rate (Kbits/sec)</b>"
-msgstr "<b>Ρυθμός βίντεο (Kbits/sec)</b>"
-
-#: ../interface/wfile.ui.h:36
-#, no-c-format
-msgid "<b>Volume (%)</b>"
-msgstr "<b>Ένταση</b>"
-
-#: ../interface/wfile.ui.h:37
-msgid "Add black bars"
-msgstr "Προσθήκη μαύρων λορίδων"
-
-#: ../interface/wfile.ui.h:38 ../interface/wmain.ui.h:18
-msgid "Advanced options"
-msgstr "Εξειδικευμένες ρυθμίσεις"
-
-#: ../interface/wfile.ui.h:39
-msgid "Audio"
-msgstr "Ήχος"
-
-#: ../interface/wfile.ui.h:40
-msgid "Audio delay (in seconds):"
-msgstr "Καθυστέρηση ήχου (σε δευτερολεπτα):"
-
-#: ../interface/wfile.ui.h:41
-msgid "Audio track: "
-msgstr "Κομμάτι ήχου: "
-
-#: ../interface/wfile.ui.h:42
-msgid "Create DVD with 5.1 channel sound"
-msgstr "Δημιουργία DVD μέ ήχο 5.1 καναλιών"
-
-#: ../interface/wfile.ui.h:43
-msgid "Default"
-msgstr "Προεπιλογή"
-
-#: ../interface/wfile.ui.h:44
-msgid "DivX format doesn't support subtitles. Please, read the FAQ."
-msgstr ""
-"Η μορφή DivX δεν υποστηρίζει υπότιτλους. Παρακαλώ, διαβάστε την τεκμηρίωση."
-
-#: ../interface/wfile.ui.h:45
-msgid "Don't deinterlace"
-msgstr "Να μη γίνει απόπλεξη"
-
-#: ../interface/wfile.ui.h:46
-msgid "Estimated final length (MBytes): "
-msgstr "Εκτιμώμενο τελικό μέγεθος (MBytes):"
-
-#: ../interface/wfile.ui.h:47
-msgid "FFMpeg deinterlacing filter"
-msgstr "FFMpeg φίλτρο απόπλεξης"
-
-#: ../interface/wfile.ui.h:48
-msgid "File properties"
-msgstr "Ιδιότητες αρχείου"
-
-#: ../interface/wfile.ui.h:49 ../interface/wmain.ui.h:25
-msgid "Final size (pixels):"
-msgstr "Τελικό μέγεθος (εικονοστοιχεία):"
-
-#: ../interface/wfile.ui.h:50
-msgid "Font size:"
-msgstr "Μέγεθος γραμμάτοσειράς: "
-
-#: ../interface/wfile.ui.h:51
-msgid "Force subtitles"
-msgstr "Ενίσχυση υπότιτλων "
-
-#: ../interface/wfile.ui.h:52 ../interface/wmain.ui.h:26
-msgid "Frames per second: "
-msgstr "Καρέ ανά δευτερόλεπτο: "
-
-#: ../interface/wfile.ui.h:53
-msgid "General"
-msgstr "Γενικές"
-
-#: ../interface/wfile.ui.h:54
-msgid "Horizontal mirror"
-msgstr "Οριζόντιος κατοπτρισμός"
-
-#: ../interface/wfile.ui.h:55
-msgid "Linear blend"
-msgstr "Γραμμική απόπλεξη"
-
-#: ../interface/wfile.ui.h:56
-msgid "Lowpass5 deinterlacing filter"
-msgstr "Lowpass5 φίλτρο απόπλεξης"
-
-#: ../interface/wfile.ui.h:57
-msgid "Main (-X -Y)"
-msgstr "Κύριες (-X -Y)"
-
-#: ../interface/wfile.ui.h:58
-msgid "Median deinterlacing filter"
-msgstr "Μεσαίο φίλτρο απόπλεξης"
-
-#: ../interface/wfile.ui.h:59
-msgid "Misc"
-msgstr "Πρόσθετες"
-
-#: ../interface/wfile.ui.h:60 ../interface/wmain.ui.h:29
-msgid "NTSC"
-msgstr "NTSC"
-
-#: ../interface/wfile.ui.h:61
-msgid "No rotation"
-msgstr "Χωρίς περιστροφή"
-
-#: ../interface/wfile.ui.h:62
-msgid "Original audio rate (Kbits/sec):"
-msgstr "Αρχικός ρυθμός ήχου (Kbits/sec):"
-
-#: ../interface/wfile.ui.h:63
-msgid "Original length (seconds): "
-msgstr "Αρχικό μήκος (δευτερόλεπτα): "
-
-#: ../interface/wfile.ui.h:64 ../interface/wmain.ui.h:31
-msgid "Original size (pixels): "
-msgstr "Αρχικό μέγεθος (εικονοστοιχεία): "
-
-#: ../interface/wfile.ui.h:65
-msgid "Original video rate (Kbits/sec):"
-msgstr "Αρχικός ρυθμός βίντεο (Kbits/sec):"
-
-#: ../interface/wfile.ui.h:66
-msgid "PAL/SECAM"
-msgstr "PAL/SECAM"
-
-#: ../interface/wfile.ui.h:67 ../interface/wmain.ui.h:34
-msgid "Preview"
-msgstr "Προεπισκόπιση"
-
-#: ../interface/wfile.ui.h:68
-msgid "Quality"
-msgstr "Ποιότητα"
-
-#: ../interface/wfile.ui.h:69
-msgid "Repack audio and video without reencoding (useful for VOB files)"
-msgstr ""
-"Πακετάρισμα ήχου και εικόνας χωρίς επανακωδικοποίηση (χρήσιμο για VOB αρχεία)"
-
-#: ../interface/wfile.ui.h:70
 msgid "Reset"
 msgstr "Επαναφορά"
 
-#: ../interface/wfile.ui.h:72
+#: ../interface/wfile.ui.h:19
 #, no-c-format
 msgid "Resets the volume to 100%"
 msgstr "Επαναφορά έντασης σε 100%"
 
-#: ../interface/wfile.ui.h:73
+#: ../interface/wfile.ui.h:21
+#, no-c-format
+msgid "<b>Volume (%)</b>"
+msgstr "<b>Ένταση</b>"
+
+#: ../interface/wfile.ui.h:22
+msgid "Store full length"
+msgstr "Αποθήκευση πλήρους μεγέθους"
+
+#: ../interface/wfile.ui.h:23
+msgid "Store the first half"
+msgstr "Αποθήκευση πρώτου μισού"
+
+#: ../interface/wfile.ui.h:24
+msgid "Store the second half"
+msgstr "Αποθήκευση δεύτερου μισού"
+
+#: ../interface/wfile.ui.h:25
+msgid "<b>File split</b>"
+msgstr "<b>Τεμαχισμός αρχείου</b>"
+
+#: ../interface/wfile.ui.h:26
+msgid "Font size:"
+msgstr "Μέγεθος γραμμάτοσειράς: "
+
+#: ../interface/wfile.ui.h:27
+msgid "Force subtitles"
+msgstr "Ενίσχυση υπότιτλων "
+
+#: ../interface/wfile.ui.h:28
+msgid "DivX format doesn't support subtitles. Please, read the FAQ."
+msgstr ""
+"Η μορφή DivX δεν υποστηρίζει υπότιτλους. Παρακαλώ, διαβάστε την τεκμηρίωση."
+
+#: ../interface/wfile.ui.h:29
+msgid "<b>Subtitles</b>"
+msgstr "<b>Υπότιτλοι</b>"
+
+#: ../interface/wfile.ui.h:30
+msgid "<b>Video rate (Kbits/sec)</b>"
+msgstr "<b>Ρυθμός βίντεο (Kbits/sec)</b>"
+
+#: ../interface/wfile.ui.h:31
+msgid "<b>Audio rate (Kbits/sec)</b>"
+msgstr "<b>Ρυθμός ροής ήχου (Kbits/sec)</b>"
+
+#: ../interface/wfile.ui.h:32
+msgid "Split the file in chapters (for easy seeking)"
+msgstr "Τεμαχισμός αρχείου σε κεφάλαια (για εύκολη θέαση)"
+
+#: ../interface/wfile.ui.h:33
+msgid "Size (in minutes) for each chapter: "
+msgstr "Μέγεθος κάθε κεφαλαίου (σε λεπτά): "
+
+#: ../interface/wfile.ui.h:34
+msgid "<b>Division in chapters</b>"
+msgstr "<b>Διαίρεση σε κεφάλαια</b>"
+
+#: ../interface/wfile.ui.h:35
+msgid "General"
+msgstr "Γενικές"
+
+#: ../interface/wfile.ui.h:36
+msgid "352x240"
+msgstr "352x240"
+
+#: ../interface/wfile.ui.h:37
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#: ../interface/wfile.ui.h:38
+msgid "352x480"
+msgstr "352x480"
+
+#: ../interface/wfile.ui.h:39
+msgid "480x480"
+msgstr "480x480"
+
+#: ../interface/wfile.ui.h:40
+msgid "720x480"
+msgstr "720x480"
+
+#: ../interface/wfile.ui.h:41
+msgid "704x480"
+msgstr "704x480"
+
+#: ../interface/wfile.ui.h:42
+msgid "1920x1080"
+msgstr "1920x1080"
+
+#: ../interface/wfile.ui.h:43
+msgid "1280x720"
+msgstr "1280x720"
+
+#: ../interface/wfile.ui.h:44
+msgid "160x128"
+msgstr "160x128"
+
+#: ../interface/wfile.ui.h:45
+msgid "<b>Final size</b>"
+msgstr "<b>Τελικό μέγεθος</b>"
+
+#: ../interface/wfile.ui.h:46
+msgid "4:3"
+msgstr "4:3"
+
+#: ../interface/wfile.ui.h:47
+msgid "16:9"
+msgstr "16:9"
+
+#: ../interface/wfile.ui.h:48
+msgid "<b>Aspect ratio</b>"
+msgstr "<b>Λόγος θέασης</b>"
+
+#: ../interface/wfile.ui.h:49
+msgid "Video format"
+msgstr "Μορφοποίηση βίντεο"
+
+#: ../interface/wfile.ui.h:50
+msgid "No rotation"
+msgstr "Χωρίς περιστροφή"
+
+#: ../interface/wfile.ui.h:51
 msgid "Rotate 180 degrees"
 msgstr "Περιστροφή 180 μοιρών"
 
-#: ../interface/wfile.ui.h:74
+#: ../interface/wfile.ui.h:52
 msgid "Rotate 90 degrees clockwise"
 msgstr "Περιστροφή 90 μοιρών προς τα δεξιά"
 
-#: ../interface/wfile.ui.h:75
+#: ../interface/wfile.ui.h:53
 msgid "Rotate 90 degrees counter-clockwise"
 msgstr "Περιστροφή 90 μοιρών προς τ' αριστερά"
 
-#: ../interface/wfile.ui.h:76
+#: ../interface/wfile.ui.h:54
+msgid "<b>Rotation</b>"
+msgstr "<b>Περιστροφή</b>"
+
+#: ../interface/wfile.ui.h:55
+msgid "Horizontal mirror"
+msgstr "Οριζόντιος κατοπτρισμός"
+
+#: ../interface/wfile.ui.h:56
+msgid "Vertical mirror"
+msgstr "Κάθετος κατοπρισμός"
+
+#: ../interface/wfile.ui.h:57
+msgid "<b>Mirror</b>"
+msgstr "<b>Κατοπτρισμός</b>"
+
+#: ../interface/wfile.ui.h:58
+msgid "Swap fields"
+msgstr "Ανταλλαγή πεδίων"
+
+#: ../interface/wfile.ui.h:59
+msgid "<b>Field order</b>"
+msgstr "<b>Σειρά πεδίου</b>"
+
+#: ../interface/wfile.ui.h:60
+msgid "Add black bars"
+msgstr "Προσθήκη μαύρων λορίδων"
+
+#: ../interface/wfile.ui.h:61
 msgid "Scale picture"
 msgstr "Κλιμάκωση εικόνας"
 
-#: ../interface/wfile.ui.h:77
+#: ../interface/wfile.ui.h:62
+msgid "<b>Scaling mode</b>"
+msgstr "<b>Κατάσταση κλιμάκωσης</b>"
+
+#: ../interface/wfile.ui.h:63
+msgid "Video options"
+msgstr "Επιλογές βίντεο"
+
+#: ../interface/wfile.ui.h:64
+msgid "Use MBCMP (faster)"
+msgstr "Χρήση του MBCMP (συντομότερο)"
+
+#: ../interface/wfile.ui.h:65
 msgid "Select MBD mode which needs the fewest bits"
 msgstr "Επιλογή λειτουργίας ΜΒD που απαιτεί τα λιγότερα bits"
 
-#: ../interface/wfile.ui.h:78
+#: ../interface/wfile.ui.h:66
 msgid "Select the MBD mode which has the best rate distortion (better quality)"
 msgstr ""
 "Επιλογή λειτουργίας ΜΒD με καλύτερη παραμόρφωση ρυθμού (καλύτερη ποιότητα)"
 
+#: ../interface/wfile.ui.h:67
+msgid "Use Trellis Searched Quantization (better quality, slower conversion)"
+msgstr ""
+"Χρήση του Trellis Searched Quantization (καλύτερη ποιότητα, αργή μετατροπή)"
+
+#: ../interface/wfile.ui.h:68
+#, fuzzy
+msgid "<b>MacroBlock decision algorithm and Trellis searched quantization</b>"
+msgstr "<b>Αλγόριθμος MacroBlock decision</b>"
+
+#: ../interface/wfile.ui.h:69
+msgid "Use dual pass encoding (better quality, much slower conversion)"
+msgstr "Κωδικοποίηση σε δύο περάσματα(καλύτερη ποιότητα, αργή μετατροπή)"
+
+#: ../interface/wfile.ui.h:70
+msgid "Turbo 1st pass"
+msgstr "Ενισχυμένο 1ο πέρασμα"
+
+#: ../interface/wfile.ui.h:71
+msgid "<b>Two pass encoding</b>"
+msgstr "<b>Κωδικοποίηση δύο σταδίων</b>"
+
+#: ../interface/wfile.ui.h:72
+msgid "Median deinterlacing filter"
+msgstr "Μεσαίο φίλτρο απόπλεξης"
+
+#: ../interface/wfile.ui.h:73
+msgid "Don't deinterlace"
+msgstr "Να μη γίνει απόπλεξη"
+
+#: ../interface/wfile.ui.h:74
+msgid "YADIF deinterlacing filter"
+msgstr "YADIF φίλτρο απόπλεξης"
+
+#: ../interface/wfile.ui.h:75
+msgid "FFMpeg deinterlacing filter"
+msgstr "FFMpeg φίλτρο απόπλεξης"
+
+#: ../interface/wfile.ui.h:76
+msgid "Linear blend"
+msgstr "Γραμμική απόπλεξη"
+
+#: ../interface/wfile.ui.h:77
+msgid "Lowpass5 deinterlacing filter"
+msgstr "Lowpass5 φίλτρο απόπλεξης"
+
+#: ../interface/wfile.ui.h:78
+msgid "<b>Deinterlacing</b>"
+msgstr "<b>Απόπλεξη</b>"
+
 #: ../interface/wfile.ui.h:79
-msgid "Size (in minutes) for each chapter: "
-msgstr "Μέγεθος κάθε κεφαλαίου (σε λεπτά): "
+msgid "Quality"
+msgstr "Ποιότητα"
 
 #: ../interface/wfile.ui.h:80
-msgid "Split the file in chapters (for easy seeking)"
-msgstr "Τεμαχισμός αρχείου σε κεφάλαια (για εύκολη θέαση)"
+msgid "Audio delay (in seconds):"
+msgstr "Καθυστέρηση ήχου (σε δευτερολεπτα):"
 
 #: ../interface/wfile.ui.h:81
-msgid "Store full length"
-msgstr "Αποθήκευση πλήρους μεγέθους"
+msgid "Create DVD with 5.1 channel sound"
+msgstr "Δημιουργία DVD μέ ήχο 5.1 καναλιών"
 
 #: ../interface/wfile.ui.h:82
-msgid "Store the first half"
-msgstr "Αποθήκευση πρώτου μισού"
-
-#: ../interface/wfile.ui.h:83
-msgid "Store the second half"
-msgstr "Αποθήκευση δεύτερου μισού"
-
-#: ../interface/wfile.ui.h:84
-msgid "Swap fields"
-msgstr "Ανταλλαγή πεδίων"
-
-#: ../interface/wfile.ui.h:85
 msgid ""
 "This file already has AC3 sound (copy audio data instead of recompress it)"
 msgstr ""
 "Αυτό το αρχείο περιέχει ήδη AC3 ήχο (αντιγραφή των αρχείων ήχου και όχι "
 "επανασυμπίεση τους)"
 
-#: ../interface/wfile.ui.h:86
+#: ../interface/wfile.ui.h:83
+msgid "<b>Audio</b>"
+msgstr "<b>Ήχος</b>"
+
+#: ../interface/wfile.ui.h:84
+msgid "Audio"
+msgstr "Ήχος"
+
+#: ../interface/wfile.ui.h:85
 msgid "This file is already a DVD/xCD-suitable MPEG-PS file"
 msgstr "Αυτό το αρχείο είναι ήδη DVD/xCD-προσαρμόσιμο MPEG-PS αρχείο."
 
-#: ../interface/wfile.ui.h:87
-msgid "This video file has no audio tracks."
-msgstr "Το βίντεο αυτό δεν περιέχει κανένα κομμάτι ήχου"
-
-#: ../interface/wfile.ui.h:88
-msgid "Turbo 1st pass"
-msgstr "Ενισχυμένο 1ο πέρασμα"
-
-#: ../interface/wfile.ui.h:89
-msgid "Use MBCMP (faster)"
-msgstr "Χρήση του MBCMP (συντομότερο)"
-
-#: ../interface/wfile.ui.h:90
-msgid "Use Trellis Searched Quantization (better quality, slower conversion)"
+#: ../interface/wfile.ui.h:86
+msgid "Repack audio and video without reencoding (useful for VOB files)"
 msgstr ""
-"Χρήση του Trellis Searched Quantization (καλύτερη ποιότητα, αργή μετατροπή)"
+"Πακετάρισμα ήχου και εικόνας χωρίς επανακωδικοποίηση (χρήσιμο για VOB αρχεία)"
 
-#: ../interface/wfile.ui.h:91
+#: ../interface/wfile.ui.h:87
 msgid "Use a GOP of 12 frames (improves compatibility)"
 msgstr "Χρήση του GOP των 12 καρέ (βελτίωση συμβατότητας)"
 
+#: ../interface/wfile.ui.h:88
+msgid "<b>Special</b>"
+msgstr "<b>Ειδικές</b>"
+
+#: ../interface/wfile.ui.h:89
+msgid "Main (-X -Y)"
+msgstr "Κύριες (-X -Y)"
+
+#: ../interface/wfile.ui.h:90
+msgid "-VF (X,Y)"
+msgstr "-VF (X,Y)"
+
+#: ../interface/wfile.ui.h:91
+msgid "-LAVCOPTS (X:Y)"
+msgstr "-LAVCOPTS (X:Y)"
+
 #: ../interface/wfile.ui.h:92
-msgid "Use dual pass encoding (better quality, much slower conversion)"
-msgstr "Κωδικοποίηση σε δύο περάσματα(καλύτερη ποιότητα, αργή μετατροπή)"
+msgid "-LAMEOPTS (X:Y)"
+msgstr "-LAMEOPTS (X:Y)"
 
 #: ../interface/wfile.ui.h:93
-msgid "Vertical mirror"
-msgstr "Κάθετος κατοπρισμός"
+#, fuzzy
+msgid "<b>Extra parameters for coder</b>"
+msgstr "<b>Πρόσθετες παράμετροι για το Mencoder</b>"
 
 #: ../interface/wfile.ui.h:94
-msgid "Video format"
-msgstr "Μορφοποίηση βίντεο"
+msgid "Misc"
+msgstr "Πρόσθετες"
 
-#: ../interface/wfile.ui.h:95
-msgid "Video options"
-msgstr "Επιλογές βίντεο"
+#: ../interface/wfile.ui.h:95 ../interface/wmain.ui.h:41
+msgid "Advanced options"
+msgstr "Εξειδικευμένες ρυθμίσεις"
 
-#: ../interface/wfile.ui.h:96
-msgid "YADIF deinterlacing filter"
-msgstr "YADIF φίλτρο απόπλεξης"
+#: ../interface/wfile.ui.h:96 ../interface/wmain.ui.h:13
+msgid "Preview"
+msgstr "Προεπισκόπιση"
 
 #: ../interface/wfolder_dialog.ui.h:1
-#, fuzzy
-msgid "Choose a folder"
-msgstr "Επιλογή αρχείου"
-
-#: ../interface/wfolder_dialog.ui.h:2
 msgid ""
 "Choose the folder where DeVeDe will create the DVD image and a name for it. "
 "Don't use a folder in a VFAT/FAT32 drive. Characters /, | and \\ are not "
@@ -948,6 +947,11 @@ msgstr ""
 "VFAT/FAT32.Αποφεύγετε ειδικούς χαρακτήρες /, | και \\ που θα αντικαθίστανται "
 "με underscores."
 
+#: ../interface/wfolder_dialog.ui.h:2
+#, fuzzy
+msgid "Choose a folder"
+msgstr "Επιλογή αρχείου"
+
 #: ../interface/wfolder_dialog.ui.h:3
 msgid "Shutdown computer when disc is done"
 msgstr ""
@@ -957,6 +961,10 @@ msgid "Load a disc structure"
 msgstr "Φόρτωση δομής δίσκου"
 
 #: ../interface/wloosecurrent.ui.h:1
+msgid "Warning: you already have a disc structure"
+msgstr "Προειδοποίηση: Έχετε ήδη τη δομή του δίσκου"
+
+#: ../interface/wloosecurrent.ui.h:2
 msgid ""
 "If you load a disc structure you will loose your current structure (unless "
 "you saved it). Continue?"
@@ -964,143 +972,139 @@ msgstr ""
 "Αν φορτώσετε τη δομή του δίσκου, θα χαθεί η τρέχουσα δομή (εκτός αν "
 "αποθηκευτεί). Θα συνεχίσετε;"
 
-#: ../interface/wloosecurrent.ui.h:2
-msgid "Warning: you already have a disc structure"
-msgstr "Προειδοποίηση: Έχετε ήδη τη δομή του δίσκου"
-
 #: ../interface/wmain.ui.h:1
-msgid " Media size: "
-msgstr " Μέγεθος μέσου: "
+msgid "185 MB CD"
+msgstr "185 MB CD"
+
+#: ../interface/wmain.ui.h:2
+msgid "650 MB CD"
+msgstr "650 MB CD"
 
 #: ../interface/wmain.ui.h:3
-#, no-c-format
-msgid "0.0%"
-msgstr "0.0%"
+msgid "700 MB CD"
+msgstr "700 MB CD"
 
 #: ../interface/wmain.ui.h:4
 msgid "1.4 GB DVD"
 msgstr "1.4 GB DVD"
 
 #: ../interface/wmain.ui.h:5
-msgid "185 MB CD"
-msgstr "185 MB CD"
-
-#: ../interface/wmain.ui.h:6
 msgid "4.7 GB DVD"
 msgstr "4.7 GB DVD"
 
-#: ../interface/wmain.ui.h:7
-msgid "650 MB CD"
-msgstr "650 MB CD"
-
-#: ../interface/wmain.ui.h:8
-msgid "700 MB CD"
-msgstr "700 MB CD"
-
-#: ../interface/wmain.ui.h:9
+#: ../interface/wmain.ui.h:6
 msgid "8.5 GB DVD"
 msgstr "8.5 GB DVD"
 
+#: ../interface/wmain.ui.h:7
+msgid "DeVeDe"
+msgstr "DeVeDe"
+
+#: ../interface/wmain.ui.h:8
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: ../interface/wmain.ui.h:9
+msgid "_Edit"
+msgstr ""
+
 #: ../interface/wmain.ui.h:10
-msgid "<b>Action</b>"
-msgstr "<b>Ενέργεια</b>"
+msgid "_Preferences"
+msgstr ""
 
 #: ../interface/wmain.ui.h:11
-msgid "<b>Default format</b>"
-msgstr "<b>Προεπιλεγμένη μορφή</b>"
+msgid "_Help"
+msgstr "_Βοήθεια"
 
 #: ../interface/wmain.ui.h:12
-msgid "<b>Disc usage</b>"
-msgstr "<b>Χρήση δίσκου</b>"
+msgid "<b>Titles</b>"
+msgstr "<b>Τίτλοι</b>"
 
 #: ../interface/wmain.ui.h:14
 msgid "<b>Files</b>"
 msgstr "<b>Αρχεία</b>"
 
-#: ../interface/wmain.ui.h:15
-msgid "<b>Menus</b>"
-msgstr "<b>Μενού</b>"
-
-#: ../interface/wmain.ui.h:16
-msgid "<b>Titles</b>"
-msgstr "<b>Τίτλοι</b>"
-
 #: ../interface/wmain.ui.h:17
-msgid "Adjust disc usage"
-msgstr "Προσαρμογή δίσκου"
+msgid "Length (seconds): "
+msgstr "Μέγεθος (δευτερόλεπτα): "
+
+#: ../interface/wmain.ui.h:18
+msgid "Video rate (Kbits/sec): "
+msgstr "Ρυθμός βίντεο (Kbits/sec):"
 
 #: ../interface/wmain.ui.h:19
 msgid "Audio rate (Kbits/sec): "
 msgstr "Ρυθμός ήχου (Kbits/sec):"
 
-#: ../interface/wmain.ui.h:20
+#: ../interface/wmain.ui.h:21
+msgid "Estimated length (MBytes): "
+msgstr "Εκτιμώμενο μέγεθος (MBytes):"
+
+#: ../interface/wmain.ui.h:22
+msgid "Output aspect ratio:"
+msgstr "Λόγος πλάτους/ύψος εξόδου:"
+
+#: ../interface/wmain.ui.h:23
+msgid "Size of chapters:"
+msgstr "Μέγεθος κεφαλαίων:"
+
+#: ../interface/wmain.ui.h:25
+msgid "Adjust disc usage"
+msgstr "Προσαρμογή δίσκου"
+
+#: ../interface/wmain.ui.h:27
+#, no-c-format
+msgid "0.0%"
+msgstr "0.0%"
+
+#: ../interface/wmain.ui.h:28
+msgid " Media size: "
+msgstr " Μέγεθος μέσου: "
+
+#: ../interface/wmain.ui.h:29
+msgid "<b>Disc usage</b>"
+msgstr "<b>Χρήση δίσκου</b>"
+
+#: ../interface/wmain.ui.h:30
+msgid "PAL"
+msgstr "PAL"
+
+#: ../interface/wmain.ui.h:32
+msgid "<b>Default format</b>"
+msgstr "<b>Προεπιλεγμένη μορφή</b>"
+
+#: ../interface/wmain.ui.h:33
 #, fuzzy
 msgid "Create a menu with the titles"
 msgstr "Προσθήκη των μενού με τίτλους"
 
-#: ../interface/wmain.ui.h:21
-msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
-msgstr "Δημιουργία εικόνων ISO ή BIN/CUE, για εγγραφή σε δίσκο"
-
-#: ../interface/wmain.ui.h:22
-msgid "Create disc structure"
-msgstr "Δημιουργία δομής δίσκου"
-
-#: ../interface/wmain.ui.h:23
-msgid "DeVeDe"
-msgstr "DeVeDe"
-
-#: ../interface/wmain.ui.h:24
-msgid "Estimated length (MBytes): "
-msgstr "Εκτιμώμενο μέγεθος (MBytes):"
-
-#: ../interface/wmain.ui.h:27
-msgid "Length (seconds): "
-msgstr "Μέγεθος (δευτερόλεπτα): "
-
-#: ../interface/wmain.ui.h:28
+#: ../interface/wmain.ui.h:34
 msgid "Menu options"
 msgstr "Επιλογές μενού"
 
-#: ../interface/wmain.ui.h:30
-msgid "Only convert film files to compliant MPEG files"
-msgstr "Μετατροπή μόνο των αρχείων της ταινίας σε αρχεία MPEG"
-
-#: ../interface/wmain.ui.h:32
-msgid "Output aspect ratio:"
-msgstr "Λόγος πλάτους/ύψος εξόδου:"
-
-#: ../interface/wmain.ui.h:33
-msgid "PAL"
-msgstr "PAL"
-
-#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:22
+#: ../interface/wmain.ui.h:35 ../interface/wmenu_properties.ui.h:31
 msgid "Preview menu"
 msgstr "Προεπισκόπιση μενού"
 
 #: ../interface/wmain.ui.h:36
-msgid "Size of chapters:"
-msgstr "Μέγεθος κεφαλαίων:"
+msgid "<b>Menus</b>"
+msgstr "<b>Μενού</b>"
 
 #: ../interface/wmain.ui.h:37
-msgid "Video rate (Kbits/sec): "
-msgstr "Ρυθμός βίντεο (Kbits/sec):"
+msgid "Only convert film files to compliant MPEG files"
+msgstr "Μετατροπή μόνο των αρχείων της ταινίας σε αρχεία MPEG"
 
 #: ../interface/wmain.ui.h:38
-msgid "_Edit"
-msgstr ""
+msgid "Create disc structure"
+msgstr "Δημιουργία δομής δίσκου"
 
 #: ../interface/wmain.ui.h:39
-msgid "_File"
-msgstr "_Αρχείο"
+msgid "Create an ISO or BIN/CUE image, ready to burn to a disc"
+msgstr "Δημιουργία εικόνων ISO ή BIN/CUE, για εγγραφή σε δίσκο"
 
 #: ../interface/wmain.ui.h:40
-msgid "_Help"
-msgstr "_Βοήθεια"
-
-#: ../interface/wmain.ui.h:41
-msgid "_Preferences"
-msgstr ""
+msgid "<b>Action</b>"
+msgstr "<b>Ενέργεια</b>"
 
 #: ../interface/wmenu_preview_ntsc.ui.h:1
 #: ../interface/wmenu_preview_pal.ui.h:1
@@ -1108,123 +1112,123 @@ msgid "Menu preview"
 msgstr "Προεπισκόπιση μενού"
 
 #: ../interface/wmenu_properties.ui.h:1
-msgid "<b>Disc startup options</b>"
-msgstr "<b>Επιλογές εκκίνησης δίσκου</b>"
+msgid "Shadow color: "
+msgstr "Χρώμα σκιών:"
 
 #: ../interface/wmenu_properties.ui.h:2
+msgid "Text color: "
+msgstr "Χρώμα κειμένου:"
+
+#: ../interface/wmenu_properties.ui.h:3
+msgid "Text: "
+msgstr "Κείμενο:"
+
+#: ../interface/wmenu_properties.ui.h:4
+msgid "Font: "
+msgstr "Γραμματοσειρά: "
+
+#: ../interface/wmenu_properties.ui.h:5
+msgid "<b>Menu title</b>"
+msgstr "<b>Τίτλος μενού</b>"
+
+#: ../interface/wmenu_properties.ui.h:6
+msgid "Select a picture to be used as background for disc's menu"
+msgstr "Επιλογή εικόνας γιά φόντο του μενού δίσκου"
+
+#: ../interface/wmenu_properties.ui.h:7
+msgid "Set default background"
+msgstr "Εφαρμογή προεπιλεγμένου φόντου"
+
+#: ../interface/wmenu_properties.ui.h:8
+msgid "<b>Menu background (only PNG)</b>"
+msgstr "<b>Εικόνα φόντου για το μενού (μόνο εικόνες PNG)</b>"
+
+#: ../interface/wmenu_properties.ui.h:9
+msgid "Choose a music file"
+msgstr "Επιλογή αρχείου μουσικής"
+
+#: ../interface/wmenu_properties.ui.h:10
+msgid "Set menus without sound"
+msgstr "Εφαρμογή βουβού μενού"
+
+#: ../interface/wmenu_properties.ui.h:11
+msgid "<b>Menu music</b>"
+msgstr "<b>Μουσική για το μενού</b>"
+
+#: ../interface/wmenu_properties.ui.h:12
 #, fuzzy
 msgid "<b>Horizontal</b>"
 msgstr "<b>Οριζόντια στοίχιση</b>"
 
-#: ../interface/wmenu_properties.ui.h:4
-#, fuzzy, no-c-format
-msgid "<b>Margins (%)</b>"
-msgstr "<b>Μενού</b>"
-
-#: ../interface/wmenu_properties.ui.h:5
-msgid "<b>Menu background (only PNG)</b>"
-msgstr "<b>Εικόνα φόντου για το μενού (μόνο εικόνες PNG)</b>"
-
-#: ../interface/wmenu_properties.ui.h:6
-msgid "<b>Menu font and colors</b>"
-msgstr "<b>Γραμματοσειρά και χρώματα μενού</b>"
-
-#: ../interface/wmenu_properties.ui.h:7
-msgid "<b>Menu music</b>"
-msgstr "<b>Μουσική για το μενού</b>"
-
-#: ../interface/wmenu_properties.ui.h:8
-msgid "<b>Menu position</b>"
-msgstr "<b>Θέση μενού</b>"
-
-#: ../interface/wmenu_properties.ui.h:9
-msgid "<b>Menu title</b>"
-msgstr "<b>Τίτλος μενού</b>"
-
-#: ../interface/wmenu_properties.ui.h:10
+#: ../interface/wmenu_properties.ui.h:13
 #, fuzzy
 msgid "<b>Vertical</b>"
 msgstr "<b>Ειδικές</b>"
 
-#: ../interface/wmenu_properties.ui.h:11
-msgid "Background color for titles: "
-msgstr "Χρώμα φόντου τίτλων:"
-
-#: ../interface/wmenu_properties.ui.h:12
-msgid "Bottom"
-msgstr "Πυθμένα"
-
-#: ../interface/wmenu_properties.ui.h:13
-msgid "Center"
-msgstr "Κέντρο"
-
 #: ../interface/wmenu_properties.ui.h:14
-msgid "Choose a music file"
-msgstr "Επιλογή αρχείου μουσικής"
+msgid "Top"
+msgstr "Κορυφή"
 
 #: ../interface/wmenu_properties.ui.h:15
-msgid "Color for selected title: "
-msgstr "Χρώμα επιλεγμένου τίτλου:"
-
-#: ../interface/wmenu_properties.ui.h:16
-msgid "Color for shadows: "
-msgstr "Χρώμα σκιών: "
-
-#: ../interface/wmenu_properties.ui.h:17
-msgid "Color for unselected titles: "
-msgstr "Χρώμα αποεπιλεγμένων τίτλων: "
-
-#: ../interface/wmenu_properties.ui.h:18
-msgid "Font: "
-msgstr "Γραμματοσειρά: "
-
-#: ../interface/wmenu_properties.ui.h:19
-msgid "Jump to the first title at startup"
-msgstr "Μετάβαση στον πρώτο τίτλο κατά την εκκίνηση"
-
-#: ../interface/wmenu_properties.ui.h:20
-msgid "Left"
-msgstr "Αριστερά"
-
-#: ../interface/wmenu_properties.ui.h:21
 msgid "Middle"
 msgstr "Μέση"
 
-#: ../interface/wmenu_properties.ui.h:23
+#: ../interface/wmenu_properties.ui.h:16
+msgid "Bottom"
+msgstr "Πυθμένα"
+
+#: ../interface/wmenu_properties.ui.h:17
+msgid "Left"
+msgstr "Αριστερά"
+
+#: ../interface/wmenu_properties.ui.h:18
+msgid "Center"
+msgstr "Κέντρο"
+
+#: ../interface/wmenu_properties.ui.h:19
 msgid "Right"
 msgstr "Δεξιά"
 
+#: ../interface/wmenu_properties.ui.h:21
+#, fuzzy, no-c-format
+msgid "<b>Margins (%)</b>"
+msgstr "<b>Μενού</b>"
+
+#: ../interface/wmenu_properties.ui.h:22
+msgid "<b>Menu position</b>"
+msgstr "<b>Θέση μενού</b>"
+
+#: ../interface/wmenu_properties.ui.h:23
+msgid "Color for unselected titles: "
+msgstr "Χρώμα αποεπιλεγμένων τίτλων: "
+
 #: ../interface/wmenu_properties.ui.h:24
-msgid "Select a picture to be used as background for disc's menu"
-msgstr "Επιλογή εικόνας γιά φόντο του μενού δίσκου"
+msgid "Color for shadows: "
+msgstr "Χρώμα σκιών: "
 
 #: ../interface/wmenu_properties.ui.h:25
-msgid "Set default background"
-msgstr "Εφαρμογή προεπιλεγμένου φόντου"
+msgid "Color for selected title: "
+msgstr "Χρώμα επιλεγμένου τίτλου:"
 
 #: ../interface/wmenu_properties.ui.h:26
-msgid "Set menus without sound"
-msgstr "Εφαρμογή βουβού μενού"
+msgid "Background color for titles: "
+msgstr "Χρώμα φόντου τίτλων:"
 
 #: ../interface/wmenu_properties.ui.h:27
-msgid "Shadow color: "
-msgstr "Χρώμα σκιών:"
+msgid "<b>Menu font and colors</b>"
+msgstr "<b>Γραμματοσειρά και χρώματα μενού</b>"
 
 #: ../interface/wmenu_properties.ui.h:28
 msgid "Show menu at disc startup"
 msgstr "Προβολή μενού κατά την εκκίνηση δίσκου"
 
 #: ../interface/wmenu_properties.ui.h:29
-msgid "Text color: "
-msgstr "Χρώμα κειμένου:"
+msgid "Jump to the first title at startup"
+msgstr "Μετάβαση στον πρώτο τίτλο κατά την εκκίνηση"
 
 #: ../interface/wmenu_properties.ui.h:30
-msgid "Text: "
-msgstr "Κείμενο:"
-
-#: ../interface/wmenu_properties.ui.h:31
-msgid "Top"
-msgstr "Κορυφή"
+msgid "<b>Disc startup options</b>"
+msgstr "<b>Επιλογές εκκίνησης δίσκου</b>"
 
 #: ../interface/wnofonts.ui.h:1
 msgid "Can't find the font for subtitles. Aborting."
@@ -1251,11 +1255,11 @@ msgstr ""
 msgid "Preview length:"
 msgstr "Προεπισκόπιση μεγέθους:"
 
-#: ../interface/wprograms.ui.h:1
+#: ../interface/wprograms.ui.h:2
 msgid "Can't find the following programs:"
 msgstr "Δεν μπορούν να βρεθούν τα εξής προγράμματα:"
 
-#: ../interface/wprograms.ui.h:2
+#: ../interface/wprograms.ui.h:3
 msgid ""
 "DeVeDe needs them in order to work. If you want to use DeVeDe, you must "
 "install all of them."
@@ -1272,40 +1276,40 @@ msgid "Save current disc structure"
 msgstr "Αποθήκευση τρέχουσας δομής δίσκου"
 
 #: ../interface/wtitle_properties_dialog.ui.h:1
-msgid "<b>Action to perform when this title ends</b>"
-msgstr "<b>Επιλογή ενέργειας μετά την ολοκλήρωση του τίτλου</b>"
+msgid "Title properties"
+msgstr "Ιδιότιτες τίτλου"
 
 #: ../interface/wtitle_properties_dialog.ui.h:2
 msgid "<b>Title's name</b>"
 msgstr "<b>Όνομα τίτλου</b>"
 
 #: ../interface/wtitle_properties_dialog.ui.h:3
-msgid "Play the first title"
-msgstr "Αναπαραγωγή του πρώτου τίτλου"
-
-#: ../interface/wtitle_properties_dialog.ui.h:4
-msgid "Play the last title"
-msgstr "Αναπαραγωγή του τελευταίου τίτλου"
-
-#: ../interface/wtitle_properties_dialog.ui.h:5
-msgid "Play the next title"
-msgstr "Αναπαραγωγή του επόμενου τίτλου"
-
-#: ../interface/wtitle_properties_dialog.ui.h:6
-msgid "Play the previous title"
-msgstr "Αναπαραγωγή του προηγούμενου τίτλου"
-
-#: ../interface/wtitle_properties_dialog.ui.h:7
-msgid "Play this title again (loop)"
-msgstr "Επανάληψη αναπαραγωγής τίτλου (βρόχος)"
-
-#: ../interface/wtitle_properties_dialog.ui.h:8
 msgid "Stop reproduction/show disc menu"
 msgstr "Διακοπή αναπαραγωγής/προβολή μενού δίσκου"
 
+#: ../interface/wtitle_properties_dialog.ui.h:4
+msgid "Play the first title"
+msgstr "Αναπαραγωγή του πρώτου τίτλου"
+
+#: ../interface/wtitle_properties_dialog.ui.h:5
+msgid "Play the previous title"
+msgstr "Αναπαραγωγή του προηγούμενου τίτλου"
+
+#: ../interface/wtitle_properties_dialog.ui.h:6
+msgid "Play this title again (loop)"
+msgstr "Επανάληψη αναπαραγωγής τίτλου (βρόχος)"
+
+#: ../interface/wtitle_properties_dialog.ui.h:7
+msgid "Play the next title"
+msgstr "Αναπαραγωγή του επόμενου τίτλου"
+
+#: ../interface/wtitle_properties_dialog.ui.h:8
+msgid "Play the last title"
+msgstr "Αναπαραγωγή του τελευταίου τίτλου"
+
 #: ../interface/wtitle_properties_dialog.ui.h:9
-msgid "Title properties"
-msgstr "Ιδιότιτες τίτλου"
+msgid "<b>Action to perform when this title ends</b>"
+msgstr "<b>Επιλογή ενέργειας μετά την ολοκλήρωση του τίτλου</b>"
 
 #: ../interface/wwarning_dialog.ui.h:1
 msgid "Warning"
