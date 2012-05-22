@@ -31,11 +31,6 @@ class devede_settings:
     
     def on_toggled_cb(self,w):
         
-        if (self.use_ffmpeg.get_active()):
-            self.ac3_fix.set_sensitive(False)
-        else:
-            self.ac3_fix.set_sensitive(True)
-        
         if (self.multicore.get_active()):
             self.hyper.set_sensitive(True)
         else:
@@ -67,6 +62,7 @@ class devede_settings:
             self.hyper.set_active(self.global_vars["hyperthreading"])
         
         self.ac3_fix=self.tree.get_object("AC3_fix")
+        self.ac3_fix.set_sensitive(True)
         self.ac3_fix.set_active(self.global_vars["AC3_fix"])
 
         self.use_ffmpeg=self.tree.get_object("use_ffmpeg")
