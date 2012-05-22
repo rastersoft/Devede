@@ -26,8 +26,15 @@ disk space, but you will have all the temporary files to analize them.</p>
 threads to convert the videos, thus getting advantage of multicore CPUs to run faster. But it can produce some artifacts,
 so if the picture quality is not good, try to disable it.</p>
 
-<p>The next option makes Devede to use FFMpeg instead of Mencoder. This code is still experimental, but also quite stable, so
+<p>Just under is <b>Don't use hyperthreading</b>. This is a technology introduced in the Pentium 4, and reintroduced in the last Intel processors,
+and allows to simulate two virtual cores from each physical core. Unfortunately, in the old Pentium 4 it was quite defective, and could result in a
+loss of performance. In the newer processors it has been fixed.</p>
+
+<p>The next option makes Devede to use FFMpeg instead of Mencoder when encoding videos. This code is still experimental, but also quite stable, so
 you should be able to use it without problems. If you experience coding problems, try activating this option.</p>
+
+<p>The next one makes Devede to use FFMpeg instead of Mencoder when encoding the menus: some versions of FFMpeg aren't capable of creating suitable files
+for the DVD menus, so the solution is to use Mencoder for menus, and FFMpeg for the videos.</p>
 
 <p>The next option allows to specify where Devede will store the temporal files for previews.</p>
 
