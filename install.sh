@@ -47,7 +47,7 @@ install_others()	# arg1=bindir, arg2=datadir, arg3=pkglibdir,
 
 {
 	install -m 755 -d "${DESTDIR}${1}"
-	install -m 755 "${scriptdir}/devede.py" "${DESTDIR}${1}/devede"
+	install -m 755 "${scriptdir}/devede" "${DESTDIR}${1}/devede"
 	install -m 755 "${scriptdir}/devede_debug" "${DESTDIR}${1}/devede_debug"
 	install -m 755 "${scriptdir}/devede-debug" "${DESTDIR}${1}/devede-debug"
 

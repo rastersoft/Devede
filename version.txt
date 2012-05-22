@@ -1,1 +1,1 @@
-Devede 3.21.0
+Devede 3.22.0
