@@ -1,3 +1,6 @@
+Changes from 3.22.0
+
+Fixed a bug when doing preview from the "menu options" window (thanks to Tommydkat)
 
 --------- TODO --------------
 

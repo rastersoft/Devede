@@ -261,6 +261,7 @@ class menu_options:
 		global_vars2["with_menu"]=True
 		global_vars2["AC3_fix"]=self.global_vars["AC3_fix"]
 		global_vars2["use_ffmpeg"]=self.global_vars["use_ffmpeg"]
+		global_vars2["use_ffmpeg_menu"]=self.global_vars["use_ffmpeg_menu"]
 		self.set_new_bg(global_vars2)
 		window=menu_preview(self.gladefile,self.structure,global_vars2)
 		window=None
