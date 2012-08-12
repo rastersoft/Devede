@@ -482,6 +482,16 @@ def load_config(global_vars):
 					global_vars["AC3_fix"]=True
 				else:
 					global_vars["AC3_fix"]=False
+			if linea[:15]=="AC3_fix_ffmpeg:":
+				if linea[15:]=="1":
+					global_vars["AC3_fix_ffmpeg"]=True
+				else:
+					global_vars["AC3_fix_ffmpeg"]=False
+			if linea[:15]=="AC3_fix_avconv:":
+				if linea[15:]=="1":
+					global_vars["AC3_fix_avconv"]=True
+				else:
+					global_vars["AC3_fix_avconv"]=False
 			if linea[:16]=="erase_tmp_files:":
 				if linea[16:]=="1":
 					global_vars["erase_files"]=True
@@ -489,14 +499,18 @@ def load_config(global_vars):
 					global_vars["erase_files"]=False
 			if linea[:11]=="use_ffmpeg:":
 				if linea[11:]=="1":
-					global_vars["use_ffmpeg"]=True
+					global_vars["encoder_video"]="ffmpeg"
 				else:
-					global_vars["use_ffmpeg"]=False
+					global_vars["encoder_video"]="mencoder"
 			if linea[:16]=="use_ffmpeg_menu:":
 				if linea[16:]=="1":
-					global_vars["use_ffmpeg_menu"]=True
+					global_vars["encoder_menu"]="ffmpeg"
 				else:
-					global_vars["use_ffmpeg_menu"]=False
+					global_vars["encoder_menu"]="mencoder"
+			if linea[:13]=="encoder_menu:":
+				global_vars["encoder_menu"]=linea[13:]
+			if linea[:14]=="encoder_video:":
+				global_vars["encoder_video"]=linea[14:]
 			#if linea[:]==":":
 			#	global_vars[""]=linea[:]
 		archivo.close()
@@ -540,20 +554,23 @@ def save_config(global_vars):
 			archivo.write("AC3_fix:1\n")
 		else:
 			archivo.write("AC3_fix:0\n")
+		if global_vars["AC3_fix_ffmpeg"]:
+			archivo.write("AC3_fix_ffmpeg:1\n")
+		else:
+			archivo.write("AC3_fix_ffmpeg:0\n")
+		if global_vars["AC3_fix_avconv"]:
+			archivo.write("AC3_fix_avconv:1\n")
+		else:
+			archivo.write("AC3_fix_avconv:0\n")
 		if global_vars["erase_files"]:
 			archivo.write("erase_tmp_files:1\n")
 		else:
 			archivo.write("erase_tmp_files:0\n")
-		if global_vars["use_ffmpeg"]:
-			archivo.write("use_ffmpeg:1\n")
-		else:
-			archivo.write("use_ffmpeg:0\n")
-		if global_vars["use_ffmpeg_menu"]:
-			archivo.write("use_ffmpeg_menu:1\n")
-		else:
-			archivo.write("use_ffmpeg_menu:0\n")
+		archivo.write("encoder_video:"+global_vars["encoder_video"]+"\n")
+		archivo.write("encoder_menu:"+global_vars["encoder_menu"]+"\n")
 		archivo.close()
 	except IOError:
+		print "Error when writting configuration"
 		pass
 
 

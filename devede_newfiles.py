@@ -1309,7 +1309,7 @@ class file_properties(newfile):
 
 		self.refresh_subtitles()
 		
-		if (self.global_vars["use_ffmpeg"]):
+		if ((self.global_vars["encoder_video"]=="ffmpeg") or (self.global_vars["encoder_video"]=="avconv")):
 			use_ffmpeg=False
 		else:
 			use_ffmpeg=True

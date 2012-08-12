@@ -43,8 +43,10 @@ class xml_files(devede_executor.executor):
 		self.output=False
 		self.structure=structure
 		self.AC3_fix=global_vars["AC3_fix"]
-		self.use_ffmpeg=global_vars["use_ffmpeg"]
-		self.use_ffmpeg_menu=global_vars["use_ffmpeg_menu"]
+		self.AC3_fix_ffmpeg=global_vars["AC3_fix_ffmpeg"]
+		self.AC3_fix_avconv=global_vars["AC3_fix_avconv"]
+		self.encoder_video=global_vars["encoder_video"]
+		self.encoder_menu=global_vars["encoder_menu"]
 		self.with_menu=global_vars["with_menu"]
 		if (len(structure)==1) and (len(structure[0])==2) and (not self.with_menu):
 			self.onlyone=True
@@ -886,8 +888,6 @@ class xml_files(devede_executor.executor):
 		
 		command_var.append("-f")
 		command_var.append("image2")
-		command_var.append("-t")
-		command_var.append(str(1+self.menu_sound_duration))
 		command_var.append("-i")
 		command_var.append(self.filefolder+self.filename+"_menu"+str(counter)+"_bg.png")
 		command_var.append("-i")
@@ -899,6 +899,11 @@ class xml_files(devede_executor.executor):
 			command_var.append("pal-dvd")
 		else:
 			command_var.append("ntsc-dvd")
+		command_var.append("-acodec")
+		if self.AC3_fix_ffmpeg:
+			command_var.append("ac3_fixed")
+		else:
+			command_var.append("ac3")
 		command_var.append("-s")
 		if self.menu_PAL:
 			command_var.append("720x576")
@@ -927,6 +932,9 @@ class xml_files(devede_executor.executor):
 		command_var.append("-aspect")
 		command_var.append("4:3")
 
+		command_var.append("-t")
+		command_var.append(str(1+self.menu_sound_duration))
+
 		#audio="/home/raster/Escritorio/lazy.mp3"
 		
 		command_var.append(currentfile)
@@ -935,13 +943,89 @@ class xml_files(devede_executor.executor):
 
 		self.launch_program(command_var)
 	
+
+	def create_menu_mpg_avconv(self,counter):
+
+		self.mplexed=False
+		command_var=[]
+		command_var.append("avconv")
+		#command_var.append("avconv")
+	
+		currentfile=self.filefolder+self.filename+"_menu_"+str(counter)+".mpg"
+	
+		audio=self.menu_sound
+		command_var.append("-loop")
+		command_var.append("1")
+		
+		command_var.append("-f")
+		command_var.append("image2")
+		command_var.append("-i")
+		command_var.append(self.filefolder+self.filename+"_menu"+str(counter)+"_bg.png")
+		command_var.append("-i")
+		command_var.append(audio)
+	
+		command_var.append("-y")
+		command_var.append("-target")
+		if self.menu_PAL:
+			command_var.append("pal-dvd")
+		else:
+			command_var.append("ntsc-dvd")
+		command_var.append("-acodec")
+		if self.AC3_fix_avconv:
+			command_var.append("ac3_fixed")
+		else:
+			command_var.append("ac3")
+		command_var.append("-s")
+		if self.menu_PAL:
+			command_var.append("720x576")
+		else:
+			command_var.append("720x480")
+		command_var.append("-g")
+		command_var.append("12")
+#		command_var.append("-bf")
+#		command_var.append("2")
+#		command_var.append("-strict")
+#		command_var.append("1")
+#		command_var.append("-ac")
+#		command_var.append("2")
+#		command_var.append("-trellis")
+#		command_var.append("1")
+#		command_var.append("-mbd")
+#		command_var.append("2")
+		command_var.append("-b:v")
+		command_var.append("2500k")
+		command_var.append("-b:a")
+		command_var.append("192k")
+#		command_var.append("-maxrate")
+#		command_var.append("4000k")
+#		command_var.append("-minrate")
+#		command_var.append("2200k")
+		command_var.append("-aspect")
+		command_var.append("4:3")
+
+		command_var.append("-t")
+		command_var.append(str(1+self.menu_sound_duration))
+
+		#audio="/home/raster/Escritorio/lazy.mp3"
+		
+		command_var.append(currentfile)
+		origDir=os.getcwd()
+		print "Lanzo "+str(command_var)
+
+		self.launch_program(command_var)
+
+
 	
 	def create_menu_mpg(self,counter):
 	
 		print "Creating menus"
 	
-		if (self.use_ffmpeg_menu):
+		if (self.encoder_menu=="ffmpeg"):
 			self.create_menu_mpg_ffmpeg(counter)
+			return
+	
+		if (self.encoder_menu=="avconv"):
+			self.create_menu_mpg_avconv(counter)
 			return
 	
 		self.mplexed=False

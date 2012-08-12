@@ -34,7 +34,7 @@ import shutil
 import pickle
 import cairo
 
-print "DeVeDe 3.22.1"
+print "DeVeDe 3.23.0 beta1"
 if (sys.platform!="win32") and (sys.platform!="win64"):
 	try:
 		print "Locale: "+str(os.environ["LANG"])
@@ -293,11 +293,13 @@ global_vars["sub_codepage"]="ISO-8859-1"
 global_vars["sub_language"]="EN (ENGLISH)"
 global_vars["with_menu"]=True
 global_vars["AC3_fix"]=False
+global_vars["AC3_fix_ffmpeg"]=False
+global_vars["AC3_fix_avconv"]=False
 (a,b)=get_cores()
 global_vars["cores"]=a
 global_vars["hypercores"]=b
-global_vars["use_ffmpeg"]=True
-global_vars["use_ffmpeg_menu"]=False
+global_vars["encoder_video"]="ffmpeg"
+global_vars["encoder_menu"]="mencoder"
 global_vars["warning_ffmpeg"]=False
 global_vars["shutdown_after_disc"]=False
 
@@ -305,6 +307,7 @@ global_vars["menu_top_margin"]=0.125
 global_vars["menu_bottom_margin"]=0.125
 global_vars["menu_left_margin"]=0.1
 global_vars["menu_right_margin"]=0.1
+global_vars["encoders"]=[]
 #global_vars[""]=""
 
 print "Cores: "+str(global_vars["cores"])+" Virtual cores: "+str(global_vars["hypercores"])
@@ -366,10 +369,12 @@ else:
 
 	if 127==devede_other.check_program("mplayer -v"):
 		errors+="mplayer\n"
-	if 127==devede_other.check_program("mencoder -msglevel help"):
-		errors+="mencoder\n"
-	if 127==devede_other.check_program("ffmpeg --help"):
-		errors+="ffmpeg\n"
+	if 0==devede_other.check_program("mencoder -msglevel help"):
+		global_vars["encoders"].append("mencoder")
+	if 0==devede_other.check_program("ffmpeg --help"):
+		global_vars["encoders"].append("ffmpeg")
+	if 0==devede_other.check_program("avconv --help"):
+		global_vars["encoders"].append("avconv")
 	if 127==devede_other.check_program("dvdauthor --help"):
 		errors+="dvdauthor\n"
 	if 127==devede_other.check_program("vcdimager --help"):
@@ -392,6 +397,9 @@ def program_exit(widget):
 	
 	gtk.main_quit()
 
+
+if len(global_vars["encoders"])==0:
+	errors+="Mencoder, FFmpeg and/or AVconv"
 
 if errors!="":
 	arbol.add_from_file(os.path.join(glade,"wprograms.ui"))

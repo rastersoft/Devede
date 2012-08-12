@@ -260,8 +260,10 @@ class menu_options:
 		global_vars2["PAL"]=self.global_vars["PAL"]
 		global_vars2["with_menu"]=True
 		global_vars2["AC3_fix"]=self.global_vars["AC3_fix"]
-		global_vars2["use_ffmpeg"]=self.global_vars["use_ffmpeg"]
-		global_vars2["use_ffmpeg_menu"]=self.global_vars["use_ffmpeg_menu"]
+		global_vars2["AC3_fix_ffmpeg"]=self.global_vars["AC3_fix_ffmpeg"]
+		global_vars2["AC3_fix_avconv"]=self.global_vars["AC3_fix_avconv"]
+		global_vars2["encoder_video"]=self.global_vars["encoder_video"]
+		global_vars2["encoder_menu"]=self.global_vars["encoder_menu"]
 		self.set_new_bg(global_vars2)
 		window=menu_preview(self.gladefile,self.structure,global_vars2)
 		window=None

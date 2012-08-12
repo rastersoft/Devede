@@ -36,6 +36,23 @@ class devede_settings:
         else:
             self.hyper.set_sensitive(False)
     
+    def set_model_from_list (self, cb, items, selected):
+        """Setup a ComboBox or ComboBoxEntry based on a list of strings."""
+        model = gtk.ListStore(str)
+        pos=-1
+        c=0
+        for i in items:
+            model.append([i])
+            if (i==selected):
+                pos=c
+            c+=1
+        cb.set_model(model)
+        cell = gtk.CellRendererText()
+        cb.pack_start(cell, True)
+        cb.add_attribute(cell, 'text', 0)
+        if (pos!=-1):
+            cb.set_active(pos)
+
     def __init__(self,gladefile,structure,global_vars):
         
         self.gladefile=gladefile
@@ -45,6 +62,12 @@ class devede_settings:
         self.tree=devede_other.create_tree(self,"settings",self.gladefile,False)
         self.tree.connect_signals(self)
         wsettings=self.tree.get_object("wsettings_dialog")
+        
+        self.videos_combo=self.tree.get_object("combobox_videos")
+        self.menus_combo=self.tree.get_object("combobox_menus")
+        
+        self.set_model_from_list(self.videos_combo,global_vars["encoders"],global_vars["encoder_video"])
+        self.set_model_from_list(self.menus_combo,global_vars["encoders"],global_vars["encoder_menu"])
         
         w=self.tree.get_object("erase_files")
         w.set_active(self.global_vars["erase_files"])
@@ -64,12 +87,14 @@ class devede_settings:
         self.ac3_fix=self.tree.get_object("AC3_fix")
         self.ac3_fix.set_sensitive(True)
         self.ac3_fix.set_active(self.global_vars["AC3_fix"])
-
-        self.use_ffmpeg=self.tree.get_object("use_ffmpeg")
-        self.use_ffmpeg.set_active(self.global_vars["use_ffmpeg"])
-        self.use_ffmpeg_menu=self.tree.get_object("use_ffmpeg_menu")
-        self.use_ffmpeg_menu.set_active(self.global_vars["use_ffmpeg_menu"])
-            
+        
+        self.ac3_fix_ffmpeg=self.tree.get_object("AC3_fix_ffmpeg")
+        self.ac3_fix_ffmpeg.set_sensitive(True)
+        self.ac3_fix_ffmpeg.set_active(self.global_vars["AC3_fix_ffmpeg"])
+        
+        self.ac3_fix_avconv=self.tree.get_object("AC3_fix_avconv")
+        self.ac3_fix_avconv.set_sensitive(True)
+        self.ac3_fix_avconv.set_active(self.global_vars["AC3_fix_avconv"])
         
         print "Path: "+str(global_vars["temp_folder"])
         path=self.tree.get_object("temporary_files")
@@ -95,11 +120,13 @@ class devede_settings:
             self.global_vars["multicore"]=1
             self.global_vars["hyperthreading"]=False
         
-        self.global_vars["use_ffmpeg"]=self.use_ffmpeg.get_active()
-        self.global_vars["use_ffmpeg_menu"]=self.use_ffmpeg_menu.get_active()
+        self.global_vars["encoder_video"]=self.global_vars["encoders"][self.videos_combo.get_active()]
+        self.global_vars["encoder_menu"]=self.global_vars["encoders"][self.menus_combo.get_active()]
             
         self.global_vars["AC3_fix"]=self.ac3_fix.get_active()
-        
+        self.global_vars["AC3_fix_ffmpeg"]=self.ac3_fix_ffmpeg.get_active()
+        self.global_vars["AC3_fix_avconv"]=self.ac3_fix_avconv.get_active()
+                
         path=self.tree.get_object("temporary_files")
         self.global_vars["temp_folder"]=path.get_current_folder()
         print "Path: "+str(self.global_vars["temp_folder"])

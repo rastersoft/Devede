@@ -322,6 +322,12 @@ class video_converter_ffmpeg(devede_executor.executor):
 					command_var.append("film-dvd")
 				else:
 					command_var.append("pal-dvd")
+				if (copy_audio==False):
+					command_var.append("-acodec")
+					if fix_ac3:
+						command_var.append("ac3_fixed")
+					else:
+						command_var.append("ac3")
 				#command_var.append("-maxrate")
 				#command_var.append("7000k")
 				#command_var.append("-minrate")

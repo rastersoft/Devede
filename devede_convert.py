@@ -46,6 +46,7 @@ if (sys.platform=="win32") or (sys.platform=="win64"):
 import devede_other
 import devede_video_convert
 import devede_ffmpeg_convert
+import devede_avconv_convert
 import devede_subtitles
 import devede_xml_menu
 import devede_delete
@@ -184,7 +185,7 @@ class create_all:
 		self.global_vars=global_vars
 		
 		self.has_mp3lame=True
-		if (global_vars["disctocreate"]=="divx") and (global_vars["use_ffmpeg"]):
+		if (global_vars["disctocreate"]=="divx") and ((global_vars["encoder_video"]=="ffmpeg") or (global_vars["encoder_video"]=="avconv")):
 			if (False==self.check_mp3lame()):
 				return
 		
@@ -497,8 +498,10 @@ class create_all:
 			else:
 				encpass = int(action[0][1])
 			print "Segundos "+str(self.seconds)
-			if (self.global_vars["use_ffmpeg"]):
-				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, encpass,self.global_vars["AC3_fix"])
+			if (self.global_vars["encoder_video"]=="ffmpeg"):
+				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, encpass,self.global_vars["AC3_fix_ffmpeg"])
+			elif (self.global_vars["encoder_video"]=="avconv"):
+				self.runner=devede_avconv_convert.video_converter_ffmpeg(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, encpass,self.global_vars["AC3_fix_avconv"])
 			else:
 				self.runner=devede_video_convert.video_converter(self.global_vars,self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, encpass,self.global_vars["AC3_fix"])
 			return True
@@ -506,8 +509,10 @@ class create_all:
 		if action[0]=="C2":
 			title=action[1]
 			chapter=action[2]
-			if (self.global_vars["use_ffmpeg"]):
-				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, 2,self.global_vars["AC3_fix"])
+			if (self.global_vars["encoder_video"]=="ffmpeg"):
+				self.runner=devede_ffmpeg_convert.video_converter_ffmpeg(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, 2,self.global_vars["AC3_fix_ffmpeg"])
+			elif (self.global_vars["encoder_video"]=="avconv"):
+				self.runner=devede_avconv_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, 2,self.global_vars["AC3_fix_avconv"])
 			else:
 				self.runner=devede_video_convert.video_converter(self.structure[title][chapter+1],self.filename,self.filefolder,self.partial,self.label,self.global_vars["disctocreate"],title+1,chapter+1,cores,self.seconds, 2,self.global_vars["AC3_fix"])
 			return True
