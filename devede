@@ -393,6 +393,7 @@ else:
 		errors+="spumux\n"
 
 
+
 def program_exit(widget):
 	
 	gtk.main_quit()
@@ -419,6 +420,20 @@ elif fonts_found==False:
 	wprograms.connect("destroy",program_exit)
 else:
 	new_file=devede_disctype.disctype(global_vars)
+
+found_v=False
+found_m=False
+for i in global_vars["encoders"]:
+	if i==global_vars["encoder_video"]:
+		found_v=True
+	if i==global_vars["encoder_menu"]:
+		found_m=True
+
+l=len(global_vars["encoders"])
+if found_v==False:
+	global_vars["encoder_video"]=global_vars["encoders"][l-1]
+if found_m==False:
+	global_vars["encoder_menu"]=global_vars["encoders"][l-1]
 
 gtk.main()
 print "Saving configuration"
