@@ -45,26 +45,15 @@ if (sys.platform!="win32") and (sys.platform!="win64"):
 tipo=-1
 
 try:
-	fichero=open("./interface/wmain.ui","r")
-	fichero.close()
-	tipo=2
+	os.stat("/usr/share/devede/wmain.ui")
+	tipo=0
 	found=True
 except:
-	found=False	
+	found=False
 
 if found==False:
 	try:
-		fichero=open("/usr/share/devede/wmain.ui","r")
-		fichero.close()
-		tipo=0
-		found=True
-	except:
-		found=False
-
-if found==False:
-	try:
-		fichero=open("/usr/local/share/devede/wmain.ui","r")
-		fichero.close()
+		os.stat("/usr/local/share/devede/wmain.ui")
 		tipo=1
 		found=True
 	except:
@@ -106,25 +95,6 @@ elif tipo==1:
 	other_path="/usr/local/share/devede"
 	help_path="/usr/local/share/doc/devede"
 	print "Using local-installed files"
-	
-elif tipo==2:
-	# if the files aren't at /usr/local, try with ./
-	#gettext.bindtextdomain('devede', './po/')
-	#Note also before python 2.3 you need the following if
-	#you need translations from non python code (glibc,libglade etc.)
-	#there are other access points to this function
-	#gtk.glade.bindtextdomain("devede","/usr/share/locale")
-	#arbol=gtk.Builder("./devede.glade",domain="devede")
-	
-	# if the files aren't at /usr/local, try with ./
-	share_locale="./po/"
-	glade="./interface"
-	sys.path.append(os.getcwd())#("./")
-	font_path=os.getcwd()#"./"
-	pic_path=os.path.join(font_path, "pixmaps") #pic_path=font_path
-	other_path=os.path.join(font_path,"pixmaps")
-	help_path=os.path.join(font_path,"doc")
-	print "Using direct files"
 	
 else:
 	print "Can't locate extra files. Aborting."
