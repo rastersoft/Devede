@@ -116,17 +116,20 @@ class create_all:
 		estado=''
 		freespace=''
 		if (sys.platform!="win32") and (sys.platform!="win64"):
-			print "Checking "+str(filefolder)
-			estado=os.statvfs(filefolder) # eg. f="C:\Documents and Settings\User name\Desktop"
-			freespace=95*estado.f_bsize*estado.f_bavail/100000
+			try:
+				print "Checking "+str(filefolder)
+				estado=os.statvfs(filefolder) # eg. f="C:\Documents and Settings\User name\Desktop"
+				freespace=95*estado.f_bsize*estado.f_bavail/100000
+			except ImportError:
+				print "Error when checking free space"
+				freespace=0
 		else:
 			try:
 				test_drive = os.path.splitdrive(filefolder)[0] + "\\" # So it will also work on Windows 2000 
 				spc, bps, fc, tc = win32api.GetDiskFreeSpace(test_drive)
 				freespace=fc * spc * bps
-
 			except ImportError:
-				pass
+				freespace=0
 		print "Free space in "+str(filefolder)+": "+str(freespace)
 		print "estatus ", estado, "\n"
 	
