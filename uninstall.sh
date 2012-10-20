@@ -15,6 +15,7 @@ uninstall_others()	# arg1=bindir, arg2=datadir, arg3=pkglibdir,
 	rm -f "${DESTDIR}${1}/devede"
 	rm -f "${DESTDIR}${1}/devede.py"
 	rm -f "${DESTDIR}${1}/devede_debug"
+        rm -f "${DESTDIR}${1}/devede-debug"
 	rm -rf "${DESTDIR}${3}"
 	rm -rf "${DESTDIR}${4}"
 	rm -rf "${DESTDIR}${5}"
