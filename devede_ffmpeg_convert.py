@@ -508,36 +508,7 @@ class video_converter_ffmpeg(devede_executor.executor):
 						os.remove(passlog_var)
 					except:
 						 pass
-					#if videofile["turbo1stpass"]:
-					#	lavcopts+=":turbo"
 
-#	
-#		if (disctype=="divx") and (copy_audio==False) and (isvob==False):
-#			lameopts="abr:br="+str(audiorate)
-#			command_var.append("-lameopts")
-#			extra_params=videofile["params_lame"] # take the LAME extra params
-#			while (extra_params!=""):
-#				extra_params,new_param=devede_other.get_new_param(extra_params)
-#				if (new_param!="") and (new_param!=':'):
-#					while (len(new_param)>1) and (new_param[0]==':'):
-#						new_param=new_param[1:]
-#					while (len(new_param)>1) and (new_param[-1]==':'):
-#						new_param=new_param[:-1]
-#					lameopts+=":"+new_param
-#			command_var.append(lameopts)
-	
-		currentfile=self.create_filename(filefolder+filename,title,chapter,disctype=="divx")
-
-		if (passlog_var != None) and (isvob==False):
-			command_var.append("-passlogfile")
-			command_var.append(passlog_var)
-
-		if (encpass==1) and (isvob==False):
-			command_var.append("-y")
-			command_var.append("/dev/null")
-		else:
-			command_var.append(currentfile)
-		
 		at=audio_tracks
 		while (at>1):
 			if (volume!=100):
@@ -552,6 +523,19 @@ class video_converter_ffmpeg(devede_executor.executor):
 			extra_params,new_param=devede_other.get_new_param(extra_params)
 			if new_param!="":
 				command_var.append(new_param)
+	
+		currentfile=self.create_filename(filefolder+filename,title,chapter,disctype=="divx")
+
+		if (passlog_var != None) and (isvob==False):
+			command_var.append("-passlogfile")
+			command_var.append(passlog_var)
+
+		if (encpass==1) and (isvob==False):
+			command_var.append("-y")
+			command_var.append("/dev/null")
+		else:
+			command_var.append(currentfile)
+		
 
 		self.print_error=_("Conversion failed.\nIt seems a bug of Mencoder.")
 		if (videofile["params"]!="") or (videofile["params_vf"]!="") or (videofile["params_lame"]!=""):
