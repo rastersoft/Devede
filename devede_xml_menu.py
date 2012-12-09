@@ -90,6 +90,9 @@ class xml_files(devede_executor.executor):
 		
 		if (len(self.structure))>self.elements_per_menu:
 			self.elements_per_menu-=1
+			self.add_one=True
+		else:
+			self.add_one=False
 		
 		counter=0
 		if self.with_menu:
@@ -545,13 +548,18 @@ class xml_files(devede_executor.executor):
 			fichero.write(' select="'+self.expand_xml(self.filefolder+self.filename)+'_menu'+str(nelement)+'_bg_select_out.png" >\n')
 			
 			counter=first_element
+			pos_tmp=len(self.structure[counter:counter+self.elements_per_menu])
+			if (self.add_one):
+				pos_tmp+=1
+			
 			if (self.align==0):
 				pos_y=self.top_margin
 			elif self.align==1:
-				pos_y=0.75-self.bottom_margin-self.height2*float(len(self.structure[counter:counter+self.lines_per_menu]))
+				pos_y=0.75-self.bottom_margin-self.height2*float(pos_tmp)
 			else:
-				pos_y=(self.top_margin+(0.75-self.bottom_margin)-self.height2*float(len(self.structure[counter:counter+self.lines_per_menu])))/2
-			pos_y3=0.75-self.bottom_margin-self.height2#pos_y+self.height2*float((len(self.structure[counter:counter+self.lines_per_menu])))
+				pos_y=(self.top_margin+(0.75-self.bottom_margin)-self.height2*float(pos_tmp))/2
+
+			pos_y3=0.75-self.bottom_margin-self.height2
 			pos_y/=0.75
 			pos_y3/=0.75
 			inc_y=self.height2/0.75
@@ -598,9 +606,10 @@ class xml_files(devede_executor.executor):
 					fichero.write(' left="boton'+str(nelement)+'p"')
 				fichero.write(' > </button>\n')
 			
+			tmpcoord=(720.0*(self.left_margin+(1.0-self.right_margin)))/2.0
 			if has_previous:
 				fichero.write('<button name="boton'+str(nelement)+'p"')
-				fichero.write(' x0="0" y0="'+str(int(pos_y3))+'" x1="'+str(int(((720-(self.left_margin+self.right_margin))/2)-1))+'" y1="'+str(int(pos_y3+inc_y-2))+'"')
+				fichero.write(' x0="0" y0="'+str(int(pos_y3))+'" x1="'+str(int(tmpcoord)-1)+'" y1="'+str(int(pos_y3+inc_y-2))+'"')
 				fichero.write(' up="boton'+str(nelement)+'x'+str(cantidad-1)+'"')
 				if has_next:
 					fichero.write(' right="boton'+str(nelement)+'n"')
@@ -608,7 +617,7 @@ class xml_files(devede_executor.executor):
 
 			if has_next:
 				fichero.write('<button name="boton'+str(nelement)+'n"')
-				fichero.write(' x0="'+str(int(((720-(self.left_margin+self.right_margin))/2)+1))+'" y0="'+str(int(pos_y3))+'" x1="719" y1="'+str(int(pos_y3+inc_y-2))+'"')
+				fichero.write(' x0="'+str(int(tmpcoord)+1)+'" y0="'+str(int(pos_y3))+'" x1="719" y1="'+str(int(pos_y3+inc_y-2))+'"')
 				fichero.write(' up="boton'+str(nelement)+'x'+str(cantidad-1)+'"')
 				if has_previous:
 					fichero.write(' left="boton'+str(nelement)+'p"')
@@ -643,9 +652,9 @@ class xml_files(devede_executor.executor):
 		if half_button: # we want half button
 			if x==0:
 				xi=self.left_margin+radius
-				xf=((self.left_margin+1-self.right_margin)/2.0)-radius
+				xf=((self.left_margin+1.0-self.right_margin)/2.0)-radius
 			else:
-				xi=((self.left_margin+1-self.right_margin)/2.0)+radius
+				xi=((self.left_margin+1.0-self.right_margin)/2.0)+radius
 				xf=1-self.right_margin-radius
 		else:
 			xi=self.left_margin+radius
@@ -801,14 +810,18 @@ class xml_files(devede_executor.executor):
 
 		cr.scale(sf.get_width(),1.33*sf.get_height()) # picture gets from 0 to 1 in X and from 0 to 0.75 in Y
 
+		pos_tmp=len(self.structure[counter:counter+self.elements_per_menu])
+		if (self.add_one):
+			pos_tmp+=1
+
 		if (self.align==0):
 			pos_y=self.top_margin
 		elif self.align==1:
-			pos_y=0.75-self.bottom_margin-self.height2*float(len(self.structure[counter:counter+self.lines_per_menu]))
+			pos_y=0.75-self.bottom_margin-self.height2*float(pos_tmp)
 		else:
-			pos_y=(self.top_margin+(0.75-self.bottom_margin)-self.height2*float(len(self.structure[counter:counter+self.lines_per_menu])))/2
+			pos_y=(self.top_margin+(0.75-self.bottom_margin)-self.height2*float(pos_tmp))/2
+		
 		pos_y3=0.75-self.bottom_margin-self.height2
-		#pos_y3=pos_y+self.height2*float((self.lines_per_menu)-1)
 		
 		fontname,fontstyle,fontslant,fontsize=devede_other.get_font_params(self.font_name)
 
