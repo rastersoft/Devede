@@ -134,6 +134,10 @@ class load_save_config:
 					element2["turbo1stpass"]=False # for backward compatibility
 				if False==element2.has_key("subfont_size"):
 					element2["subfont_size"]=28 # subtitle font size
+				if False==element2.has_key("sub_fill_color"):
+					element2["sub_fill_color"]=[65535,65535,65535,65535] # subtitle fill color
+				if False==element2.has_key("sub_outline_color"):
+					element2["sub_outline_color"]=[0,0,0,65535] # subtitle outline color
 				if False==element2.has_key("volume"):
 					element2["volume"]=100 # default volume (in percentage)
 				if False==element2.has_key("force_subs"):
