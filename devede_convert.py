@@ -595,7 +595,7 @@ class create_all:
 			if (failure):
 				failure=False
 				
-				# If it fails, try with HAL
+				# If it fails, try with ConsoleKit
 				try:
 					bus = dbus.SystemBus()
 					bus_object = bus.get_object("org.freedesktop.ConsoleKit", "/org/freedesktop/ConsoleKit/Manager")
