@@ -588,7 +588,7 @@ class create_all:
 			# First, try with logind
 			try:
 				bus = dbus.SystemBus()
-				bus_object = bus.get_object("org.freedesktop.login1", "/org/freedesktop/login1/Manager")
+				bus_object = bus.get_object("org.freedesktop.login1", "/org/freedesktop/login1")
 				bus_object.PowerOff(False, dbus_interface="org.freedesktop.login1.Manager")
 			except:
 				failure=True
