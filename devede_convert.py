@@ -355,6 +355,8 @@ class create_all:
 		self.filename.replace("\\","_")
 		
 		filefolder=wdir.get_current_folder()
+		if filefolder is None: 
+			filefolder="/tmp"
 		
 		wfolder_dialog.hide()
 		wfolder_dialog.destroy()
