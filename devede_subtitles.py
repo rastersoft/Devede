@@ -136,6 +136,16 @@ class subtitles_adder(devede_executor.executor):
 
 		fichero.write('\n\t\tfontsize="'+str(tamanofont)+'.0"')
 
+		fill_color = 'rgba(%.0f%%, %.0f%%, %.0f%%, %.0f%%)' % tuple(
+			float(item)/655.35 for item in videofile["sub_fill_color"]
+		)
+		fichero.write('\n\t\tfill-color="%s"' % fill_color)
+
+		outline_color = 'rgba(%.0f%%, %.0f%%, %.0f%%, %.0f%%)' % tuple(
+			float(item)/655.35 for item in videofile["sub_outline_color"]
+		)
+		fichero.write('\n\t\toutline-color="%s"' % outline_color)
+
 		if (videofile["fps"]==30):
 			if (videofile["ofps"]==24) and ((disctype=="dvd") or (disctype=="divx")):
 				fps_out="24000/1001"
