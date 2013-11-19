@@ -585,16 +585,26 @@ class create_all:
 			print "\n\nApago el ordenador\n\n"
 			failure=False
 			
-			# First, try with ConsoleKit
+			# First, try with logind
 			try:
 				bus = dbus.SystemBus()
-				bus_object = bus.get_object("org.freedesktop.ConsoleKit", "/org/freedesktop/ConsoleKit/Manager")
-				bus_object.Stop(dbus_interface="org.freedesktop.ConsoleKit.Manager")
+				bus_object = bus.get_object("org.freedesktop.login1", "/org/freedesktop/login1")
+				bus_object.PowerOff(False, dbus_interface="org.freedesktop.login1.Manager")
 			except:
 				failure=True
 			if (failure):
 				failure=False
 				
+				# If it fails, try with ConsoleKit
+				try:
+					bus = dbus.SystemBus()
+					bus_object = bus.get_object("org.freedesktop.ConsoleKit", "/org/freedesktop/ConsoleKit/Manager")
+					bus_object.Stop(dbus_interface="org.freedesktop.ConsoleKit.Manager")
+				except:
+					failure=True
+			if (failure):
+				failure=False
+
 				# If it fails, try with HAL
 				try:
 					bus = dbus.SystemBus()
