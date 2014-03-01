@@ -505,7 +505,7 @@ class video_converter_ffmpeg(devede_executor.executor):
 						 pass
 	
 			if (vcd==False):
-				command_var.append("-b:v")
+				command_var.append("-b")
 				command_var.append(str(videorate)+"k")
 	
 		
