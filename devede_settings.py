@@ -128,7 +128,7 @@ class devede_settings:
         self.global_vars["AC3_fix_avconv"]=self.ac3_fix_avconv.get_active()
                 
         path=self.tree.get_object("temporary_files")
-        self.global_vars["temp_folder"]=path.get_current_folder()
+        self.global_vars["temp_folder"]=path.get_filename()
         print "Path: "+str(self.global_vars["temp_folder"])
         
         wsettings.destroy()

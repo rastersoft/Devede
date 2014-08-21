@@ -99,7 +99,7 @@ class create_all:
 		if iso_name.get_text()=="":
 			mode=False
 		
-		folder=iso_folder.get_current_folder()
+		folder=iso_folder.get_filename()
 		if folder==None:
 			mode=False
 		elif folder=="":
@@ -354,7 +354,7 @@ class create_all:
 		self.filename.replace("|","_")
 		self.filename.replace("\\","_")
 		
-		filefolder=wdir.get_current_folder()
+		filefolder=wdir.get_filename()
 		if filefolder is None: 
 			filefolder="/tmp"
 		

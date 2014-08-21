@@ -1,28 +1,32 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.16"/>
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkWindow" id="wdisk_type">
     <property name="width_request">650</property>
+    <property name="can_focus">False</property>
     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Disc type selection</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
     <property name="icon">devede.svg</property>
-    <signal name="delete_event" handler="on_wdisk_type_delete_event"/>
+    <signal name="delete-event" handler="on_wdisk_type_delete_event" swapped="no"/>
     <child>
       <object class="GtkVBox" id="vbox40">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
+        <property name="can_focus">False</property>
         <child>
           <object class="GtkLabel" id="label117">
             <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="ypad">15</property>
             <property name="label" translatable="yes">&lt;b&gt;Choose the disc type you want to create with DeVeDe&lt;/b&gt;</property>
             <property name="use_markup">True</property>
           </object>
           <packing>
-            <property name="padding">4</property>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">0</property>
           </packing>
         </child>
@@ -31,13 +35,16 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_disctype_dvd"/>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_disctype_dvd" swapped="no"/>
             <child>
               <object class="GtkHBox" id="hbox15">
                 <property name="visible">True</property>
+                <property name="can_focus">False</property>
                 <child>
                   <object class="GtkImage" id="image4">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="pixbuf">icon_dvd.png</property>
                   </object>
                   <packing>
@@ -49,12 +56,15 @@
                 <child>
                   <object class="GtkLabel" id="label112">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">&lt;b&gt;Video DVD&lt;/b&gt;
 Creates a video DVD suitable for all DVD home players</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
                     <property name="padding">4</property>
                     <property name="position">1</property>
                   </packing>
@@ -63,6 +73,8 @@ Creates a video DVD suitable for all DVD home players</property>
             </child>
           </object>
           <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
         </child>
@@ -71,13 +83,16 @@ Creates a video DVD suitable for all DVD home players</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_disctype_vcd"/>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_disctype_vcd" swapped="no"/>
             <child>
               <object class="GtkHBox" id="hbox18">
                 <property name="visible">True</property>
+                <property name="can_focus">False</property>
                 <child>
                   <object class="GtkImage" id="image5">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="pixbuf">icon_vcd.png</property>
                   </object>
                   <packing>
@@ -89,12 +104,15 @@ Creates a video DVD suitable for all DVD home players</property>
                 <child>
                   <object class="GtkLabel" id="label113">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">&lt;b&gt;VideoCD&lt;/b&gt;
 Creates a VideoCD, with a picture quality equivalent to VHS</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
                     <property name="padding">4</property>
                     <property name="position">1</property>
                   </packing>
@@ -103,6 +121,8 @@ Creates a VideoCD, with a picture quality equivalent to VHS</property>
             </child>
           </object>
           <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">2</property>
           </packing>
         </child>
@@ -111,13 +131,16 @@ Creates a VideoCD, with a picture quality equivalent to VHS</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_disctype_svcd"/>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_disctype_svcd" swapped="no"/>
             <child>
               <object class="GtkHBox" id="hbox19">
                 <property name="visible">True</property>
+                <property name="can_focus">False</property>
                 <child>
                   <object class="GtkImage" id="image6">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="pixbuf">icon_svcd.png</property>
                   </object>
                   <packing>
@@ -129,12 +152,15 @@ Creates a VideoCD, with a picture quality equivalent to VHS</property>
                 <child>
                   <object class="GtkLabel" id="label114">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">&lt;b&gt;Super VideoCD&lt;/b&gt;
 Creates a VideoCD with better picture quality</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
                     <property name="padding">4</property>
                     <property name="position">1</property>
                   </packing>
@@ -143,6 +169,8 @@ Creates a VideoCD with better picture quality</property>
             </child>
           </object>
           <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">3</property>
           </packing>
         </child>
@@ -151,13 +179,16 @@ Creates a VideoCD with better picture quality</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_disctype_cvd"/>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_disctype_cvd" swapped="no"/>
             <child>
               <object class="GtkHBox" id="hbox20">
                 <property name="visible">True</property>
+                <property name="can_focus">False</property>
                 <child>
                   <object class="GtkImage" id="image7">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="pixbuf">icon_cvd.png</property>
                   </object>
                   <packing>
@@ -169,12 +200,15 @@ Creates a VideoCD with better picture quality</property>
                 <child>
                   <object class="GtkLabel" id="label115">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">&lt;b&gt;China VideoDisc&lt;/b&gt;
 Another kind of Super VideoCD</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
                     <property name="padding">4</property>
                     <property name="position">1</property>
                   </packing>
@@ -183,6 +217,8 @@ Another kind of Super VideoCD</property>
             </child>
           </object>
           <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">4</property>
           </packing>
         </child>
@@ -191,13 +227,16 @@ Another kind of Super VideoCD</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_disctype_divx"/>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_disctype_divx" swapped="no"/>
             <child>
               <object class="GtkHBox" id="hbox21">
                 <property name="visible">True</property>
+                <property name="can_focus">False</property>
                 <child>
                   <object class="GtkImage" id="image8">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="pixbuf">icon_divx.png</property>
                   </object>
                   <packing>
@@ -209,12 +248,15 @@ Another kind of Super VideoCD</property>
                 <child>
                   <object class="GtkLabel" id="label116">
                     <property name="visible">True</property>
+                    <property name="can_focus">False</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">&lt;b&gt;DivX / MPEG-4&lt;/b&gt;
 Creates files compliant with DivX home players</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
                     <property name="padding">4</property>
                     <property name="position">1</property>
                   </packing>
@@ -223,6 +265,8 @@ Creates files compliant with DivX home players</property>
             </child>
           </object>
           <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">5</property>
           </packing>
         </child>
