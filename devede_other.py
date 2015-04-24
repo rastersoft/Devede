@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
 
 # Copyright 2006-2009 (C) Raster Software Vigo (Sergio Costas)
@@ -415,14 +415,16 @@ def check_program(programa):
 	p.wait()
 	return p.returncode
 
+def to_bool(value):
+	""" Converts string to bool """
+	if str(value).lower() in ("true",1,"pal"): return True
+	if str(value).lower() in ("false",0,"ntsc"): return False
+	raise Exception('Invalid value for boolean conversion: ' + str(value))
 
 def load_config(global_vars):
 
 	""" Load the configuration """
 	home=get_home_directory()
-	global_vars["PAL"]=True
-	global_vars["multicore"]=1 # it shouldn't use multicore by default
-	global_vars["hyperthreading"]=True # by default, use hyperthreading
 
 	# TODO change to allow a windows temp directory
 
@@ -450,69 +452,59 @@ def load_config(global_vars):
 				break
 			if linea[-1]=="\n":
 				linea=linea[:-1]
-			if linea=="pal":
-				global_vars["PAL"]=True
-			if linea=="ntsc":
-				global_vars["PAL"]=False
-			if linea[:13]=="video_format:":
-				if linea[13:]=="pal":
-					global_vars["PAL"]=True
-				if linea[13:]=="ntsc":
-					global_vars["PAL"]=False
-			if linea[:12]=="temp_folder:":
-				global_vars["temp_folder"]=linea[12:]
-			if linea[:10]=="multicore:":
-				if linea[10:]=="1":
-					global_vars["multicore"]=1
+			
+			colon=linea.index(':')         # find colon location
+			key=linea[:colon]              # get key
+			value=linea[(colon+1):]   # get value
+			
+			#special cases
+			if key=="use_ffmpeg_menu":
+				if value=="1":
+					value="ffmpeg"
 				else:
-					global_vars["multicore"]=global_vars["cores"]
-			if linea[:15]=="hyperthreading:":
-				if linea[15:]=="1":
-					global_vars["hyperthreading"]=True
+					value="mencoder"
+			if key=="use_ffmpeg":
+				if value=="1":
+					value="ffmpeg"
 				else:
-					global_vars["hyperthreading"]=False
-			if linea[:13]=="final_folder:":
-				global_vars["finalfolder"]=linea[13:]
-			if linea[:13]=="sub_language:":
-				global_vars["sub_language"]=linea[13:]
-			if linea[:13]=="sub_codepage:":
-				global_vars["sub_codepage"]=linea[13:]
-			if linea[:8]=="AC3_fix:":
-				if linea[8:]=="1":
-					global_vars["AC3_fix"]=True
-				else:
-					global_vars["AC3_fix"]=False
-			if linea[:15]=="AC3_fix_ffmpeg:":
-				if linea[15:]=="1":
-					global_vars["AC3_fix_ffmpeg"]=True
-				else:
-					global_vars["AC3_fix_ffmpeg"]=False
-			if linea[:15]=="AC3_fix_avconv:":
-				if linea[15:]=="1":
-					global_vars["AC3_fix_avconv"]=True
-				else:
-					global_vars["AC3_fix_avconv"]=False
-			if linea[:16]=="erase_tmp_files:":
-				if linea[16:]=="1":
-					global_vars["erase_files"]=True
-				else:
-					global_vars["erase_files"]=False
-			if linea[:11]=="use_ffmpeg:":
-				if linea[11:]=="1":
-					global_vars["encoder_video"]="ffmpeg"
-				else:
-					global_vars["encoder_video"]="mencoder"
-			if linea[:16]=="use_ffmpeg_menu:":
-				if linea[16:]=="1":
-					global_vars["encoder_menu"]="ffmpeg"
-				else:
-					global_vars["encoder_menu"]="mencoder"
-			if linea[:13]=="encoder_menu:":
-				global_vars["encoder_menu"]=linea[13:]
-			if linea[:14]=="encoder_video:":
-				global_vars["encoder_video"]=linea[14:]
-			#if linea[:]==":":
-			#	global_vars[""]=linea[:]
+					value="mencoder"
+			if key=="multicore":
+				if not value=="1": value=global_vars["cores"]
+			if key=="AC3_fix":
+				value=to_bool(value)
+			if key=="AC3_fix_ffmpeg":
+				value=to_bool(value)
+			if key=="AC3_fix_avconv":
+				value=to_bool(value)
+			if key=="erase_tmp_files":
+				value=to_bool(value)
+			if key=="video_format":
+				value=to_bool(value)
+			if key=="hyperthreading":
+				value=to_bool(value)
+			if key=="with_menu":
+				value=to_bool(value)
+			if key=="shutdown_after_disc":
+				value=to_bool(value)
+			if key=="erase_files":
+				value=to_bool(value)
+			if key=="PAL":
+				value=to_bool(value)
+			if key=="menu_widescreen":
+				value=to_bool(value)
+			if key=="file_twopass":
+				value=to_bool(value)
+			if key=="file_turbo1stpass":
+				value=to_bool(value)
+			if key=="file_sound51":
+				value=to_bool(value)
+			if key=="file_volume":
+				value=float(value)
+			if key=="file_lchapters":
+				value=float(value)
+			
+			global_vars[key]=value    # save
+			
 		archivo.close()
 	except IOError:
 		pass
@@ -534,40 +526,11 @@ def save_config(global_vars):
 
 	if global_vars["temp_folder"][-1]!=os.sep:
 		global_vars["temp_folder"]+=os.sep
-	try:	
+	try:
+		allowed=["PAL","erase_files","finalfolder","sub_codepage","sub_language","with_menu","AC3_fix","AC3_fix_ffmpeg","AC3_fix_avconv","encoder_video","encoder_menu","shutdown_after_disc","multicore","hyperthreading","menu_top_margin","menu_bottom_margin","menu_left_margin","menu_right_margin", "menu_widescreen","file_blackbars","file_lchapters","file_sound51","file_twopass","file_turbo1stpass","file_volume"]
 		archivo=open(home,"w")
-		if global_vars["PAL"]:
-			archivo.write("video_format:pal\n")
-		else:
-			archivo.write("video_format:ntsc\n")
-		archivo.write("temp_folder:"+global_vars["temp_folder"]+"\n")
-		archivo.write("multicore:"+str(global_vars["multicore"])+"\n")
-		if global_vars["hyperthreading"]:
-			archivo.write("hyperthreading:1\n")
-		else:
-			archivo.write("hyperthreading:0\n")
-		if global_vars["finalfolder"]!="":
-			archivo.write("final_folder:"+str(global_vars["finalfolder"])+"\n")
-		archivo.write("sub_language:"+str(global_vars["sub_language"])+"\n")
-		archivo.write("sub_codepage:"+str(global_vars["sub_codepage"])+"\n")
-		if global_vars["AC3_fix"]:
-			archivo.write("AC3_fix:1\n")
-		else:
-			archivo.write("AC3_fix:0\n")
-		if global_vars["AC3_fix_ffmpeg"]:
-			archivo.write("AC3_fix_ffmpeg:1\n")
-		else:
-			archivo.write("AC3_fix_ffmpeg:0\n")
-		if global_vars["AC3_fix_avconv"]:
-			archivo.write("AC3_fix_avconv:1\n")
-		else:
-			archivo.write("AC3_fix_avconv:0\n")
-		if global_vars["erase_files"]:
-			archivo.write("erase_tmp_files:1\n")
-		else:
-			archivo.write("erase_tmp_files:0\n")
-		archivo.write("encoder_video:"+global_vars["encoder_video"]+"\n")
-		archivo.write("encoder_menu:"+global_vars["encoder_menu"]+"\n")
+		for option, value in global_vars.items():
+			if option in allowed: archivo.write(option+":"+str(value)+"\n")
 		archivo.close()
 	except IOError:
 		print "Error when writting configuration"
