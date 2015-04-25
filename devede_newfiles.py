@@ -349,6 +349,8 @@ class newfile(file_get_params):
 		self.file_properties["copy_audio"]=False # recompress the audio
 		self.file_properties["isvob"]=False # recompress both audio and video
 		self.file_properties["swap_fields"]=False # swap fields in interlaced videos
+		self.file_properties["sub_fill_color"]=[65535,65535,65535,65535] # subtitle outline color
+		self.file_properties["sub_outline_color"]=[0,0,0,65535] # subtitle outline color
 		self.file_properties["subfont_size"]=28 # subtitle font size
 		self.file_properties["sound51"]=self.global_vars["file_sound51"] # don't use 5.1 sound
 		self.file_properties["gop12"]=True # GOP of 12 by default to increase compatibility
@@ -732,6 +734,14 @@ class file_properties(newfile):
 
 		w=self.tree.get_object("subfont_size")
 		self.file_properties["subfont_size"]=int(w.get_value())
+	
+		w=self.tree.get_object("sub_fill_color")
+		color=w.get_color()
+		self.file_properties["sub_fill_color"]=[color.red,color.green,color.blue,w.get_alpha()]
+		
+		w=self.tree.get_object("sub_outline_color")
+		color=w.get_color()
+		self.file_properties["sub_outline_color"]=[color.red,color.green,color.blue,w.get_alpha()]
 	
 		w=self.tree.get_object("audiodelay")
 		self.file_properties["adelay"]=float(w.get_value())
@@ -1216,6 +1226,18 @@ class file_properties(newfile):
 		
 		w=self.tree.get_object("subfont_size")
 		w.set_value(self.file_properties["subfont_size"])
+		
+		w=self.tree.get_object("sub_fill_color")		
+		color=self.file_properties["sub_fill_color"]		
+		gdk_color=gtk.gdk.Color(color[0],color[1],color[2])		
+		w.set_color(gdk_color)		
+		w.set_alpha(color[3])		
+		
+		w=self.tree.get_object("sub_outline_color")		
+		color=self.file_properties["sub_outline_color"]		
+		gdk_color=gtk.gdk.Color(color[0],color[1],color[2])		
+		w.set_color(gdk_color)		
+		w.set_alpha(color[3])
 		
 		w=self.tree.get_object("swap_fields")
 		w.set_active(self.file_properties["swap_fields"])
