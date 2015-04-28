@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
 
 # Copyright 2006-2009 (C) Raster Software Vigo (Sergio Costas)
@@ -336,8 +336,8 @@ class newfile(file_get_params):
 		self.file_properties["ofps"]=self.file_values["fps"]
 		self.file_properties["ofps2"]=self.file_values["ofps2"]
 		
-		self.file_properties["blackbars"]=0 # black bars, no scale
-		self.file_properties["lchapters"]=5
+		self.file_properties["blackbars"]=self.global_vars["file_blackbars"] # black bars, no scale
+		self.file_properties["lchapters"]=self.global_vars["file_lchapters"]
 		self.file_properties["adelay"]=0 # no audio delay
 		self.file_properties["cutting"]=0 # full length
 		self.file_properties["resolution"]=0 # output resolution = auto
@@ -349,15 +349,15 @@ class newfile(file_get_params):
 		self.file_properties["copy_audio"]=False # recompress the audio
 		self.file_properties["isvob"]=False # recompress both audio and video
 		self.file_properties["swap_fields"]=False # swap fields in interlaced videos
-		self.file_properties["subfont_size"]=28 # subtitle font size
 		self.file_properties["sub_fill_color"]=[65535,65535,65535,65535] # subtitle outline color
 		self.file_properties["sub_outline_color"]=[0,0,0,65535] # subtitle outline color
-		self.file_properties["sound51"]=False # don't use 5.1 sound
+		self.file_properties["subfont_size"]=28 # subtitle font size
+		self.file_properties["sound51"]=self.global_vars["file_sound51"] # don't use 5.1 sound
 		self.file_properties["gop12"]=True # GOP of 12 by default to increase compatibility
 		self.file_properties["filesize"]=os.stat(filename)[stat.ST_SIZE] # file size
 		self.file_properties["trellis"]=True # use trellis
-		self.file_properties["twopass"]=False # two pass encoding
-		self.file_properties["turbo1stpass"]=False # use turbo 1st pass on two pass encoding
+		self.file_properties["twopass"]=self.global_vars["file_twopass"] # two pass encoding
+		self.file_properties["turbo1stpass"]=self.global_vars["file_turbo1stpass"] # use turbo 1st pass on two pass encoding
 		self.file_properties["mbd"]=2 # maximum quality
 		self.file_properties["deinterlace"]="none" # don't deinterlace
 		self.file_properties["sub_list"]=[]
@@ -378,7 +378,7 @@ class newfile(file_get_params):
 		else:
 			self.file_properties["aspect"]=1.3333333
 			
-		self.file_properties["volume"]=100
+		self.file_properties["volume"]=self.global_vars["file_volume"]
 			
 		return True,audio_tracks
 
@@ -734,15 +734,15 @@ class file_properties(newfile):
 
 		w=self.tree.get_object("subfont_size")
 		self.file_properties["subfont_size"]=int(w.get_value())
-
+	
 		w=self.tree.get_object("sub_fill_color")
 		color=w.get_color()
 		self.file_properties["sub_fill_color"]=[color.red,color.green,color.blue,w.get_alpha()]
-
+		
 		w=self.tree.get_object("sub_outline_color")
 		color=w.get_color()
 		self.file_properties["sub_outline_color"]=[color.red,color.green,color.blue,w.get_alpha()]
-
+	
 		w=self.tree.get_object("audiodelay")
 		self.file_properties["adelay"]=float(w.get_value())
 		
@@ -1227,18 +1227,18 @@ class file_properties(newfile):
 		w=self.tree.get_object("subfont_size")
 		w.set_value(self.file_properties["subfont_size"])
 		
-		w=self.tree.get_object("sub_fill_color")
-		color=self.file_properties["sub_fill_color"]
-		gdk_color=gtk.gdk.Color(color[0],color[1],color[2])
-		w.set_color(gdk_color)
+		w=self.tree.get_object("sub_fill_color")		
+		color=self.file_properties["sub_fill_color"]		
+		gdk_color=gtk.gdk.Color(color[0],color[1],color[2])		
+		w.set_color(gdk_color)		
+		w.set_alpha(color[3])		
+		
+		w=self.tree.get_object("sub_outline_color")		
+		color=self.file_properties["sub_outline_color"]		
+		gdk_color=gtk.gdk.Color(color[0],color[1],color[2])		
+		w.set_color(gdk_color)		
 		w.set_alpha(color[3])
-
-		w=self.tree.get_object("sub_outline_color")
-		color=self.file_properties["sub_outline_color"]
-		gdk_color=gtk.gdk.Color(color[0],color[1],color[2])
-		w.set_color(gdk_color)
-		w.set_alpha(color[3])
-
+		
 		w=self.tree.get_object("swap_fields")
 		w.set_active(self.file_properties["swap_fields"])
 	

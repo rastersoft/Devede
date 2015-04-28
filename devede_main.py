@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
 
 # Copyright 2006-2009 (C) Raster Software Vigo (Sergio Costas)
@@ -387,7 +387,7 @@ class main_window:
 		fine=True
 		list2=[]
 		for element in list:
-			done,audio=converter.create_default_video_parameters(element) # check if files are videos
+			done,audio=converter.create_default_video_parameters(global_vars,element) # check if files are videos
 			print done
 			print audio
 			if (done==False):
