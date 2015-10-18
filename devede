@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
 
 # Copyright 2006-2009 (C) Raster Software Vigo (Sergio Costas)
@@ -272,12 +272,21 @@ global_vars["encoder_video"]="ffmpeg"
 global_vars["encoder_menu"]="mencoder"
 global_vars["warning_ffmpeg"]=False
 global_vars["shutdown_after_disc"]=False
+global_vars["multicore"]=1 # it shouldn't use multicore by default
+global_vars["hyperthreading"]=True # by default, use hyperthreading
 
 global_vars["menu_top_margin"]=0.125
 global_vars["menu_bottom_margin"]=0.125
 global_vars["menu_left_margin"]=0.1
 global_vars["menu_right_margin"]=0.1
 global_vars["encoders"]=[]
+
+global_vars["file_blackbars"]=0
+global_vars["file_lchapters"]=5
+global_vars["file_sound51"]=False
+global_vars["file_twopass"]=False
+global_vars["file_turbo1stpass"]=False
+global_vars["file_volume"]=100
 #global_vars[""]=""
 
 print "Cores: "+str(global_vars["cores"])+" Virtual cores: "+str(global_vars["hypercores"])
@@ -329,7 +338,6 @@ if (sys.platform=="win32") or (sys.platform=="win64"):
 			global_vars["iso_creator"]="genisoimage.exe"
 		except:
 			errors+="genisoimage/mkisofs\n"
-
 	try:
 		devede_other.check_program(["spumux.exe", "--help"])
 	except:
